@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("Pokemon GB.ttf");
+}
+
 body {
   background-color: rgb(45, 45, 45);
+  font-family: "Pokemon GB";
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -30,7 +36,7 @@ body {
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-box:hover .flip-box-inner {
-  transform: rotateY(0deg); /* change*/
+  transform: rotateY(180deg); /* change*/
 }
 
 /* Position the front and back side */
@@ -55,22 +61,36 @@ body {
   transform: rotateY(180deg);
 }
 
+#demo {
+}
+
 #progress {
   background: #333;
   border-radius: 13px;
   height: 20px;
-  width: 50%;
+  width: 80%;
   padding: 3px;
   position: relative;
-	top: 70%;
-	margin: auto;
+  top: 70%;
+  margin: auto;
 }
 
 #after {
   content: '';
   display: block;
-  background: orange;
+  background: linear-gradient(to right, #ffcc00 0%, #ff9966 100%);
   width: 0%;
   height: 100%;
   border-radius: 9px;
+  position: relative;   
+}
+
+#trainer {
+  max-width: 300%;
+  max-height: 300%;
+  display: inline-block;
+  content:url("200.gif");
+  position: absolute;
+  top: -120%;
+  left: 70%;
 }
