@@ -3,18 +3,26 @@
 	<head>
 		<title>Page Title</title>
 		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<script type="text/javascript" src="progressbar.js"></script>
 	</head>
 
-	<body scroll="no" style="overflow: hidden">
+	<body onload="fill()" scroll="no" style="overflow: hidden">
 		<div class="flip-box">
 			<div class="flip-box-inner">
 				<div class="flip-box-front">
 					<h2>Front Side</h2>
 					<h3>WIP</h3>
+
+					<!-- Progress bar-->
+					<div id="progress"><div id="after"></div></div>
+
+					<!-- Display the countdown timer in an element -->
+					<p id="demo"></p>
+					<script src="countdown.js"></script>
 				</div>
 				<div class="flip-box-back">
 					<h2>Back Side</h2>
-					<img src="http://www.asciify.net/ascii/thumb/8354/circle-game.png">
+					<img src="http://www.asciify.net/ascii/thumb/8354/circle-game.png" alt="Circle game">
 				</div>
 			</div>
 		</div>
