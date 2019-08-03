@@ -8,6 +8,15 @@ body {
   font-family: "Pokemon GB";
 }
 
+.topleft {
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: left;
+}
+
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
@@ -71,7 +80,7 @@ body {
   width: 80%;
   padding: 3px;
   position: relative;
-  top: 70%;
+  bottom: -60%;
   margin: auto;
 }
 
