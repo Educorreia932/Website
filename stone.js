@@ -1,3 +1,38 @@
+var spells = {"cantrips": [],
+	          "first-level": [],
+	          "second-level": [],
+	          "third-level": [],
+	          "fourth-level": [],
+	          "fifth-level": [],
+	          "sixth-level": [],
+	          "seventh-level": [],
+	          "eigth-level": [],
+	          "ninth-level": []}
+
+var correspondece = {0: "cantrips",
+	                 1: "first-level",
+	                 2: "second-level",
+	                 3: "third-level",
+	                 4: "fourth-level",
+	                 5: "fifth-level",
+	                 6: "sixth-level",
+	                 7: "seventh-level",
+	                 8: "eigth-level",
+	                 9: "ninth-level"}
+
+
+//Read XML file
+
+function readxml()
+    {
+        xmlHttp = new window.XMLHttpRequest();
+        xmlHttp.open("GET","spells.xml", false);
+        xmlHttp.send(null);
+        xmlDoc = xmlHttp.responseXML;
+    }
+
+//Dice
+
 var first_dice = Math.floor((Math.random() * 100) + 1); //Returns a random number between 1 and 10
 var second_dice = Math.floor((Math.random() * 100) + 1);
 
@@ -19,7 +54,7 @@ var major_properties = ["While attuned to the artifact, one of your ability scor
 	                    "As 51 - 60 above, except the spell is 5th level.",
 	                    "As 51 - 60 above, except the spell is 6th level.",
 	                    "As 51 - 60 above, except the spell is 7th level.",
-	                    "While attuned to the artifact, you can't be blinded, deafened, petrified , or stunned."]
+	                    "While attuned to the artifact, you can't be blinded, deafened, petrified, or stunned."]
 
 function choose(dice) {
 	if (dice >= 1 && dice <= 20) {
