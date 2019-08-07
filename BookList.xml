@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BookList>
+  <Book>
+     <Title>jQuery: Novice to Ninja</Title>
+     <Publisher>Site point</Publisher>
+  </Book>
+  <Book>
+     <Title>Learning jQuery</Title>
+     <Publisher>PACKT</Publisher>
+  </Book>
+  <Book>
+     <Title>Head First jQuery</Title>
+     <Publisher>O'Reilly</Publisher>
+  </Book>
+  <Book>
+     <Title>jQuery UI 1.8</Title>
+     <Publisher>PACKT</Publisher>
+  </Book>
+</BookList>
