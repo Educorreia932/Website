@@ -20,11 +20,11 @@ body {
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
-  width: 950px;
-  height: 608px;
+  width: 1000px;
+  height: 600px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   position: absolute;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -44,9 +44,10 @@ body {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg); /* change*/
-}
+  transform: rotateY(180deg); 
+} 
 
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
@@ -70,7 +71,11 @@ body {
   transform: rotateY(180deg);
 }
 
-#demo {
+.rectangle {
+  height: 70px;
+  width: 120px;
+  background-color: black;
+  position: relative;
 }
 
 #progress {
@@ -80,7 +85,7 @@ body {
   width: 80%;
   padding: 3px;
   position: relative;
-  bottom: -60%;
+  bottom: -75%;
   margin: auto;
 }
 
@@ -102,4 +107,25 @@ body {
   position: absolute;
   top: -120%;
   left: 70%;
+}
+
+.social-icons {
+  text-align: center;
+}
+  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+}
+
+.social-icons li a {
+  border-bottom: none;
+}
+
+.social-icons li img {
+  width:70px;
+  height:70px;
+  margin-right: 20px;
 }
