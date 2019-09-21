@@ -14,7 +14,7 @@ function fill() {
 	var el = document.getElementById("after");
 	var today = new Date();
 	var date1 = new Date(2018, 8, 9);
-	var date2 = new Date(2024, 21, 6);
+	var date2 = new Date(2023, 21, 6);
 	var time1 = days_between(date1, date2);
 	var time2 = days_between(date1, today);
 
