@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>Page Title</title>
-		<link rel="stylesheet" type="text/css" href="mystyle.css">
-		<script type="text/javascript" src="progressbar.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/index-style.css">
+		<script type="text/javascript" src="scripts/progressbar.js"></script>
 	</head>
 
 	<body onload="fill()" scroll="no" style="overflow: hidden">
@@ -13,21 +13,18 @@
 			<div class="flip-box-inner">
 				<!-- Front side -->
 				<div class="flip-box-front">
-					<br><br><br><br><br>					
-					<p class="topleft"><b>Educorreia932</b><br>Card</p>
-					
+					<!-- Display the countdown timer in an element -->
+					<p id="topleft"><b>Educorreia932</b><br>Card</p>
+					<p><b>FEUP - MIEIC</b><br>Time to end course:</p>
+					<p id="countdown"></p>
+					<script src="scripts/countdown.js"></script>
+
 					<!-- Progress bar-->
 					<div id="progress">
 						<div id="after">
 							<div id="trainer"></div>
 						</div>
 					</div>
-
-					<!-- Display the countdown timer in an element -->
-					<b>FEUP - MIEIC</b>
-					<p>Time to end course:</p>
-					<p id="demo"></p>
-					<script src="countdown.js"></script>
 
 					<!-- Rectangle gallery -->
 					<!-- div class="rectangle"></div-->
@@ -36,14 +33,14 @@
 				<!-- Back side -->
 				<div class="flip-box-back">
 					<h2>Back Side</h2>
-					<a href="Stone of Golorr/properties.html">Stone of Golorr Properties</a>
+					<a href="stone-of-golorr.html">Stone of Golorr Properties</a>
 
 					<ul class="social-icons">
-					    <li><a href="https://www.facebook.com/eduardo.costacorreia"><img src="Social Media Icons/Facebook.svg" /></a></li>
-					    <li><a href="https://www.youtube.com/user/Skelozard1/"><img src="Social Media Icons/Youtube.svg" /></a></li>
-					    <li><a href="https://www.instagram.com/educorreia932/"><img src="Social Media Icons/Instagram.svg" /></a></li>
-					    <li><a href="https://www.linkedin.com/in/eduardo-correia-7a608216a/"><img src="Social Media Icons/LinkedIn.svg" /></a></li>
-					    <li><a href="https://steamcommunity.com/id/Skelozard/"><img src="Social Media Icons/Steam.svg" /></a></li>
+					    <li><a href="https://www.facebook.com/eduardo.costacorreia"><img src="img/Social Media Icons/Facebook.svg" /></a></li>
+					    <li><a href="https://www.youtube.com/user/Skelozard1/"><img src="img/Social Media Icons/Youtube.svg" /></a></li>
+					    <li><a href="https://www.instagram.com/educorreia932/"><img src="img/Social Media Icons/Instagram.svg" /></a></li>
+					    <li><a href="https://www.linkedin.com/in/eduardo-correia-7a608216a/"><img src="img/Social Media Icons/LinkedIn.svg" /></a></li>
+					    <li><a href="https://steamcommunity.com/id/Skelozard/"><img src="img/Social Media Icons/Steam.svg" /></a></li>
 					</ul>
 				</div>
 			</div>
