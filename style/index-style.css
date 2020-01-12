@@ -18,16 +18,16 @@ body {
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
-  background-color: transparent;
-  width: 1000px;
-  height: 600px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+	background-color: transparent;
+	width: 1000px;
+	height: 600px;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 /* This container is needed to position the front and back side */
@@ -112,10 +112,37 @@ body {
 	content:url("img/Pokemon Trainer.gif");
 }
 
-.social-icons {
-  text-align: center;
+.avatar {
+	position: absolute;	
+	left: 70%;
+	top: 25%;
 }
-  
+
+.avatar img {
+	background:
+	linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+	linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+	linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+	linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
+	background-size: 100px 100px;
+	background-color: #C80000;
+	border-radius: 10%;
+}
+
+.grid { 
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;	
+	grid-gap: 10px;
+	width: 40%;
+	position: relative;
+	left: 30%;
+}
+
+.grid img {
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	max-width: 100%;
+}
+
 .social-icons li {
 	display: inline-block;
 	list-style-type: none;
