@@ -7,6 +7,7 @@ body {
 	background-image: url("../img/Wallpapers/redgiant.jpg");
 	font-family: "Pokemon GB";
 	background-size: cover;
+	line-height: 150%;
 }
 
 :link {
@@ -106,7 +107,7 @@ body {
 	position: relative;   
 	bottom: 100%;
 	left: 80%;
-	content:url("img/Pokemon Trainer.gif");
+	content:url("../img/Pokemon Trainer.gif");
 }
 
 .avatar {
@@ -143,8 +144,6 @@ body {
 .social-icons li {
 	display: inline-block;
 	list-style-type: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
 }
 
 .social-icons li a {

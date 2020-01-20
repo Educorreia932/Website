@@ -45,13 +45,13 @@
 					</div>
 
 					<!-- Do an horizontal flip when you click the flip box container -->
-					<script name="rotate">
-						function rotate() {
-							document.getElementsByClassName("flip-box-inner").item(0).style.transform = "rotateY(180deg)";
+					<script>
+						function rotate(degrees) {
+							document.getElementsByClassName("flip-box-inner").item(0).style.transform = "rotateY("+ String(degrees) + "deg)";
 						}
 					</script>
 
-					<button onclick="rotate()">
+					<button onclick="rotate(180)">
 						<p>Back side</p>
 					</button>
 				</div>
@@ -59,6 +59,7 @@
 				<!-- Back side -->
 				<div class="flip-box-back">
 					<h2>Back Side</h2>
+					<a href="bio.html">Biography</a><br>
 					<a href="stone-of-golorr.html">Stone of Golorr Properties</a>
 
 					<ul class="social-icons">
@@ -66,6 +67,10 @@
 					    <li><a href="https://www.instagram.com/educorreia932/"><img src="img/Social Media Icons/Instagram.svg" /></a></li>
 					    <li><a href="https://steamcommunity.com/id/Skelozard/"><img src="img/Social Media Icons/Steam.svg" /></a></li>
 					</ul>
+
+					<button onclick="rotate(0)">
+						<p>Front side</p>
+					</button>
 				</div>
 			</div>
 		</div>
