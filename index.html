@@ -37,12 +37,23 @@
 					<p id="countdown"></p>
 					<script src="scripts/countdown.js"></script>
 
-					<!-- Progress bar-->
+					<!-- Progress bar -->
 					<div id="progress">
 						<div id="after">
 							<div id="trainer"></div>
 						</div>
 					</div>
+
+					<!-- Do an horizontal flip when you click the flip box container -->
+					<script name="rotate">
+						function rotate() {
+							document.getElementsByClassName("flip-box-inner").item(0).style.transform = "rotateY(180deg)";
+						}
+					</script>
+
+					<button onclick="rotate()">
+						<p>Back side</p>
+					</button>
 				</div>
 
 				<!-- Back side -->

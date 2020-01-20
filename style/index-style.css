@@ -4,8 +4,9 @@
 }
 
 body {
-  background-color: rgb(45, 45, 45);
-  font-family: "Pokemon GB";
+	background-image: url("../img/Wallpapers/redgiant.jpg");
+	font-family: "Pokemon GB";
+	background-size: cover;
 }
 
 :link {
@@ -40,12 +41,8 @@ body {
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-}
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-	transform: rotateY(180deg); 
-} 
+}
 
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
