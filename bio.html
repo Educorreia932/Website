@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biography</title>
+        <title>About Me</title>
         <link rel="stylesheet" type="text/css" href="style/bio-style.css">
     </head>
 
     <body>
-        <h2>Biography</h2>
-        <p>Asking me to describe myself is just so weird and I just feel like I can't do it properly, but I will try nevertheless.</br>
+        <h2>About Me</h2>
+        <p>Describing myself is just so weird and I just feel like I can't do it properly, but I will try nevertheless.</br>
            That being, my real name is Eduardo, I live in a quite small town (<a href="https://www.google.com/maps/place/Trofa/" target="_blank" style="text-decoration:none">Trofa, Porto</a>) in my country, which is Portugal.</br>
            My principal hobbies are watching <i>Youtube/Netflix</i> (sometimes television too), browsing <i>reddit</i>, playing videogames, tabletop games and roleplaying games (mainly Dungeons & Dragons), occasionally drawing, do image editing or code (in C++, Python, Visual Basic, Java, HTML/CSS or ARM).</br>
            Furthermore, I'm currently on the second year of a "Computing Engineering" course in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank" style="text-decoration:none">FEUP</a> (Faculty of Engineering of University of Porto).</br>
         </p>
-        <h3>Countries visited (in order) 🌍</h3>
-        <ul>
-            <li>Portugal (of course) 🇵🇹</li>
-            <li>Spain 🇪🇸</li>
-            <li>France 🇫🇷</li>
-            <li>United Kingdom 🇬🇧</li>
-            <li>Italy 🇮🇹/🇻🇦</li>
-            <li>Belgium 🇧🇪</li>
-            <li>Germany 🇩🇪</li>
-            <li>Poland 🇵🇱</li>
-            <li>Switzerland 🇨🇭</li>
-            <li>Czech Republic 🇨🇿</li>
-            <li>Ireland 🇮🇪</li>
-        </ul>
+        
+        <div style="clear: right;">
+            <h3>Countries visited (in order) 🌍</h3>
+            <ul>
+                <li>Portugal (of course) 🇵🇹</li>
+                <li>Spain 🇪🇸</li>
+                <li>France 🇫🇷</li>
+                <li>United Kingdom 🇬🇧</li>
+                <li>Italy 🇮🇹/🇻🇦</li>
+                <li>Belgium 🇧🇪</li>
+                <li>Germany 🇩🇪</li>
+                <li>Poland 🇵🇱</li>
+                <li>Switzerland 🇨🇭</li>
+                <li>Czech Republic 🇨🇿</li>
+                <li>Ireland 🇮🇪</li>
+            </ul>
 
-        <h3>Favorite games 🎮</h3>
-        <ul>
-            <li>The Elder Scrolls V: Skyrim</li>
-            <li>The Witcher III: Wild Hunt</li>
-            <li>Dark Souls III</li>
-            <li>The Legend of Zelda: Breath of the Wild</li>
-            <li>Divinity: Original Sin II</li>
-            <li>Little Big Planet 2</li>
-            <li>Minecraft (Tekkit, All the Mods, FTB...)</li>
-        </ul>    
+            <h3>Favorite games 🎮</h3>
+            <ul>
+                <li>The Elder Scrolls V: Skyrim</li>
+                <li>The Witcher III: Wild Hunt</li>
+                <li>Dark Souls III</li>
+                <li>The Legend of Zelda: Breath of the Wild</li>
+                <li>Divinity: Original Sin II</li>
+                <li>Little Big Planet 2</li>
+                <li>Minecraft (Tekkit, All the Mods, FTB...)</li>
+            </ul>    
 
-        <h3>Favorite anime 🐱‍🏍</h3>
-        <ul>
-            <li>Code Geass</li>
-            <li>Fullmetal Alchemist: Brotherhood</li>
-            <li>Death Note</li>
-            <li>Howl's Moving Castle</li>
-        </ul>
+            <h3>Favorite anime 🐱‍🏍</h3>
+            <ul>
+                <li>Code Geass</li>
+                <li>Fullmetal Alchemist: Brotherhood</li>
+                <li>Death Note</li>
+                <li>Howl's Moving Castle</li>
+            </ul>
 
+            <h3>Favorite music artists 🎸</h3>
+            <ul>
+                <li>Jamiroquai</li> 
+                <li>Red Hot Chili Peppers</li>
+                <li>Capitão Fausto</li>
+                <li>Ornatos Violeta</li>
+                <li>Jack White</li>
+                <li>Modest Mouse</li>
+                <li>Foo Fighters</li>
+            </ul>
             
-        <h3>Favorite music artists 🎸</h3>
-        <ul>
-            <li>Jamiroquai</li> 
-            <li>Red Hot Chili Peppers</li>
-            <li>Capitão Fausto</li>
-            <li>Ornatos Violeta</li>
-            <li>Jack White</li>
-            <li>Modest Mouse</li>
-            <li>Foo Fighters</li>
-        </ul>
+            <h3>Recently seen series 📺</h3>      
+            <ul>
+                <li>Breaking Bad</li>
+                <li>The Big Bang Theory</li>
+                <li>Stranger Things</li>
+                <li>The Witcher</li>
+            </ul>      
 
-        <h3>Recently seen series 📺</h3>      
-        <ul>
-            <li>Breaking Bad</li>
-            <li>The Big Bang Theory</li>
-            <li>Stranger Things</li>
-            <li>The Witcher</li>
-        </ul>      
+            <h3>Favorite movies 🎬</h3>
+            <ul>
+                <li>Star Wars Saga</li>
+                <li>Marvel Cinematic Universe</li>
+                <li>Studio Ghibli Movies</li>
+            </ul>
 
-        <h3>Favorite movies 🎬</h3>
-        <ul>
-            <li>Star Wars Saga</li>
-            <li>Marvel Cinematic Universe</li>
-            <li>Studio Ghibli Movies</li>
-        </ul>
+            <p id="lastModified" ></p>
+            <script>
+                document.getElementById("lastModified").innerHTML = "<b>Last Modified: </b>" + document.lastModified 
+            </script>            
+        </div>
     </body>
 </html>
