@@ -55,6 +55,9 @@ function generateList() {
             
             // Add games to table
             data.forEach(element => {
+                if (element[1] == "Wishlist" || element[1] == "Not played")
+                    return;
+
                 // Create an empty <tr> element and add it to the end of the table
                 var row = table.insertRow();
 
@@ -65,7 +68,10 @@ function generateList() {
 
                 name.innerHTML = element[0];
                 played_on.innerHTML = element[2];
-                hours_played.innerHTML = element[5];
+                hours_played.innerHTML = element[5] + "h";
+
+                if (element[5] == "\"\"")
+                    hours_played.innerHTML = "N/A"
             });
         };
     };
