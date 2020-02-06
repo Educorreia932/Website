@@ -6,15 +6,12 @@ function processData(allText) {
 
     for (var i = 1; i < allTextLines.length; i++) {
         var data = allTextLines[i].split(',');
+        var tarr = [];
 
-            console.log(i);
+        for (var j = 0; j < headers.length; j++)
+            tarr.push(data[j]);
 
-            var tarr = [];
-
-            for (var j = 0; j < headers.length; j++)
-                tarr.push(data[j]);
-
-            lines.push(tarr);
+        lines.push(tarr);
     }
 
     return lines;
@@ -54,13 +51,21 @@ function generateList() {
     request.onreadystatechange = function () {
         if (request.readyState == 4) {
             var data = processData(request.responseText);
-            console.log(data);
+            var table = document.getElementById("games");
             
+            // Add games to table
             data.forEach(element => {
-                var node = document.createElement("li");
-                var text_node = document.createTextNode(element[0]);
-                node.appendChild(text_node);   
-                document.getElementById("games").appendChild(node);
+                // Create an empty <tr> element and add it to the end of the table
+                var row = table.insertRow();
+
+                // Insert new cells (<td> elements)
+                var name = row.insertCell(0);
+                var played_on = row.insertCell(1);
+                var hours_played = row.insertCell(2);
+
+                name.innerHTML = element[0];
+                played_on.innerHTML = element[2];
+                hours_played.innerHTML = element[5];
             });
         };
     };
