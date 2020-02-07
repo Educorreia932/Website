@@ -9,6 +9,15 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+td>img {
+    display: none;
+    position: relative;
+    left: 7%;
+    top: 9%;
+    max-width: 100px;
+    box-shadow: 0 0 5px black;
+}
+
 /*** Table Styles **/
 
 table {
@@ -60,6 +69,10 @@ tr:hover td {
     background: #4E5066;
     color: #FFFFFF;
     border-top: 1px solid #22262e;
+}
+
+td:hover>img {
+    display: inline;
 }
 
 tr:first-child {

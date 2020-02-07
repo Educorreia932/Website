@@ -1,42 +1,84 @@
 Game,Status,Played on,Rating,Url,Hours played
-The Binding of Isaac: Rebirth,Played,PC,,https://rawg.io/games/the-binding-of-isaac-rebirth,223
-The Witcher 3: Wild Hunt,Completed,PC,,https://rawg.io/games/the-witcher-3-wild-hunt,144
-Team Fortress 2,Played,PC,,https://rawg.io/games/team-fortress-2,73
-Town of Salem,Completed,PC,recommended,https://rawg.io/games/town-of-salem,72
-Fallout 4,Played,PC,,https://rawg.io/games/fallout-4,67
-Dark Souls III,Completed,PC,,https://rawg.io/games/dark-souls-iii,64
-FINAL FANTASY XV WINDOWS EDITION,Played,PC,,https://rawg.io/games/final-fantasy-xv-windows-edition,44
-WAKFU,Played,PC,,https://rawg.io/games/wakfu,42
-Europa Universalis IV,Currently playing,PC,,https://rawg.io/games/europa-universalis-iv,41
-Endless Legend,Completed,PC,recommended,https://rawg.io/games/endless-legend,41
-Divinity: Original Sin 2,Played,PC,,https://rawg.io/games/divinity-original-sin-2,30
-Ni no Kuni II: Revenant Kingdom,Played,PC,,https://rawg.io/games/ni-no-kuni-ii-revenant-kingdom,23
-Caves of Qud,Currently playing,PC,,https://rawg.io/games/caves-of-qud,13.8
-Pillars of Eternity II: Deadfire,Played,PC,,https://rawg.io/games/pillars-of-eternity-ii-deadfire,11.6
-Tales of Maj'Eyal,Played,PC,,https://rawg.io/games/tales-of-majeyal,11.3
-Dark Souls II: Scholar of the First Sin,Played,PC,,https://rawg.io/games/dark-souls-ii-scholar-of-the-first-sin,10.6
+The Elder Scrolls V - Skyrim,Completed,PC; PlayStation 3,10,https://rawg.io/games/the-elder-scrolls-v-skyrim,114
+The Witcher 3 - Wild Hunt,Completed,PC,9,https://rawg.io/games/the-witcher-3-wild-hunt,144
+Dark Souls III,Completed,PC,9,https://rawg.io/games/dark-souls-iii,64
+Divinity - Original Sin 2,Played,PC,9,https://rawg.io/games/divinity-original-sin-2,30
+Resident Evil 2,Completed,PC,9,https://rawg.io/games/resident-evil-2-2019,
+LittleBigPlanet 2,Completed,PlayStation 3,9,https://rawg.io/games/littlebigplanet-2,
+Pokémon HeartGold,Completed,Nintendo DS,9,https://rawg.io/games/pokemon-heartgold-version,
+The Binding of Isaac - Rebirth,Played,PC,8,https://rawg.io/games/the-binding-of-isaac-rebirth,223
+The Legend of Zelda - Breath of the Wild,Completed,Nintendo Switch,8,https://rawg.io/games/the-legend-of-zelda-breath-of-the-wild,170
+Pokémon Y,Completed,Nintendo 3DS,8,https://rawg.io/games/pokemon-y,152
+Super Smash Bros.,Played,Nintendo 3DS,8,,114
+Town of Salem,Completed,PC,8,https://rawg.io/games/town-of-salem,72
+Europa Universalis IV,Currently playing,PC,8,https://rawg.io/games/europa-universalis-iv,41
+Endless Legend,Completed,PC,8,https://rawg.io/games/endless-legend,41
+Caves of Qud,Currently playing,PC,8,https://rawg.io/games/caves-of-qud,13.8
+Pillars of Eternity II - Deadfire,Played,PC,8,https://rawg.io/games/pillars-of-eternity-ii-deadfire,11.6
+Starbound,Played,PC,8,https://rawg.io/games/starbound,192
+Terraria,Played,PC,8,https://rawg.io/games/terraria,163
+Portal 2,Played,PC,8,https://rawg.io/games/portal-2,
+Daxter,Completed,PSP,8,https://rawg.io/games/daxter,
+Professor Layton and the Last Specter,Completed,Nintendo DS,8,https://rawg.io/games/professor-layton-and-the-last-specter,
+Tomb Raider (2013),Completed,PlayStation 4,8,https://rawg.io/games/tomb-raider,
+Noita,Currently playing,PC,8,https://rawg.io/games/noita,
+Team Fortress 2,Played,PC,7,https://rawg.io/games/team-fortress-2,73
+Fallout 4,Played,PC,7,https://rawg.io/games/fallout-4,67
+Pokémon Ultra Sun,Currently playing,Nintendo 3DS,7,https://rawg.io/games/pokemon-ultra-sun,58
+Fire Emblem Awakening,Played,Nintendo 3DS,7,https://rawg.io/games/fire-emblem-awakening,57
+FINAL FANTASY XV WINDOWS EDITION,Played,PC,7,https://rawg.io/games/final-fantasy-xv-windows-edition,44
+Mario Kart 8 Deluxe,Completed,Nintendo Switch,7,https://rawg.io/games/mario-kart-8-deluxe,40
+Stardew Valley,Played,Nintendo Switch,7,https://rawg.io/games/stardew-valley,30
+Ni no Kuni II: Revenant Kingdom,Played,PC,7,https://rawg.io/games/ni-no-kuni-ii-revenant-kingdom,23
+The Elder Scrolls III: Morrowind,Played,PC,7,https://rawg.io/games/morrowind,17.4
+The Legend of Zelda: Link's Awakening (2019),Currently playing,Nintendo Switch,7,https://rawg.io/games/the-legend-of-zelda-links-awakening,15
+Super Smash Bros. Ultimate,Played,Nintendo Switch,7,https://rawg.io/games/super-smash-bros-ultimate,15
+New Super Mario Bros.,Completed,Nintendo DS,7,https://rawg.io/games/new-super-mario-bros,
+Super Mario 64 DS,Played,Nintendo DS,7,https://rawg.io/games/super-mario-64-ds,
+Sid Meier's Civilization V,Completed,PC,7,https://rawg.io/games/civilization-v,
+MySims Kingdom,Completed,Nintendo DS,7,https://rawg.io/games/mysims-kingdom,
+Minecraft,Played,PC,7,https://rawg.io/games/minecraft,
+Hollow Knight,Completed,Nintendo Switch,7,https://rawg.io/games/hollow-knight,
+The Elder Scrolls Online: Tamriel Unlimited,Played,PC,7,https://rawg.io/games/the-elder-scrolls-online-tamriel-unlimited,
+WAKFU,Played,PC,6,https://rawg.io/games/wakfu,42
+Resident Evil Revelations,Completed,Nintendo 3DS,6,https://rawg.io/games/resident-evil-revelations-biohazard-revelations,14
+Tales of Maj'Eyal,Played,PC,6,https://rawg.io/games/tales-of-majeyal,11.3
+Pokémon GO,Played,Android,6,https://rawg.io/games/pokemon-go,
+Metal Slug X,Completed,PC,6,https://rawg.io/games/metal-slug-x,
+Blockland,Played,PC,6,https://rawg.io/games/blockland,
+Sports Champions,Played,PlayStation 3,6,https://rawg.io/games/sports-champions,
+Lara Croft and the Temple of Osiris,Played,PC,5,https://rawg.io/games/lara-croft-and-the-temple-of-osiris,
+Shattered Planet,Played,PC,5,https://rawg.io/games/shattered-planet,
+Kirby: Star Allies,Completed,Nintendo Switch,5,https://rawg.io/games/kirby-star-allies,
+Bastion,Played,PC,4,https://rawg.io/games/bastion,
+League of Legends,Played,PC,4,https://rawg.io/games/league-of-legends,
+Tropico 4,Played,PC,4,https://rawg.io/games/tropico-4,
+AdVenture Capitalist,Played,PC,2,https://rawg.io/games/adventure-capitalist,
+Dark Souls II: Scholar of the First Sin,Played,PC,7,https://rawg.io/games/dark-souls-ii-scholar-of-the-first-sin,10.6
 Crusader Kings II,Played,PC,,https://rawg.io/games/crusader-kings-ii,8.6
-Pixel Dungeon,Played,PC,,https://rawg.io/games/pixel-dungeon,7.6
+Pixel Dungeon,Played,PC,7,https://rawg.io/games/pixel-dungeon,7.6
 Counter-Strike: Global Offensive,Played,PC,,https://rawg.io/games/counter-strike-global-offensive,7
 Ultimate Chicken Horse,Currently playing,PC,,https://rawg.io/games/ultimate-chicken-horse,6.9
+DISGAEA 5: ALLIANCE OF VENGEANCE,Currently playing,Nintendo Switch,7,https://rawg.io/games/disgaea-5-alliance-of-vengeance,5
 NARUTO SHIPPUDEN: Ultimate Ninja STORM 4,Played,PC,,https://rawg.io/games/naruto-shippuden-ultimate-ninja-storm-4,3.7
 Graveyard Keeper,Currently playing,PC,,https://rawg.io/games/graveyard-keeper,3.3
+VRChat,Played,PC,,https://rawg.io/games/vrchat,3
 Life is Strange,Played,PC,,https://rawg.io/games/life-is-strange-episode-1-2,2.5
 Never Split the Party,Played,PC,,https://rawg.io/games/never-split-the-party,2.3
 Jotun: Valhalla Edition,Played,PC,,https://rawg.io/games/jotun,1.7
 Pixel Puzzles 2: Anime,Played,PC,,https://rawg.io/games/pixel-puzzles-2-anime,1.6
 Hitman 2,Wishlist,PC,,https://rawg.io/games/hitman-2,1
+Monster Hunter Generations Ultimate,Currently playing,Nintendo Switch,,https://rawg.io/games/monster-hunter-generations-ultimate,1
 Bendy and the Ink Machine,Played,PC,,https://rawg.io/games/bendy-and-the-ink-machine,0.5
 Mitos.is: The Game,Played,PC,,https://rawg.io/games/mitosis-the-game,0.3
 Bad North,Played,PC,,https://rawg.io/games/bad-north,0.1
 Samorost 3,Played,PC,,https://rawg.io/games/samorost-3,0.1
 LEGO The Hobbit,Not played,PC,,https://rawg.io/games/lego-the-hobbit,
-Drawn to Life: The Next Chapter,Completed,Nintendo DS,,https://rawg.io/games/drawn-to-life-the-next-chapter,
+Drawn to Life: The Next Chapter,Completed,Nintendo DS,8,https://rawg.io/games/drawn-to-life-the-next-chapter,
 The Pedestrian,Wishlist,,,https://rawg.io/games/the-pedestrian,
 Red Dead Redemption 2,Wishlist,,,https://rawg.io/games/red-dead-redemption-2,
 Marvel's Spider-Man,Wishlist,PlayStation 4,,https://rawg.io/games/marvels-spider-man,
 Spyro Reignited Trilogy,Wishlist,,,https://rawg.io/games/spyro-reignited-trilogy,
-Monster Hunter Generations Ultimate,Currently playing,Nintendo Switch,,https://rawg.io/games/monster-hunter-generations-ultimate,1
 Beneath a Steel Sky,Not played,PC,,https://rawg.io/games/beneath-a-steel-sky,
 Dragonsphere,Not played,PC,,https://rawg.io/games/dragonsphere,
 Freespace 2,Not played,PC,,https://rawg.io/games/freespace-2,
@@ -48,20 +90,14 @@ Treasure Adventure Game,Not played,PC,,https://rawg.io/games/treasure-adventure-
 Warsow,Not played,PC,,https://rawg.io/games/warsow,
 Grim Fandango Remastered,Not played,PC,,https://rawg.io/games/grim-fandango-remastered,
 Obduction,Not played,PC,,https://rawg.io/games/obduction,
-Pokémon Gold/Silver,Played,Nintendo DS,,https://rawg.io/games/pokemon-gold,
-Pokémon GO,Played,Android,,https://rawg.io/games/pokemon-go,
 Turbo Pug DX,Not played,PC,,https://rawg.io/games/turbo-pug-dx,
 Deceit,Played,PC,,https://rawg.io/games/deceit,
 Niche - a genetics survival game,Played,PC,,https://rawg.io/games/niche-a-genetics-survival-game,
 GabeN: The Final Decision,Not played,PC,,https://rawg.io/games/gaben-the-final-decision,
 Race The Sun,Played,PC,,https://rawg.io/games/race-the-sun,
-AdVenture Capitalist,Played,PC,skip,https://rawg.io/games/adventure-capitalist,
 PAYDAY The Heist,Played,PC,,https://rawg.io/games/payday-the-heist,
-Lara Croft and the Temple of Osiris,Played,PC,meh,https://rawg.io/games/lara-croft-and-the-temple-of-osiris,
 LEGO Batman 3: Beyond Gotham,Played,PC,,https://rawg.io/games/lego-batman-3-beyond-gotham,
-Metal Slug X,Completed,PC,,https://rawg.io/games/metal-slug-x,
 Borealis,Played,PC,,https://rawg.io/games/borealis,
-Shattered Planet,Played,PC,meh,https://rawg.io/games/shattered-planet,
 Unturned,Played,PC,,https://rawg.io/games/unturned,
 Shadowrun: Dragonfall - Director's Cut,Played,PC,,https://rawg.io/games/shadowrun-dragonfall-directors-cut,
 Tabletop Simulator,Played,PC,,https://rawg.io/games/tabletop-simulator,
@@ -70,9 +106,8 @@ QuestRun,Played,PC,,https://rawg.io/games/questrun,
 Pixel Puzzles: Japan,Played,PC,,https://rawg.io/games/pixel-puzzles-japan,
 Sanitarium,Currently playing,PC,,https://rawg.io/games/sanitarium,
 Spoiler Alert,Played,PC,,https://rawg.io/games/spoiler-alert,
-Starbound,Played,PC,,https://rawg.io/games/starbound,
 Blockstorm,Played,PC,,https://rawg.io/games/blockstorm,
-Scribblenauts Unmasked: A DC Comics Adventure,Completed,PC,,https://rawg.io/games/scribblenauts-unmasked-a-dc-comics-adventure,
+Scribblenauts Unmasked: A DC Comics Adventure,Completed,PC,7,https://rawg.io/games/scribblenauts-unmasked-a-dc-comics-adventure,23
 Skullgirls,Completed,PC,,https://rawg.io/games/skullgirls,
 Angry Video Game Nerd Adventures,Played,PC,,https://rawg.io/games/angry-video-game-nerd-adventures,
 Unepic,Played,PC,,https://rawg.io/games/unepic,
@@ -80,56 +115,33 @@ Realm of the Mad God,Played,PC,,https://rawg.io/games/realm-of-the-mad-god,
 LEGO The Lord of the Rings,Played,PC,,https://rawg.io/games/lego-lord-of-the-rings,
 Pid,Played,PC,,https://rawg.io/games/pid,
 Dishonored,Played,PC,,https://rawg.io/games/dishonored,
-The Binding of Isaac,Completed,PC,recommended,https://rawg.io/games/the-binding-of-isaac,
+The Binding of Isaac,Completed,PC,,https://rawg.io/games/the-binding-of-isaac,42
 Darksiders II,Played,PC,,https://rawg.io/games/darksiders-ii,
 Alan Wake,Played,PC,,https://rawg.io/games/alan-wake,
-Fallout: New Vegas,Played,PC,,https://rawg.io/games/fallout-new-vegas,
-The Elder Scrolls V: Skyrim,Completed,PC; PlayStation 3,exceptional,https://rawg.io/games/the-elder-scrolls-v-skyrim,
-Bastion,Played,PC,meh,https://rawg.io/games/bastion,
-Terraria,Played,PC,,https://rawg.io/games/terraria,
-Portal 2,Played,PC,,https://rawg.io/games/portal-2,
+Fallout: New Vegas,Played,PC,,https://rawg.io/games/fallout-new-vegas,30
 Darksiders,Played,PC,,https://rawg.io/games/darksiders,
 Portal,Completed,PC,,https://rawg.io/games/portal,
 Garry's Mod,Played,PC,,https://rawg.io/games/garrys-mod,
 Open Season,Completed,PSP,,https://rawg.io/games/open-season,
 The Legend of Zelda: Spirit Tracks,Played,Nintendo DS,,https://rawg.io/games/the-legend-of-zelda-spirit-tracks,
 Fallout Shelter,Played,Android,,https://rawg.io/games/fallout-shelter,
-The Legend of Zelda: Link's Awakening (2019),Currently playing,Nintendo Switch,,https://rawg.io/games/the-legend-of-zelda-links-awakening,15
-Blockland,Played,PC,recommended,https://rawg.io/games/blockland,
-Kirby: Star Allies,Completed,Nintendo Switch,meh,https://rawg.io/games/kirby-star-allies,
-Mario Kart 8 Deluxe,Completed,Nintendo Switch,recommended,https://rawg.io/games/mario-kart-8-deluxe,40
-New Super Mario Bros.,Completed,Nintendo DS,recommended,https://rawg.io/games/new-super-mario-bros,
-Super Mario 64 DS,Played,Nintendo DS,recommended,https://rawg.io/games/super-mario-64-ds,
-Super Smash Bros. Ultimate,Played,Nintendo Switch,recommended,https://rawg.io/games/super-smash-bros-ultimate,15
 Two Point Hospital,Played,PC,,https://rawg.io/games/two-point-hospital,
-Sid Meier's Civilization V,Completed,PC,recommended,https://rawg.io/games/civilization-v,
-Fire Emblem Awakening,Played,Nintendo 3DS,recommended,https://rawg.io/games/fire-emblem-awakening,57
-MySims Kingdom,Completed,Nintendo DS,recommended,https://rawg.io/games/mysims-kingdom,
 LEGO Indiana Jones 2: The Adventure Continues,Completed,PSP,,https://rawg.io/games/lego-indiana-jones-2,
 LEGO Harry Potter: Years 1-4,Played,PSP,,https://rawg.io/games/lego-harry-potter,
-LEGO Star Wars: The Force Awakens,Played,PS4,,https://rawg.io/games/lego-star-wars-tfa,
-LEGO Batman,Completed,PSP,,https://rawg.io/games/lego-batman,
+LEGO Batman,Completed,PSP,8,https://rawg.io/games/lego-batman,
 osu!,Played,PC,,https://rawg.io/games/osu,
 Ratchet and Clank: Size Matters,Completed,PSP,,https://rawg.io/games/ratchet-and-clank-size-matters,
-Daxter,Completed,PSP,recommended,https://rawg.io/games/daxter,
 Planet Zoo,Wishlist,PC,,https://rawg.io/games/planet-zoo,
 Resident Evil 3,Wishlist,,,https://rawg.io/games/resident-evil-3,
 Age of Empires II: Definitive Edition,Wishlist,PC,,https://rawg.io/games/age-of-empires-2-definitive-edition,
-Pokémon Ultra Sun/Ultra Moon,Currently playing,Nintendo 3DS,,https://rawg.io/games/pokemon-ultra-sun,58
-Resident Evil 2,Completed,PC,exceptional,https://rawg.io/games/resident-evil-2-2019,
-Resident Evil Revelations,Completed,Nintendo 3DS,,https://rawg.io/games/resident-evil-revelations-biohazard-revelations,14
-Professor Layton and the Last Specter,Completed,Nintendo DS,recommended,https://rawg.io/games/professor-layton-and-the-last-specter,
-Professor Layton and the Miracle Mask,Played,Nintendo 3DS,,https://rawg.io/games/professor-layton-and-the-miracle-mask,
+Professor Layton and the Miracle Mask,Played,Nintendo 3DS,7,https://rawg.io/games/professor-layton-and-the-miracle-mask,
 Hyper Fighters,Not played,PC,,https://rawg.io/games/hyper-fighters,
 Cognition: An Erica Reed Thriller,Not played,PC,,https://rawg.io/games/cognition-an-erica-reed-thriller,
 Spec Ops: The Line,Not played,PC,,https://rawg.io/games/spec-ops-the-line,
 Warlock - Master of the Arcane,Played,PC,,https://rawg.io/games/warlock-master-of-the-arcane,
 Commando Jack,Not played,PC,,https://rawg.io/games/commando-jack,
 EVE Online,Not played,PC,,https://rawg.io/games/eve-online,
-League of Legends,Played,PC,skip,https://rawg.io/games/league-of-legends,
-Minecraft,Played,PC,recommended,https://rawg.io/games/minecraft,
 Amnesia: The Dark Descent,Not played,PC,,https://rawg.io/games/amnesia-the-dark-descent,
-Sports Champions,Played,PlayStation 3,meh,https://rawg.io/games/sports-champions,
 Outland,Not played,PC,,https://rawg.io/games/outland,
 Brothers in Arms: Hell's Highway,Not played,Xbox 360,,https://rawg.io/games/brothers-in-arms-hh,
 Saints Row 2,Not played,PC,,https://rawg.io/games/saints-row-2,
@@ -162,7 +174,7 @@ Cubetractor,Not played,PC,,https://rawg.io/games/cubetractor,
 Chronology,Not played,PC,,https://rawg.io/games/chronology,
 Half-Life,Not played,PC,,https://rawg.io/games/half-life,
 Litil Divil,Played,PC,,https://rawg.io/games/litil-divil,
-Cyberia,Played,PC,recommended,https://rawg.io/games/cyberia,
+Cyberia,Played,PC,,https://rawg.io/games/cyberia,
 The Lord of the Rings Online,Played,PC,,https://rawg.io/games/the-lord-of-the-rings-online,
 Dungeons & Dragons Online,Played,PC,,https://rawg.io/games/dungeons-dragons-online,
 Yelaxot,Not played,PC,,https://rawg.io/games/yelaxot,
@@ -176,7 +188,6 @@ Chivalry: Medieval Warfare,Not played,PC,,https://rawg.io/games/chivalry-medieva
 Bridge Constructor Playground,Not played,PC,,https://rawg.io/games/bridge-constructor-playground,
 Epigenesis,Not played,PC,,https://rawg.io/games/epigenesis,
 Knights and Merchants,Not played,PC,,https://rawg.io/games/knights-and-merchants,
-Tomb Raider (2013),Completed,PlayStation 4,recommended,https://rawg.io/games/tomb-raider,
 POSTAL,Not played,PC,,https://rawg.io/games/postal,
 Draw Slasher,Not played,PC,,https://rawg.io/games/draw-slasher,
 The 39 Steps,Not played,PC,,https://rawg.io/games/the-39-steps,
@@ -193,10 +204,8 @@ Dead Bits,Played,PC,,https://rawg.io/games/dead-bits,
 LEGO Star Wars - The Complete Saga,Played,PC,,https://rawg.io/games/lego-star-wars-tcs,
 Call of Duty: World at War,Not played,Xbox 360,,https://rawg.io/games/call-of-duty-world-at-war,
 Super Crate Box,Played,PC,,https://rawg.io/games/super-crate-box,
-Hollow Knight,Completed,Nintendo Switch,,https://rawg.io/games/hollow-knight,
 NieR:Automata,Played,PC,,https://rawg.io/games/nierautomata,
 Cyberpunk 2077,Wishlist,,,https://rawg.io/games/cyberpunk-2077,
-LittleBigPlanet 2,Completed,PlayStation 3,exceptional,https://rawg.io/games/littlebigplanet-2,
 KnightShift,Played,PC,,https://rawg.io/games/knightshift,
 Septerra Core,Played,PC,,https://rawg.io/games/septerra-core,
 Nosferatu: The Wrath of Malachi,Not played,PC,,https://rawg.io/games/nosferatu-the-wrath-of-malachi,
@@ -207,9 +216,8 @@ Overcast - Walden and the Werewolf,Not played,PC,,https://rawg.io/games/overcast
 Age of Wonders III,Not played,PC,,https://rawg.io/games/age-of-wonders-iii,
 Dungeons 2,Not played,PC,,https://rawg.io/games/dungeons-2,
 Dwarfs!?,Played,PC,,https://rawg.io/games/dwarfs,
-Dwarf Fortress,Played,PC,,https://rawg.io/games/dwarf-fortress,
-NetHack,Played,PC,,https://rawg.io/games/nethack,
-DISGAEA 5: ALLIANCE OF VENGEANCE,Currently playing,Nintendo Switch,,https://rawg.io/games/disgaea-5-alliance-of-vengeance,5
+Dwarf Fortress,Played,PC,7,https://rawg.io/games/dwarf-fortress,
+NetHack,Played,PC,7,https://rawg.io/games/nethack,
 The Culling Of The Cows,Not played,PC,,https://rawg.io/games/the-culling-of-the-cows,
 Brawlhalla,Played,PC,,https://rawg.io/games/brawlhalla,
 SUPER DISTRO,Not played,PC,,https://rawg.io/games/super-distro,
@@ -220,8 +228,8 @@ Memories of a Vagabond,Not played,PC,,https://rawg.io/games/memories-of-a-vagabo
 Aura Kingdom,Played,PC,,https://rawg.io/games/aura-kingdom,
 Space Hack,Played,PC,,https://rawg.io/games/space-hack,
 Dungeon Defenders II,Not played,PC,,https://rawg.io/games/dungeon-defenders-ii,
-NARUTO STORM R,Played,PC,meh,https://rawg.io/games/naruto-storm-r,
-Black Desert Online,Played,PC,meh,https://rawg.io/games/black-desert-online,
+NARUTO STORM R,Played,PC,,https://rawg.io/games/naruto-storm-r,
+Black Desert Online,Played,PC,,https://rawg.io/games/black-desert-online,
 I Have No Mouth and I Must Scream,Currently playing,PC,,https://rawg.io/games/i-have-no-mouth-and-i-must-scream-2,
 Resident Evil HD Remaster,Played,PC,,https://rawg.io/games/resident-evil-hd-remaster,
 Voxelized,Not played,PC,,https://rawg.io/games/voxelized,
@@ -240,8 +248,6 @@ TeraBlaster,Played,PC,,https://rawg.io/games/terablaster,
 RPG MO,Played,PC,,https://rawg.io/games/rpg-mo,
 Kingdom: Classic,Not played,PC,,https://rawg.io/games/kingdom-classic,
 Murderous Pursuits,Not played,PC,,https://rawg.io/games/murderous-pursuits,
-The Legend of Zelda: The Wind Waker,Played,GameCube,,https://rawg.io/games/the-legend-of-zelda-the-wind-waker,
-The Legend of Zelda: Breath of the Wild,Completed,Nintendo Switch,exceptional,https://rawg.io/games/the-legend-of-zelda-breath-of-the-wild,170
 Wurm Unlimited,Played,PC,,https://rawg.io/games/wurm-unlimited,
 Middle-earth: Shadow of War,Not played,PC,,https://rawg.io/games/middle-earth-shadow-of-war,
 Darksiders Warmastered Edition,Played,PC,,https://rawg.io/games/darksiders-warmastered-edition,
@@ -256,7 +262,6 @@ The Flame in the Flood,Played,PC,,https://rawg.io/games/the-flame-in-the-flood,
 CATS!,Not played,PC,,https://rawg.io/games/cats,
 Endorlight,Not played,PC,,https://rawg.io/games/endorlight,
 Bullet Life 2010,Not played,PC,,https://rawg.io/games/bullet-life-2010,
-Stardew Valley,Played,Nintendo Switch,,https://rawg.io/games/stardew-valley,30
 Path of Exile,Not played,PC,,https://rawg.io/games/path-of-exile,
 MagiCat,Not played,PC,,https://rawg.io/games/magicat,
 Tabletopia,Played,PC,,https://rawg.io/games/tabletopia,
@@ -267,12 +272,9 @@ Equilinox,Played,PC,,https://rawg.io/games/equilinox,
 Heaven Forest - VR MMO,Not played,PC,,https://rawg.io/games/heaven-forest-vr-mmo,
 Resident Evil 7 / Biohazard 7 Teaser: Beginning Hour,Played,PC,,https://rawg.io/games/resident-evil-7-biohazard-7-teaser-beginning-hour,
 Heavy Metal Machines,Not played,PC,,https://rawg.io/games/heavy-metal-machines,
-VRChat,Played,PC,,https://rawg.io/games/vrchat,3
 McOsu,Played,PC,,https://rawg.io/games/mcosu,
-Pokémon HeartGold/SoulSilver,Completed,Nintendo DS,exceptional,https://rawg.io/games/pokemon-heartgold-version,
 Pokémon FireRed/LeafGreen,Played,Game Boy Advance,,https://rawg.io/games/pokemon-firered,
-Pokémon X/Y,Completed,Nintendo 3DS,recommended,https://rawg.io/games/pokemon-y,152
-Bloodborne,Played,PlayStation 4,recommended,https://rawg.io/games/bloodborne,
+Bloodborne,Played,PlayStation 4,,https://rawg.io/games/bloodborne,
 HITMAN,Played,PC,,https://rawg.io/games/hitman,
 Mirage: Arcane Warfare,Played,PC,,https://rawg.io/games/mirage-arcane-warfare,
 This Book Is A Dungeon,Played,PC,,https://rawg.io/games/this-book-is-a-dungeon,
@@ -291,15 +293,12 @@ Minion Masters,Not played,PC,,https://rawg.io/games/minion-masters,
 Magicite,Played,PC,,https://rawg.io/games/magicite,
 Steel & Steam: Episode 1,Not played,PC,,https://rawg.io/games/steel-steam-episode-1,
 Royal Quest,Not played,PC,,https://rawg.io/games/royal-quest,
-The Elder Scrolls Online: Tamriel Unlimited,Played,PC,,https://rawg.io/games/the-elder-scrolls-online-tamriel-unlimited,
-Noita,Currently playing,PC,,https://rawg.io/games/noita,
 Dreams,Wishlist,PlayStation 4,,https://rawg.io/games/dreams,
 Worlds of Ultima: The Savage Empire,Not played,PC,,https://rawg.io/games/worlds-of-ultima-the-savage-empire,
 Team Fortress Classic,Not played,PC,,https://rawg.io/games/team-fortress-classic,
 The Walking Dead: Season 1,Not played,PC,,https://rawg.io/games/the-walking-dead,
 Unrailed!,Played,PC,,https://rawg.io/games/unrailed,
 Fallout: A Post Nuclear Role Playing Game,Played,PC,,https://rawg.io/games/fallout-a-post-nuclear-role-playing-game,
-The Elder Scrolls III: Morrowind,Played,PC,,https://rawg.io/games/morrowind,17.4
 Half-Life 2: Episode Two,Not played,PC,,https://rawg.io/games/half-life-2-episode-two,
 Moonbase Alpha,Played,PC,,https://rawg.io/games/moonbase-alpha,
 Metro 2033,Not played,PC,,https://rawg.io/games/metro-2033,
@@ -307,5 +306,4 @@ Two Worlds Epic Edition,Played,PC,,https://rawg.io/games/two-worlds-epic-edition
 Brutal Legend,Not played,PC,,https://rawg.io/games/brutal-legend,
 Assassin's Creed II,Not played,PC,,https://rawg.io/games/assassins-creed-ii,
 Gothic II: Gold Edition,Not played,PC,,https://rawg.io/games/gothic-ii-gold-edition,
-Tropico 4,Played,PC,,https://rawg.io/games/tropico-4,
-Super Smash Bros.,Played,Nintendo 3DS,"","",114
+Pokémon Black/White,Completed,Nintendo DS,"","",""
