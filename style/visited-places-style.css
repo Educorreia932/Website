@@ -1,0 +1,44 @@
+.water {
+	fill: rgb(0, 43, 184);
+}
+
+.land {
+	fill: rgb(248, 248, 248);
+	stroke: rgb(116, 116, 116);
+	stroke-width: 0.7px;
+}
+
+.land:hover {
+	fill: rgb(126, 126, 126);
+	stroke-width: 1px;
+}
+
+.focused {
+	fill: rgb(126, 126, 126);
+}
+
+.highlight {
+	fill: rgb(255, 0, 0);
+}
+
+select {
+	position: absolute;
+	top: 20px;
+	left: 580px;
+	border: solid #ccc 1px;
+	padding: 3px;
+	box-shadow: inset 1px 1px 2px #ddd8dc;
+}
+
+.countryTooltip {
+	position: absolute;
+	display: none;
+	pointer-events: none;
+	background: #fff;
+	padding: 5px;
+	text-align: left;
+	border: solid #ccc 1px;
+	color: #666;
+	font-size: 14px;
+	font-family: sans-serif;
+}
