@@ -42,7 +42,7 @@ function makeHttpObject() {
 // Reading data in utf-8 format. 
 // Instead of 'utf-8' it can be other character set also like 'ascii' 
 function generateList() {
-    var url = "https://raw.githubusercontent.com/Educorreia932/Educorreia932.github.io/master/scripts/games.csv";
+    var url = "https://gist.githubusercontent.com/Educorreia932/11dc514466a5756ba04a3c2d909f3426/raw/400045a5df8132250d5c4d49591e082f77d645cb/games.csv";
 
     var request = makeHttpObject();
     
