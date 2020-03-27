@@ -54,13 +54,14 @@ function ready(error, world, countryData, data) {
         .attr("d", path)
         .each(function(d, i) {
             try {
-                country_name = countryById[d.id];
+                country_name = countryById[d.id].split(' ').join('_');
             }
 
             catch(err) {
                 country_name = "undefined"
             }
             
+            console.log(country_name)
             d3.select(this).attr("id", country_name);
         })
 
@@ -85,7 +86,7 @@ function ready(error, world, countryData, data) {
 
     // Highlight visited countries
     d3.map(data, function(d) {
-        d3.selectAll("#" + d.country).attr("class", "highlight");
+        d3.selectAll("#" + d.country.split(' ').join('_')).attr("class", "highlight");
     });
 
     // Drag event
