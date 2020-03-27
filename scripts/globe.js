@@ -61,13 +61,12 @@ function ready(error, world, countryData, data) {
                 country_name = "undefined"
             }
             
-            console.log(country_name)
             d3.select(this).attr("id", country_name);
         })
 
         //Mouse events
         .on("mouseover", function (d) {
-            countryTooltip.text(countryById[d.id])
+            countryTooltip.text(countryById[d.id.replace(/^0+/, '')])
                 .style("left", (d3.event.pageX + 7) + "px")
                 .style("top", (d3.event.pageY - 15) + "px")
                 .style("display", "block")
@@ -103,7 +102,7 @@ function ready(error, world, countryData, data) {
     d3.select("select").on("change", function () {
         var rotate = projection.rotate(),
             focusedCountry = country(countries, this),
-            p = d3.geo.centroid(focusedCountry);
+            p = d3.geoCentroid(focusedCountry);
 
         svg.selectAll(".focused").classed("focused", focused = false);
 
@@ -116,15 +115,20 @@ function ready(error, world, countryData, data) {
                     return function (t) {
                         projection.rotate(r(t));
                         svg.selectAll("path").attr("d", path)
-                            .classed("focused", function (d, i) { return d.id == focusedCountry.id ? focused = d : false; });
+                            .classed("focused", function (d) { 
+                                return d.id == focusedCountry.id ? focused = d : false; 
+                            });
                     };
                 })
         })();
     });
 
     function country(cnt, sel) {
+        console.log(cnt)
         for (var i = 0, l = cnt.length; i < l; i++)
-            if (cnt[i].id == sel.value) 
+            if (cnt[i].id.replace(/^0+/, '') == sel.value) 
                 return cnt[i];
     };
+
+
 };

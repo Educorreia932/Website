@@ -19,6 +19,8 @@
 
 .highlight {
 	fill: rgb(255, 0, 0);
+	stroke: rgb(48, 48, 48);
+	stroke-width: 0.5px;
 }
 
 select {
