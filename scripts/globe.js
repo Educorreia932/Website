@@ -129,6 +129,4 @@ function ready(error, world, countryData, data) {
             if (cnt[i].id.replace(/^0+/, '') == sel.value) 
                 return cnt[i];
     };
-
-
 };
