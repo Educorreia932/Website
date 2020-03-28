@@ -20,21 +20,21 @@ function processData(allText) {
 function makeHttpObject() {
     try {
         return new XMLHttpRequest();
-    } 
-    
-    catch (error) {}
-    
+    }
+
+    catch (error) { }
+
     try {
         return new ActiveXObject("Msxml2.XMLHTTP");
-    } 
-    
-    catch (error) {}
-    
+    }
+
+    catch (error) { }
+
     try {
         return new ActiveXObject("Microsoft.XMLHTTP");
-    } 
-    
-    catch (error) {}
+    }
+
+    catch (error) { }
 
     throw new Error("Could not create HTTP request object.");
 }
@@ -45,14 +45,14 @@ function generateList() {
     var url = "https://gist.githubusercontent.com/Educorreia932/11dc514466a5756ba04a3c2d909f3426/raw/400045a5df8132250d5c4d49591e082f77d645cb/games.csv";
 
     var request = makeHttpObject();
-    
+
     request.open("GET", url, true);
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState == 4) {
             var data = processData(request.responseText);
             var table = document.getElementById("games");
-            
+
             // Add games to table
             data.forEach(element => {
                 if (element[1] == "Wishlist" || element[1] == "Not played")
@@ -83,10 +83,10 @@ function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("games");
     switching = true;
-    
+
     //Set the sorting direction to ascending:
     dir = "asc";
-    
+
     /*Make a loop that will continue until no switching has been done:*/
     while (switching) {
         //start by saying: no switching is done:
@@ -110,8 +110,8 @@ function sortTable(n) {
                     shouldSwitch = true;
                     break;
                 }
-            } 
-            
+            }
+
             else if (dir == "desc") {
                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                     //if so, mark as a switch and break the loop:
@@ -127,14 +127,12 @@ function sortTable(n) {
             switching = true;
             //Each time a switch is done, increase this count by 1:
             switchcount++;
-        } 
-        
-        else {
-            /*If no switching has been done AND the direction is "asc", set the direction to "desc" and run the while loop again.*/
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
+        }
+
+        /* If no switching has been done AND the direction is "asc", set the direction to "desc" and run the while loop again.*/
+        else if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
         }
     }
 }
