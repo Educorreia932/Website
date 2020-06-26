@@ -1,3 +1,35 @@
 
-<h1>Test</h1>
-<script src="1001.js" ></script>
+<button onclick="changeASCII()">➤</button>
+
+<script type="text/javascript">
+    var gifs = [
+        "1001.js",
+        "1015.js",
+        "1017.js",
+        "1024.js",
+        "1060.js",
+        "1095.js"
+    ]
+
+    var current = 0;
+
+    function changeASCII() {
+        if (current + 1 < gifs.length)
+            current++;
+        
+            var gif = gifs[current];
+
+        var s = document.createElement("script");
+        
+        s.type = "text/javascript";
+        s.src = "gif/" + gif;
+        s.innerHTML = null;
+        s.id = "ascii-art";
+
+        document.getElementById("ascii-display").appendChild(s);
+    }
+</script>
+
+<div id="ascii-display">
+    <script id="ascii-art" src="gif/1001.js" ></script>
+</div>
