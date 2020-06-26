@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Modeseven-L3n5";
+    src: url("Modeseven-L3n5.ttf");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color:  #232323;
+    color: whitesmoke;
+    font-family: "Modeseven-L3n5";
+    word-wrap: break-word;
+    font-size: large;
+}
+
+#ascii-change {
+    text-align: center;
+}
+
+#fscroller {
+    font-size: small;
+    position: relative;
+    left: 60%;
+    width: 50%;
+}
+
+#footer {
+    text-align: center;
+}
+
+#progress {
+	background: #333;
+	border-radius: 13px;
+	height: 20px;
+	width: 80%;
+	padding: 3px;
+	position: relative;
+	margin: auto;
+}

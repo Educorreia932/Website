@@ -1,47 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Educorreia932's Homepage</title>
+        <link rel="stylesheet" type="text/css" href="style/new.css">
+        <script type="text/javascript" src="scripts/progressbar.js"></script>
+    </head>
+    
+    <body>
+        <div>
+            <p>Introduction</p>
+            <p>About Me</p>
+            <p>Projects</p>
+        </div>
 
-<button onclick="changeASCII('left')">⮜</button>
-<button onclick="changeASCII('right')">⮞</button>
+        <div id="course-countdown">
+            <!-- Display the countdown timer in an element -->
+            <p><b>FEUP - MIEIC</b><br>Time to end course:</p>
+            <p id="countdown"></p>
+            <script src="scripts/countdown.js"></script>
 
-<script type="text/javascript">
-    var ascii = [
-        "1001.js",
-        "1015.js",
-        "1017.js",
-        "1024.js",
-        "1060.js",
-        "1095.js"
-    ]
+            <!-- Progress bar -->
+            <div id="progress">
+                <div id="after">
+                    <div id="trainer"></div>
+                </div>
+            </div>
+        </div>
 
-    var current = 0;
+        
 
-    function changeASCII(direction) {
-        var changed = false;
+        <script type="text/javascript" src="scripts/ascii.js"></script>
+    
+        <div id="ascii-box" >
+            <div id="ascii-display">
+                <script id="ascii-art" src="gif/1015.js" ></script>
 
-        if (direction == "left" && current - 1 >= 0) {
-            current--;
-            changed = true;
-        }
+                <div id="ascii-change">
+                    <button  onclick="changeASCII()">Click me (人ゝω・）</button>
 
-        else if (direction == "right" && current + 1 < ascii.length) {
-            current++;
-            changed = true;
-        }
+                </div>
+            </div>
+        </div>
 
-        if (changed) {
-            var gif = ascii[current];
-            var s = document.createElement("script");
-            
-            s.type = "text/javascript";
-            s.src = "gif/" + gif;
-            s.innerHTML = null;
-            s.id = "ascii-art";
+        <div id="footer">
+            <p>&copy; 2020 Eduardo Correia</p>
+        </div>
+    </body>
+</html>
 
-            document.getElementById("ascii-art").remove();
-            document.getElementById("ascii-display").appendChild(s);
-        }
-    }
-</script>
-
-<div id="ascii-display">
-    <script id="ascii-art" src="gif/1001.js" ></script>
-</div>
