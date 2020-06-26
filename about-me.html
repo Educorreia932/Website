@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About Me</title>
-        <link rel="stylesheet" type="text/css" href="style/bio-style.css">
+        <title>Educorreia932's Homepage</title>
+        <link rel="stylesheet" type="text/css" href="style/new.css">
+        <script type="text/javascript" src="scripts/progressbar.js"></script>
     </head>
-
+    
     <body>
-        <h2>About Me</h2>
-        <p>Describing myself is just so weird and I just feel like I can't do it properly, but I will try nevertheless.</br>
-           That being, my real name is Eduardo, I live in a quite small town (<a href="https://www.google.com/maps/place/Trofa/" target="_blank" style="text-decoration:none">Trofa, Porto</a>) in my country, which is Portugal.</br>
-           My main hobbies are watch <i>Youtube/Netflix</i> (sometimes television too), browse <i>reddit</i>, play videogames, tabletop games and roleplaying games (mainly Dungeons & Dragons), occasionally draw, do image editing or code (most of the time in C++, Python, Java or HTML/CSS).</br>
-           Furthermore, I'm currently on the second year of a "Computing Engineering" course in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank" style="text-decoration:none">FEUP</a> (Faculty of Engineering of University of Porto).</br>
-        </p>
-        
+        <!-- Header -->
+        <div class="header">
+            <p class="tab" onclick="location.href='index.html'">Introduction</p>
+            <p class="tab" onclick="location.href='about-me.html'">About Me</p>
+            <p class="tab">Projects</p>
+            <p class="tab">Miscellanous</p>
+        </div>
+
+        <script type="text/javascript" src="scripts/ascii.js"></script>
+    
         <div style="clear: right;">
             <h3><a href="visited-places.html">Visited countries</a> (in order) 🌍</h3>
             <ul>
@@ -51,9 +55,10 @@
             <h3>Favorite music artists 🎸</h3>
             <ul>
                 <li>Jamiroquai</li> 
+                <li>Ornatos Violeta</li>
                 <li>Red Hot Chili Peppers</li>
                 <li>Capitão Fausto</li>
-                <li>Ornatos Violeta</li>
+                <li>TOOL</li>
                 <li>Jack White</li>
                 <li>Modest Mouse</li>
                 <li>Foo Fighters</li>
@@ -75,10 +80,23 @@
                 <li>Studio Ghibli Movies</li>
             </ul>
 
+                    
+        </div>
+
+        <div id="ascii-box" >
+            <div id="ascii-display">
+                <script id="ascii-art" src="gif/1017.js" ></script>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <p>&copy; 2020 Eduardo Correia</p>
             <p id="lastModified" ></p>
             <script>
                 document.getElementById("lastModified").innerHTML = "<b>Last Modified: </b>" + document.lastModified 
-            </script>            
+            </script>    
         </div>
     </body>
 </html>
+

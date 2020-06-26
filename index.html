@@ -1,88 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Educorreia932's Page</title>
-		<link rel="stylesheet" type="text/css" href="style/index-style.css">
-		<script type="text/javascript" src="scripts/progressbar.js"></script>
-	
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162048285-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+    <head>
+        <title>Educorreia932's Homepage</title>
+        <link rel="stylesheet" type="text/css" href="style/new.css">
+        <script type="text/javascript" src="scripts/progressbar.js"></script>
+    </head>
+    
+    <body>
+        <!-- Header -->
+        <div class="header">
+            <p class="tab" onclick="location.href='index.html'">Introduction</p>
+            <p class="tab" onclick="location.href='about-me.html'">About Me</p>
+            <p class="tab">Projects</p>
+            <p class="tab">Miscellanous</p>
+        </div>
 
-			gtag('config', 'UA-162048285-1');
-		</script>
-	</head>
+        <p>
+            Describing myself is just so weird and I just feel like I can't do it properly, but I will try nevertheless.</br>
+            That being, my real name is Eduardo, I live in a quite small town in my country, which is Portugal.</br>
+            My main hobbies are to watch <i>Youtube/Netflix</i> (sometimes television too), browse <i>reddit</i>, play videogames, tabletop games and roleplaying games (mainly Dungeons & Dragons), occasionally draw, do image editing or code (most of the time in C++, Python, Java or HTML/CSS).</br>
+            Furthermore, I'm currently on the second year of a "Computing Engineering" course in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank" style="text-decoration:none">FEUP</a> (Faculty of Engineering of University of Porto).</br>
+        </p>
 
-	<body onload="fill()" scroll="no" style="overflow: hidden">
-		<div class="flip-box">
-			<div class="flip-box-inner">
-				<!-- Front side -->
-				<div class="flip-box-front">
-					<p id="topleft"><b>Educorreia932</b><br>Card</p>
+        <!-- Course Countdown -->
+        <div id="course-countdown">
+            <!-- Display the countdown timer in an element -->
+            <p>Time to end course ⏲</p>
 
-					<div class="avatar">
-						<img src="img/Avatar.png" alt="Avatar" width=50%>
-						<p>Avatar</p>
-					</div>
+             <!-- Progress bar -->
+             <div id="progress">
+                <div id="after"></div>
+            </div>
 
-					<p>Known programming languages:</p>
-					
-					<div class="grid">
-						<img src="img/Programming Languages/Assembly.png" alt="Assembly">
-						<img src="img/Programming Languages/C.png" alt="C">
-						<img src="img/Programming Languages/C++.png" alt="C++">
-						<img src="img/Programming Languages/Java.png" alt="Java">
-						<img src="img/Programming Languages/Javascript.png" alt="Javascript">
-						<img src="img/Programming Languages/Python.png" alt="Python">
-					</div>
+            <script src="scripts/countdown.js"></script>
 
-					<!-- Display the countdown timer in an element -->
-					
-					<p><b>FEUP - MIEIC</b><br>Time to end course:</p>
-					<p id="countdown"></p>
-					<script src="scripts/countdown.js"></script>
+            <p id="countdown"></p>
+        </div>
 
-					<!-- Progress bar -->
-					<div id="progress">
-						<div id="after">
-							<div id="trainer"></div>
-						</div>
-					</div>
+        <script type="text/javascript" src="scripts/ascii.js"></script>
+    
+        <!-- ASCII Animation -->
+        <div id="ascii-display">
+            <script id="ascii-art" src="gif/1015.js" ></script>
+        </div>
 
-					<!-- Do an horizontal flip when you click the flip box container -->
-					<script>
-						function rotate(degrees) {
-							document.getElementsByClassName("flip-box-inner").item(0).style.transform = "rotateY("+ String(degrees) + "deg)";
-						}
-					</script>
-
-					<button onclick="rotate(180)">
-						<p>Back side</p>
-					</button>
-				</div>
-
-				<!-- Back side -->
-				<div class="flip-box-back">
-					<h2>Back Side</h2>
-					<a href="bio.html">About Me</a><br>
-					<a href="stone-of-golorr.html">Stone of Golorr Properties</a><br>
-					<!-- <a href="">Projects</a><br> -->
-					<a href="list-of-games.html">List of Games</a>
-
-					<ul class="social-icons">
-					    <li><a href="https://www.facebook.com/eduardo.costacorreia"><img src="img/Social Media Icons/Facebook.svg" /></a></li>
-					    <li><a href="https://www.instagram.com/educorreia932/"><img src="img/Social Media Icons/Instagram.svg" /></a></li>
-					    <li><a href="https://steamcommunity.com/id/Skelozard/"><img src="img/Social Media Icons/Steam.svg" /></a></li>
-					</ul>
-
-					<button onclick="rotate(0)">
-						<p>Front side</p>
-					</button>
-				</div>
-			</div>
-		</div>
-	</body>
+        <!-- Footer -->
+        <div id="footer">
+            <p>&copy; 2020 Eduardo Correia</p>
+        </div>
+    </body>
 </html>
+
