@@ -1,5 +1,11 @@
-# Educorreia932.github.io
+# Educorreia932's Homepage
 
-My own personal site using *GitHub Pages* to host it
+The source files for my website, being hosted using Github Pages.
+
+## Preview
 
 ![Preview](preview.png)
+
+## Old Version
+
+![Old Preview](old_preview.png)

@@ -40,4 +40,3 @@ setTimeout("changecontent()",delay)
 }
 if (ie4||DOM2)
 document.write('<div id="fscroller"></div>')
-window.onload=changecontent
