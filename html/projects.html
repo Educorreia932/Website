@@ -2,15 +2,15 @@
 <html>
     <head>
         <title>Educorreia932's Homepage</title>
-        <link rel="stylesheet" type="text/css" href="style/new.css">
-        <link rel="icon" href="img/Avatar.png">
-        <script type="text/javascript" src="scripts/progressbar.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style/new.css">
+        <link rel="icon" href="../img/Avatar.png">
+        <script src="../scripts/kaomoji.js"></script>
     </head>
     
-    <body onload="changecontent(); display_kaomoji('writing')">
+    <body onload="changecontent(); display_kaomoji('cat')">
         <!-- Header -->
         <div class="header">
-            <p class="tab" onclick="location.href='index.html'">Introduction</p>
+            <p class="tab" onclick="location.href='introduction.html'">Introduction</p>
             <p class="tab" onclick="location.href='about-me.html'">About Me</p>
             <p class="tab" onclick="location.href='projects.html'">Projects</p>
             <p class="tab" onclick="location.href='miscellaneous.html'">Miscellaneous</p>
@@ -18,10 +18,10 @@
 
         <!-- ASCII Animation -->
         <div id="ascii-display" class="unselectable">
-            <script id="ascii-art" src="gif/1024.js" ></script>
+            <script id="ascii-art" src="../gif/1024.js" ></script>
         </div>
 
-        <h1>My own creations</h1>
+        <h1>My own creations <span id="kaomoji"></span></h1>
 
         <h2>Personal</h2>
         <p>Teacher Bot</p>
