@@ -21,7 +21,5 @@ function fill() {
 	var time1 = days_between(date1, date2);
 	var time2 = days_between(date1, today);
 
-	console.log( String((time2 / time1) * 100) + "%");
-
 	el.style.width = String((time2 / time1) * 100) + "%";
 }

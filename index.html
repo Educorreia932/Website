@@ -6,7 +6,7 @@
         <script type="text/javascript" src="scripts/progressbar.js"></script>
     </head>
     
-    <body>
+    <body onload="fill(); changecontent()">
         <!-- Header -->
         <div class="header">
             <p class="tab" onclick="location.href='index.html'">Introduction</p>
@@ -29,11 +29,15 @@
             
             <p>Furthermore, I'm currently on the second year of a "Computing Engineering" course in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank" style="text-decoration:none">FEUP</a> (Faculty of Engineering of University of Porto).</p>
         </div>
+
+        <div id="avatar">
+            <img  src="img/Avatar.png" width="400" height="400">
+        </div>
         
         <!-- Course Countdown -->
         <div id="course-countdown">
             <!-- Display the countdown timer in an element -->
-            <p>Time to end course ⏲</p>
+            <p style="text-align: center;">Time to end course ⏲</p>
 
              <!-- Progress bar -->
              <div id="progress">
@@ -42,16 +46,16 @@
 
             <script src="scripts/countdown.js"></script>
 
-            <p id="countdown"></p>
+            <p id="countdown" style="text-align: center;"></p>
         </div>
-
-        <script type="text/javascript" src="scripts/ascii.js"></script>
-    
-        
 
         <!-- Footer -->
         <div id="footer">
             <p>&copy; 2020 Eduardo Correia</p>
+            <p id="lastModified" ></p>
+            <script>
+                document.getElementById("lastModified").innerHTML = "<b>Last Modified: </b>" + document.lastModified 
+            </script>    
         </div>
     </body>
 </html>

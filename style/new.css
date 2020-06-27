@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color:  #232323;
+    background-color:  #242424;
     color: whitesmoke;
     font-family: "Modeseven-L3n5";
 	line-height: 1.3;
@@ -24,6 +24,7 @@ body {
 }
   
 /* Header */
+
 header {
 	position: relative;
 	z-index: 1;
@@ -69,6 +70,12 @@ header {
 
 #footer {
     text-align: center;
+}
+
+/* Avatar */
+
+#avatar {
+	text-align: center;
 }
 
 /* Progress Bar */
