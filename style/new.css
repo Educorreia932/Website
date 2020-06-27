@@ -3,6 +3,15 @@
     src: url("Modeseven-L3n5.ttf");
 }
 
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 html {
     overflow-x: hidden;
     font-size: large;
@@ -56,21 +65,71 @@ header {
 
 /* ASCII Animation */
 
-#ascii-change {
-    text-align: center;
-}
-
 #fscroller {
     font-size: small;
     position: relative;
 	line-height: 1.0;
 	float: right;
 	z-index: 10;
+	padding: 2%;
 }
 
-#footer {
-    text-align: center;
+#fscroller.active {
+	/* Chrome, Safari, Opera */
+	-webkit-animation: rainbow 5s infinite; 
+  
+	/* Internet Explorer */
+	-ms-animation: rainbow 5s infinite;
+	
+	/* Standar Syntax */
+	animation: rainbow 5s infinite; 
 }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow {
+	0%{color: orange;}	
+	10%{color: purple;}	
+	20%{color: red;}
+	30%{color: CadetBlue;}
+	40%{color: yellow;}
+	50%{color: coral;}
+	60%{color: green;}
+	70%{color: cyan;}
+	80%{color: DeepPink;}
+	90%{color: DodgerBlue;}
+	100%{color: orange;}
+  }
+  
+/* Internet Explorer */
+@-ms-keyframes rainbow {
+	0%{color: orange;}	
+	10%{color: purple;}	
+	20%{color: red;}
+	30%{color: CadetBlue;}
+	40%{color: yellow;}
+	50%{color: coral;}
+	60%{color: green;}
+	70%{color: cyan;}
+	80%{color: DeepPink;}
+	90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow {
+	0%{color: orange;}	
+	10%{color: purple;}	
+	20%{color: red;}
+	30%{color: CadetBlue;}
+	40%{color: yellow;}
+	50%{color: coral;}
+	60%{color: green;}
+	70%{color: cyan;}
+	80%{color: DeepPink;}
+	90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
 
 /* Avatar */
 
@@ -99,3 +158,10 @@ header {
 	border-radius: 9px;
 	position: relative;   
 }
+
+/* Footer */
+
+#footer {
+    text-align: center;
+}
+
