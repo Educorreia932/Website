@@ -3,16 +3,16 @@
     <head>
         <title>Educorreia932's Homepage</title>
         <link rel="stylesheet" type="text/css" href="style/new.css">
-        <script type="text/javascript" src="scripts/progressbar.js"></script>
+        <script src="scripts/kaomoji.js"></script>
     </head>
     
-    <body>
+    <body onload="changecontent(); display_kaomoji('writing')">
         <!-- Header -->
         <div class="header">
             <p class="tab" onclick="location.href='index.html'">Introduction</p>
             <p class="tab" onclick="location.href='about-me.html'">About Me</p>
             <p class="tab" onclick="location.href='projects.html'">Projects</p>
-            <p class="tab">Miscellaneous</p>
+            <p class="tab" onclick="location.href='miscellaneous.html'">Miscellaneous</p>
         </div>
 
         <!-- ASCII Animation -->
@@ -20,6 +20,8 @@
             <script id="ascii-art" src="gif/1017.js" ></script>
         </div>
     
+        <h2>A little more about me <a id="kaomoji"></a></h2>
+
         <div>
             <h3><a href="visited-places.html">Visited countries</a> (in order) 🌍</h3>
             <ul>
@@ -32,7 +34,7 @@
                 <li>Germany 🇩🇪</li>
                 <li>Poland 🇵🇱</li>
                 <li>Switzerland 🇨🇭</li>
-                <li>Czech Republic 🇨🇿</li>
+                <li>Czech Republic 🇨🇿</li> 
                 <li>Ireland 🇮🇪</li>
             </ul>
 
@@ -81,6 +83,15 @@
                 <li>Star Wars Saga</li>
                 <li>Marvel Cinematic Universe</li>
                 <li>Studio Ghibli Movies</li>
+            </ul>
+
+            <h3>Favorite Youtube channels 📹</h3>
+            <ul>
+                <li>Numberphile</li>
+                <li>Jovem Nerd</li>
+                <li>Tom Scott</li>
+                <li>SsethTzeentach</li>
+                <li>Dave Lee</li>
             </ul>
         </div>
 

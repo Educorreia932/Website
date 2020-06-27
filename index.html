@@ -4,15 +4,16 @@
         <title>Educorreia932's Homepage</title>
         <link rel="stylesheet" type="text/css" href="style/new.css">
         <script type="text/javascript" src="scripts/progressbar.js"></script>
+        <script src="scripts/kaomoji.js"></script>
     </head>
     
-    <body onload="fill(); changecontent()">
+    <body onload="fill(); changecontent(); display_kaomoji('greeting')">
         <!-- Header -->
         <div class="header">
             <p class="tab" onclick="location.href='index.html'">Introduction</p>
             <p class="tab" onclick="location.href='about-me.html'">About Me</p>
             <p class="tab" onclick="location.href='projects.html'">Projects</p>
-            <p class="tab">Miscellaneous</p>
+            <p class="tab" onclick="location.href='miscellaneous.html'">Miscellaneous</p>
         </div>
 
         <!-- ASCII Animation -->
@@ -21,11 +22,11 @@
         </div>
 
         <div>
-            <h2>Welcome to my webpage</h2>
+            <h2>Welcome to my webpage <a id="kaomoji"></a></h2>
 
-            <p>My name is Eduardo, I live in a quite small town in my country, which is Portugal.</p>
+            <p>My name is Eduardo and I'm <del>not</del> your typical portuguese nerd.</p>
             
-            <p>My main hobbies are to watch <i>Youtube/Netflix</i> (sometimes television too), browse <i>reddit</i>, play videogames, tabletop games and roleplaying games (mainly Dungeons & Dragons), occasionally draw, do image editing or code (most of the time in C++, Python, Java or HTML/CSS).</p>
+            <p>My main hobbies are to watch <i>Youtube</i> (sometimes television or Netflix too), browse <i>reddit</i>, play videogames, tabletop games and roleplaying games (mainly Dungeons & Dragons), occasionally draw, do image editing or code (most of the time in C++, Python, Java or HTML/CSS).</p>
             
             <p>Furthermore, I'm currently on the second year of a "Computing Engineering" course in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank" style="text-decoration:none">FEUP</a> (Faculty of Engineering of University of Porto).</p>
         </div>
