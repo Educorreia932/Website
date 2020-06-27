@@ -16,10 +16,12 @@ function days_between(date1, date2) {
 function fill() {
 	var el = document.getElementById("after");
 	var today = new Date();
-	var date1 = new Date(2018, 8, 9);
-	var date2 = new Date(2023, 21, 6);
+	var date1 = new Date(2018, 9, 8);
+	var date2 = new Date(2023, 6, 21);
 	var time1 = days_between(date1, date2);
 	var time2 = days_between(date1, today);
 
 	el.style.width = String((time2 / time1) * 100) + "%";
+	console.log(time1)
+	console.log(time2)
 }
