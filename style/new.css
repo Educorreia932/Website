@@ -74,7 +74,7 @@ header {
 	padding: 2%;
 }
 
-#fscroller.active {
+#fscroller:hover {
 	/* Chrome, Safari, Opera */
 	-webkit-animation: rainbow 5s infinite; 
   
