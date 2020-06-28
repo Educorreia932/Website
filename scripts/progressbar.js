@@ -22,6 +22,6 @@ function fill() {
 	var time2 = days_between(date1, today);
 
 	el.style.width = String((time2 / time1) * 100) + "%";
-	console.log(time1)
-	console.log(time2)
+
+	document.getElementById("progress_percentage").innerHTML = el.style.width;
 }
