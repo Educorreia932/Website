@@ -1,5 +1,12 @@
 /* Frame */
 
 iframe {
-    width: 50%;
+    width: 60%;
+    border-radius: 10px;
+    padding-left: 15px;
+    filter: blur(3px);
+}
+
+iframe:hover {
+    filter: blur(0px);
 }
