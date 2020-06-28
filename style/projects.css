@@ -9,13 +9,34 @@
 	color: inherit;
 }
 
+h2 {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 250%;
+}
+
+hr {
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+
+/* ASCII Animation */
+
+#fscroller {
+    float: none;
+    text-align: center;
+}
+
 /* Project Grid */
 
 .project-grid {
     display: grid;
-    grid-column-gap: 5px;
-    grid-row-gap: 10px;
-    width: 60%;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
 }
 
 .project-item {
@@ -28,11 +49,35 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
-    width: 90%;
-    height: 90%;
+    max-width: 90%;
 }
 
 .project-item > h2:hover {
     cursor: pointer;
     text-shadow: 2px 2px 5px gray;
+}
+
+.content {
+    display: "block";
+}
+
+.content > img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    max-width: 95%;
+}
+
+button {
+    font: inherit;
+    font-size: 150%;
+    background: none;
+    color: inherit; 
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    float: right;
+    position: relative;
+    right: 2%;
+    top: 2%;
 }
