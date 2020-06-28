@@ -1,5 +1,6 @@
+
 .water {
-	fill: rgb(0, 43, 184);
+	fill: #242424;
 }
 
 .land {
@@ -18,12 +19,17 @@
 }
 
 .highlight {
-	fill: rgb(255, 0, 0);
+	fill: #ff4000;
 	stroke: rgb(48, 48, 48);
 	stroke-width: 0.5px;
 }
 
+.highlight:hover{
+	fill: #d93300;
+}
+
 select {
+	visibility: hidden;
 	position: absolute;
 	top: 20px;
 	left: 580px;
