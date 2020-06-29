@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Beautiful Internet Collage</title>
+        <link rel="stylesheet" type="text/css" href="../style/new.css">
+        <link rel="stylesheet" type="text/css" href="../style/collage.css">
+        <link rel="icon" href="../img/Avatar.png">
+    </head>
+
+    <body>
+        <h1>A <del>Beautiful</del> Internet Collage</h1>
+
+        <p>This webpage is an collaborative experiment, much like <a href="https://www.reddit.com/r/place/" target="_blank">r/place</a>, where you submit an image to go along with the already existing ones to form a <del>beautiful</del> collage.</p>
+
+        <p>There are no restrictrions to the images you may submit... so far.</p>
+        
+        <h2>Instructions</h2>
+
+        <p>Enter a valid image URL, its X/Y coordinates, click on submit and then <b>boom</b> magic will happen.</p>
+
+        <form action="load_image.php" method="post">
+            <label for="fname">Image URL</label><br>
+            <input type="text" name="url"><br>
+            <label for="fname">X Coordinate</label><br>
+            <input type="number" name="x"><br>
+            <label for="fname">Y Coordinate</label><br>
+            <input type="number" name="y"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>WARNING: Potential <span style="color: red">NSFW</span> material below</h2>
+
+        <script>
+            var image;
+
+            var loadFile = function(event) {
+                image = document.getElementById("stamp");
+                image.src = URL.createObjectURL(event.target.files[0]);
+                image.alt = event.target.files[0].name;
+                document.getElementById("clickable").href += "&alt=" + image.alt;
+            }
+
+            document.addEventListener("mousemove", e => {
+                if (image != null) {
+                    document.getElementById("output").style.left = e.pageX - 10 + "px" ;
+                    document.getElementById("output").style.top = e.pageY - 10 + "px" ;
+                }
+            });
+        </script>
+
+        <hr>
+
+        <div id="canvas">
+            <!-- <img src="https://cdn.mos.cms.futurecdn.net/QjuZKXnkLQgsYsL98uhL9X-320-80.jpg"> -->
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,8 @@
+#canvas {
+    /* filter: blur(20px); */
+    padding: 1%;
+}
+
+#canvas:hover {
+    filter: blur(0px);
+}

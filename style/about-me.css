@@ -1,0 +1,13 @@
+/* Globe */
+
+#country-list {
+    padding-bottom: 2%;
+}
+
+#globe {
+    float: right;
+    position: relative;
+    right: 10%;
+}
+
+
