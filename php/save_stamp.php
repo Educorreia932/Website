@@ -45,7 +45,7 @@
 
     $stamp = $url . " " . $x . " " . $y . "\n";
 
-    file_put_contents("../data/stamps.txt", $stamp, FILE_APPEND);
+    // file_put_contents("../data/stamps.txt", $stamp, FILE_APPEND);
 
     goBack();
 ?>

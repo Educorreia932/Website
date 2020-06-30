@@ -1,3 +1,63 @@
+<?php session_start(); ?>
+
+<?php 
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+
+    $securimage = new Securimage(); 
+
+    if ($securimage->check($_POST['captcha_code']) == true) {
+        function goBack() {
+            header("Location: https://educorreia932.dev/html/collage.html");
+            die();
+        }
+    
+        $url = $_POST["url"];
+    
+        // Check if the link corresponds to an image
+    
+        $headers = get_headers($url, 1);
+        
+        if (strpos($headers['Content-Type'], 'image/') === false)
+            goBack();
+        
+        $x = $_POST["x"];
+        $y = $_POST["y"];
+    
+        // Invalid coordinates
+    
+        if ($x > 1000 || $y > 1000)
+            goBack();
+    
+        // See if image was already uploaded
+    
+        $matches = array();
+    
+        $handle = @fopen("../data/stamps.txt", "r");
+    
+        if ($handle) {
+            while (!feof($handle)) {
+                $buffer = fgets($handle);
+    
+                if (strpos($buffer, $url . " ") !== FALSE)
+                    $matches[] = $buffer;
+            }
+    
+            fclose($handle);
+        }
+    
+        if (sizeof($matches) != 0)
+            goBack();
+    
+        $stamp = $url . " " . $x . " " . $y . "\n";
+    
+        file_put_contents("../data/stamps.txt", $stamp, FILE_APPEND);
+    
+        goBack();
+
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +78,12 @@
 
         <p>Enter a valid image URL, its X/Y coordinates, click on submit and then <b>boom</b> magic will happen.</p>
 
-        <form action="../php/save_stamp.php" method="post">
+        <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
+
+        <form action="" method="post">
+            <input type="text" name="captcha_code" size="10" maxlength="6" value=""/>
+            <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br>
+            <br>
             <label for="fname">Image URL</label><br>
             <input type="text" name="url"><br>
             <label for="fname">X Coordinate</label><br>
@@ -28,9 +93,9 @@
             <input type="submit" value="Submit">
         </form>
 
-        <h2>WARNING: Potential <span style="color: red">NSFW</span> material below</h2>
+        <h2>WARNING: Potential <span style="color: red">NSFW</span> material below.</h2>
 
-        <script>
+        <!-- <script>
             var image;
 
             var loadFile = function(event) {
@@ -46,15 +111,15 @@
                     document.getElementById("output").style.top = e.pageY - 10 + "px" ;
                 }
             });
-        </script>
+        </script> -->
 
         <hr>
 
         <script src="../scripts/display-stamps.js"></script>
 
-        <div id="canvas">
-            <!-- <img src="https://cdn.mos.cms.futurecdn.net/QjuZKXnkLQgsYsL98uhL9X-320-80.jpg"> -->
-        </div>
+        <div id="canvas"></div>
     </body>
 </html>
+
+
 

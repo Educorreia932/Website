@@ -1,5 +1,4 @@
 https://cdn.mos.cms.futurecdn.net/QjuZKXnkLQgsYsL98uhL9X-320-80.jpg 50 50
-https://media.discordapp.net/attachments/615941696072450055/727158067090948106/arch.png 0 0
 https://cdn.discordapp.com/attachments/519841576655257610/713410227382255626/1587062322269.png 50 50
 https://i.ytimg.com/vi/U3si-cDgLf8/maxresdefault.jpg 200 10
 https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/800px-Pleiades_large.jpg 0 0
@@ -7,3 +6,10 @@ https://cdn.discordapp.com/attachments/519841576655257610/714639087398682634/154
 https://cdn.discordapp.com/attachments/519841576655257610/714638919576322068/1543006265344.png 50 
 https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg 600 0
 https://thecatapi.com/api/images/get?type=png 425 886
+https://25.media.tumblr.com/tumblr_luownsYXjf1r2nfj9o1_500.png 672 222
+https://i.imgur.com/X3YSgci.gif 0 500
+https://i.ytimg.com/vi/lMsp3ifpi-s/maxresdefault.jpg 700 700
+https://media.discordapp.net/attachments/615941696072450055/727158067090948106/arch.png 333 333
+https://upload.wikimedia.org/wikipedia/commons/7/70/Doge_meme.png 700 700
+https://media.discordapp.net/attachments/679277916768567303/727316155823554560/SPOILER_1593475776162.png 600 500
+https://theimaginativeconservative.org/wp-content/uploads/2015/05/6748f8ea516944e171a49983c7f5e696.jpg 300 400
