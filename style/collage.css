@@ -3,10 +3,6 @@
     padding: 1%;
 }
 
-#canvas:hover {
-    filter: blur(0px);
-}
-
 #canvas > img {
     position: absolute;
     max-width: 300px;

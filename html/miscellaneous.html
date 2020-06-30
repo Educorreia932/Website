@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="../style/miscellanous.css">
         <link rel="icon" href="../img/Avatar.png">
         <script src="../scripts/kaomoji.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     </head>
     
     <body onload="changecontent(); display_kaomoji('indifference')">
@@ -29,6 +30,20 @@
             Feel at home here.
         </p>
 
+        <!-- A Beautiful Internet Collage -->
+
+        <div class="frame">
+            <h2><a href="../php/collage.php">A <del>Beautiful</del> Internet Collage</a></h2>
+            <div id="collage"></div>
+            <script>
+                $("#collage").load("../php/collage.php #canvas");
+            </script>
+        </div>
+
+        <br>
+
+        <!-- Stone of Golorr -->
+
         <div class="frame">
             <h2><a href="./stone-of-golorr.html">Stone of Golorr Properties</a></h2>
             <p>
@@ -39,6 +54,8 @@
         </div>
 
         <br>
+
+        <!-- List of Games -->
 
         <div class="frame">
             <h2><a href="./list-of-games.html">List of Games Played</a></h2>
