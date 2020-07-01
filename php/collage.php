@@ -63,24 +63,6 @@
             }
         </script>
 
-        <!-- <script>
-            var image;
-
-            var loadFile = function(event) {
-                image = document.getElementById("stamp");
-                image.src = URL.createObjectURL(event.target.files[0]);
-                image.alt = event.target.files[0].name;
-                document.getElementById("clickable").href += "&alt=" + image.alt;
-            }
-
-            document.addEventListener("mousemove", e => {
-                if (image != null) {
-                    document.getElementById("output").style.left = e.pageX - 10 + "px" ;
-                    document.getElementById("output").style.top = e.pageY - 10 + "px" ;
-                }
-            });
-        </script> -->
-
         <!-- Footer -->
         <div id="footer">
             <p>&copy; 2020 Eduardo Correia</p>

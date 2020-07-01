@@ -5,6 +5,41 @@
     </head>
 
     <body>
-        <img src="https://cdn.mos.cms.futurecdn.net/QjuZKXnkLQgsYsL98uhL9X-320-80.jpg">
+        <style>
+            #stamp {
+                position: absolute;
+            }
+        </style>
+
+        <img id="stamp" onclick="placeStamp()">
+
+        <script>
+            var image = document.getElementById("stamp");
+
+            function getUrl() {
+                var url = prompt('Enter image URL');
+                
+                if (url) { // Do string and URL validation here and also for image type
+                    return url;
+                } 
+                
+                else {
+                    return getUrl();
+                }
+            }
+
+            image.src = getUrl();
+
+            var listener = function (event) {
+                document.getElementById("stamp").style.left = event.pageX - 20 + "px" ;
+                document.getElementById("stamp").style.top = event.pageY - 20 + "px" ;
+            };
+            
+            document.addEventListener("mousemove", listener);
+
+            function placeStamp() {
+                document.removeEventListener("mousemove", listener)
+            }
+        </script>
     </body>
 </html>
