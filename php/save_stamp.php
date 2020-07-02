@@ -1,16 +1,11 @@
 <?php
-    function saveStamp() {
-        $url = $_POST["url"];
-
+    function saveStamp($x, $y, $url) {
         // Check if the link corresponds to an image
 
         $headers = get_headers($url, 1);
         
         if (strpos($headers['Content-Type'], 'image/') === false)
             exit;
-        
-        $x = $_POST["x"];
-        $y = $_POST["y"];
 
         // Invalid coordinates
 

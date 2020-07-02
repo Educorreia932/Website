@@ -11,24 +11,24 @@
             }
         </style>
 
+        <form id="image">
+            <label for="myCheck">URL</label>
+            <input type="text" name="lname"><br><br>
+            <input type="button" onclick="loadStamp()" value="Submit">
+        </form>
+
         <img id="stamp" onclick="placeStamp()">
 
         <script>
-            var image = document.getElementById("stamp");
+            var url;
 
-            function getUrl() {
-                var url = prompt('Enter image URL');
-                
-                if (url) { // Do string and URL validation here and also for image type
-                    return url;
-                } 
-                
-                else {
-                    return getUrl();
-                }
+            function loadStamp() {
+                url = document.getElementById("image").submit();
+                console.log(url);
+                image.src = getUrl();
             }
 
-            image.src = getUrl();
+            var image = document.getElementById("stamp");
 
             var listener = function (event) {
                 document.getElementById("stamp").style.left = event.pageX - 20 + "px" ;

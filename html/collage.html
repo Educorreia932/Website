@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Beautiful Internet Collage</title>
+        <link rel="stylesheet" type="text/css" href="../style/new.css">
+        <link rel="stylesheet" type="text/css" href="../style/collage.css">
+        <link rel="icon" href="../img/Avatar.png">
+        <script type="text/javascript" src="../scripts/blur.js"></script>
+    </head>
+
+    <body>
+        <h1>A <del>Beautiful</del> Internet Collage</h1>
+
+        <p>This webpage is an collaborative experiment, much like <a href="https://www.reddit.com/r/place/" target="_blank">r/place</a>, where you submit an image to go along with the already existing ones to form a <del>beautiful</del> collage.</p>
+
+        <p>There are no restrictrions to the images you may submit... so far.</p>
+        
+        <h2>Instructions</h2>
+
+        <p>Enter a valid image URL, place it on the canvas, click on submit, fill the captcha and then <b>boom</b> magic will happen.</p>
+
+        <input type="text" id="url-input" name="url" size="40" placeholder="URL" value=""/><br>
+        <button type="button" onclick="loadStamp()">Submit</button>
+
+        <script>
+            var listener;
+
+            function loadStamp() {
+                var input = document.getElementById("url-input");
+                var url = input.value;
+                
+                // Clear input 
+                input.value = "";
+
+                // Check if image is valid 
+                // TODO: Change to a more robust verification
+                if (url.match(/\.(jpeg|jpg|gif|png)$/) != null) {
+                    var stamp = document.createElement("img");
+                    stamp.src = url;
+
+                    var canvas = document.getElementById("canvas");
+
+                    stamp.onclick = function() {
+                        var x = stamp.style.left;
+                        var y = stamp.style.top;
+                        var url = stamp.src;
+
+                        stamp.remove();
+
+                        const data = {
+                            x: x.slice(0, -2),
+                            y: y.slice(0, -2),
+                            url: url
+                        };
+
+                        const searchParams = new URLSearchParams(data).toString();
+
+                        window.open("../php/stamp_submit.php?" + searchParams, "_self");
+                    };
+
+                    canvas.appendChild(stamp);
+                   
+                    canvas.style.filter = "blur(0px)";
+
+                    var div = document.getElementById('canvas');
+                    
+                    div.addEventListener('mouseenter', function() {
+                        var el = document.getElementById("canvas");
+                        var rect = el.getBoundingClientRect();
+                        var top = rect.top + window.pageYOffset;
+                        var left = rect.left + window.pageXOffset;
+
+                        listener = function (event) {
+                            stamp.style.left = event.pageX -left + "px" ;
+                            stamp.style.top = event.pageY - top  + "px" ;
+                        };
+                        
+                        document.addEventListener("mousemove", listener);
+                    }, false);
+
+                    div.addEventListener('mouseleave', function() {
+                        document.removeEventListener("mousemove", listener);
+                    }, false);
+
+                    return;
+                }
+                    
+                else
+                    alert("Not a valid URL");
+            }
+        </script>
+
+        <h2>WARNING: Potential <span style="color: red">NSFW</span> material below.</h2>
+        <input type="checkbox" id="blurCheck" onclick="NSFWblur()">
+        <label for="blurCheck">I have no problems with that (remove blur).</label> 
+        
+        <!-- Footer -->
+        <div id="footer">
+            <p>&copy; 2020 Eduardo Correia</p>
+        </div>
+
+        <hr>
+
+        <script src="../scripts/display-stamps.js"></script>
+
+        <div id="canvas"></div>
+    </body>
+</html>
