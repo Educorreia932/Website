@@ -67,7 +67,7 @@ function generateList() {
                 var played_on = row.insertCell(2);
                 var hours_played = row.insertCell(3);
 
-                name.innerHTML = element[0] + '<img src="img/Games Covers/' + element[0] + '.png">';
+                name.innerHTML = element[0];
                 rating.innerHTML = element[3];
                 played_on.innerHTML = element[2];
                 hours_played.innerHTML = element[5] + "h";
