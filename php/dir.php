@@ -1,3 +1,5 @@
+<!-- List all html files of the blog directory -->
+
 var files = 
     <?php 
         $out = array();
@@ -9,5 +11,3 @@ var files =
         
         echo json_encode($out); 
     ?>;
-
-console.log(files);

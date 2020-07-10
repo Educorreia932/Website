@@ -1,0 +1,11 @@
+.illustration {
+    text-align: center;
+}
+
+.illustration > figcaption {
+    font-size: small;
+}
+
+.illustration > img {
+    border-radius: 10px;
+}

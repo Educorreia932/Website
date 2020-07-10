@@ -24,13 +24,17 @@ body {
 	line-height: 1.3;
 }
 
-:link {
+a:link {
 	color: #ff4000;
 	text-decoration: none;
 }
 
-:visited {
+a:visited {
 	color: #d93300;
+}
+
+a:hover {
+	color: #ff5e00;
 }
 
 hr {
