@@ -8,14 +8,14 @@ function readJSON(url) {
 		return JSON.parse(request.responseText);
 }
 
-const URL = "https://gist.githubusercontent.com/Educorreia932/ce7542c367fa4d00904de6dfef4a64ab/raw/542cdbd73ecc54035e744136486fd1817f048e35/ds3-data.json";
+const URL = "/data/ds3-data.json"
 
 var ds3_database = readJSON(URL);
 
 function add_items(category) {
 	var data = ds3_database[category];
-	var id = category.replace(" ", "-").toLowerCase();
-	var checklist = document.getElementById(id);
+	var id = category.split(" ").join("-").toLowerCase();
+   	var checklist = document.getElementById(id);
 
 	for (var i = 0; i < data.length; i++) {
 		var dd = document.createElement("dd");
@@ -30,7 +30,12 @@ function add_items(category) {
 }
 
 function load_data() {
+	add_items("Undead Bone Shards");
+	add_items("Estus Shards");
+	add_items("Infusions");
 	add_items("Sorceries");
 	add_items("Miracles");
 	add_items("Pyromancies");
+	add_items("Gestures");
+	add_items("Rings");
 }
