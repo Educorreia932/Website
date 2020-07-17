@@ -17,9 +17,10 @@ canvas.height = height;
 function editPrompt() {
     var password = prompt("Please enter the password");
 
-    if (password === "eusouodm")
-        canvas.style.opacity = "75%"
-
+    if (password === "eusouodm") {
+        canvas.style.opacity = "75%";
+        canvas.style.pointerEvents = "all";
+    }
 }
 
 loadCanvas();
