@@ -14,7 +14,15 @@ var height = image.height;
 canvas.width = width;
 canvas.height = height;
 
-fillCanvas();
+function editPrompt() {
+    var password = prompt("Please enter the password");
+
+    if (password === "eusouodm")
+        canvas.style.opacity = "75%"
+
+}
+
+loadCanvas();
 
 // Array of scratch "holes"
 var arcs = new Array();
