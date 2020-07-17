@@ -8,3 +8,7 @@
     visibility: hidden;
     pointer-events: none;
 }
+
+#save-button {
+    visibility: hidden;
+}

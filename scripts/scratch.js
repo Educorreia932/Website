@@ -14,12 +14,35 @@ var height = image.height;
 canvas.width = width;
 canvas.height = height;
 
+async function sha256(message) {
+    // encode as UTF-8
+    const msgBuffer = new TextEncoder('utf-8').encode(message);                    
+
+    // hash the message
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+    // convert ArrayBuffer to Array
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+    // convert bytes to hex string                  
+    const hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+
+    return hashHex;
+}
+
 function editPrompt() {
     var password = prompt("Please enter the password");
+    var hashed_password = "";
+    sha256(password).then(value => checkPassword(value));
+}
 
-    if (password === "eusouodm") {
+function checkPassword(value) {
+    const HASH = "cde0e753dc250f2c57e27a5815e9eaf3a64df85acf8a3311aab066ba7c90643c";
+
+    if (value == HASH) {
         canvas.style.opacity = "75%";
         canvas.style.pointerEvents = "all";
+        document.getElementById("save-button").style.visibility = "visible";
     }
 }
 
@@ -27,8 +50,6 @@ loadCanvas();
 
 // Array of scratch "holes"
 var arcs = new Array();
-
-image.style.visibility = "visible";
 
 //----------------------------------------------------------------------------
 
@@ -124,12 +145,16 @@ function saveCanvas() {
 }
 
 function loadCanvas() {
+    let map_image = document.getElementById("map");
+    map_image.style.visibility = "hidden";
+
     context.globalCompositeOperation = 'source-over';
     context.clearRect(0, 0, canvas.width, canvas.height);
     var image = new Image();
 
     image.onload = function() {
         context.drawImage(image, x, y);
+        map_image.style.visibility = "visible";
     };
 
     image.src = "/php/canvas.png";
