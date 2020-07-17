@@ -14,11 +14,10 @@ var height = image.height;
 canvas.width = width;
 canvas.height = height;
 
-// Fill rectangle
-context.beginPath();
-context.fillStyle = '#CCCCCC';
-context.rect(x, y, width, height);
-context.fill();
+fillCanvas();
+
+// Array of scratch "holes"
+var arcs = new Array();
 
 image.style.visibility = "visible";
 
@@ -31,6 +30,10 @@ function clearArc(x, y) {
     context.beginPath();
     context.arc(x, y, 13, 0, Math.PI * 2, false);
     context.fill();
+}
+
+function addArc(x, y) {
+    arcs.push([x, y]);
 }
 
 canvas.addEventListener('mousedown', function (event) {
@@ -100,3 +103,33 @@ function judgeVisible() {
 }
 
 document.addEventListener('DOMContentLoaded', judgeVisible, false);
+
+function saveCanvas() {
+    var data = document.getElementById("scratch").toDataURL();
+
+    $.post("/php/canvas.php", {
+        imageData: data
+    }, function(data) {
+        window.location = data;
+    });
+}
+
+function loadCanvas() {
+    context.globalCompositeOperation = 'source-over';
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    var image = new Image();
+
+    image.onload = function() {
+        context.drawImage(image, x, y);
+    };
+
+    image.src = "/php/canvas.png";
+}
+
+function fillCanvas() {
+    context.globalCompositeOperation = 'source-over';
+    context.beginPath();
+    context.fillStyle = '#CCCCCC';
+    context.rect(x, y, width, height);
+    context.fill();
+}
