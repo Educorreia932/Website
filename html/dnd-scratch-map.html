@@ -3,18 +3,19 @@
     <head>
         <title>Dungeons & Dragons - Scratch Map</title>
         <link rel="stylesheet" type="text/css" href="/style/dnd-scratch-map.css">
+        <link rel="icon" href="/img/Avatar.png">
         <script src="/scripts/scratch.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     </head>
 
     <body>
         <button onclick="drawPolygon()">Draw polygon</button><br>
+        <button onclick="loadRegions()">Load</button><br>
 
         <div id="scratch-map">
             <img id="map-image" src="https://i.imgur.com/c5MtqW2.png" width="1000"></img>
 
-            <svg width=1000 height=1000>
-                <polygon id="region1" class="region" points="200,10 250,190 160,210" onclick="hideRegion('region1')" >
-            </svg>
+            <svg width=1000 height=1000></svg>
         </div>
     </body>
 </html>
