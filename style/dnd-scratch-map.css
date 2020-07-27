@@ -1,0 +1,13 @@
+svg, #map-image {
+    position: absolute;
+}
+
+polygon {
+    fill: lime;
+    stroke: purple;
+    stroke-width: 1,
+}
+
+polygon:hover {
+    cursor: pointer;
+}

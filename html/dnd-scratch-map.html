@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dungeons & Dragons - Scratch Map</title>
+        <link rel="stylesheet" type="text/css" href="/style/dnd-scratch-map.css">
+        <script src="/scripts/scratch.js"></script>
+    </head>
+
+    <body>
+        <button onclick="drawPolygon()">Draw polygon</button><br>
+
+        <div id="scratch-map">
+            <img id="map-image" src="https://i.imgur.com/c5MtqW2.png" width="1000"></img>
+
+            <svg width=1000 height=1000>
+                <polygon id="region1" class="region" points="200,10 250,190 160,210" onclick="hideRegion('region1')" >
+            </svg>
+        </div>
+    </body>
+</html>
