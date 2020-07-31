@@ -5,40 +5,16 @@
         <title>Dark Souls III Completion Checklist</title>
         <link rel="stylesheet" type="text/css" href="/style/new.css">
         <link rel="icon" href="/img/Darksign.png">
-        <script type="text/javascript" src="/scripts/ds3-data.js"></script>
+        <script type="text/javascript" src="/scripts/ds3-completion.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     </head>
 
-    <body onload="load_data()">
-        <form>
-            <input type="submit" value="Save">
-        </form>
+    <body onload="loadData(), loadFile()">
+        <h1>Dark Souls III Completion Checklist</h1>
 
-        <script>
-            $("form").on("submit", function(event) {
-                event.preventDefault();
-                var checks = {};  
-
-                $('input[type=checkbox]').each(function () {
-                    if (this.checked) {
-                        let name = this.parentNode.innerText;
-                        let category = $(this).parent("dd").parent("dl").find("dt").text();
-
-                        if (checks[category] == null)
-                            checks[category] = [name];
-
-                        else
-                            checks[category].push(name);
-                    }
-                });
-
-                checks = JSON.stringify(checks);
-
-                $.post("/php/ds3_completion.php", {
-                    data: checks
-                });
-            });
-        </script>
+        <input type="file" id="input"><br>
+        <button onclick="saveFile()">Save</button>
+        <a id="container"></a>
 
         <dl id="undead-bone-shards">
             <dt><h3>Undead Bone Shards</h3></dt>
