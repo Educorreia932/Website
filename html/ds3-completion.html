@@ -17,7 +17,7 @@
         <script>
             $("form").on("submit", function(event) {
                 event.preventDefault();
-                var checks = {}; 
+                var checks = {};  
 
                 $('input[type=checkbox]').each(function () {
                     if (this.checked) {
@@ -32,7 +32,11 @@
                     }
                 });
 
-                console.log(checks);
+                checks = JSON.stringify(checks);
+
+                $.post("/php/ds3_completion.php", {
+                    data: checks
+                });
             });
         </script>
 

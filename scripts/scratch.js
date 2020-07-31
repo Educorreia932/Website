@@ -31,8 +31,8 @@ function createPolygon(points) {
 
     for (value of points) {
         let point = svg.createSVGPoint();
-        point.x = value[0];
-        point.y = value[1];
+        point.x = value[0] - svg.getBoundingClientRect().left;
+        point.y = value[1] - svg.getBoundingClientRect().top;
         polygon.points.appendItem(point);
         polygon.id = "region" + lastPolygonID;
         polygon.setAttribute("onclick",  "hideRegion('" + polygon.id + "')");
