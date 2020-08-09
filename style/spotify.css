@@ -1,0 +1,24 @@
+#login, #loggedin {
+    display: none;
+}
+
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+}
+
+.container {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.half {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+    padding: 1rem;
+}
