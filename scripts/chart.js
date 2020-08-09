@@ -65,10 +65,6 @@ function createChart(data) {
             }]
         },
         options: {
-            title: {
-                display: true,
-                text: 'Your favorite genres'
-            },
             legend: {
                 display: false
             }
@@ -80,9 +76,28 @@ function createChart(data) {
 function displayData(labels, data) {
     let list = document.getElementById("data");
 
-    for (let i = labels.length - 1; i > labels.length - 25; i--) {
+    for (let i = labels.length - 1; i > labels.length - 26; i--) {
         let entry = document.createElement("li");
         entry.appendChild(document.createTextNode(labels[i]));
+        list.appendChild(entry);
+    }
+}
+
+function displayPlaylists(data) {
+    fillList("playlists-list", data.items);
+}
+
+function fillList(id, data) {
+    let list = document.getElementById(id);
+    console.log(data)
+
+
+    for (let i = 0; i < data.length; i++) {
+        let entry = document.createElement("li");
+        let a = document.createElement("a");
+        a.innerHTML = data[i].name;
+        a.href = data[i].external_urls.spotify;
+        entry.appendChild(a);
         list.appendChild(entry);
     }
 }
