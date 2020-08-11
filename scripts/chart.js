@@ -89,8 +89,6 @@ function displayPlaylists(data) {
 
 function fillList(id, data) {
     let list = document.getElementById(id);
-    console.log(data)
-
 
     for (let i = 0; i < data.length; i++) {
         let entry = document.createElement("li");
