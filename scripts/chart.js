@@ -1,3 +1,6 @@
+var current_page = 0;
+var genres = [];
+
 // Generates a random color
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -74,17 +77,26 @@ function createChart(data) {
 }
 
 function displayData(labels, data) {
-    let list = document.getElementById("data");
-
-    for (let i = labels.length - 1; i > labels.length - 26; i--) {
-        let entry = document.createElement("li");
-        entry.appendChild(document.createTextNode(labels[i]));
-        list.appendChild(entry);
-    }
+    genres = labels;
+    fillGenresList(0, labels);
 }
 
 function displayPlaylists(data) {
     fillList("playlists-list", data.items);
+}
+
+function fillGenresList(page, labels) {
+    $('ol').empty();
+
+    let offset = page * 25;
+
+    let list = document.getElementById("data");
+
+    for (let i = labels.length - 1 - offset; i > labels.length - 26 - offset; i--) {
+        let entry = document.createElement("li");
+        entry.appendChild(document.createTextNode(labels[i]));
+        list.appendChild(entry);
+    }
 }
 
 function fillList(id, data) {
@@ -98,4 +110,14 @@ function fillList(id, data) {
         entry.appendChild(a);
         list.appendChild(entry);
     }
+}
+
+function changeGenresPage(direction_offset) {
+    current_page += direction_offset;
+
+    if (current_page < 0) 
+        current_page= 0
+
+    else
+        fillGenresList(current_page, genres);
 }

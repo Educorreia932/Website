@@ -9,13 +9,18 @@
 
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
-const shell = require('shelljs')
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+var fs = require('fs'); // Read files
 
 var client_id = '2e0253314f754ef19453bbcb7d65dae2'; // Your client id
-var client_secret = 'bd3ec6667dbd48b4bcb9ccf8d6c4cdbf'; // Your secret
+var client_secret;
+
+fs.readFile('token.txt', 'utf8', function (err, data) {
+    client_secret = data;
+});
+
 var redirect_uri = 'https://educorreia932.dev/demo/callback'; // Your redirect uri
 
 /**

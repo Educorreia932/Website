@@ -126,6 +126,8 @@
     
                 <div class="half"> 
                     <ol id="data"></ol>
+                    <button onclick="changeGenresPage(-1)">🡄</button>
+                    <button onclick="changeGenresPage(1)">🡆</button>
                 </div>
             </section>
     
@@ -140,6 +142,7 @@
         </div>
 
         <script>
+            // The user has logged in
             if (window.location.href.search("access_token=") != -1) {
                 const TOP_ARTISTS = "https://api.spotify.com/v1/me/top/artists?limit=100&time_range=long_term";
                 const PLAYLISTS = "https://api.spotify.com/v1/me/playlists";
