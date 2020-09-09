@@ -1,5 +1,5 @@
 
-fetch('../data/stamps.txt')
+fetch('/data/stamps.txt')
     .then(response => response.text())
     .then(text => {
         var content = text.split("\n");
@@ -12,6 +12,6 @@ fetch('../data/stamps.txt')
             img.style.left = line[1] + "px";
             img.style.top = line[2] + "px";
 
-            document.getElementById("canvas").appendChild(img);
+            document.getElementById("stamp-canvas").appendChild(img);
         }
     })

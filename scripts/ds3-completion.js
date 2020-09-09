@@ -15,7 +15,7 @@ var ds3_database = readJSON(URL);
 function add_items(category) {
 	var data = ds3_database[category];
 	var id = category.split(" ").join("-").toLowerCase();
-   	var checklist = document.getElementById(id);
+	var checklist = document.getElementById(id);
 
 	for (var i = 0; i < data.length; i++) {
 		var dd = document.createElement("dd");
@@ -41,7 +41,7 @@ function loadData() {
 }
 
 function generateJSON() {
-	let checks = {};  
+	let checks = {};
 
 	$('input[type=checkbox]').each(function () {
 		if (this.checked) {
@@ -62,22 +62,25 @@ function generateJSON() {
 function saveFile() {
 	var obj = generateJSON();
 	var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-	
+
 	$('<a href="data:' + data + '" download="data.json">download JSON</a>').appendTo('#container');
 }
 
 function loadFile() {
-	const inputElement = document.getElementById("input");
-	inputElement.addEventListener("change", handleFiles, false);
+	var files = document.getElementById("selectFiles").files;
+	console.log(files);
 
-	function handleFiles() {
-		const file = this.files[0];
-		let reader = new FileReader();
-		
-		reader.onload = function(event) {
-			let content = JSON.Parse(event.target.result);            
-		}
+	if (files.length <= 0)
+		return false;
 
-		reader.readAsText(file);
+	var fr = new FileReader();
+
+	fr.onload = function (e) {
+		console.log(e);
+		var result = JSON.parse(e.target.result);
+		var formatted = JSON.stringify(result, null, 2);
+		console.log(formatted);
 	}
+
+	fr.readAsText(files.item(0));
 }

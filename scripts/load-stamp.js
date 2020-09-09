@@ -13,7 +13,7 @@ function loadStamp() {
         var stamp = document.createElement("img");
         stamp.src = url;
 
-        var canvas = document.getElementById("canvas");
+        var canvas = document.getElementById("stamp-canvas");
 
         stamp.onclick = function() {
             var x = stamp.style.left;
@@ -37,10 +37,10 @@ function loadStamp() {
         
         canvas.style.filter = "blur(0px)";
 
-        var div = document.getElementById('canvas');
+        var div = document.getElementById('stamp-canvas');
         
         div.addEventListener('mouseenter', function() {
-            var el = document.getElementById("canvas");
+            var el = document.getElementById("stamp-canvas");
             var rect = el.getBoundingClientRect();
             var top = rect.top + window.pageYOffset;
             var left = rect.left + window.pageXOffset;

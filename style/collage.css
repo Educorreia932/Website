@@ -1,9 +1,9 @@
-#canvas {
+#stamp-canvas {
     filter: blur(20px);
     padding: 1%;
 }
 
-#canvas > img {
+#stamp-canvas > img {
     position: absolute;
     max-width: 300px;
     max-height: 300px;
