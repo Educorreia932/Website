@@ -70,6 +70,11 @@ header {
 	border-radius: .15em;
 }
 
+iframe {
+	border: 0;
+	overflow: hidden;
+}
+
 /* ASCII Animation */
 
 #fscroller {
@@ -136,7 +141,6 @@ header {
 	90%{color: DodgerBlue;}
 	100%{color: orange;}
 }
-
 
 /* Avatar */
 
@@ -219,5 +223,3 @@ header {
 #footer {
     text-align: center;
 }
-
-
