@@ -1,79 +1,66 @@
-/* Hyperlinks */
+/* Project cards */
 
-:link {
-    color: inherit;
-    text-decoration: none; /* Remove underline */
+div#projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
-:visited {
-	color: inherit;
-}
-
-h2 {
-    text-align: center;
-}
-
-.section-title {
-    font-size: 250%;
-}
-
-
-
-/* ASCII Animation */
-
-#fscroller {
-    float: none;
-    text-align: center;
-}
-
-/* Project Grid */
-
-.project-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-}
-
-.project-item {
-    border: 1px solid whitesmoke;
-    text-align: center;
+div#projects div.project-card {
+    background-color: #333333;
     border-radius: 10px;
+    max-width: 20rem;
+    transition: all 0.5s;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
 }
 
-.project-item > img {
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    max-width: 90%;
+div#projects div.project-card:hover {
+    transform: scale(1.02);
 }
 
-.project-item > h2:hover {
-    cursor: pointer;
-    text-shadow: 2px 2px 5px gray;
+div#projects div.project-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
-.content {
-    display: "block";
+div#projects div.project-information {
+    padding: 1rem;
+    padding-top: 0;
 }
 
-.content > img {
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    max-width: 95%;
+div#projects div.project-card h2 {
+    font-size: 100%;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
 }
 
-button {
-    font: inherit;
-    font-size: 150%;
-    background: none;
-    color: inherit; 
-    border: none;
-    cursor: pointer;
-    outline: inherit;
-    float: right;
-    position: relative;
-    right: 2%;
-    top: 2%;
+div#projects div.project-information {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+div#projects div.project-information p {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+div#projects div.project-tags {
+    display: flex;
+    text-transform: uppercase;
+}
+
+div#projects span.project-tag {
+    background-color: #d93300;
+    padding: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+    margin-right: 0.8rem;
+    width: auto;
+    border-radius: 3px;
+    font-size: 0.8rem;
 }

@@ -1,3 +1,5 @@
+# This script was used to web scrape the images to the games I've played list
+
 import csv
 import requests
 from bs4 import BeautifulSoup

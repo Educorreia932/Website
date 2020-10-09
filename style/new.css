@@ -22,6 +22,8 @@ body {
     color: whitesmoke;
     font-family: "Modeseven-L3n5";
 	line-height: 1.3;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 a:link {
