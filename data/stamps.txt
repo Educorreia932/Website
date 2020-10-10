@@ -3,7 +3,7 @@ https://cdn.discordapp.com/attachments/519841576655257610/713410227382255626/158
 https://i.ytimg.com/vi/U3si-cDgLf8/maxresdefault.jpg 200 10
 https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/800px-Pleiades_large.jpg 0 0
 https://cdn.discordapp.com/attachments/519841576655257610/714639087398682634/1547441976613.png 50 05
-https://cdn.discordapp.com/attachments/519841576655257610/714638919576322068/1543006265344.png 50 
+https://cdn.discordapp.com/attachments/519841576655257610/714638919576322068/1543006265344.png 50 0
 https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg 600 0
 https://thecatapi.com/api/images/get?type=png 425 886
 https://25.media.tumblr.com/tumblr_luownsYXjf1r2nfj9o1_500.png 672 222
@@ -13,7 +13,6 @@ https://media.discordapp.net/attachments/615941696072450055/727158067090948106/a
 https://upload.wikimedia.org/wikipedia/commons/7/70/Doge_meme.png 700 700
 https://media.discordapp.net/attachments/679277916768567303/727316155823554560/SPOILER_1593475776162.png 600 500
 https://theimaginativeconservative.org/wp-content/uploads/2015/05/6748f8ea516944e171a49983c7f5e696.jpg 300 400
-https://upload.wikimedia.org/wikipedia/commons/8/85/Smiley.svg 0 900
 https://cdn.discordapp.com/attachments/718899644339585095/727286715496005786/Screenshot_20200629-220859.jpg 300 800
 https://fsmedia.imgix.net/75/38/9d/93/923c/42c7/9523/4fdfbc812c57/science-of-earworms-explain-why-never-gonna-give-you-up-is-stuck-in-our-heads-30-years-later.png 5 5
 https://media.discordapp.net/attachments/679277916768567303/727869000603926538/gato.png 999 999
@@ -36,7 +35,6 @@ https://data1.ibtimes.co.in/en/full/732741/pet.jpg 1000 0
 https://i.imgur.com/aKM4LgI.jpeg 12 12
 https://pics.me.me/thumb_ubuntu-i-prefer-real-linux-archlinux-i-said-the-real-42127612.png 0 1000
 https://preview.redd.it/uxjs89vup2851.jpg?width=960&crop=smart&auto=webp&s=3311b1c704d69698aa87ee7b7b3ad605cf3de207 900 0
-https://lh3.googleusercontent.com/proxy/QUOKC3mr-pMLLyEcIVPJS32kLYQ8TC90ZBWkpimAHHk5n4cAeLKW3Ru9InDineo0QBvzSQe3pAMsSj9R1aMbLooDOWf51ALm9-tTH7wUMlfTmqDncJTS4AXItYRQ_LUymAtPJU_mEDN4GC7kdS0yg5mRaEWQg3LpyiRGu6ZkzqM 800 300
 https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forig00.deviantart.net%2F2064%2Ff%2F2015%2F108%2F1%2F5%2Fsonatas__stocks_and_tickles___animated_by_caroos_dungeon-d8q43a5.gif&f=1&nofb=1 800 400
 https://img.quizur.com/f/img5cc8e00e5925a1.91568144.jpg?lastEdited=1556668435 300 1000
 https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.explicit.bing.net%2Fth%3Fid%3DOIP.LkhP4XbfdjQh3MO0rEkjdQHaIV%26pid%3DApi&f=1 900 0
