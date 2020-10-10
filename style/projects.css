@@ -1,20 +1,19 @@
 /* Project cards */
 
 div#projects {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+    column-count: auto;
+    column-width: 20rem;
+    column-gap: 1.5em;
 }
 
 div#projects div.project-card {
+    display: inline-block;
     background-color: #333333;
     border-radius: 10px;
-    max-width: 20rem;
     transition: all 0.5s;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     flex-shrink: 0;
+    vertical-align: top;
 }
 
 div#projects div.project-card:hover {
