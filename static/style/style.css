@@ -13,7 +13,8 @@
 }
 
 :root {
-	--main-bg-color: #242424;
+	--background-color-1: #242424;
+	--background-color-2: #303030;
 	--text-color-1: white;
 }
 
@@ -23,7 +24,7 @@ html {
 }
 
 body {
-    background-color: var(--main-bg-color);
+    background-color: var(--background-color-1);
     color: whitesmoke;
     font-family: "Modeseven-L3n5";
 	line-height: 1.3;
@@ -58,15 +59,13 @@ header {
 	padding-left: 1em;
 }
  
-.tab {
-  	position: relative;
+a.tab {
 	display: inline-block;
-	color: inherit;
+	color: var(--text-color-1);
+    background-color: var(--background-color-2);
 	text-decoration: none;
-	padding: .3em 1em 0;
-    margin: 0 -.3em;
-    background-color: #303030;
-    cursor: pointer;
+	padding: 0.3em 1em;
+	cursor: pointer;
 }
 
 .main {
@@ -227,6 +226,6 @@ iframe {
 
 /* Footer */
 
-#footer {
+footer {
     text-align: center;
 }

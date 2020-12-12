@@ -1,0 +1,29 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to my webpage</title>
+        <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
+        <link rel="icon" href="{% static 'images/Avatar.png' %}">
+        <script defer src="{% static 'scripts/progressbar.js' %}"></script>
+        <script defer src="{% static 'scripts/kaomoji.js' %}"></script>
+    </head>
+
+    <body onload="fill(); changecontent(); display_kaomoji('greeting')">
+        {# Header #}
+        <header>
+            <a class="tab" href="">Introduction</a>
+            <a class="tab" href="about_me">About Me</a>
+            <a class="tab" href="projects">Project</a>
+            <a class="tab" href="miscellaneous">Miscellaneous</a>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        {# Footer #}
+        <footer>
+            <p>&copy; 2020 Eduardo Correia</p>
+        </footer>
+    </body>
+</html>

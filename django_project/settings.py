@@ -40,10 +40,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'django_project.urls'
 
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'vue_app/templates/vue_app')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

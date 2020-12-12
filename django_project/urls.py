@@ -8,4 +8,5 @@ from vue_app import views as vue_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', vue_views.homepage),
+    path('about_me', vue_views.about_me),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
