@@ -1,4 +1,3 @@
+__pycache__/
 
-django_project/__pycache__/
-
-vue_app/__pycache__/
+pyvenv.cfg
