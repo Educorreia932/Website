@@ -12,7 +12,7 @@
     {% for project in projects %}
 
     <div class="project-card">
-        <img class="project-illustration" src={{project.image}}>
+        <img class="project-illustration" alt="Project Illustration" src={{project.illustration_url}}>
 
         <div class="project-information">
             <h2>{{project.title}}</h2>
@@ -20,9 +20,11 @@
             <p class="project-description">{{project.description}}</p>
 
             <div class="project-tags">
+                {% for tag in project.tags %}
                 <span class="project-tag">     
-                    Theme
+                    {{tag.name}}
                 </span>
+                {% endfor %}
             </div>
         </div>
     </div>

@@ -1,0 +1,58 @@
+[
+  {
+    "model": "main.Tag",
+    "pk": 1,
+    "fields": {
+      "name": "Theme"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 2,
+    "fields": {
+      "name": "Game"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 3,
+    "fields": {
+      "name": "Game-Jam"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 4,
+    "fields": {
+      "name": "University"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 5,
+    "fields": {
+      "name": "Chart"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 6,
+    "fields": {
+      "name": "Statistics"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 7,
+    "fields": {
+      "name": "Bot"
+    }
+  },
+  {
+    "model": "main.Tag",
+    "pk": 8,
+    "fields": {
+      "name": "Graph"
+    }
+  }
+]
