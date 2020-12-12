@@ -9,4 +9,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', vue_views.homepage),
     path('about_me', vue_views.about_me),
+    path('projects', vue_views.projects),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

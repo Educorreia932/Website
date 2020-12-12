@@ -1,121 +1,99 @@
+{% extends "base.html" %}
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Educorreia932's Homepage</title>
-        <link rel="stylesheet" type="text/css" href="../style/new.css">
-        <link rel="stylesheet" type="text/css" href="../style/about-me.css">
-        <link rel="icon" href="../img/Avatar.png">
-        <script src="/scripts/kaomoji.js"></script>
-    </head>
-    
-    <body onload="changecontent(); display_kaomoji('sympathy')">
-        <!-- Header -->
-        <div class="header">
-            <p class="tab" onclick="location.href='./introduction.html'">Introduction</p>
-            <p class="tab" onclick="location.href='./about-me.html'">About Me</p>
-            <p class="tab" onclick="location.href='./projects.html'">Projects</p>
-            <p class="tab" onclick="location.href='./blog.html'">Blog</p>
-            <p class="tab" onclick="location.href='./miscellaneous.html'">Miscellaneous</p>
-        </div>
+{% load static %} 
 
-        <!-- ASCII Animation -->
-        <div id="ascii-display" class="unselectable">
-            <script id="ascii-art" src="/gif/1017.js" ></script>
-        </div>
-    
-        <h1>Get to know me better <span id="kaomoji"></span></h1>
+{% block title %}Educorreia932 - Get to know me better{% endblock %}
 
-        <div>
-            <div id="country-list">
-                <div id="globe">
-                    <iframe src="./visited-places.html" width="450" height="450"></iframe>
-                </div>
+{% block content %}
 
-                <h3>Visited countries (in order) 🌍</h3>
-                <ul>
-                    <li>Portugal (of course) 🇵🇹</li>
-                    <li>Spain 🇪🇸</li>
-                    <li>France 🇫🇷</li>
-                    <li>United Kingdom 🇬🇧</li>
-                    <li>Italy 🇮🇹/🇻🇦</li>
-                    <li>Belgium 🇧🇪</li>
-                    <li>Germany 🇩🇪</li>
-                    <li>Poland 🇵🇱</li>
-                    <li>Switzerland 🇨🇭</li>
-                    <li>Czech Republic 🇨🇿</li> 
-                    <li>Ireland 🇮🇪</li>
-                </ul>
-            </div>
-        </div>
+{# ASCII Animation #}
+<div id="ascii-display" class="unselectable">
+    <script id="ascii-art" src="/gif/1017.js" ></script>
+</div>
 
-        <h3>Favorite games 🎮</h3>
+<h1>Get to know me better <span id="kaomoji"></span></h1>
+
+<div>
+    <div id="country-list">
+        <h3>Visited countries (in order) 🌍</h3>
         <ul>
-            <li>The Elder Scrolls V: Skyrim</li>
-            <li>The Witcher III: Wild Hunt</li>
-            <li>Dark Souls III</li>
-            <li>The Legend of Zelda: Breath of the Wild</li>
-            <li>Divinity: Original Sin II</li>
-            <li>Little Big Planet 2</li>
-            <li>Pokémon Heartgold</li>
-            <li>Starbound</li>
-            <li>Terraria</li>
-            <li>The Binding of Isaac: Rebirth</li>
-        </ul>    
-
-        <h3>Favorite anime 🐱‍🏍</h3>
-        <ul>
-            <li>Code Geass</li>
-            <li>Fullmetal Alchemist: Brotherhood</li>
-            <li>Death Note</li>
-            <li>Howl's Moving Castle</li>
-            <li>Evangelion</li>
+            <li>Portugal (of course) 🇵🇹</li>
+            <li>Spain 🇪🇸</li>
+            <li>France 🇫🇷</li>
+            <li>United Kingdom 🇬🇧</li>
+            <li>Italy 🇮🇹/🇻🇦</li>
+            <li>Belgium 🇧🇪</li>
+            <li>Germany 🇩🇪</li>
+            <li>Poland 🇵🇱</li>
+            <li>Switzerland 🇨🇭</li>
+            <li>Czech Republic 🇨🇿</li> 
+            <li>Ireland 🇮🇪</li>
         </ul>
+    </div>
+</div>
 
-        <h3>Favorite music artists 🎸</h3>
-        <ul>
-            <li>Jamiroquai</li> 
-            <li>Ornatos Violeta</li>
-            <li>Red Hot Chili Peppers</li>
-            <li>TOOL</li>
-            <li>Capitão Fausto</li>
-            <li>Jack White</li>
-            <li>Modest Mouse</li>
-            <li>Diabo na Cruz</li>
-            <li>Foo Fighters</li>
-            <li>Nirvana</li>
-            <li>Pluto</li>
-        </ul>
-        
-        <h3>Favorite series 📺</h3>      
-        <ul>
-            <li>Breaking Bad</li>
-            <li>IT Crowd</li>
-            <li>The Big Bang Theory</li>
-            <li>Stranger Things</li>
-            <li>The Witcher</li>
-        </ul>      
+<h3>Favorite games 🎮</h3>
+<ul>
+    <li>The Elder Scrolls V: Skyrim</li>
+    <li>The Witcher III: Wild Hunt</li>
+    <li>Dark Souls III</li>
+    <li>The Legend of Zelda: Breath of the Wild</li>
+    <li>Divinity: Original Sin II</li>
+    <li>Little Big Planet 2</li>
+    <li>Pokémon Heartgold</li>
+    <li>Starbound</li>
+    <li>Terraria</li>
+    <li>The Binding of Isaac: Rebirth</li>
+</ul>    
 
-        <h3>Favorite movies 🎬</h3>
-        <ul>
-            <li>Star Wars Saga</li>
-            <li>Marvel Cinematic Universe</li>
-            <li>Studio Ghibli Movies</li>
-        </ul>
+<h3>Favorite anime 🐱‍🏍</h3>
+<ul>
+    <li>Code Geass</li>
+    <li>Fullmetal Alchemist: Brotherhood</li>
+    <li>Death Note</li>
+    <li>Howl's Moving Castle</li>
+    <li>Evangelion</li>
+</ul>
 
-        <h3>Favorite Youtube channels 📹</h3>
-        <ul>
-            <li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
-            <li><a href="https://www.youtube.com/user/JovemNerd">Jovem Nerd</a></li>
-            <li><a href="https://www.youtube.com/user/enyay">Tom Scott</a></li>
-            <li><a href="https://www.youtube.com/user/SsethTzeentach">SsethTzeentach</a></li>
-            <li><a href="https://www.youtube.com/channel/UCVYamHliCI9rw1tHR1xbkfw">Dave Lee</a></li>
-            <li><a href="https://www.youtube.com/channel/UC4E98HDsPXrf5kTKIgrSmtQ">Special Books by Special Kids</a></li>
-        </ul>
+<h3>Favorite music artists 🎸</h3>
+<ul>
+    <li>Jamiroquai</li> 
+    <li>Ornatos Violeta</li>
+    <li>Red Hot Chili Peppers</li>
+    <li>TOOL</li>
+    <li>Capitão Fausto</li>
+    <li>Jack White</li>
+    <li>Modest Mouse</li>
+    <li>Diabo na Cruz</li>
+    <li>Foo Fighters</li>
+    <li>Nirvana</li>
+    <li>Pluto</li>
+</ul>
 
-        <!-- Footer -->
-        <div id="footer">
-            <p>&copy; 2020 Eduardo Correia</p>
-        </div>
-    </body>
-</html>
+<h3>Favorite series 📺</h3>      
+<ul>
+    <li>Breaking Bad</li>
+    <li>IT Crowd</li>
+    <li>The Big Bang Theory</li>
+    <li>Stranger Things</li>
+    <li>The Witcher</li>
+</ul>      
+
+<h3>Favorite movies 🎬</h3>
+<ul>
+    <li>Star Wars Saga</li>
+    <li>Marvel Cinematic Universe</li>
+    <li>Studio Ghibli Movies</li>
+</ul>
+
+<h3>Favorite Youtube channels 📹</h3>
+<ul>
+    <li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
+    <li><a href="https://www.youtube.com/user/JovemNerd">Jovem Nerd</a></li>
+    <li><a href="https://www.youtube.com/user/enyay">Tom Scott</a></li>
+    <li><a href="https://www.youtube.com/user/SsethTzeentach">SsethTzeentach</a></li>
+    <li><a href="https://www.youtube.com/channel/UCVYamHliCI9rw1tHR1xbkfw">Dave Lee</a></li>
+    <li><a href="https://www.youtube.com/channel/UC4E98HDsPXrf5kTKIgrSmtQ">Special Books by Special Kids</a></li>
+</ul>
+
+{% endblock %}

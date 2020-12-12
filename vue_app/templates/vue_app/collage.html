@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>A Beautiful Internet Collage</title>
+        <link rel="stylesheet" type="text/css" href="/style/new.css">
+        <link rel="stylesheet" type="text/css" href="/style/collage.css">
+        <link rel="icon" href="/img/Avatar.png">
+        <script type="text/javascript" src="/scripts/blur.js"></script>
+    </head>
+
+    <body>
+        <h1>A <del>Beautiful</del> Internet Collage</h1>
+
+        <p>This webpage is an collaborative experiment, much like <a href="https://www.reddit.com/r/place/" target="_blank">r/place</a>, where you submit an image to go along with the already existing ones to form a <del>beautiful</del> collage.</p>
+
+        <p>There are no restrictrions to the images you may submit... so far.</p>
+        
+        <h2>Instructions</h2>
+
+        <p>Enter a valid image URL, place it on the canvas, click on submit, fill the captcha and then <b>boom</b> magic will happen.</p>
+
+        <input type="text" id="url-input" name="url" size="40" placeholder="URL" value=""/><br>
+        <button type="button" onclick="loadStamp()">Submit</button>
+
+        <script src="/scripts/load-stamp.js"></script>
+
+        <h2>WARNING: Potential <span style="color: red">NSFW</span> material below.</h2>
+        <input type="checkbox" id="blurCheck" onclick="NSFWblur()">
+        <label for="blurCheck">I have no problems with that (remove blur).</label> 
+        
+        <!-- Footer -->
+        <div id="footer">
+            <p>&copy; 2020 Eduardo Correia</p>
+        </div>
+
+        <hr>
+
+        <script src="/scripts/display-stamps.js"></script>
+
+        <div id="stamp-canvas"></div>
+    </body>
+</html>
