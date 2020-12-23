@@ -7,6 +7,7 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
         <link rel="stylesheet" href="{% static 'style/projects.css' %}"/>
+        <link rel="stylesheet" href="{% static 'style/globe.css' %}"/>
         <link rel="icon" href="{% static 'images/Avatar.png' %}">
         <script defer src="{% static 'scripts/progressbar.js' %}"></script>
         <script defer src="{% static 'scripts/kaomoji.js' %}"></script>
@@ -16,9 +17,9 @@
         {# Header #}
         <header>
             <a class="tab" href="/">Introduction</a>
-            <a class="tab" href="about_me">About Me</a>
-            <a class="tab" href="projects">Projects</a>
-            <a class="tab" href="miscellaneous">Miscellaneous</a>
+            <a class="tab" href="/about_me">About Me</a>
+            <a class="tab" href="/projects">Projects</a>
+            <a class="tab" href="/miscellaneous">Miscellaneous</a>
         </header>
 
         {% block content %}{% endblock %}

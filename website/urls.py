@@ -9,4 +9,6 @@ urlpatterns = {
     path('about_me', views.about_me),
     path('projects', views.projects),
     path('miscellaneous', views.miscellaneous),
+    path('collage', views.collage),
+    path('debug', views.debug),
 }

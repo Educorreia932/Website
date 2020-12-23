@@ -22,3 +22,9 @@ def projects(request):
 
 def miscellaneous(request):
     return render(request, 'miscellaneous.html')
+
+def collage(request):
+    return render(request, "collage.html")
+
+def debug(request):
+    return render(request, "debug.html")

@@ -13,23 +13,14 @@
 
 <h1>Get to know me better <span id="kaomoji"></span></h1>
 
-<div>
-    <div id="country-list">
-        <h3>Visited countries (in order) 🌍</h3>
-        <ul>
-            <li>Portugal (of course) 🇵🇹</li>
-            <li>Spain 🇪🇸</li>
-            <li>France 🇫🇷</li>
-            <li>United Kingdom 🇬🇧</li>
-            <li>Italy 🇮🇹/🇻🇦</li>
-            <li>Belgium 🇧🇪</li>
-            <li>Germany 🇩🇪</li>
-            <li>Poland 🇵🇱</li>
-            <li>Switzerland 🇨🇭</li>
-            <li>Czech Republic 🇨🇿</li> 
-            <li>Ireland 🇮🇪</li>
-        </ul>
-    </div>
+<div id="country-list">
+    <h3>Visited countries 🌍</h3>
+    <script defer src="https://d3js.org/d3.v4.js"></script>
+    <script defer src="https://d3js.org/topojson.v1.min.js"></script>
+    <script defer src="https://d3js.org/queue.v1.min.js"></script>
+    <script defer src="{% static '/scripts/globe.js' %} "></script>
+
+    <div id="globe"></div>
 </div>
 
 <h3>Favorite games 🎮</h3>
@@ -55,20 +46,8 @@
     <li>Evangelion</li>
 </ul>
 
-<h3>Favorite music artists 🎸</h3>
-<ul>
-    <li>Jamiroquai</li> 
-    <li>Ornatos Violeta</li>
-    <li>Red Hot Chili Peppers</li>
-    <li>TOOL</li>
-    <li>Capitão Fausto</li>
-    <li>Jack White</li>
-    <li>Modest Mouse</li>
-    <li>Diabo na Cruz</li>
-    <li>Foo Fighters</li>
-    <li>Nirvana</li>
-    <li>Pluto</li>
-</ul>
+<h3>Favorite music albums 🎸</h3>
+<img alt="Favorite music albums" src="{% static 'images/FavoriteMusicAlbums.png' %}" width="550">
 
 <h3>Favorite series 📺</h3>      
 <ul>

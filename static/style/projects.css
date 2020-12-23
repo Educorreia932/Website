@@ -26,25 +26,20 @@ div#projects div.project-card img {
 }
 
 div#projects div.project-information {
-    padding: 1rem;
-    padding-top: 0;
+    padding: 0 1rem 1rem;
 }
 
 div#projects div.project-card h2 {
     font-size: 100%;
-    margin: 0;
-    margin-top: 0.5rem;
-    margin-bottom: 0.7rem;
+    margin: 0.5rem 0 0.7rem;
 }
 
 div#projects div.project-information {
-    padding: 1rem;
-    padding-top: 0;
+    padding: 0 1rem 1rem;
 }
 
 div#projects div.project-information p {
-    margin: 0;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
     font-size: 0.8rem;
 }
 
@@ -55,9 +50,7 @@ div#projects div.project-tags {
 
 div#projects span.project-tag {
     background-color: #d93300;
-    padding: 0.5rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.1rem;
+    padding: 0.2rem 0.5rem 0.1rem;
     margin-right: 0.8rem;
     width: auto;
     border-radius: 3px;

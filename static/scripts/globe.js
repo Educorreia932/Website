@@ -1,31 +1,30 @@
-var width = 350,
+let width = 350,
     height = 350,
     sens = 0.40,
     focused,
     data;
 
-//Setting projection
-var projection = d3.geoOrthographic()
+// Setting projection
+let projection = d3.geoOrthographic()
     .scale(150)
     .rotate([0, 0])
     .translate([width / 2, height / 2])
     .clipAngle(90);
 
-var path = d3.geoPath(projection);
+let path = d3.geoPath(projection);
 
-//SVG container
-var svg = d3.select("body").append("svg")
+// SVG container
+let svg = d3.select("#globe").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-//Adding water
+// Adding water
 svg.append("path")
     .datum({ type: "Sphere" })
     .attr("class", "water")
     .attr("d", path);
 
-var countryTooltip = d3.select("body").append("div").attr("class", "countryTooltip");
-var countryList = d3.select("body").append("select").attr("name", "countries");
+let countryTooltip = d3.select("body").append("div").attr("class", "countryTooltip");
 
 queue()
     .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/110m.json')
@@ -35,34 +34,32 @@ queue()
 
 //Main function
 function ready(error, world, countryData, data) {
-    var countryById = {};
-    var countries = topojson.feature(world, world.objects.countries).features;
+    let countryById = {};
+    let countries = topojson.feature(world, world["objects"]["countries"]).features;
 
-    // Adding countries to select
+    // Adding countries
     countryData.forEach(function (d) {
         countryById[d.id] = d.name;
-        option = countryList.append("option");
-        option.text(d.name);
-        option.property("value", d.id);
     });
 
     // Drawing countries on the globe
-    var world = svg.selectAll("path.land")
+    svg.selectAll("path.land")
         .data(countries)
         .enter().append("path")
         .attr("class", "land")
         .attr("d", path)
-        .each(function(d, i) {
+        .each(function(d) {
+            let country_name = "undefined";
+
             try {
                 d.id = d.id.replace(/^0+/, ''); // Removes leading zeros
                 country_name = countryById[d.id].split(' ').join('_');
             }
 
             catch(err) {
-                console.log(d.id)
-                country_name = "undefined"
+                console.log(country_name)
             }
-            
+
             d3.select(this).attr("id", country_name);
         })
 
@@ -92,33 +89,33 @@ function ready(error, world, countryData, data) {
 
     // Drag event
     svg.call(d3.drag()
-        .subject(function () { var r = projection.rotate(); return { x: r[0] / sens, y: -r[1] / sens }; })
+        .subject(function () { let r = projection.rotate(); return { x: r[0] / sens, y: -r[1] / sens }; })
         .on("drag", function () {
-            var rotate = projection.rotate();
+            let rotate = projection.rotate();
             projection.rotate([d3.event.x * sens, -d3.event.y * sens, rotate[2]]);
             svg.selectAll("path").attr("d", path);
             svg.selectAll(".focused").classed("focused", focused = false);
         }))
 
-    //Country focus on option select
+    // Country focus on option select
     d3.select("select").on("change", function () {
-        var rotate = projection.rotate(),
-            focusedCountry = country(countries, this),
+        projection.rotate();
+        let focusedCountry = country(countries, this),
             p = d3.geoCentroid(focusedCountry);
 
         svg.selectAll(".focused").classed("focused", focused = false);
 
-        //Globe rotating
+        // Globe rotating
         (function transition() {
             d3.transition()
                 .duration(2500)
                 .tween("rotate", function () {
-                    var r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+                    let r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
                     return function (t) {
                         projection.rotate(r(t));
                         svg.selectAll("path").attr("d", path)
-                            .classed("focused", function (d) { 
-                                return d.id == focusedCountry.id ? focused = d : false; 
+                            .classed("focused", function (d) {
+                                return d.id === focusedCountry.id ? focused = d : false;
                             });
                     };
                 })
@@ -126,9 +123,8 @@ function ready(error, world, countryData, data) {
     });
 
     function country(cnt, sel) {
-        console.log(cnt)
-        for (var i = 0, l = cnt.length; i < l; i++)
-            if (cnt[i].id.replace(/^0+/, '') == sel.value) 
+        for (let i = 0, l = cnt.length; i < l; i++)
+            if (cnt[i].id.replace(/^0+/, '') === sel.value)
                 return cnt[i];
-    };
-};
+    }
+}
