@@ -10,8 +10,8 @@ class Project(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
 
 class Stamp(models.Model):
-    image_url = models.CharField(max_length=200)
-    submitted_date = models.DateField()
-    x = models.IntegerField()
-    y = models.IntegerField()
+    image_url = models.CharField(max_length=300)
+    submitted_date = models.DateField(default=None, blank=True, null=True)
+    x = models.FloatField()
+    y = models.FloatField()
 

@@ -37,6 +37,10 @@
 
 <script src="/scripts/display-stamps.js"></script>
 
-<div id="stamp-canvas"></div>
+<div id="stamp-canvas">
+    {% for stamp in stamps %}
+    <img src="{{ stamp.image_url }}" style="left: {{ stamp.x }}; top: {{ stamp.y }}" alt="Stamp">
+    {% endfor %}
+</div>
 
 {% endblock %}

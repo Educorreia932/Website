@@ -3,7 +3,7 @@ from django.shortcuts import render
 import json
 import random
 
-from .models import Project
+from .models import *
 from .serializers import ProjectSerializer
 
 def get_kaomoji(category):
@@ -42,23 +42,25 @@ def projects(request):
 
 def miscellaneous(request):
     context = {
-        "kaomoji": get_kaomoji("anger")
+        "kaomoji": get_kaomoji("indifference")
     }
 
     return render(request, 'miscellaneous.html', context)
 
 def collage(request):
-    return render(request, "collage.html")
+    stamps_data = Stamp.objects.all()
+
+    context = {
+        "stamps": stamps_data
+    }
+
+    return render(request, "collage.html", context)
 
 def stone_of_golorr_properties(request):
     return render(request, "stone-of-golorr.html")
 
 def debug(request):
-    context = {
-        "kaomoji": get_kaomoji("indifference")
-    }
-
-    return render(request, "debug.html", context)
+    return render(request, "debug.html")
 
 # Error pages
 

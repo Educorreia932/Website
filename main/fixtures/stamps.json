@@ -1,0 +1,872 @@
+[
+  {
+    "model": "main.Stamp",
+    "pk": 0,
+    "fields": {
+      "image_url": "https://cdn.mos.cms.futurecdn.net/QjuZKXnkLQgsYsL98uhL9X-320-80.jpg",
+      "submitted_date": null,
+      "x": "50",
+      "y": "50"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 1,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/519841576655257610/713410227382255626/1587062322269.png",
+      "submitted_date": null,
+      "x": "50",
+      "y": "50"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 2,
+    "fields": {
+      "image_url": "https://i.ytimg.com/vi/U3si-cDgLf8/maxresdefault.jpg",
+      "submitted_date": null,
+      "x": "200",
+      "y": "10"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 3,
+    "fields": {
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pleiades_large.jpg/800px-Pleiades_large.jpg",
+      "submitted_date": null,
+      "x": "0",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 4,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/519841576655257610/714639087398682634/1547441976613.png",
+      "submitted_date": null,
+      "x": "50",
+      "y": "05"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 5,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/519841576655257610/714638919576322068/1543006265344.png",
+      "submitted_date": null,
+      "x": "50",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 6,
+    "fields": {
+      "image_url": "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg",
+      "submitted_date": null,
+      "x": "600",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 7,
+    "fields": {
+      "image_url": "https://thecatapi.com/api/images/get?type=png",
+      "submitted_date": null,
+      "x": "425",
+      "y": "886"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 8,
+    "fields": {
+      "image_url": "https://25.media.tumblr.com/tumblr_luownsYXjf1r2nfj9o1_500.png",
+      "submitted_date": null,
+      "x": "672",
+      "y": "222"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 9,
+    "fields": {
+      "image_url": "https://i.imgur.com/X3YSgci.gif",
+      "submitted_date": null,
+      "x": "0",
+      "y": "500"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 10,
+    "fields": {
+      "image_url": "https://i.ytimg.com/vi/lMsp3ifpi-s/maxresdefault.jpg",
+      "submitted_date": null,
+      "x": "700",
+      "y": "700"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 11,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/615941696072450055/727158067090948106/arch.png",
+      "submitted_date": null,
+      "x": "333",
+      "y": "333"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 12,
+    "fields": {
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Doge_meme.png",
+      "submitted_date": null,
+      "x": "700",
+      "y": "700"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 13,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727316155823554560/SPOILER_1593475776162.png",
+      "submitted_date": null,
+      "x": "600",
+      "y": "500"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 14,
+    "fields": {
+      "image_url": "https://theimaginativeconservative.org/wp-content/uploads/2015/05/6748f8ea516944e171a49983c7f5e696.jpg",
+      "submitted_date": null,
+      "x": "300",
+      "y": "400"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 15,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/718899644339585095/727286715496005786/Screenshot_20200629-220859.jpg",
+      "submitted_date": null,
+      "x": "300",
+      "y": "800"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 16,
+    "fields": {
+      "image_url": "https://fsmedia.imgix.net/75/38/9d/93/923c/42c7/9523/4fdfbc812c57/science-of-earworms-explain-why-never-gonna-give-you-up-is-stuck-in-our-heads-30-years-later.png",
+      "submitted_date": null,
+      "x": "5",
+      "y": "5"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 17,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727869000603926538/gato.png",
+      "submitted_date": null,
+      "x": "999",
+      "y": "999"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 18,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727870899889504266/arch.png",
+      "submitted_date": null,
+      "x": "1500",
+      "y": "999"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 19,
+    "fields": {
+      "image_url": "https://www.radiopopular.pt/includes/imgs/1x1.png",
+      "submitted_date": null,
+      "x": "1",
+      "y": "1"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 20,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727871230665031751/SPOILER_1593475605253.jpg",
+      "submitted_date": null,
+      "x": "0",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 21,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727871406217494568/welcome-back-to-another-episode-of-posting-anime-feet-to-61389391.png",
+      "submitted_date": null,
+      "x": "0",
+      "y": "400"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 22,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727871667862503424/mais_feet.jpg",
+      "submitted_date": null,
+      "x": "0",
+      "y": "800"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 23,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/679277916768567303/727597244781690992/SPOILER_EbwZd-ZVAAEPp8X.png",
+      "submitted_date": null,
+      "x": "50",
+      "y": "500"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 24,
+    "fields": {
+      "image_url": "https://i.stack.imgur.com/so036.png",
+      "submitted_date": null,
+      "x": "1",
+      "y": "1"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 25,
+    "fields": {
+      "image_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi0.kym-cdn.com%2Fphotos%2Fimages%2Foriginal%2F001%2F190%2F894%2F7dc.jpg&f=1&nofb=1",
+      "submitted_date": null,
+      "x": "400",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 26,
+    "fields": {
+      "image_url": "https://cdn012.bdsmlr.com/uploads/photos/2020/04/1065393/bdsmlr-1065393-7HAScBeMeI.jpg",
+      "submitted_date": null,
+      "x": "800",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 27,
+    "fields": {
+      "image_url": "https://cdn09.bdsmlr.com/uploads/photos/2020/01/407936/bdsmlr-407936-4LlZYn4VX2.jpg",
+      "submitted_date": null,
+      "x": "800",
+      "y": "300"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 28,
+    "fields": {
+      "image_url": "https://i.redd.it/ufea5vq490851.jpg",
+      "submitted_date": null,
+      "x": "750",
+      "y": "425"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 29,
+    "fields": {
+      "image_url": "https://cdn04.bdsmlr.com/uploads/photos/2019/07/949441/bdsmlr-949441-IX08fatq1o.jpg",
+      "submitted_date": null,
+      "x": "800",
+      "y": "300"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 30,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727872933678153808/SPOILER_bdsmlr-407936-4LlZYn4VX2.png?width=304&height=405",
+      "submitted_date": null,
+      "x": "1000",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 31,
+    "fields": {
+      "image_url": "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg",
+      "submitted_date": null,
+      "x": "800",
+      "y": "200"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 32,
+    "fields": {
+      "image_url": "http://nullcandy.com/demo/kittens/kitten.jpg",
+      "submitted_date": null,
+      "x": "12",
+      "y": "12"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 33,
+    "fields": {
+      "image_url": "https://data1.ibtimes.co.in/en/full/732741/pet.jpg",
+      "submitted_date": null,
+      "x": "1000",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 34,
+    "fields": {
+      "image_url": "https://i.imgur.com/aKM4LgI.jpeg",
+      "submitted_date": null,
+      "x": "12",
+      "y": "12"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 35,
+    "fields": {
+      "image_url": "https://pics.me.me/thumb_ubuntu-i-prefer-real-linux-archlinux-i-said-the-real-42127612.png",
+      "submitted_date": null,
+      "x": "0",
+      "y": "1000"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 36,
+    "fields": {
+      "image_url": "https://preview.redd.it/uxjs89vup2851.jpg?width=960&crop=smart&auto=webp&s=3311b1c704d69698aa87ee7b7b3ad605cf3de207",
+      "submitted_date": null,
+      "x": "900",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 37,
+    "fields": {
+      "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forig00.deviantart.net%2F2064%2Ff%2F2015%2F108%2F1%2F5%2Fsonatas__stocks_and_tickles___animated_by_caroos_dungeon-d8q43a5.gif&f=1&nofb=1",
+      "submitted_date": null,
+      "x": "800",
+      "y": "400"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 38,
+    "fields": {
+      "image_url": "https://img.quizur.com/f/img5cc8e00e5925a1.91568144.jpg?lastEdited=1556668435",
+      "submitted_date": null,
+      "x": "300",
+      "y": "1000"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 39,
+    "fields": {
+      "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.explicit.bing.net%2Fth%3Fid%3DOIP.LkhP4XbfdjQh3MO0rEkjdQHaIV%26pid%3DApi&f=1",
+      "submitted_date": null,
+      "x": "900",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 40,
+    "fields": {
+      "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.explicit.bing.net%2Fth%3Fid%3DOIP.BXPVHsmdAtkNW0ZTfsaQrwHaLf%26pid%3DApi&f=1",
+      "submitted_date": null,
+      "x": "900",
+      "y": "600"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 41,
+    "fields": {
+      "image_url": "https://i.pinimg.com/236x/8b/5e/94/8b5e948f6f8396ab1e1de72693a9ff90.jpg",
+      "submitted_date": null,
+      "x": "900",
+      "y": "0"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 42,
+    "fields": {
+      "image_url": "https://preview.redd.it/m9seqkqhj8851.jpg?width=960&crop=smart&auto=webp&s=b68060c5c3aa8faca2e10d9bd53448b516dabe90",
+      "submitted_date": null,
+      "x": "700",
+      "y": "1000"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 43,
+    "fields": {
+      "image_url": "https://i.imgur.com/lweXhhw.png",
+      "submitted_date": null,
+      "x": "185",
+      "y": "88.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 44,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/615941696072450055/728042192597286952/New_Piskel_2.gif",
+      "submitted_date": null,
+      "x": "1353",
+      "y": "82.9"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 45,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727987600966549684/300px-Quieres3F.png",
+      "submitted_date": null,
+      "x": "1379",
+      "y": "377.7"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 46,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/727923682042970202/EVER_HappyCrocodile.png",
+      "submitted_date": null,
+      "x": "1213",
+      "y": "722.702"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 47,
+    "fields": {
+      "image_url": "https://i.pinimg.com/originals/39/e9/b7/39e9b7940dd8233b10fc1f552fa66b60.jpg",
+      "submitted_date": null,
+      "x": "905",
+      "y": "637.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 48,
+    "fields": {
+      "image_url": "https://sigarra.up.pt/feup/pt/WEB_GESSI_DOCS.download_file?p_name=F52103022/Departamentos.jpg",
+      "submitted_date": null,
+      "x": "189",
+      "y": "261.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 49,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/726982089928605796/726982447635365938/DdhXPX6XkAUt23d.jpg",
+      "submitted_date": null,
+      "x": "1391",
+      "y": "572.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 50,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/679664591675850762/696791943727808612/rosetti2.png",
+      "submitted_date": null,
+      "x": "1109",
+      "y": "308.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 51,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/714162704805396551/728059155843383356/f1923a3.png",
+      "submitted_date": null,
+      "x": "500",
+      "y": "504.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 52,
+    "fields": {
+      "image_url": "https://pbs.twimg.com/media/CEqNrh4UUAMAOOl.jpg",
+      "submitted_date": null,
+      "x": "1302",
+      "y": "948.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 53,
+    "fields": {
+      "image_url": "https://images7.memedroid.com/images/UPLOADED954/5eb68f1ead901.jpeg",
+      "submitted_date": null,
+      "x": "55.0078",
+      "y": "504.672"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 54,
+    "fields": {
+      "image_url": "https://rollingstone.uol.com.br/media/_versions/pornhub_logo_reproducao_divulgacao_widelg.jpg",
+      "submitted_date": null,
+      "x": "190",
+      "y": "87.8571"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 55,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/728635744733626429/SPOILER_1593777091945.png",
+      "submitted_date": null,
+      "x": "543",
+      "y": "253.704"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 56,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/728635145212395590/SPOILER_1593776952623.png",
+      "submitted_date": null,
+      "x": "319",
+      "y": "515.701"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 57,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/728636935475822594/1593778091773.png",
+      "submitted_date": null,
+      "x": "307",
+      "y": "997.705"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 58,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/679277916768567303/728637287516340274/SPOILER_1593778407847.png",
+      "submitted_date": null,
+      "x": "1460",
+      "y": "762.702"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 59,
+    "fields": {
+      "image_url": "https://i.imgur.com/yNTYUyC.gif",
+      "submitted_date": null,
+      "x": "317",
+      "y": "557.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 60,
+    "fields": {
+      "image_url": "https://art.pixilart.com/a566eba4aec3fac.png",
+      "submitted_date": null,
+      "x": "280",
+      "y": "990.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 61,
+    "fields": {
+      "image_url": "https://media.gq.com/photos/5e85fac4cb478c00085df9d1/3:4/w_2360,h_3147,c_limit/HowToSendNudes2.jpg",
+      "submitted_date": null,
+      "x": "568",
+      "y": "189.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 62,
+    "fields": {
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/71S7Z60qCyL._AC_SL1000_.jpg",
+      "submitted_date": null,
+      "x": "323",
+      "y": "509.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 63,
+    "fields": {
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Atorvastatin-3D-animated.png",
+      "submitted_date": null,
+      "x": "1234",
+      "y": "216.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 64,
+    "fields": {
+      "image_url": "http://p.favim.com/orig/2018/08/05/cursed-image-what-lol-Favim.com-6120116.jpg",
+      "submitted_date": null,
+      "x": "1461",
+      "y": "713.3"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 65,
+    "fields": {
+      "image_url": "https://i.ytimg.com/vi/ms6IiIjvd0o/maxresdefault.jpg",
+      "submitted_date": null,
+      "x": "463",
+      "y": "749.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 66,
+    "fields": {
+      "image_url": "https://img-9gag-fun.9cache.com/photo/aD4gObO_460s.jpg",
+      "submitted_date": null,
+      "x": "308",
+      "y": "997.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 67,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/679277916768567303/738398127056486451/c8ql8762sud51.png",
+      "submitted_date": null,
+      "x": "550",
+      "y": "187.2"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 68,
+    "fields": {
+      "image_url": "https://cdn.bulbagarden.net/upload/1/18/414Mothim.png",
+      "submitted_date": null,
+      "x": "1437",
+      "y": "100.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 69,
+    "fields": {
+      "image_url": "https://i.pinimg.com/originals/2c/9e/5f/2c9e5fa55c53de050558902c90aad3f6.jpg",
+      "submitted_date": null,
+      "x": "188",
+      "y": "67.1563"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 70,
+    "fields": {
+      "image_url": "https://i.pinimg.com/originals/7a/c4/91/7ac49132043b179a88fa1180676756ba.jpg",
+      "submitted_date": null,
+      "x": "702",
+      "y": "989.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 71,
+    "fields": {
+      "image_url": "https://www.cancer.org/es/noticias-recientes/preguntas-comunes-acerca-del-brote-del-nuevo-coronavirus/_jcr_content/par/image.img.jpg/1586550990157.jpg",
+      "submitted_date": null,
+      "x": "985",
+      "y": "871.9"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 72,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/256461533092118528/742854719931678760/FB_IMG_1597180756695.jpg",
+      "submitted_date": null,
+      "x": "1068",
+      "y": "232.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 73,
+    "fields": {
+      "image_url": "https://img.memecdn.com/skyrim-vs-dark-souls_o_1150401.jpg",
+      "submitted_date": null,
+      "x": "633",
+      "y": "448.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 74,
+    "fields": {
+      "image_url": "https://www.lineupmx.com.mx/wp-content/uploads/2018/01/Declan-Mckenna-mx.jpg",
+      "submitted_date": null,
+      "x": "9",
+      "y": "192.9"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 75,
+    "fields": {
+      "image_url": "https://cdnio.luscious.net/yancarlosxy/294844/161270-high_school_dxd-rias_gremory_01C16AXKH72Z5C6SJMYVA7R0F3.1024x0.jpg",
+      "submitted_date": null,
+      "x": "591",
+      "y": "984.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 76,
+    "fields": {
+      "image_url": "https://rinconesdemexico.com/wp-content/uploads/valle-de-los-cirios.jpg",
+      "submitted_date": null,
+      "x": "554",
+      "y": "258.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 77,
+    "fields": {
+      "image_url": "https://data.whicdn.com/images/346485359/original.jpg",
+      "submitted_date": null,
+      "x": "583",
+      "y": "985.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 78,
+    "fields": {
+      "image_url": "https://cdn.ebaumsworld.com/thumbs/2020/05/19/055403/86274098/sailormoon-5.jpg",
+      "submitted_date": null,
+      "x": "376",
+      "y": "258.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 79,
+    "fields": {
+      "image_url": "https://i.ytimg.com/vi/hgc8K0vasgk/hqdefault.jpg",
+      "submitted_date": null,
+      "x": "998",
+      "y": "866.812"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 80,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/714191801157812274/752269409854291988/h7s9y3acoil51.png",
+      "submitted_date": null,
+      "x": "1188",
+      "y": "643.175"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 81,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/500431045955420161/752907295398297730/The_Villa_Banner_1.png",
+      "submitted_date": null,
+      "x": "736",
+      "y": "59.1563"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 82,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/500431045955420161/752910701042991184/Twitter_Banner.png",
+      "submitted_date": null,
+      "x": "735",
+      "y": "227.156"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 83,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/488436611235840001/752911484698230854/612399649050853474.png",
+      "submitted_date": null,
+      "x": "289",
+      "y": "0.15625"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 84,
+    "fields": {
+      "image_url": "https://cdn.discordapp.com/attachments/295534444771540993/752911692362416219/661982382dd7a1433a8dee359ac3d1c6.png",
+      "submitted_date": null,
+      "x": "761",
+      "y": "20.1562"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 85,
+    "fields": {
+      "image_url": "https://media.discordapp.net/attachments/392697643429658625/752916542504697916/Welcome_to_bottom_gear_mates.png",
+      "submitted_date": null,
+      "x": "465",
+      "y": "6.15625"
+    }
+  },
+  {
+    "model": "main.Stamp",
+    "pk": 86,
+    "fields": {
+      "image_url": "https://is2.4chan.org/b/1600365418250.png",
+      "submitted_date": null,
+      "x": "12",
+      "y": "22.3"
+    }
+  }
+]

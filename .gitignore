@@ -6,3 +6,5 @@ node_modules/
 pyvenv.cfg
 
 
+
+main/migrations/

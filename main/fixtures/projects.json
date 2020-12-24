@@ -17,7 +17,7 @@
     "fields": {
       "title": "String Art",
       "description": "A simple string art generator that converts an input black and white illustration_url into a sequence of connected strings in a circular frame.",
-      "illustration_url": "",
+      "illustration_url": "/static/images/Projects/StringArt.png",
       "tags": [
       ]
     }
@@ -64,7 +64,7 @@
     "fields": {
       "title": "Pokémon - A Sequel Coming In Inevitably",
       "description": "Pokémon Fire Red look-alike running on a terminal.",
-      "illustration_url": "",
+      "illustration_url": "/static/images/Projects/PokemonASCII.png",
       "tags": [
         2,
         4
@@ -77,7 +77,7 @@
     "fields": {
       "title": "McDelivery",
       "description": "WebGL scene redemption of a McDonald's zeppelin delivering hamburgers.",
-      "illustration_url": "https://github.com/Educorreia932/CGRA/blob/master/main.Project/src/submission/proj-t4g4-2.PNG?raw=true",
+      "illustration_url": "https://github.com/Educorreia932/CGRA/blob/master/Project/src/submission/proj-t4g4-2.PNG?raw=true",
       "tags": [
         4
       ]
@@ -89,22 +89,9 @@
     "fields": {
       "title": "Tour Mate App",
       "description": "An application that let's you plan a tour around Porto by choosing several touristic attractions and calculating an optimal route to let you visit them.",
-      "illustration_url": "",
+      "illustration_url": "/static/images/Projects/TourMateApp.png",
       "tags": [
         8
-      ]
-    }
-  },
-  {
-    "model": "main.Project",
-    "pk": 9,
-    "fields": {
-      "title": "Tour Mate App",
-      "description": "An application that let's you plan a tour around Porto by choosing several touristic attractions and calculating an optimal route to let you visit them.",
-      "illustration_url": "",
-      "tags": [
-        2,
-        4
       ]
     }
   },
@@ -127,7 +114,7 @@
     "fields": {
       "title": "Github Pie Chart",
       "description": "A script that generates a pie chart with the lines of code percentage of each language of a GitHub profile.",
-      "illustration_url": "",
+      "illustration_url": "/static/images/Projects/GithubPieChart.png",
       "tags": [
         5,
         6

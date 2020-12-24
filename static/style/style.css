@@ -230,5 +230,13 @@ footer {
     text-align: center;
 }
 
-/* About Me */
+/* Collage */
 
+div#stamp-canvas {
+	position: relative;
+}
+
+div#stamp-canvas img {
+	position: absolute;
+	max-width: 300px;
+}
