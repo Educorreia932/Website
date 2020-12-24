@@ -35,11 +35,9 @@
 
 <hr>
 
-<script src="/scripts/display-stamps.js"></script>
-
 <div id="stamp-canvas">
     {% for stamp in stamps %}
-    <img src="{{ stamp.image_url }}" style="left: {{ stamp.x }}; top: {{ stamp.y }}" alt="Stamp">
+    <img src="{{ stamp.image_url }}" style="left: {{ stamp.x }}px; top: {{ stamp.y }}px" alt="Stamp">
     {% endfor %}
 </div>
 

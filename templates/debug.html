@@ -1,1 +1,8 @@
-{{kaomoji}}
+{% for stamp in stamps %}
+    {{ stamp.image_url }}
+    {{ stamp.submitted_date }}
+    {{ stamp.x }}
+    {{ stamp.y }}
+    <br>
+{% endfor %}
+

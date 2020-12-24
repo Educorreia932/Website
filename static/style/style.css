@@ -239,4 +239,5 @@ div#stamp-canvas {
 div#stamp-canvas img {
 	position: absolute;
 	max-width: 300px;
+	max-height: 300px;
 }
