@@ -6,12 +6,13 @@
 
 {% block content %}
 
-<!-- ASCII Animation -->
+    {# ASCII Animation #}
 <div id="ascii-display" class="unselectable">
-    <script id="ascii-art" src="../gif/1024.js" ></script>
+    <script defer id="ascii-art" src="{% static '/scripts/ascii_animations/1024.js' %}" ></script>
+    <div id="fscroller"></div>
 </div>
 
-<h1>Divers hyperlinks spoil <span id="kaomoji"></span></h1>
+<h1>Divers hyperlinks spoil {{kaomoji}}</h1>
 
 <p>
     This is where I dump random stuff that doesn't really fit anywhere else on the website.<br>
@@ -30,35 +31,23 @@
 
 <!-- A Beautiful Internet Collage -->
 
-<div class=        "frame">
-    <h2><a href="/collage">A <del>Beautiful</del> Internet Collage</a></h2>
+<div class="frame">
+    <h2><a href="collage">A <del>Beautiful</del> Internet Collage</a></h2>
 </div>
 
 <p>
     A collaborative experiment, much like <a href="https://www.reddit.com/r/place/" target="_blank">r/place</a>, where you submit an image to go along with the already existing ones to form a <del>beautiful</del> collage.
 </p>
 
-<!-- Dark Souls III Completion Checklist -->
-
-<div class="frame">
-    <h2><a href="/ds3-completion.html">Dark Souls III Completion Checklist</a></h2>
-</div>
-
-<!-- Dark Souls III Completion Checklist -->
-
-<div class="frame">
-    <h2><a href="./scratch.html">Dungeons & Dragons - Scratch Map</a></h2>
-</div>
-
 <!-- Stone of Golorr -->
 
 <div class="frame">
-    <h2><a href="./stone-of-golorr.html">Dungeons & Dragons - Stone of Golorr Properties</a></h2>
+    <h2><a href="stone_of_golorr_properties">Dungeons & Dragons - Stone of Golorr Properties</a></h2>
     <p>
         This was a small tool I made for my Dungeons & Dragons party to help us running a campaign.<br>
         When we were playing it, there was an artifact that had random properties, determined by some tables and dice rolling, so this program automates that.
     </p>
-    <iframe src="./stone-of-golorr.html" height="300"></iframe><br>
+    <iframe src="stone_of_golorr_properties" height="300"></iframe><br>
 </div>
 
 <br>

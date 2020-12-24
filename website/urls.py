@@ -11,7 +11,9 @@ urlpatterns = {
     path('about_me', views.about_me),
     path('projects', views.projects),
     path('miscellaneous', views.miscellaneous),
-    path('collage', views.collage)
+    path('collage', views.collage),
+    path('stone_of_golorr_properties', views.stone_of_golorr_properties),
+    path('debug', views.debug)
 }
 
 handler403 = views.permission_denied

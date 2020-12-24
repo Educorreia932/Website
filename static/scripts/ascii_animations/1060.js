@@ -38,5 +38,3 @@ document.fscrollerns.document.fscrollerns_sub.document.close()
 index++
 setTimeout("changecontent()",delay)
 }
-if (ie4||DOM2)
-document.write('<div id="fscroller"></div>')
