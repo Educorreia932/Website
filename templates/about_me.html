@@ -8,7 +8,8 @@
 
 {# ASCII Animation #}
 <div id="ascii-display" class="unselectable">
-    <script id="ascii-art" src="/gif/1017.js" ></script>
+    <script defer id="ascii-art" src="{% static '/scripts/ascii_animations/1017.js' %}" ></script>
+    <div id="fscroller"></div>
 </div>
 
 <h1>Get to know me better <span id="kaomoji"></span></h1>
@@ -18,7 +19,7 @@
     <script defer src="https://d3js.org/d3.v4.js"></script>
     <script defer src="https://d3js.org/topojson.v1.min.js"></script>
     <script defer src="https://d3js.org/queue.v1.min.js"></script>
-    <script defer src="{% static '/scripts/globe.js' %} "></script>
+    <script defer src="{% static '/scripts/globe.js' %}"></script>
 
     <div id="globe"></div>
 </div>

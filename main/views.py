@@ -26,5 +26,10 @@ def miscellaneous(request):
 def collage(request):
     return render(request, "collage.html")
 
-def debug(request):
-    return render(request, "debug.html")
+# Error pages
+
+def permission_denied(request, exception):
+    return render(request, "error/403.html", status=403)
+
+def page_not_found(request, exception):
+    return render(request, "error/404.html", status=404)
