@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Educorreia932 - A Beautiful Collage{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+<script defer src="{% static 'scripts/collage.js' %}"></script>
+
+<h1>A
+    <del>Beautiful</del>
+    Internet Collage
+</h1>
+
+<p>This webpage is an collaborative experiment, much like <a href="https://www.reddit.com/r/place/" target="_blank">r/place</a>,
+    where you submit an image to go along with the already existing ones to form a
+    <del>beautiful</del>
+    collage.
+</p>
+
+<p>There are no restrictrions to the images you may submit... so far.</p>
+
+<h2>Instructions</h2>
+
+<p>Enter a valid image URL, place it on the canvas, click on submit, fill the captcha and then <b>boom</b> magic will happen.</p>
+
+<form>
+    <input type="text" id="image-url" name="url" size="40" placeholder="URL"/><br>
+    <button type="button" onclick="submitStamp()">Submit</button>
+</form>
+
+<h2>WARNING: Potential <span style="color: red">NSFW</span> material below.</h2>
+<input type="checkbox" id="blurCheck" onclick="NSFWblur()">
+<label for="blurCheck">I have no problems with that (remove blur).</label>
+
+<hr>
+
+<div id="stamp-canvas">
+    {% for stamp in stamps %}
+    <img src="{{ stamp.image_url }}" style="left: {{ stamp.x }}px; top: {{ stamp.y }}px" alt="Stamp">
+    {% endfor %}
+</div>
+
+{% endblock %}

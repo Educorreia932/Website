@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+    background-image: url("/static/images/Stone of Golorr Properties/Dragonheist Wallpaper.jpg");
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    color: white;
+    text-shadow: 0 0 5px black;
+}

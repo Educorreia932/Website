@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Educorreia932 - Get to know me better{% endblock %}
+
+{% block content %}
+
+{# ASCII Animation #}
+<div id="ascii-display" class="unselectable">
+    <script defer id="ascii-art" src="{% static '/scripts/ascii_animations/1024.js' %}" ></script>
+    <div id="fscroller"></div>
+</div>
+
+<h1>Divers hyperlinks spoil {{kaomoji}}</h1>
+
+<p>
+    This is where I dump random stuff that doesn't really fit anywhere else on the website.<br>
+    Feel at home here.
+</p>
+
+<!-- Spotify Statistics -->
+
+<div class="frame">
+    <h2><a href="/spotify_statistics">Spotify Statistics</a></h2>
+</div>
+
+<p>
+    Check statistics about your Spotify account.
+</p>
+
+<!-- A Beautiful Internet Collage -->
+
+<div class="frame">
+    <h2><a href="collage">A <del>Beautiful</del> Internet Collage</a></h2>
+</div>
+
+<p>
+    A collaborative experiment, much like <a href="https://www.reddit.com/r/place/" target="_blank">r/place</a>, where you submit an image to go along with the already existing ones to form a <del>beautiful</del> collage.
+</p>
+
+<!-- Stone of Golorr -->
+
+<div class="frame">
+    <h2><a href="stone_of_golorr_properties">Dungeons & Dragons - Stone of Golorr Properties</a></h2>
+    <p>
+        This was a small tool I made for my Dungeons & Dragons party to help us running a campaign.<br>
+        When we were playing it, there was an artifact that had random properties, determined by some tables and dice rolling, so this program automates that.
+    </p>
+{#    <iframe src="stone_of_golorr_properties" height="300" allowfullscreen></iframe><br>#}
+</div>
+
+<!-- List of Games -->
+
+<div class="frame">
+    <h2><a href="list_of_games">List of Games Played</a></h2>
+    <p>
+        This is a list of the games I've played so far, it isn't very much up to date tho.<br>
+        Also, you can click on the collum names to reorder it, but it's fairly slow doing it <del>Bubble Sort lul</del>.
+    </p>
+{#    <iframe src="list_of_games" height="500" allowfullscreen></iframe><br>#}
+</div>
+
+{% endblock %}
+
+

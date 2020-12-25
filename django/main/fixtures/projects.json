@@ -1,0 +1,137 @@
+[
+  {
+    "model": "main.Project",
+    "pk": 1,
+    "fields": {
+      "title": "Oblivion Visual Studio Code Theme",
+      "description": "A syntax coloring theme for Visual Studio Code based on the already existing Oblivion.",
+      "illustration_url": "https://raw.githubusercontent.com/Educorreia932/Oblivion-VS-Code-Theme/master/preview.png",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 2,
+    "fields": {
+      "title": "String Art",
+      "description": "A simple string art generator that converts an input black and white illustration_url into a sequence of connected strings in a circular frame.",
+      "illustration_url": "/static/images/Projects/StringArt.png",
+      "tags": [
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 3,
+    "fields": {
+      "title": "Teacher Bot",
+      "description": "A Discord bot that retrieves statistics for a text channel and has a bunch of other funny commands.",
+      "illustration_url": "https://github.com/Educorreia932/Teacher-Bot/raw/master/teacher.jpg",
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 4,
+    "fields": {
+      "title": "CTM 2020 Summer Internship",
+      "description": "Flying communications node controller sensitive to traffic",
+      "illustration_url": "https://github.com/Educorreia932/CTM-2020-Summer-Intership/raw/master/sitl_simulation.png",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 5,
+    "fields": {
+      "title": "Pokémon Origins",
+      "description": "An infographics on pokémon and its counterpart inspirational origins in flora and fauna.",
+      "illustration_url": "https://raw.githubusercontent.com/Educorreia932/Pokemon-Origins/master/graphic.png",
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 6,
+    "fields": {
+      "title": "Pokémon - A Sequel Coming In Inevitably",
+      "description": "Pokémon Fire Red look-alike running on a terminal.",
+      "illustration_url": "/static/images/Projects/PokemonASCII.png",
+      "tags": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 7,
+    "fields": {
+      "title": "McDelivery",
+      "description": "WebGL scene redemption of a McDonald's zeppelin delivering hamburgers.",
+      "illustration_url": "https://github.com/Educorreia932/CGRA/blob/master/Project/src/submission/proj-t4g4-2.PNG?raw=true",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 8,
+    "fields": {
+      "title": "Tour Mate App",
+      "description": "An application that let's you plan a tour around Porto by choosing several touristic attractions and calculating an optimal route to let you visit them.",
+      "illustration_url": "/static/images/Projects/TourMateApp.png",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 10,
+    "fields": {
+      "title": "Project Watt",
+      "description": "A platforming game themed around an electric particle in a circuit trying to reach the exit (connect to earth) and developed for MINIX.",
+      "illustration_url": "https://camo.githubusercontent.com/7e83c6ce4ee303d831f18b29392fbc0dad9babb4/68747470733a2f2f692e696d6775722e636f6d2f3367707a4c36592e706e67",
+      "tags": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 11,
+    "fields": {
+      "title": "Github Pie Chart",
+      "description": "A script that generates a pie chart with the lines of code percentage of each language of a GitHub profile.",
+      "illustration_url": "/static/images/Projects/GithubPieChart.png",
+      "tags": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 12,
+    "fields": {
+      "title": "Every Web is a Home",
+      "description": "Game developed for Global Game Jam 2019 in which you are a spider trying to catch bugs with your web.",
+      "illustration_url": "https://img.itch.zone/aW1nLzE4NTU1ODYucG5n/original/ZYCpEs.png",
+      "tags": [
+        2,
+        3
+      ]
+    }
+  }
+]
