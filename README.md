@@ -1,6 +1,7 @@
-# Educorreia932's Homepage
+# Educorreia932's Website
 
-The source files for my website, being hosted using Github Pages.
+The source files for my website.  
+Developed using Django.
 
 ## Preview
 
@@ -9,9 +10,3 @@ The source files for my website, being hosted using Github Pages.
 ## Old Version
 
 ![Old Preview](old_preview.png)
-
-Setting up a local server with PHP 
-
-```sh
-php -S localhost:8000
-```

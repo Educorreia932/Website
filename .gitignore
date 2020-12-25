@@ -1,3 +1,12 @@
-securimage/
+__pycache__/
+.idea/
+venv/
+node_modules/
 
-token.txt
+pyvenv.cfg
+
+
+
+main/migrations/
+
+db.sqlite3
