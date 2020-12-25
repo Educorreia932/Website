@@ -14,7 +14,7 @@ urlpatterns = {
     path('collage', views.collage),
     path('submit_stamp', views.submit_stamp),
     path('stone_of_golorr_properties', views.stone_of_golorr_properties),
-    path('debug', views.debug)
+    path('spotify_statistics', views.spotify_statistics),
 }
 
 handler403 = views.permission_denied

@@ -67,6 +67,7 @@ def submit_stamp(request):
             x=request.POST.get("x"),
             y=request.POST.get("y")
         )
+
         stamp.save()
 
         return HttpResponse(
@@ -77,8 +78,8 @@ def submit_stamp(request):
 def stone_of_golorr_properties(request):
     return render(request, "stone-of-golorr.html")
 
-def debug(request):
-    return render(request, "debug.html")
+def spotify_statistics(request):
+    return render(request, "spotify_statistics.html")
 
 # Error pages
 
