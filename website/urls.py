@@ -12,6 +12,7 @@ urlpatterns = {
     path('projects', views.projects),
     path('miscellaneous', views.miscellaneous),
     path('collage', views.collage),
+    path('submit_stamp', views.submit_stamp),
     path('stone_of_golorr_properties', views.stone_of_golorr_properties),
     path('debug', views.debug)
 }

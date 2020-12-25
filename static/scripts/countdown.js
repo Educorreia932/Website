@@ -25,7 +25,7 @@ let x = setInterval(function() {
 	}
 }, 1000);
 
-function days_between(date1, date2) {
+function daysBetween(date1, date2) {
 	// The number of milliseconds in one day
 	const ONE_DAY = 1000 * 60 * 60 * 24;
 
@@ -40,17 +40,17 @@ function days_between(date1, date2) {
 	return Math.round(difference_ms / ONE_DAY);
 }
 
-function fill_progress_bar() {
+function fillProgressBar() {
 	const el = document.getElementById("after");
 	const today = new Date();
 	const date1 = new Date(2018, 9, 8);
 	const date2 = new Date(2023, 6, 21);
-	const time1 = days_between(date1, date2);
-	const time2 = days_between(date1, today);
+	const time1 = daysBetween(date1, date2);
+	const time2 = daysBetween(date1, today);
 
 	el.style.width = String((time2 / time1) * 100) + "%";
 
 	document.getElementById("progress_percentage").innerHTML = el.style.width;
 }
 
-fill_progress_bar();
+fillProgressBar();

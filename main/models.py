@@ -11,7 +11,7 @@ class Project(models.Model):
 
 class Stamp(models.Model):
     image_url = models.CharField(max_length=300)
-    submitted_date = models.DateField(default=None, blank=True, null=True)
+    submitted_date = models.DateTimeField(blank=True, null=True, auto_now_add=True)
     x = models.FloatField()
     y = models.FloatField()
 

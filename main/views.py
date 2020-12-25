@@ -1,7 +1,9 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 import json
 import random
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import *
 from .serializers import ProjectSerializer
@@ -55,6 +57,22 @@ def collage(request):
     }
 
     return render(request, "collage.html", context)
+
+# TODO: Check for CSRF token
+@csrf_exempt
+def submit_stamp(request):
+    if request.method == "POST":
+        stamp = Stamp(
+            image_url=request.POST.get("image_url"),
+            x=request.POST.get("x"),
+            y=request.POST.get("y")
+        )
+        stamp.save()
+
+        return HttpResponse(
+            json.dumps(r"Success"),
+            content_type="application/json"
+        )
 
 def stone_of_golorr_properties(request):
     return render(request, "stone-of-golorr.html")

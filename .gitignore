@@ -8,3 +8,5 @@ pyvenv.cfg
 
 
 main/migrations/
+
+db.sqlite3
