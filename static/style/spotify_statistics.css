@@ -1,0 +1,25 @@
+footer {
+    text-align: center;
+}
+
+section#content {
+    width: 100%;
+}
+
+div#information {
+    display: grid;
+    grid-template-columns: repeat(3, 20em [col-start]);
+    grid-gap: 1em;
+    justify-content: center;
+}
+
+.artist-card {
+    display: inline-block;
+    text-align: center;
+    font-size: larger;
+}
+
+.artist-card img {
+    border-radius: 10px 10px;
+    width: 100%;
+}

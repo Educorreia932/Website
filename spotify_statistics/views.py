@@ -51,6 +51,7 @@ def spotify_callback(request):
     token_type = response.get("token_type")
     refresh_token = response.get("refresh_token")
     expires_in = response.get("expires_in")
+
     error = response.get("error")
 
     if not request.session.exists(request.session.session_key):
@@ -60,7 +61,7 @@ def spotify_callback(request):
 
     update_or_create_user_tokens(session_id, access_token, token_type, expires_in, refresh_token)
 
-    return redirect("")
+    return redirect("/spotify_statistics")
 
 
 class IsAuthenticated(APIView):
@@ -80,7 +81,5 @@ class TopArtists(APIView):
         endpoint = "top/artists"
 
         response = execute_spotify_api_request(session_id, endpoint)
-
-        print(response)
 
         return Response(response, status=status.HTTP_200_OK)
