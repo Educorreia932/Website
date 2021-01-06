@@ -1,14 +1,37 @@
-footer {
-    text-align: center;
-}
-
 section#content {
     width: 100%;
 }
 
+div#options {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#options div.option {
+    width: 10em;
+}
+
+div#options label {
+    font-weight: normal;
+    width: 100%;
+}
+
+div#options input {
+    display: none;
+}
+
+div#options input:checked + label {
+    background-color: #1DB954;
+    color: white;
+}
+
 div#information {
+    margin-left: 12em;
+    margin-right: 12em;
     display: grid;
-    grid-template-columns: repeat(3, 20em [col-start]);
+    grid-template-columns: repeat(3, 33% [col-start]);
     grid-gap: 1em;
     justify-content: center;
 }
@@ -22,4 +45,8 @@ div#information {
 .artist-card img {
     border-radius: 10px 10px;
     width: 100%;
+}
+
+footer {
+    text-align: center;
 }
