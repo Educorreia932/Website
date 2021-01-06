@@ -14,4 +14,3 @@ class Stamp(models.Model):
     submitted_date = models.DateTimeField(blank=True, null=True, auto_now_add=True)
     x = models.FloatField()
     y = models.FloatField()
-

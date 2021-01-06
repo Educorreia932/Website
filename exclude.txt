@@ -1,9 +1,0 @@
-.git
-.idea
-__pycache__
-venv
-.gitignore
-deploy.sh
-exclude.txt
-manage.py
-README.md

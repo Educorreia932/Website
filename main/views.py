@@ -1,10 +1,14 @@
+import spotipy
+
 from django.http import HttpResponse
 from django.shortcuts import render
+from spotipy.oauth2 import SpotifyOAuth
 
 import json
 import random
 from django.views.decorators.csrf import csrf_exempt
 
+from .forms import StampForm
 from .models import *
 from .serializers import ProjectSerializer
 
@@ -13,6 +17,7 @@ def get_kaomoji(category):
         kaomoji = json.load(file)["kaomoji"]
 
     return random.choice(kaomoji[category])
+
 
 # Main pages
 
@@ -23,12 +28,14 @@ def homepage(request):
 
     return render(request, 'homepage.html', context)
 
+
 def about_me(request):
     context = {
         "kaomoji": get_kaomoji("sympathy")
     }
 
     return render(request, 'about_me.html', context)
+
 
 def projects(request):
     queryset = Project.objects.all()
@@ -42,12 +49,14 @@ def projects(request):
 
     return render(request, 'projects.html', context)
 
+
 def miscellaneous(request):
     context = {
         "kaomoji": get_kaomoji("indifference")
     }
 
     return render(request, 'miscellaneous.html', context)
+
 
 def collage(request):
     stamps_data = Stamp.objects.all()
@@ -57,6 +66,7 @@ def collage(request):
     }
 
     return render(request, "collage.html", context)
+
 
 # TODO: Check for CSRF token
 @csrf_exempt
@@ -75,16 +85,32 @@ def submit_stamp(request):
             content_type="application/json"
         )
 
+
 def stone_of_golorr_properties(request):
     return render(request, "stone-of-golorr.html")
 
-def spotify_statistics(request):
-    return render(request, "spotify_statistics.html")
+
 
 # Error pages
 
 def permission_denied(request, exception):
     return render(request, "error/403.html", status=403)
 
+
 def page_not_found(request, exception):
     return render(request, "error/404.html", status=404)
+
+# DEBUG ---------------------------
+
+@csrf_exempt
+def debug(request):
+    if request.POST:
+        form = StampForm(request.POST)
+
+        if form.is_valid():
+            print("CAPTCHA Sucess")
+
+    else:
+        form = StampForm()
+
+    return render(request, "debug.html", {'form': form})

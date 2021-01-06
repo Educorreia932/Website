@@ -1,16 +1,22 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Spotify Statistics</title>
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    </head>
+<head>
+    <title>Spotify Statistics</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script defer src="{% static 'scripts/spotify_statistics.js' %}"></script>
+</head>
 
-    <body style="padding-left: 1em; padding-right: 1em">
-        <h1>Spotify Statistics</h1>
-        <div style="text-align: center">
-            <h2>Not Available</h2>
-            <p>I'm currently doing some changes on my website, so, until I finish it, this page won't be operational.</p>
-            <p>I'm sorry for the inconvenience. I hope to get it back working soon, until then I ask for your patience and thank you for using this tool!</p>
-        </div>
-    </body>
+<body>
+
+<h1>Spotify Statistics</h1>
+
+{{ token.user }}
+
+<footer>
+    &copy; 2021 - Eduardo Correia
+</footer>
+
+</body>
 </html>

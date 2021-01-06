@@ -5,7 +5,7 @@ from main import views
 
 from django.conf.urls import *
 
-urlpatterns = {
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
     path('about_me', views.about_me),
@@ -14,8 +14,10 @@ urlpatterns = {
     path('collage', views.collage),
     path('submit_stamp', views.submit_stamp),
     path('stone_of_golorr_properties', views.stone_of_golorr_properties),
-    path('spotify_statistics', views.spotify_statistics),
-}
+    path('spotify_statistics/', include("spotify_statistics.urls")),
+    path('captcha/', include('captcha.urls')),
+    path('debug', views.debug),
+]
 
 handler403 = views.permission_denied
 handler404 = views.page_not_found

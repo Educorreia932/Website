@@ -1,6 +1,30 @@
 [
   {
     "model": "main.Project",
+    "pk": 14,
+    "fields": {
+      "title": "Ask Away",
+      "description": "Mobile applications to ask questions in conference talks.",
+      "illustration_url": "/static/images/Projects/AskAway.png",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
+    "pk": 13,
+    "fields": {
+      "title": "Helper Shelter",
+      "description": "Animal adoption website",
+      "illustration_url": "/static/images/Projects/HelperShelter.png",
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "main.Project",
     "pk": 1,
     "fields": {
       "title": "Oblivion Visual Studio Code Theme",

@@ -26,9 +26,11 @@
 
 <p>Enter a valid image URL, place it on the canvas, click on submit, fill the captcha and then <b>boom</b> magic will happen.</p>
 
-<form>
-    <input type="text" id="image-url" name="url" size="40" placeholder="URL"/><br>
-    <button type="button" onclick="submitStamp()">Submit</button>
+<input type="text" id="image-url" name="url" size="40" placeholder="URL"/><br>
+<button type="button" onclick="submitStamp()">Submit</button>
+
+<form id="stamp-submition">
+   {{ form }}
 </form>
 
 <h2>WARNING: Potential <span style="color: red">NSFW</span> material below.</h2>
