@@ -24,6 +24,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'captcha',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,3 +133,10 @@ LOGGING = {
 }
 
 X_FRAME_OPTIONS = 'ALLOWALL'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
+}

@@ -5,7 +5,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from requests import Request, post
-from .utils import update_or_create_user_tokens, is_spotify_authenticated, get_user_tokens
+from .utils import *
 
 
 def spotify_statistics(request):
@@ -23,7 +23,7 @@ def spotify_statistics(request):
 
 class AuthURL(APIView):
     def get(self, request):
-        scope = "user-read-playback-state"
+        scope = "user-read-playback-state user-top-read"
 
         url = Request("GET", "https://accounts.spotify.com/authorize", params={
             "scope": scope,
@@ -68,3 +68,19 @@ class IsAuthenticated(APIView):
         is_authenticated = is_spotify_authenticated(self.request.session.session_key)
 
         return Response({"status": is_authenticated}, status=status.HTTP_200_OK)
+
+
+class TopArtists(APIView):
+    def get(self, request):
+        if not request.session.exists(request.session.session_key):
+            request.session.create()
+
+        session_id = request.session.session_key
+
+        endpoint = "top/artists"
+
+        response = execute_spotify_api_request(session_id, endpoint)
+
+        print(response)
+
+        return Response(response, status=status.HTTP_200_OK)
