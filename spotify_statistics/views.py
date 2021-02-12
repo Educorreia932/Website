@@ -78,7 +78,9 @@ class TopArtists(APIView):
 
         session_id = request.session.session_key
 
-        endpoint = "top/artists"
+        time_range = request.GET.get("time_range")
+
+        endpoint = f"top/artists?time_range={time_range}"
 
         response = execute_spotify_api_request(session_id, endpoint)
 
