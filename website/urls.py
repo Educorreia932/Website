@@ -14,6 +14,7 @@ urlpatterns = [
     path('collage', views.collage),
     path('submit_stamp', views.submit_stamp),
     path('stone_of_golorr_properties', views.stone_of_golorr_properties),
+    path('break_in', views.break_in),
     path('spotify_statistics/', include("spotify_statistics.urls")),
     path('captcha/', include('captcha.urls')),
     path('debug', views.debug),

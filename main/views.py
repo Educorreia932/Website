@@ -1,8 +1,5 @@
-import spotipy
-
 from django.http import HttpResponse
 from django.shortcuts import render
-from spotipy.oauth2 import SpotifyOAuth
 
 import json
 import random
@@ -11,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .forms import StampForm
 from .models import *
 from .serializers import ProjectSerializer
+
 
 def get_kaomoji(category):
     with open("static/kaomoji.json", "r", encoding="utf8") as file:
@@ -26,7 +24,7 @@ def homepage(request):
         "kaomoji": get_kaomoji("greeting")
     }
 
-    return render(request, 'homepage.html', context)
+    return render(request, 'pages/homepage.html', context)
 
 
 def about_me(request):
@@ -34,7 +32,7 @@ def about_me(request):
         "kaomoji": get_kaomoji("sympathy")
     }
 
-    return render(request, 'about_me.html', context)
+    return render(request, 'pages/about_me.html', context)
 
 
 def projects(request):
@@ -47,7 +45,7 @@ def projects(request):
         "kaomoji": get_kaomoji("cat")
     }
 
-    return render(request, 'projects.html', context)
+    return render(request, 'pages/projects.html', context)
 
 
 def miscellaneous(request):
@@ -55,7 +53,7 @@ def miscellaneous(request):
         "kaomoji": get_kaomoji("indifference")
     }
 
-    return render(request, 'miscellaneous.html', context)
+    return render(request, 'pages/miscellaneous.html', context)
 
 
 def collage(request):
@@ -65,7 +63,7 @@ def collage(request):
         "stamps": stamps_data
     }
 
-    return render(request, "collage.html", context)
+    return render(request, "pages/collage.html", context)
 
 
 # TODO: Check for CSRF token
@@ -87,8 +85,11 @@ def submit_stamp(request):
 
 
 def stone_of_golorr_properties(request):
-    return render(request, "stone-of-golorr.html")
+    return render(request, "pages/stone_of_golorr.html")
 
+
+def break_in(request):
+    return render(request, "break_in/break_in.html")
 
 
 # Error pages
@@ -99,6 +100,7 @@ def permission_denied(request, exception):
 
 def page_not_found(request, exception):
     return render(request, "error/404.html", status=404)
+
 
 # DEBUG ---------------------------
 

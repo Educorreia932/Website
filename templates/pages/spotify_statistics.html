@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spotify Statistics</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style/spotify_statistics.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+    <script defer src="{% static 'scripts/spotify_statistics.js' %}"></script>
+</head>
+
+<body>
+
+<h1>Spotify Statistics</h1>
+
+<h2>Your favorite genres</h2>
+
+<section id="time-period-selection">
+    <input type="radio" id="4-weeks-period" name="time-period" value="short_term">
+    <label for="4-weeks-period">Last 4 weeks</label>
+
+    <input type="radio" id="6-months-period" name="time-period" value="medium_term" checked>
+    <label for="6-months-period">Last 6 months</label>
+
+    <input type="radio" id="all-time-period" name="time-period" value="long_term">
+    <label for="all-time-period">All time</label>
+</section>
+
+<section id="content">
+    <div id="chart">
+        <canvas id="doughnut" width="400" height="400"></canvas>
+    </div>
+    <div id="wordcloud"></div>
+</section>
+
+<footer>
+    &copy; 2021 - Eduardo Correia
+</footer>
+
+</body>
+</html>

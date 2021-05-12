@@ -1,0 +1,103 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %}Educorreia932 - Welcome to my webpage{% endblock %}
+
+{% block content %}
+
+    {# ASCII Animation #}
+    <div id="ascii-display" class="unselectable">
+        <script defer id="ascii-art" src="{% static '/scripts/ascii_animations/1015.js' %}"></script>
+        <div id="fscroller"></div>
+    </div>
+
+    <div>
+        <h1>Welcome to my webpage {{ kaomoji }}</h1>
+
+        <p>My name is Eduardo, I'm
+            <del>not</del>
+            your typical portuguese nerd and this is
+            <del>not</del>
+            your typical webpage.
+        </p>
+
+        <p>I don't know how you ended up here and, since you might not know me, here's a brief heads up.</p>
+
+        <p>I'm currently attending the third year of a "Master in Informatics and Computing Engineering" 5-year course
+            in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank">FEUP</a> (Faculty of Engineering
+            of University of Porto).</p>
+
+        <p>My main hobbies are to watch <i>Youtube</i>/anime, browse <i>reddit</i>, play video-games, tabletop games or
+            role-playing games (mainly <i>Dungeons & Dragons</i>), code (most of the time in <b>C/C++</b>, <b>C#</b>
+            (Unity) <b>Python</b>, <b>Java</b> or
+            <del>the Holy Trinity</del>
+            <b>HTML</b>/<b>CSS</b>/<b>Javascript</b>), listen to music and occasionally draw, do some image editing or
+            read a book.
+        </p>
+
+        <p>
+            Online, I usually go by the nickname <b>Educorreia932</b> or <b>Skelozard</b>.<br>
+            I'm guessing it's fairly obvious to see where the first nickname comes from (the <b>932</b> part was just
+            because there were already 931 "Eduardo's" in a game I created an account many years ago and it sticked
+            since).<br>
+            About the second one, it's a contraction between <b>Skeleton</b> and <b>Lizard</b> (my favorite animal) /
+            <b>Wizard</b> (my favorite RPG class), but also the name of a <a
+                href="https://pokegods-or-fakemon.fandom.com/wiki/Skelozard" target="_blank">fake pokémon</a>
+            apparently.<br>
+            I sometimes use <b>Skelozard1</b> in platforms where an account named <b>Skelozard</b> already exists
+            <del>curse you Skelozardε</del>
+            .
+        </p>
+    </div>
+
+    {# Avatar #}
+    <img id="avatar" alt="Avatar" src="{% static 'images/Avatar.png' %}" width="400" height="400">
+
+    {# Course countdown #}
+    <div id="course-countdown">
+        {# Display the countdown timer in an element #}
+        <p style="text-align: center;">Time to end university course ⏲</p>
+
+        {# Progress bar #}
+        <div id="progress" class="tooltip">
+            <span id="progress_percentage" class="tooltiptext"></span>
+            <div id="after"></div>
+        </div>
+
+        <script src="{% static 'scripts/countdown.js' %}"></script>
+
+        <p id="countdown" style="text-align: center;"></p>
+    </div>
+
+    <!-- Social Media Icons -->
+    {% with "/images/Social Media Icons/" as icons_folder %}
+        <div id="social-media">
+            <a href="https://github.com/Educorreia932" target="_blank">
+                <img alt="Github Icon" src="{% static icons_folder|add:'Github.svg' %}"/>
+            </a>
+            <a href="https://steamcommunity.com/id/Skelozard/" target="_blank">
+                <img alt="Steam Icon" src="{% static icons_folder|add:'Steam.svg' %}"/>
+            </a>
+            <a href="https://open.spotify.com/user/skelozard?si=xcfSNEPvTL2Gogds5yPMEw" target="_blank">
+                <img alt="Spotify Icon" src="{% static icons_folder|add:'Spotify.svg' %}">
+            </a>
+            <a href="https://www.linkedin.com/in/eduardo-correia-7a608216a/" target="_blank">
+                <img alt="LinkedIn Icon" src="{% static icons_folder|add:'LinkedIn.svg' %}"/>
+            </a>
+            <a href="https://www.instagram.com/educorreia932/" target="_blank">
+                <img alt="Instagram Icon" src="{% static icons_folder|add:'Instagram.svg' %}"/>
+            </a>
+            <a href="https://www.deviantart.com/skelozard1" target="_blank">
+                <img alt="DeviantArt Icon" src="{% static icons_folder|add:'DeviantArt.svg' %}"/>
+            </a>
+            <a href="mailto:educorreia932@gmail.com" target="_blank">
+                <img alt="E-Mail Icon" src="{% static icons_folder|add:'Gmail.svg' %}"/>
+            </a>
+            <a href="https://discord.bio/p/skelozard" target="_blank">
+                <img alt="Discord Icon" src="{% static icons_folder|add:'Discord.svg' %}">
+            </a>
+        </div>
+    {% endwith %}
+
+{% endblock %}

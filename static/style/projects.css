@@ -1,12 +1,12 @@
 /* Project cards */
 
-div#projects {
+#projects {
     column-count: auto;
     column-width: 20rem;
     column-gap: 1.5em;
 }
 
-div#projects div.project-card {
+#projects div.project-card {
     display: inline-block;
     background-color: #333333;
     border-radius: 10px;
@@ -16,39 +16,39 @@ div#projects div.project-card {
     vertical-align: top;
 }
 
-div#projects div.project-card:hover {
+#projects div.project-card:hover {
     transform: scale(1.02);
 }
 
-div#projects div.project-card img {
+#projects div.project-card img {
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
-div#projects div.project-information {
+#projects div.project-information {
     padding: 0 1rem 1rem;
 }
 
-div#projects div.project-card h2 {
+#projects div.project-card h2 {
     font-size: 100%;
     margin: 0.5rem 0 0.7rem;
 }
 
-div#projects div.project-information {
+#projects div.project-information {
     padding: 0 1rem 1rem;
 }
 
-div#projects div.project-information p {
+#projects div.project-information p {
     margin: 0 0 1rem;
     font-size: 0.8rem;
 }
 
-div#projects div.project-tags {
+#projects div.project-tags {
     display: flex;
     text-transform: uppercase;
 }
 
-div#projects span.project-tag {
+#projects span.project-tag {
     background-color: #d93300;
     padding: 0.2rem 0.5rem 0.1rem;
     margin-right: 0.8rem;
