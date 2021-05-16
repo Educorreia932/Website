@@ -34,7 +34,8 @@
 	</ul>
 
 	<h3>Favorite music albums 🎸</h3>
-	<img alt="Favorite music albums" src="/static/images/FavoriteMusicAlbums.png" width="550">
+
+	<img alt="Favorite music albums" src="@/assets/images/FavoriteMusicAlbums.png" width="550">
 
 	<h3>Favorite movies/series 📺</h3>
 
@@ -71,6 +72,10 @@ export default {
 <style scoped>
 h3 {
 	@apply text-center;
+}
+
+img {
+	@apply block mx-auto;
 }
 
 ul {

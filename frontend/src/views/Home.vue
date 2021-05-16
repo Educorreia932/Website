@@ -46,7 +46,7 @@
 	</section>
 
 	<!-- Avatar-->
-	<img id="avatar" alt="Avatar" src="@/assets/Avatar.png" width="400" height="400" class="block mx-auto">
+	<img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400" height="400" class="block mx-auto">
 
 	<section class="text-center my-10">
 		<p>Time to end university course ⏲</p>
