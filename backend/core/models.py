@@ -14,7 +14,15 @@ class Project(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
 
 
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = "__all__"
+
+
 class ProjectSerializer(serializers.ModelSerializer):
+    tags = TagSerializer(many=True)
+
     class Meta:
         model = Project
         fields = "__all__"

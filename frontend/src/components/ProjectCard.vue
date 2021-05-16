@@ -1,20 +1,18 @@
 <template>
 	<div class="project-card">
-		<img class="project-illustration" alt="Project Illustration" src=/static/images/Projects/Umbrella.png>
+		<img class="project-illustration" alt="Project Illustration" src="">
 
 		<div class="project-information">
 			<h2>{{ project.title }}</h2>
 
-			<p class="project-description">Game developed for Global Game Jam 2021.</p>
+			<p class="project-description">
+				{{ project.description }}
+			</p>
 
 			<div class="project-tags">
-                <span class="project-tag">
-                    Game
-                </span>
-
-				<span class="project-tag">
-                    Game-Jam
-                </span>
+				<span v-for="tag in project.tags" :key="tag" class="project-tag">
+					{{ tag.name }}
+				</span>
 			</div>
 		</div>
 	</div>
@@ -29,17 +27,10 @@ export default {
 
 <style scoped>
 .project-card {
-	display: inline-block;
-	background-color: #333333;
-	border-radius: 10px;
-	transition: all 0.5s;
+	@apply inline-block bg-dark-light rounded-xl transition transform hover:scale-105;
 	margin-bottom: 1.5rem;
 	flex-shrink: 0;
 	vertical-align: top;
-}
-
-.project-card:hover {
-	transform: scale(1.02);
 }
 
 .project-card img {
@@ -66,7 +57,7 @@ export default {
 }
 
 .project-tags {
-	display: flex;
+	@apply flex;
 	text-transform: uppercase;
 }
 
@@ -74,7 +65,6 @@ export default {
 	background-color: #d93300;
 	padding: 0.2rem 0.5rem 0.1rem;
 	margin-right: 0.8rem;
-	width: auto;
 	border-radius: 3px;
 	font-size: 0.8rem;
 }
