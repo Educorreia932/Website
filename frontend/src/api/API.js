@@ -7,7 +7,7 @@ const API = () => {
         baseURL: API_URL,
         xsrfCookieName: "csrftoken",
         xsrfHeaderName: "X-CSRFTOKEN",
-        withCredentials: true,
+        withCredentials: false,
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
