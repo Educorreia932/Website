@@ -22,10 +22,21 @@ export default {
 }
 
 #after {
-	background: linear-gradient(to right, #ffcc00 0%, #ff9966 100%);
 	width: 60%;
 	height: 100%;
 	border-radius: 9px;
+	background: linear-gradient(45deg, #ffcc00, #ff6e2c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0 0
+	}
+	100% {
+		background-position: 100% 100%
+	}
 }
 
 .tooltip {

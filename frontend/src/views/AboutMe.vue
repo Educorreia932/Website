@@ -4,7 +4,26 @@
 	<!-- Visited countries -->
 	<h3>Visited countries 🌍</h3>
 
-	<globe width=400 height=400 speed=0.005></globe>
+	<section id="countries">
+		<div class="flags">
+			<country-flag country='pt' size='big' class="flag"/>
+			<country-flag country='es' size='big' class="flag"/>
+			<country-flag country='fr' size='big' class="flag"/>
+			<country-flag country='gb' size='big' class="flag"/>
+			<country-flag country='it' size='big' class="flag"/>
+			<country-flag country='de' size='big' class="flag"/>
+		</div>
+
+		<globe width=400 height=400 speed=0.005 id="globe"></globe>
+
+		<div class="flags">
+			<country-flag country='be' size='big' class="flag"/>
+			<country-flag country='pl' size='big' class="flag"/>
+			<country-flag country='ch' size='big' class="flag"/>
+			<country-flag country='cz' size='big' class="flag"/>
+			<country-flag country='ie' size='big' class="flag"/>
+		</div>
+	</section>
 
 	<!-- Favorite videogames -->
 	<h3>Favorite videogames 🎮</h3>
@@ -62,10 +81,14 @@
 
 <script>
 import Globe from "@/components/Globe";
+import CountryFlag from 'vue-country-flag-next'
 
 export default {
 	name: "AboutMe",
-	components: {Globe}
+	components: {
+		"globe": Globe,
+		"country-flag": CountryFlag
+	}
 }
 </script>
 
@@ -81,5 +104,18 @@ img {
 ul {
 	text-align: center;
 	list-style: inside none;
+}
+
+.flag {
+	border-radius: 8px 8px;
+}
+
+#countries {
+	@apply flex flex-row space-x-16 place-content-center;
+	height: 400px;
+}
+
+.flags {
+	@apply flex flex-col space-y-5 place-content-center;
 }
 </style>

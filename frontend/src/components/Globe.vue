@@ -1,7 +1,5 @@
 <template>
-	<div id="container">
-		<svg id="globe"></svg>
-	</div>
+	<svg id="globe"></svg>
 </template>
 
 <script>
@@ -80,10 +78,6 @@ export default {
 </script>
 
 <style>
-#container {
-	@apply text-center;
-}
-
 .water {
 	@apply fill-current text-dark;
 }
