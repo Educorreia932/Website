@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1>Welcome to my webpage <kaomoji category="greeting"></kaomoji></h1>
+		<h1>Welcome to my website <kaomoji category="greeting"></kaomoji></h1>
 
 		<p>
 			My name is Eduardo, I'm
