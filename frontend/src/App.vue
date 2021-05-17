@@ -1,7 +1,7 @@
 <template>
 	<div v-if="!$route.meta.plain_layout">
 		<header>
-			<nav>
+			<nav class="space-x-3">
 				<router-link class="tab" :to="{ name: 'home' }">Introduction</router-link>
 				<router-link class="tab" :to="{ name: 'about_me' }">About Me</router-link>
 				<router-link class="tab" :to="{ name: 'projects' }">Projects</router-link>
@@ -28,7 +28,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.tab {
+	@apply inline-block text-white bg-dark-light;
+	padding: 0.3em 1em;
+	cursor: pointer;
+}
 </style>
 
