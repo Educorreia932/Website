@@ -1,6 +1,6 @@
 <template>
 	<div class="project-card">
-		<img class="project-illustration" alt="Project Illustration" src="">
+		<img class="project-illustration" alt="Project Illustration" :src="project.image">
 
 		<div class="project-information">
 			<h2>{{ project.title }}</h2>
@@ -21,7 +21,10 @@
 <script>
 export default {
 	name: "ProjectCard",
-	props: ["project"]
+	props: ["project"],
+	mounted() {
+		console.log(this.project)
+	}
 }
 </script>
 

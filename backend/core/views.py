@@ -8,6 +8,6 @@ class ProjectsViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
 
     def list(self, request, **kwargs):
-        serializer = ProjectSerializer(self.queryset, many=True)
+        serializer = ProjectSerializer(self.queryset, many=True, context={'request': request})
 
         return Response(serializer.data)

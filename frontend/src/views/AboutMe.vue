@@ -76,7 +76,6 @@
 		<li><a href="https%3A/www.youtube.com/user/PaolofromTOKYO">Paolo fromTOKYO</a></li>
 		<li><a href="https%3A/www.youtube.com/user/UniversoProgramado">Universo Programado</a></li>
 	</ul>
-
 </template>
 
 <script>
