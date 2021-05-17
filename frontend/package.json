@@ -1,0 +1,60 @@
+{
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "@chenfengyuan/vue-countdown": "^1.1.5",
+        "@fortawesome/fontawesome-svg-core": "^1.2.35",
+        "@fortawesome/free-solid-svg-icons": "^5.15.3",
+        "@fortawesome/vue-fontawesome": "^3.0.0-3",
+        "axios": "^0.21.1",
+        "core-js": "^3.6.5",
+        "d3": "^6.7.0",
+        "d3-queue": "^3.0.7",
+        "topojson": "^3.0.2",
+        "vue": "^3.0.11",
+        "vue-country-flag-next": "^2.1.1",
+        "vue-router": "^4.0.8"
+    },
+    "devDependencies": {
+        "@fortawesome/free-brands-svg-icons": "^5.15.3",
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "^4.5.13",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/compiler-sfc": "^3.0.0",
+        "autoprefixer": "^9.8.6",
+        "babel-eslint": "^10.1.0",
+        "cors": "^2.8.5",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^7.0.0",
+        "postcss": "^7.0.35",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/vue3-essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {
+            "no-unused-vars": "off"
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}

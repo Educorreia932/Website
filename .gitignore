@@ -5,10 +5,13 @@ node_modules/
 
 pyvenv.cfg
 
-
-
 main/migrations/
 
 db.sqlite3
 
 exclude.txt
+
+
+frontend/package-lock.json
+
+backend/core/migrations/
