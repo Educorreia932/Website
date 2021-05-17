@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1>Welcome to my webpage</h1>
+		<h1>Welcome to my webpage <kaomoji category="greeting"></kaomoji></h1>
 
 		<p>
 			My name is Eduardo, I'm
@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import Kaomoji from "@/components/Kaomoji";
 import ProgressBar from "@/components/ProgressBar.vue"
 import Countdown from "@/components/Countdown"
 
@@ -91,6 +92,7 @@ const today = new Date();
 export default {
 	name: 'Home',
 	components: {
+		"kaomoji": Kaomoji,
 		"progress-bar": ProgressBar,
 		"countdown": Countdown
 	},

@@ -5,8 +5,6 @@
 				<router-link class="tab" :to="{ name: 'home' }">Introduction</router-link>
 				<router-link class="tab" :to="{ name: 'about_me' }">About Me</router-link>
 				<router-link class="tab" :to="{ name: 'projects' }">Projects</router-link>
-
-				<a class="tab" href="/miscellaneous">Miscellaneous</a>
 			</nav>
 		</header>
 

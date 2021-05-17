@@ -1,5 +1,5 @@
 <template>
-	<h1>My own creations</h1>
+	<h1>My own creations <kaomoji category="cat"></kaomoji></h1>
 
 	<section id="projects">
 		<project-card v-for="project in projects" :key="project.id" :project="project"></project-card>
@@ -7,12 +7,16 @@
 </template>
 
 <script>
+import Kaomoji from "@/components/Kaomoji";
 import Projects from "@/api/Projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export default {
 	name: "Projects",
-	components: {ProjectCard},
+	components: {
+		"kaomoji": Kaomoji,
+		"project-card": ProjectCard,
+	},
 	data() {
 		return {
 			projects: []

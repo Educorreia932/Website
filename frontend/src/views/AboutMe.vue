@@ -1,5 +1,7 @@
 <template>
-	<h1>Get to know me better</h1>
+	<h1>Get to know me better
+		<kaomoji category="sympathy"></kaomoji>
+	</h1>
 
 	<!-- Visited countries -->
 	<h3>Visited countries 🌍</h3>
@@ -70,23 +72,25 @@
 	<h3>Favorite Youtube channels 📹</h3>
 
 	<ul>
-		<li><a href="https%3A/www.youtube.com/user/numberphile">Numberphile</a></li>
-		<li><a href="https%3A/www.youtube.com/user/enyay">Tom Scott</a></li>
-		<li><a href="https%3A/www.youtube.com/user/SsethTzeentach">SsethTzeentach</a></li>
-		<li><a href="https%3A/www.youtube.com/user/PaolofromTOKYO">Paolo fromTOKYO</a></li>
-		<li><a href="https%3A/www.youtube.com/user/UniversoProgramado">Universo Programado</a></li>
+		<li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
+		<li><a href="https://www.youtube.com/user/enyay">Tom Scott</a></li>
+		<li><a href="https://www.youtube.com/user/SsethTzeentach">SsethTzeentach</a></li>
+		<li><a href="https://www.youtube.com/user/PaolofromTOKYO">Paolo fromTOKYO</a></li>
+		<li><a href="https://www.youtube.com/user/UniversoProgramado">Universo Programado</a></li>
 	</ul>
 </template>
 
 <script>
+import Kaomoji from "@/components/Kaomoji";
 import Globe from "@/components/Globe";
 import CountryFlag from 'vue-country-flag-next'
 
 export default {
 	name: "AboutMe",
 	components: {
+		"kaomoji": Kaomoji,
 		"globe": Globe,
-		"country-flag": CountryFlag
+		"country-flag": CountryFlag,
 	}
 }
 </script>
