@@ -1,34 +1,8 @@
 version: '3'
 
-volumes:
-    local_postgres_data: { }
-    local_postgres_data_backups: { }
-
 services:
-    django:
-        image: python:3.7
-        container_name: website_django
-        depends_on:
-            - postgres
-        volumes:
-            - .:/app
-            - ./static:/static
-        working_dir: /app
-        env_file:
-            - .env
+    backend:
+        build: backend/
         ports:
-            - "8000:8000"
-        command: bash -c "pip install -r requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn -w 4 -t 180 -b 0.0.0.0:8000 config.wsgi"
-
-    postgres:
-        image: postgres:11
-        container_name: website_postgres
-        volumes:
-            - local_postgres_data:/var/lib/postgresql/data
-            - local_postgres_data_backups:/backups
-        env_file:
-            - .env
-
-    redis:
-        image: redis:5
-        container_name: website_redis
+            - 8000:8000
+        command: python manage.py runserver 0.0.0.0:8000

@@ -1,7 +1,7 @@
 # Educorreia932's Website
 
-The source files for my website.  
-Developed using Django.
+The source files for my personal website.  
+Developed using Django and Vue.js.
 
 ## Preview
 
