@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = () => {
-    let API_URL = "http://localhost:8000/api";
+    let API_URL = "https://educorreia932.dev/api";
 
     return axios.create({
         baseURL: API_URL,

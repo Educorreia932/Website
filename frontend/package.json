@@ -5,7 +5,8 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+        "lint": "vue-cli-service lint",
+        "production": "vue-cli-service serve --mode production"
     },
     "dependencies": {
         "@chenfengyuan/vue-countdown": "^1.1.5",
@@ -16,6 +17,7 @@
         "core-js": "^3.6.5",
         "d3": "^6.7.0",
         "d3-queue": "^3.0.7",
+        "serve": "^11.3.2",
         "topojson": "^3.0.2",
         "vue": "^3.0.11",
         "vue-country-flag-next": "^2.1.1",
@@ -33,7 +35,7 @@
         "cors": "^2.8.5",
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^7.0.0",
-        "postcss": ">=8.2.10",
+        "postcss": "^7.0.35",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
     },
     "eslintConfig": {

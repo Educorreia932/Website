@@ -14,4 +14,4 @@ RUN npm install
 COPY . .
 
 # Build app for production with minification
-RUN npm run build --modern --no-unsafe-inline
+# RUN npm run build --modern --no-unsafe-inline

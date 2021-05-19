@@ -17,3 +17,5 @@ frontend/package-lock.json
 backend/core/migrations/
 
 package-lock.json
+
+frontend/dist/
