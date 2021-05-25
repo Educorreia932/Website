@@ -3,7 +3,7 @@
         <kaomoji category="cat"></kaomoji>
     </h1>
 
-    <section id="projects">
+    <section class="masonry">
         <project-card v-for="project in projects" :key="project.id" :project="project"></project-card>
     </section>
 </template>
@@ -42,9 +42,5 @@ export default {
 </script>
 
 <style scoped>
-#projects {
-    column-count: auto;
-    column-width: 20rem;
-    column-gap: 1.5em;
-}
+
 </style>

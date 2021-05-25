@@ -9,10 +9,16 @@
                 {{ project.description }}
             </p>
 
-            <div class="project-tags">
-				<span v-for="tag in project.tags" :key="tag" class="project-tag">
-					{{ tag.name }}
-				</span>
+            <div class="flex">
+                <div class="project-tags">
+                    <span v-for="tag in project.tags" :key="tag" class="project-tag">
+                        {{ tag.name }}
+                    </span>
+                </div>
+
+                <a :href="project.project_url" class="ml-auto project-anchor" target="_blank">
+                    <font-awesome-icon :icon="['fa', 'link']"/>
+                </a>
             </div>
         </div>
     </div>
@@ -67,5 +73,9 @@ export default {
     margin-right: 0.8rem;
     border-radius: 3px;
     font-size: 0.8rem;
+}
+
+.project-anchor {
+    color: gray;
 }
 </style>
