@@ -10,7 +10,7 @@ export default {
 	props: ["category"],
 	data() {
 		return {
-			kaomoji: kaomoji_json[this.category][0]
+			kaomoji: kaomoji_json[this.category][Math.floor(Math.random() * kaomoji_json[this.category].length)]
 		}
 	},
 }

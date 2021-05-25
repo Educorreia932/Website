@@ -30,6 +30,9 @@ export default {
     methods: {
         get() {
             Projects.list().then((response) => {
+                for (let project of response.data)
+                    project.image_url = process.env.VUE_APP_API_ENDPOINT + project.image_url;
+
                 this.projects = response.data;
             });
         }

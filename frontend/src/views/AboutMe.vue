@@ -72,11 +72,11 @@
 	<h3>Favorite Youtube channels 📹</h3>
 
 	<ul>
-		<li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
-		<li><a href="https://www.youtube.com/user/enyay">Tom Scott</a></li>
-		<li><a href="https://www.youtube.com/user/SsethTzeentach">SsethTzeentach</a></li>
-		<li><a href="https://www.youtube.com/user/PaolofromTOKYO">Paolo fromTOKYO</a></li>
-		<li><a href="https://www.youtube.com/user/UniversoProgramado">Universo Programado</a></li>
+		<li><a href="https://www.youtube.com/c/numberphile">Numberphile</a></li>
+		<li><a href="https://www.youtube.com/c/enyay">Tom Scott</a></li>
+		<li><a href="https://www.youtube.com/c/SsethTzeentach">SsethTzeentach</a></li>
+		<li><a href="https://www.youtube.com/c/PaolofromTOKYO">Paolo fromTOKYO</a></li>
+		<li><a href="https://www.youtube.com/c/UniversoProgramado">Universo Programado</a></li>
 	</ul>
 </template>
 

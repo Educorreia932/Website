@@ -1,10 +1,8 @@
 import axios from 'axios'
 
 const API = () => {
-    let API_URL = "https://educorreia932.dev/api";
-
     return axios.create({
-        baseURL: API_URL,
+        baseURL: process.env.VUE_APP_API_ENDPOINT + "/api",
         xsrfCookieName: "csrftoken",
         xsrfHeaderName: "X-CSRFTOKEN",
         withCredentials: false,
