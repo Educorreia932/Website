@@ -34,7 +34,6 @@ export default {
 <style scoped>
 .project-card {
     @apply inline-block bg-dark-light rounded-xl transition transform hover:scale-105;
-    margin-bottom: 1.5rem;
     flex-shrink: 0;
     vertical-align: top;
 }

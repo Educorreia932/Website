@@ -6,11 +6,11 @@ import "@/assets/css/tailwind.css"
 
 // FontAwesome
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faLink} from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faSteam, faSpotify, faLinkedin, faInstagram, faDiscord} from '@fortawesome/free-brands-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-library.add(faEnvelope, faGithub, faSteam, faSpotify, faLinkedin, faInstagram, faDiscord)
+library.add(faEnvelope, faGithub, faSteam, faSpotify, faLinkedin, faInstagram, faDiscord, faLink)
 
 const app = createApp(App)
 

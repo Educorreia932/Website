@@ -3,8 +3,14 @@
         <kaomoji category="cat"></kaomoji>
     </h1>
 
-    <section class="masonry">
-        <project-card v-for="project in projects" :key="project.id" :project="project"></project-card>
+    <section class="container">
+        <div v-for="project in projects" :key="project.id" class="item">
+            <project-card :project="project"></project-card>
+        </div>
+
+        <span class="item break"></span>
+        <span class="item break"></span>
+        <span class="item break"></span>
     </section>
 </template>
 
@@ -38,9 +44,38 @@ export default {
         }
     }
 }
-
 </script>
 
-<style scoped>
+<style>
+.container {
+    @apply flex flex-col flex-wrap space-y-6;
+    height: 1700px;
+}
+
+.item {
+    width: 23.5%;
+}
+
+.item:nth-of-type(4n+1) {
+    order: 1;
+}
+
+.item:nth-of-type(4n+2) {
+    order: 2;
+}
+
+.item:nth-of-type(4n+3) {
+    order: 3;
+}
+
+.item:nth-of-type(4n) {
+    order: 4;
+}
+
+.break {
+    @apply mx-3;
+    flex-basis: 100%;
+    width: 0;
+}
 
 </style>
