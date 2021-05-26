@@ -4,13 +4,10 @@
     </h1>
 
     <section class="container">
-        <div v-for="project in projects" :key="project.id" class="item">
-            <project-card :project="project"></project-card>
-        </div>
+        <project-card v-for="i in projects.length" :key="i" :project="projects[i - 1]"
+                      :style="{ order: (i - 1) % numberColumns + 1, width: '23.5%' }"></project-card>
 
-        <span class="item break"></span>
-        <span class="item break"></span>
-        <span class="item break"></span>
+        <span v-for="i in numberColumns - 1" :key="i" :style="{ order: i}" class="item break"></span>
     </section>
 </template>
 
@@ -27,7 +24,8 @@ export default {
     },
     data() {
         return {
-            projects: []
+            projects: [],
+            numberColumns: 4
         }
     },
     mounted() {
@@ -56,26 +54,9 @@ export default {
     width: 23.5%;
 }
 
-.item:nth-of-type(4n+1) {
-    order: 1;
-}
-
-.item:nth-of-type(4n+2) {
-    order: 2;
-}
-
-.item:nth-of-type(4n+3) {
-    order: 3;
-}
-
-.item:nth-of-type(4n) {
-    order: 4;
-}
-
 .break {
     @apply mx-3;
     flex-basis: 100%;
     width: 0;
 }
-
 </style>
