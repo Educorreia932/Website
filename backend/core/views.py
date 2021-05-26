@@ -5,7 +5,7 @@ from core.models import *
 
 
 class ProjectsViewSet(viewsets.ModelViewSet):
-    queryset = reversed(Project.objects.all())
+    queryset = Project.objects.all()[::-1]
 
     def list(self, request, **kwargs):
         serializer = ProjectSerializer(self.queryset, many=True, context={'request': request})
