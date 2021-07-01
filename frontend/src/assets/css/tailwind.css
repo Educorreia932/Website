@@ -9,29 +9,7 @@
     }
 
     body {
-        @apply font-body bg-dark px-8;
-        color: whitesmoke;
-        line-height: 1.3;
-        font-size: large;
+        @apply m-0;
     }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    a:link {
-        @apply text-red-orange;
-        text-decoration: none;
-    }
-
-    a:visited {
-        @apply text-red-orange-dark;
-    }
-
-    a:hover {
-        @apply text-red-orange-light;
-    }
-
-
 }
 

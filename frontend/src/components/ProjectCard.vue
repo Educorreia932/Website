@@ -75,6 +75,6 @@ export default {
 }
 
 .project-anchor {
-    color: gray;
+    color: gray !important;
 }
 </style>

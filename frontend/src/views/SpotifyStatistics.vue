@@ -5,13 +5,13 @@
         <h2>Your favorite genres</h2>
 
         <section id="time-period-selection">
-            <input type="radio" id="4-weeks-period" name="time-period" value="short_term">
+            <input type="radio" id="4-weeks-period" name="time-period" v-on:click="fetchTopArtists('short_term')">
             <label for="4-weeks-period">Last 4 weeks</label>
 
-            <input type="radio" id="6-months-period" name="time-period" value="medium_term" checked>
+            <input type="radio" id="6-months-period" name="time-period" checked v-on:click="fetchTopArtists('medium_term')">
             <label for="6-months-period">Last 6 months</label>
 
-            <input type="radio" id="all-time-period" name="time-period" value="long_term">
+            <input type="radio" id="all-time-period" name="time-period" v-on:click="fetchTopArtists('long_term')">
             <label for="all-time-period">All time</label>
         </section>
 
@@ -26,23 +26,22 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="text-center">
         &copy; 2021 - Eduardo Correia
     </footer>
 </template>
 
 <script>
-import * as d3 from "d3";
+
+const d3 = require('d3')
+const cloud = require("d3-cloud");
 import Chart from "chart.js";
 
 export default {
     name: "SpotifyStatistics",
     mounted() {
         fetch(process.env.VUE_APP_API_ENDPOINT + "/api/get_csrf_cookie")
-            .then((response) => response.json())
-            .then((data) => {
-                this.setCookie("csrftoken", data.token)
-            })
+            .then((response) => this.setCookie("X-CSRFToken", response.headers.get("X-CSRFToken")))
 
         // Check if user is authenticated
         fetch(process.env.VUE_APP_API_ENDPOINT + "/api/spotify_statistics/is_authenticated", {
@@ -172,7 +171,7 @@ export default {
                 .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
-            const layout = d3.layout.cloud()
+            const layout = cloud()
                 .size([width, height])
                 .words(genres.map(function (entry) {
                     return {
@@ -212,59 +211,49 @@ export default {
 </script>
 
 <style scoped>
-body {
-    @apply p-4 bg-white;
+main {
+    @apply px-12;
+    font-family: "Helvetica", sans-serif;
 }
 
-section#time-period-selection {
-    @apply flex text-center mt-8 p-0;
-    list-style-type: none;
-    justify-content: center;
+#time-period-selection {
+    @apply flex text-center mt-8 p-0 justify-center list-none;
 }
 
-section#time-period-selection label {
+#time-period-selection label {
+    @apply text-black p-2;
     width: 12em;
-    color: black;
-    background-color: #f6f6f6;
-    padding: 0.3em;
+    background-color: #F6F6F6;
 }
 
-section#time-period-selection input:checked + label {
+#time-period-selection input:checked + label {
     @apply text-white;
     background-color: #1DB954;
 }
 
-section#time-period-selection label:first-of-type {
+#time-period-selection label:first-of-type {
     border-radius: 25px 0 0 25px;
 }
 
-section#time-period-selection label:last-of-type {
+#time-period-selection label:last-of-type {
     border-radius: 0 25px 25px 0;
 }
 
-section#time-period-selection input {
-    display: none;
+#time-period-selection input {
+    @apply hidden;
 }
 
-section#content {
+#content {
     @apply grid my-9;
     grid-template-columns: 60% 1fr;
 }
 
-section#content div#chart {
+#content div#chart {
     padding-left: 15%;
     padding-right: 15%;
 }
 
-section#content div#wordcloud {
+#content div#wordcloud {
     @apply flex justify-center;
-}
-
-section#content div#wordcloud svg {
-    @apply m-auto;
-}
-
-footer {
-    @apply text-center;
 }
 </style>

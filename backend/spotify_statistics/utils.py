@@ -3,7 +3,6 @@ from datetime import timedelta
 from django.utils import timezone
 from requests import post, put, get
 
-from .credentials import CLIENT_ID, CLIENT_SECRET
 from .models import SpotifyToken
 
 BASE_URL = "https://api.spotify.com/v1/me/"
@@ -80,6 +79,7 @@ def refresh_spotify_token(session_id):
 
 def execute_spotify_api_request(session_id, endpoint, post_="False", put_="False"):
     tokens = get_user_tokens(session_id)
+    endpoint += "&limit=50"
 
     headers = {
         "Content-Type": "application/json",

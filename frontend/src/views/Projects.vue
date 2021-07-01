@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
     @apply flex flex-col flex-wrap space-y-6;
     height: 2200px;

@@ -235,5 +235,18 @@
                 4
             ]
         }
+    },
+    {
+        "model": "core.Project",
+        "pk": 19,
+        "fields": {
+            "title": "Undermountain",
+            "description": "A roguelike game based on the Undermountain setting of Dungeons & Dragons.",
+            "project_url": "https://github.com/Educorreia932/Undermountain",
+            "image": "/static/projects/Undermountain.png",
+            "tags": [
+                2
+            ]
+        }
     }
 ]

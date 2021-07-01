@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from backend.settings import env
-from .credentials import *
 from .utils import *
 
 csrf = ""
@@ -22,8 +21,8 @@ class AuthURL(APIView):
         url = Request("GET", "https://accounts.spotify.com/authorize", params={
             "scope": scope,
             "response_type": "code",
-            "redirect_uri": REDIRECT_URI,
-            "client_id": CLIENT_ID
+            "redirect_uri": env("SPOTIFY_REDIRECT"),
+            "client_id": env("SPOTIFY_CLIENT_ID")
         }).prepare().url
 
         return Response({"url": url}, status=status.HTTP_200_OK)
@@ -35,9 +34,9 @@ def spotify_callback(request):
     response = post("https://accounts.spotify.com/api/token", data={
         "grant_type": "authorization_code",
         "code": code,
-        "redirect_uri": REDIRECT_URI,
-        "client_id": CLIENT_ID,
-        "client_secret": CLIENT_SECRET
+        "redirect_uri": env("SPOTIFY_REDIRECT"),
+        "client_id": env("SPOTIFY_CLIENT_ID"),
+        "client_secret": env("SPOTIFY_CLIENT_SECRET")
     }).json()
 
     access_token = response.get("access_token")
@@ -51,6 +50,7 @@ def spotify_callback(request):
     update_or_create_user_tokens(session_id, access_token, token_type, expires_in, refresh_token)
 
     return redirect(env("FRONTEND_ROOT") + "/spotify_statistics")
+
 
 class IsAuthenticated(APIView):
     def get(self, request):

@@ -14,13 +14,15 @@
         "@fortawesome/free-solid-svg-icons": "^5.15.3",
         "@fortawesome/vue-fontawesome": "^3.0.0-3",
         "axios": "^0.21.1",
-        "chart.js": "^3.3.0",
+        "chart.js": "2.9.4",
         "core-js": "^3.6.5",
         "d3": "^6.7.0",
+        "d3-cloud": "^1.2.5",
         "d3-queue": "^3.0.7",
         "serve": "^11.3.2",
         "topojson": "^3.0.2",
         "vue": "^3.0.11",
+        "vue-chartjs": "^3.5.1",
         "vue-country-flag-next": "^2.1.1",
         "vue-router": "^4.0.8"
     },
@@ -53,7 +55,7 @@
         },
         "rules": {
             "no-unused-vars": "off",
-            "no-unused-components": "off"
+            "vue/no-unused-components": "off"
         }
     },
     "browserslist": [
