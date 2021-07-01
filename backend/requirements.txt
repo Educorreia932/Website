@@ -3,3 +3,4 @@ djangorestframework~=3.12.4
 pathlib~=1.0.1
 django-cors-headers
 Pillow
+django-environ

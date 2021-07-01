@@ -1,21 +1,19 @@
 __pycache__/
 .idea/
+
+# Backend folders and files
+backend/core/migrations/
 venv/
-node_modules/
-
 pyvenv.cfg
-
-main/migrations/
-
 db.sqlite3
 
-exclude.txt
-
-
-frontend/package-lock.json
-
-backend/core/migrations/
-
+# Frontend folders and files
+frontend/dist/
+node_modules/
 package-lock.json
 
-frontend/dist/
+# Environment files
+.env
+.env.production
+
+exclude.txt

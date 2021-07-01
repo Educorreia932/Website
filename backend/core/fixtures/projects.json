@@ -150,7 +150,7 @@
         "pk": 12,
         "fields": {
             "title": "Ask Away",
-            "description": "Mobile applications to ask questions in conference talks.",
+            "description": "A mobile application designed to ask questions in conference talks.",
             "project_url": "https://github.com/Educorreia932/ESOF",
             "image": "/static/projects/AskAway.png",
             "tags": [
@@ -163,7 +163,7 @@
         "pk": 13,
         "fields": {
             "title": "Helper Shelter",
-            "description": "Animal adoption website",
+            "description": "An animal adoption website",
             "project_url": "https://github.com/Educorreia932/LTW/tree/master/Project",
             "image": "/static/projects/HelperShelter.png",
             "tags": [
@@ -208,6 +208,31 @@
             "project_url": "https://github.com/Educorreia932/Bad-Apple",
             "image": "/static/projects/BadApple.jpg",
             "tags": [
+            ]
+        }
+    },
+    {
+        "model": "core.Project",
+        "pk": 17,
+        "fields": {
+            "title": "Spotify Statistics",
+            "description": "A webpage that gives you some insight regarding your favorite music genres according to what you listen to on Spotify.",
+            "project_url": "https://educorreia932.dev/spotify_statistics",
+            "image": "/static/projects/SpotifyStatistics.png",
+            "tags": [
+            ]
+        }
+    },
+    {
+        "model": "core.Project",
+        "pk": 18,
+        "fields": {
+            "title": "Trade-a-Bid",
+            "description": "Online auction platform for users to buy and sell all kinds of digital products, through a bidding system.",
+            "project_url": "https://github.com/Educorreia932/LBAW",
+            "image": "/static/projects/Trade-a-Bid.png",
+            "tags": [
+                4
             ]
         }
     }

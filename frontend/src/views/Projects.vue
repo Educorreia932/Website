@@ -5,7 +5,8 @@
 
     <section class="container">
         <project-card v-for="i in projects.length" :key="i" :project="projects[i - 1]"
-                      :style="{ order: (i - 1) % numberColumns + 1, width: '23.5%' }"></project-card>
+                      :style="{ order: (i - 1) % numberColumns + 1, width: '23.5%' }">
+        </project-card>
 
         <span v-for="i in numberColumns - 1" :key="i" :style="{ order: i}" class="item break"></span>
     </section>
@@ -47,7 +48,7 @@ export default {
 <style>
 .container {
     @apply flex flex-col flex-wrap space-y-6;
-    height: 1700px;
+    height: 2200px;
 }
 
 .item {

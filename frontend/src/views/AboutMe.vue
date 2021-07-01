@@ -116,10 +116,12 @@
     <h3>Favorite Youtube channels 📹</h3>
 
     <ul>
+        <li><a href="https://www.youtube.com/c/AtrocityGuide">Atrocity Guide</a></li>
+        <li><a href="https://www.youtube.com/c/BarelySociable">Barely Sociable</a></li>
         <li><a href="https://www.youtube.com/c/numberphile">Numberphile</a></li>
-        <li><a href="https://www.youtube.com/c/enyay">Tom Scott</a></li>
-        <li><a href="https://www.youtube.com/c/SsethTzeentach">SsethTzeentach</a></li>
         <li><a href="https://www.youtube.com/c/PaolofromTOKYO">Paolo fromTOKYO</a></li>
+        <li><a href="https://www.youtube.com/c/SsethTzeentach">SsethTzeentach</a></li>
+        <li><a href="https://www.youtube.com/c/enyay">Tom Scott</a></li>
         <li><a href="https://www.youtube.com/c/UniversoProgramado">Universo Programado</a></li>
     </ul>
 </template>

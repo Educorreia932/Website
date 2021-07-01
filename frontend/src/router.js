@@ -1,7 +1,9 @@
 import {createRouter, createWebHistory} from "vue-router";
+
 import Home from "@/views/Home.vue";
 import AboutMe from "@/views/AboutMe";
 import Projects from "@/views/Projects";
+import SpotifyStatistics from "@/views/SpotifyStatistics";
 
 const routes = [
     {
@@ -27,9 +29,17 @@ const routes = [
         meta: {
             title: "Educorreia932 - My own creations"
         }
+    },
+    {
+        path: "/spotify_statistics",
+        component: SpotifyStatistics,
+        name: "spotify_statistics",
+        meta: {
+            title: "Educorreia932 - Spotify Statistics",
+            plain_layout: true
+        }
     }
 ]
-
 
 const router = createRouter({
     history: createWebHistory(),

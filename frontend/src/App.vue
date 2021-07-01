@@ -1,5 +1,5 @@
 <template>
-	<div v-if="!$route.meta.plain_layout">
+	<div v-if="!$route.meta.plain_layout" id="app-content">
 		<header>
 			<nav class="space-x-3">
 				<router-link class="tab" :to="{ name: 'home' }">Introduction</router-link>

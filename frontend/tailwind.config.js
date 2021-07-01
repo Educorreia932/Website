@@ -17,6 +17,7 @@ module.exports = {
         },
         fontFamily: {
             body: ['Modeseven-L3n5', 'sans-serif'],
+            spotify: [ 'sans-serif']
         }
     },
     variants: {
