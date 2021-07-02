@@ -1,7 +1,7 @@
 # Educorreia932's Website
 
 The source files for my personal website.  
-Developed using Django and Vue.js.
+Developed using *Django* and *Vue.js*.
 
 ## Preview
 
@@ -10,3 +10,4 @@ Developed using Django and Vue.js.
 ## Old Version
 
 ![Old Preview](old_preview.png)
+ 

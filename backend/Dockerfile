@@ -1,3 +1,5 @@
+# Not using Docker to deploy my website for the moment
+
 FROM python:3.7-alpine
 
 WORKDIR /

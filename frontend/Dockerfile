@@ -1,3 +1,5 @@
+# Not using Docker to deploy my website for the moment
+
 FROM node:lts-alpine
 
 WORKDIR /
