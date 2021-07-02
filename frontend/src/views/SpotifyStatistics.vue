@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="px-12">
         <h1>Spotify Statistics</h1>
 
         <h2>Your favorite genres</h2>
@@ -27,8 +27,8 @@
         </section>
     </main>
 
-    <footer class="text-center">
-        &copy; 2021 - Eduardo Correia
+    <footer class="text-center pb-7">
+        &copy; 2021 - <router-link to="/">Eduardo Correia</router-link>
     </footer>
 </template>
 

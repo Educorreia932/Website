@@ -49,7 +49,11 @@ const routes = [
             plain_layout: true
         }
     },
-
+    {
+        path: "/:catchAll(.*)",
+        name: "404",
+        redirect: "/"
+    },
 ]
 
 const router = createRouter({
