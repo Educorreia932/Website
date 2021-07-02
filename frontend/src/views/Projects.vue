@@ -3,7 +3,7 @@
         <kaomoji category="cat"></kaomoji>
     </h1>
 
-    <section class="container">
+    <section class="container" style="height: 2200px">
         <project-card v-for="i in projects.length" :key="i" :project="projects[i - 1]"
                       :style="{ order: (i - 1) % numberColumns + 1, width: '23.5%' }">
         </project-card>
@@ -48,16 +48,10 @@ export default {
 <style scoped>
 .container {
     @apply flex flex-col flex-wrap space-y-6;
-    height: 2200px;
-}
-
-.item {
-    width: 23.5%;
 }
 
 .break {
-    @apply mx-3;
+    @apply mx-3 w-0;
     flex-basis: 100%;
-    width: 0;
 }
 </style>

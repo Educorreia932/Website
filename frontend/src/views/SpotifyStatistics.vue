@@ -8,7 +8,8 @@
             <input type="radio" id="4-weeks-period" name="time-period" v-on:click="fetchTopArtists('short_term')">
             <label for="4-weeks-period">Last 4 weeks</label>
 
-            <input type="radio" id="6-months-period" name="time-period" checked v-on:click="fetchTopArtists('medium_term')">
+            <input type="radio" id="6-months-period" name="time-period" checked
+                   v-on:click="fetchTopArtists('medium_term')">
             <label for="6-months-period">Last 6 months</label>
 
             <input type="radio" id="all-time-period" name="time-period" v-on:click="fetchTopArtists('long_term')">
@@ -32,14 +33,21 @@
 </template>
 
 <script>
-
 const d3 = require('d3')
 const cloud = require("d3-cloud");
 import Chart from "chart.js";
 
+let chart = null
+
 export default {
     name: "SpotifyStatistics",
     mounted() {
+        // Add Bootstrap stylesheet
+        let stylesheet = document.createElement('link');
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = 'https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'
+        document.head.appendChild(stylesheet)
+
         fetch(process.env.VUE_APP_API_ENDPOINT + "/api/get_csrf_cookie")
             .then((response) => this.setCookie("X-CSRFToken", response.headers.get("X-CSRFToken")))
 
@@ -119,11 +127,14 @@ export default {
         generateChart(genres) {
             const ctx = document.getElementById('doughnut');
 
-            let labels = Object.keys(genres);
-            let data = Object.values(genres);
-            let colors = labels.map(() => this.getRandomColor());
+            const labels = Object.keys(genres);
+            const data = Object.values(genres);
+            const colors = labels.map(() => this.getRandomColor());
 
-            new Chart(ctx, {
+            if (chart != null)
+                chart.destroy();
+
+            chart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
                     labels: labels,
@@ -135,7 +146,8 @@ export default {
                 },
                 options: {
                     legend: {
-                        display: false
+                        display: false,
+                        responsive: true
                     }
                 }
             });
@@ -211,11 +223,6 @@ export default {
 </script>
 
 <style scoped>
-main {
-    @apply px-12;
-    font-family: "Helvetica", sans-serif;
-}
-
 #time-period-selection {
     @apply flex text-center mt-8 p-0 justify-center list-none;
 }

@@ -22,9 +22,9 @@
         "serve": "^11.3.2",
         "topojson": "^3.0.2",
         "vue": "^3.0.11",
-        "vue-chartjs": "^3.5.1",
         "vue-country-flag-next": "^2.1.1",
-        "vue-router": "^4.0.8"
+        "vue-router": "^4.0.8",
+        "vue3-burger-menu": "^1.1.1"
     },
     "devDependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.3",

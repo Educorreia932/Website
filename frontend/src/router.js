@@ -4,6 +4,7 @@ import Home from "@/views/Home.vue";
 import AboutMe from "@/views/AboutMe";
 import Projects from "@/views/Projects";
 import SpotifyStatistics from "@/views/SpotifyStatistics";
+import Collage from "@/views/Collage";
 
 const routes = [
     {
@@ -38,7 +39,17 @@ const routes = [
             title: "Educorreia932 - Spotify Statistics",
             plain_layout: true
         }
-    }
+    },
+    {
+        path: "/collage",
+        component: Collage,
+        name: "collage",
+        meta: {
+            title: "Educorreia932 - A Beautiful Collage",
+            plain_layout: true
+        }
+    },
+
 ]
 
 const router = createRouter({
