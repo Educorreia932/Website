@@ -146,16 +146,16 @@ ul {
     list-style: inside none;
 }
 
+.flags {
+    @apply hidden sm:flex flex-col space-y-5 place-content-center;
+}
+
 .flag {
     border-radius: 8px 8px;
 }
 
 #countries {
-    @apply flex flex-row space-x-16 place-content-center;
+    @apply flex flex-row sm:space-x-16 place-content-center;
     height: 400px;
-}
-
-.flags {
-    @apply flex flex-col space-y-5 place-content-center;
 }
 </style>
