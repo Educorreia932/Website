@@ -8,7 +8,7 @@
             </nav>
         </header>
 
-        <main>
+        <main class="big-boy">
             <router-view></router-view>
         </main>
 
@@ -28,31 +28,32 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app-content {
-    @apply font-body bg-dark px-12;
+    @apply font-body bg-dark px-6 sm:px-10 md:px-12 text-base sm:text-lg;
     color: whitesmoke;
     line-height: 1.3;
-    font-size: large;
-}
+    min-height: 100vh;
 
-#app-content h1 {
-    font-size: 2em;
-}
+    h1 {
+        @apply text-xl sm:text-2xl md:text-3xl lg:text-3xl;
+    }
 
-#app-content a:link {
-    @apply text-red-orange;
-    text-decoration: none;
-}
+    a:link {
+        @apply text-red-orange no-underline;
+    }
 
-#app-content a:visited {
-    @apply text-red-orange-dark;
-}
+    a:visited {
+        @apply text-red-orange-dark;
+    }
 
-#app-content a:hover {
-    @apply text-red-orange-light;
+    a:hover {
+        @apply text-red-orange-light;
+    }
 }
+</style>
 
+<style>
 .tab {
     @apply inline-block text-white bg-dark-light !important;
     padding: 0.3em 1em;

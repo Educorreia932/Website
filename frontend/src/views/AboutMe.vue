@@ -1,33 +1,25 @@
 <template>
-    <h1>Get to know me better
+    <h1>
+        Get to know me better
         <kaomoji category="sympathy"></kaomoji>
     </h1>
 
     <section>
-        <p>
-            My name is Eduardo, I'm
-            <del>not</del>
-            your typical portuguese nerd and this is
-            <del>not</del>
-            your typical webpage.
-        </p>
+        <p>My name is Eduardo, and this is my webpage.</p>
 
         <p>I don't know how you ended up here and, since you might not know me, here's a brief heads up.</p>
 
         <p>I'm currently attending the third year of a "Master in Informatics and Computing Engineering" 5-year
-            course
-            in <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank">FEUP</a> (Faculty of
-            Engineering
-            of University of Porto).</p>
+            course in
+            <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank">FEUP</a>
+            (Faculty of Engineering of University of Porto).</p>
 
         <p>My main hobbies are to watch <i>Youtube</i>/anime, browse <i>reddit</i>, play video-games, tabletop games
-            or
-            role-playing games (mainly <i>Dungeons & Dragons</i>), code (most of the time in <b>C/C++</b>, <b>C#</b>
-            (Unity) <b>Python</b>, <b>Java</b> or
+            or role-playing games (mainly <i>Dungeons & Dragons</i>), code (most of the time in <b>C/C++</b>, <b>C#</b>(Unity)
+            <b>Python</b>, <b>Java</b> or
             <del>the Holy Trinity</del>
             <b>HTML</b>/<b>CSS</b>/<b>Javascript</b>), listen to music and occasionally draw, do some image editing
-            or
-            read a book.
+            or read a book.
         </p>
 
         <p>
@@ -42,8 +34,7 @@
             href="https://pokegods-or-fakemon.fandom.com/wiki/Skelozard" target="_blank">fake pokémon</a>
             apparently.<br>
             I sometimes use <b>Skelozard1</b> in platforms where an account named <b>Skelozard</b> already exists
-            <del>curse you Skelozardε</del>
-            .
+            <del>curse you Skelozardε</del>.
         </p>
     </section>
 
@@ -100,7 +91,7 @@
 
     <h3>Favorite music albums 🎸</h3>
 
-    <img alt="Favorite music albums" src="@/assets/images/FavoriteMusicAlbums.png" width="550">
+    <img alt="Favorite music albums" src="@/assets/images/FavoriteMusicAlbums.jpg" width=500 class="max-w-full">
 
     <h3>Favorite movies/series 📺</h3>
 
@@ -118,7 +109,7 @@
     <ul>
         <li><a href="https://www.youtube.com/c/AtrocityGuide">Atrocity Guide</a></li>
         <li><a href="https://www.youtube.com/c/BarelySociable">Barely Sociable</a></li>
-        <li><a href="https://www.youtube.com/c/numberphile">Numberphile</a></li>
+        <li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
         <li><a href="https://www.youtube.com/c/PaolofromTOKYO">Paolo fromTOKYO</a></li>
         <li><a href="https://www.youtube.com/c/SsethTzeentach">SsethTzeentach</a></li>
         <li><a href="https://www.youtube.com/c/enyay">Tom Scott</a></li>

@@ -1,5 +1,5 @@
 <template>
-	<div id="progress-bar" class="w-9/12 mx-auto has-tooltip">
+	<div id="progress-bar" class="mx-auto has-tooltip">
 		<span id="progress-percentage" class="tooltip">{{ `${width}%` }}</span>
 		<span id="after" class="block" :style="{width: `${width}%`}"></span>
 	</div>
@@ -22,7 +22,6 @@ export default {
 }
 
 #after {
-	width: 60%;
 	height: 100%;
 	border-radius: 9px;
 	background: linear-gradient(45deg, #ffcc00, #ff6e2c);

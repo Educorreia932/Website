@@ -1,19 +1,22 @@
 <template>
-    <h1>Welcome to my website
+    <h1>
+        Welcome to my website
+        <wbr>
         <kaomoji category="greeting"></kaomoji>
     </h1>
 
     <div class="text-center">
-        <q class="italic inline mx-auto pl-2">Programming is like alchemy and I turn 0s and 1s into things in the internet</q> ⚗️
+        <q class="italic inline mx-auto pl-2">Programming is like alchemy and I turn 0s and 1s into things in the
+            internet</q> ⚗️
     </div>
 
     <!-- Avatar-->
-    <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400" height="400" class="block mx-auto py-4">
+    <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width=400 class="block mx-auto py-4 max-w-full">
 
     <section class="text-center my-10">
         <p>Time to end university course ⏲</p>
 
-        <progress-bar :width=width></progress-bar>
+        <progress-bar :width=width class="xs:w-full sm:w-full md:w-9/12"></progress-bar>
         <countdown :end_date=end_date></countdown>
     </section>
 

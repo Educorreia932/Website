@@ -58,7 +58,8 @@ export default {
             return Math.round(this.windowWidth / 400)
         },
     },
-    updated() {
+    async updated() {
+        await new Promise(r => setTimeout(r, 200));
         let heights = Array(this.numberColumns).fill(0)
 
         for (let i = 0; i < this.projectCardsRefs.length; i++) {
@@ -69,7 +70,7 @@ export default {
             heights[i % this.numberColumns] += height + marginTop
         }
 
-        this.containerHeight = Math.max(...heights) + "px";
+        this.containerHeight = 40 + Math.max(...heights) + "px";
     }
 }
 </script>

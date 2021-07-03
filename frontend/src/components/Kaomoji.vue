@@ -1,5 +1,5 @@
 <template>
-	<span>{{ kaomoji }}</span>
+	<span class="inline-block">{{ kaomoji }}</span>
 </template>
 
 <script>
@@ -15,7 +15,3 @@ export default {
 	},
 }
 </script>
-
-<style scoped>
-
-</style>
