@@ -4,6 +4,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 
 from core.models import *
+from core.serializers import ProjectSerializer
 
 
 class ProjectsViewSet(viewsets.ModelViewSet):

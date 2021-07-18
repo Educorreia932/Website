@@ -34,7 +34,8 @@
             href="https://pokegods-or-fakemon.fandom.com/wiki/Skelozard" target="_blank">fake pokémon</a>
             apparently.<br>
             I sometimes use <b>Skelozard1</b> in platforms where an account named <b>Skelozard</b> already exists
-            <del>curse you Skelozardε</del>.
+            <del>curse you Skelozardε</del>
+            .
         </p>
     </section>
 
@@ -62,65 +63,15 @@
         </div>
     </section>
 
-    <!-- Favorite videogames -->
-    <h3>Favorite videogames 🎮</h3>
-
-    <ul>
-        <li>The Elder Scrolls V: Skyrim</li>
-        <li>The Witcher III: Wild Hunt</li>
-        <li>Dark Souls III</li>
-        <li>The Legend of Zelda: Breath of the Wild</li>
-        <li>Divinity: Original Sin II</li>
-        <li>Little Big Planet 2</li>
-        <li>Pokémon Heartgold</li>
-        <li>Starbound</li>
-        <li>Terraria</li>
-        <li>The Binding of Isaac: Rebirth</li>
-    </ul>
-
-    <!-- Favorite anime -->
-    <h3>Favorite anime 🐱‍🏍</h3>
-
-    <ul>
-        <li>Code Geass</li>
-        <li>Fullmetal Alchemist: Brotherhood</li>
-        <li>Death Note</li>
-        <li>Howl's Moving Castle</li>
-        <li>Evangelion</li>
-    </ul>
-
-    <h3>Favorite music albums 🎸</h3>
-
-    <img alt="Favorite music albums" src="@/assets/images/FavoriteMusicAlbums.jpg" width=500 class="max-w-full">
-
-    <h3>Favorite movies/series 📺</h3>
-
-    <ul>
-        <li>Breaking Bad</li>
-        <li>IT Crowd</li>
-        <li>The Big Bang Theory</li>
-        <li>Star Wars Saga</li>
-        <li>Marvel Cinematic Universe</li>
-        <li>Studio Ghibli Movies</li>
-    </ul>
-
-    <h3>Favorite Youtube channels 📹</h3>
-
-    <ul>
-        <li><a href="https://www.youtube.com/c/AtrocityGuide">Atrocity Guide</a></li>
-        <li><a href="https://www.youtube.com/c/BarelySociable">Barely Sociable</a></li>
-        <li><a href="https://www.youtube.com/user/numberphile">Numberphile</a></li>
-        <li><a href="https://www.youtube.com/c/PaolofromTOKYO">Paolo fromTOKYO</a></li>
-        <li><a href="https://www.youtube.com/c/SsethTzeentach">SsethTzeentach</a></li>
-        <li><a href="https://www.youtube.com/c/enyay">Tom Scott</a></li>
-        <li><a href="https://www.youtube.com/c/UniversoProgramado">Universo Programado</a></li>
-    </ul>
+    <!-- Favorite things-->
+    <favorite-things></favorite-things>
 </template>
 
 <script>
 import Kaomoji from "@/components/Kaomoji";
 import Globe from "@/components/Globe";
 import CountryFlag from 'vue-country-flag-next'
+import FavoriteThings from "@/components/FavoriteThings";
 
 export default {
     name: "AboutMe",
@@ -128,6 +79,7 @@ export default {
         "kaomoji": Kaomoji,
         "globe": Globe,
         "country-flag": CountryFlag,
+        "favorite-things": FavoriteThings
     }
 }
 </script>

@@ -24,7 +24,8 @@
         "vue": "^3.0.11",
         "vue-country-flag-next": "^2.1.1",
         "vue-router": "^4.0.8",
-        "vue3-burger-menu": "^1.1.1"
+        "vue3-burger-menu": "^1.1.1",
+        "vue3-carousel": "^0.1.23"
     },
     "devDependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -38,11 +39,11 @@
         "cors": "^2.8.5",
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^7.0.0",
-        "postcss": "^7.0.35",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
         "node-sass": "^5.0.0",
+        "postcss": "^7.0.35",
         "sass": "^1.32.8",
-        "sass-loader": "^10.1.1"
+        "sass-loader": "^10.1.1",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
     },
     "eslintConfig": {
         "root": true,

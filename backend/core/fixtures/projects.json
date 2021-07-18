@@ -248,5 +248,15 @@
                 2
             ]
         }
+    },
+    {
+        "model": "core.Project",
+        "pk": 20,
+        "fields": {
+            "title": "PokéBattle",
+            "description": "An esoteric language designed so that the program looks like the transcript of a Pokémon battle.",
+            "project_url": "https://github.com/Educorreia932/PokeBattle",
+            "image": "/static/projects/PokeBattle.png"
+        }
     }
 ]
