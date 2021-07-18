@@ -9,7 +9,6 @@
         "production": "vue-cli-service serve --mode production"
     },
     "dependencies": {
-        "@chenfengyuan/vue-countdown": "^1.1.5",
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
         "@fortawesome/free-solid-svg-icons": "^5.15.3",
         "@fortawesome/vue-fontawesome": "^3.0.0-3",

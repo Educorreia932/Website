@@ -5,7 +5,7 @@
     </h1>
 
     <section>
-        <p>My name is Eduardo, and this is my webpage.</p>
+        <p>My name is Eduardo and this is my webpage.</p>
 
         <p>I don't know how you ended up here and, since you might not know me, here's a brief heads up.</p>
 
@@ -22,21 +22,7 @@
             or read a book.
         </p>
 
-        <p>
-            Online, I usually go by the nickname <b>Educorreia932</b> or <b>Skelozard</b>.<br>
-            I'm guessing it's fairly obvious to see where the first nickname comes from (the <b>932</b> part was
-            just
-            because there were already 931 "Eduardo's" in a game I created an account many years ago and it sticked
-            since).<br>
-            About the second one, it's a contraction between <b>Skeleton</b> and <b>Lizard</b> (my favorite animal)
-            /
-            <b>Wizard</b> (my favorite RPG class), but also the name of a <a
-            href="https://pokegods-or-fakemon.fandom.com/wiki/Skelozard" target="_blank">fake pokémon</a>
-            apparently.<br>
-            I sometimes use <b>Skelozard1</b> in platforms where an account named <b>Skelozard</b> already exists
-            <del>curse you Skelozardε</del>
-            .
-        </p>
+        <p>Online, I usually go by the nickname <b>Educorreia932</b> or <b>Skelozard</b>.</p>
     </section>
 
     <!-- Visited countries -->

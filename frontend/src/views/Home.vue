@@ -20,6 +20,7 @@
         <countdown :end_date=end_date></countdown>
     </section>
 
+    <!-- Social Media-->
     <section id="social-media" class="flex space-x-3 place-content-center">
         <a href="https://github.com/Educorreia932" target="_blank">
             <font-awesome-icon :icon="['fab', 'github']" size="2x"/>

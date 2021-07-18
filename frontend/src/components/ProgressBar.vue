@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #progress-bar {
 	background: #333;
 	border-radius: 13px;
