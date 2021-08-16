@@ -22,6 +22,7 @@
         "topojson": "^3.0.2",
         "vue": "^3.0.11",
         "vue-country-flag-next": "^2.1.1",
+        "vue-masonry": "^0.13.0",
         "vue-router": "^4.0.8",
         "vue3-burger-menu": "^1.1.1",
         "vue3-carousel": "^0.1.23"
@@ -36,8 +37,10 @@
         "autoprefixer": "^9.8.6",
         "babel-eslint": "^10.1.0",
         "cors": "^2.8.5",
+        "cytoscape": "^3.19.0",
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^7.0.0",
+        "mitt": "^3.0.0",
         "node-sass": "^5.0.0",
         "postcss": "^7.0.35",
         "sass": "^1.32.8",

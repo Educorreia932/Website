@@ -1,15 +1,10 @@
 <template>
     <h1>My own creations
-        <kaomoji category="cat"></kaomoji>
+        <kaomoji category="cat"/>
     </h1>
 
-    <section class="container" :style="{ height: containerHeight }">
-        <project-card v-for="i in projects.length" :key="i" :project="projects[i - 1]"
-                      :style="{ order: (i - 1) % numberColumns + 1, width: (100 / numberColumns) - 1.5 + '%' }"
-                      :ref="setProjectCardRef">
-        </project-card>
-
-        <span v-for="i in numberColumns - 1" :key="i" :style="{ order: i }" class="item break"></span>
+    <section class="container" v-masonry transition-duration="0.2s" item-selector=".item" gutter="20" percent-position="true">
+        <project-card class="item" v-masonry-tile v-for="i in projects.length" :key="i" :project="projects[i - 1]"/>
     </section>
 </template>
 
@@ -48,40 +43,18 @@ export default {
                 this.projects = response.data;
             });
         },
-        setProjectCardRef(el) {
-            if (!this.projectCardsRefs.includes(el))
-                this.projectCardsRefs.push(el)
-        }
     },
     computed: {
         numberColumns() {
             return Math.round(this.windowWidth / 400)
         },
     },
-    async updated() {
-        await new Promise(r => setTimeout(r, 200));
-        let heights = Array(this.numberColumns).fill(0)
-
-        for (let i = 0; i < this.projectCardsRefs.length; i++) {
-            const style = this.projectCardsRefs[i].$el.currentStyle || window.getComputedStyle(this.projectCardsRefs[i].$el);
-            const marginTop = parseInt(style.marginTop.match(/\d+/g)[0]);
-            const height = parseFloat(style.height.match(/\d+(.\d+)?/g)[0]);
-
-            heights[i % this.numberColumns] += height + marginTop
-        }
-
-        this.containerHeight = 40 + Math.max(...heights) + "px";
-    }
 }
 </script>
 
 <style scoped>
-.container {
-    @apply flex flex-col flex-wrap space-y-6;
-}
-
-.break {
-    @apply mx-3 w-0;
-    flex-basis: 100%;
+.item {
+    width: 23%;
+    margin-bottom: 20px;
 }
 </style>

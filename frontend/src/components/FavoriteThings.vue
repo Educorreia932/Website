@@ -21,15 +21,10 @@
 </template>
 
 <script>
-import VTooltip from 'v-tooltip'
-
 const favorite_things_json = require("../assets/favorite_things.json");
 
 export default {
     name: "FavoriteThings",
-    components: {
-        "v-tooltip": VTooltip
-    },
     data() {
         return {
             "favorite_things": favorite_things_json,
