@@ -3,8 +3,10 @@
         <kaomoji category="cat"/>
     </h1>
 
-    <section class="container" v-masonry transition-duration="0.2s" item-selector=".item" gutter="20" percent-position="true">
-        <project-card class="item" v-masonry-tile v-for="i in projects.length" :key="i" :project="projects[i - 1]"/>
+    <section id="container" v-masonry transition-duration="0.2s" item-selector=".item"
+             percent-position="true" ref="container" :gutter="spaceBetween">
+        <project-card class="item" v-masonry-tile v-for="i in projects.length" :key="i" :project="projects[i - 1]"
+                      :style="`width: ${itemWidth}px; margin-bottom: ${spaceBetween}px`"/>
     </section>
 </template>
 
@@ -22,17 +24,15 @@ export default {
     data() {
         return {
             projects: [],
-            projectCardsRefs: [],
-            windowWidth: window.innerWidth,
-            containerHeight: "100%"
+            containerWidth: 0,
+            spaceBetween: 20
         }
     },
     mounted() {
         this.getData();
 
-        window.addEventListener('resize', () => {
-            this.windowWidth = window.innerWidth
-        })
+        new ResizeObserver(this.onResize).observe(document.getElementById("container"))
+        this.onResize()
     },
     methods: {
         getData() {
@@ -43,18 +43,18 @@ export default {
                 this.projects = response.data;
             });
         },
+        onResize() {
+            this.containerWidth = document.querySelector("main").offsetWidth;
+        }
     },
     computed: {
         numberColumns() {
-            return Math.round(this.windowWidth / 400)
+            return Math.round(this.containerWidth / 400);
         },
-    },
+        itemWidth() {
+            return (this.containerWidth - this.numberColumns * this.spaceBetween) / this.numberColumns;
+        }
+    }
 }
 </script>
 
-<style scoped>
-.item {
-    width: 23%;
-    margin-bottom: 20px;
-}
-</style>
