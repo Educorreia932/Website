@@ -9,6 +9,7 @@
 		"generate": "nuxt generate"
 	},
 	"dependencies": {
+		"@burhanahmeed/vue-modal-2": "^1.1.11",
 		"@fortawesome/free-brands-svg-icons": "^5.15.4",
 		"@fortawesome/free-regular-svg-icons": "^5.15.4",
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",

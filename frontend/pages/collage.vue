@@ -1,13 +1,24 @@
 <template>
-    <div id="content">
+    <main id="content">
         <sidebar-menu :menu="menu"/>
-    </div>
+
+        <modal ref="informationModal">
+            Information
+        </modal>
+
+        <section id="stamps" class="text-center">
+            <button @click="$refs.informationModal.openModal()">Click Me</button>
+        </section>
+    </main>
 </template>
 
 <script>
+// Sidebar Menu
 import {SidebarMenu} from 'vue-sidebar-menu';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 import '@fortawesome/fontawesome-free/css/all.css';
+
+import Modal from "@/components/Modal.vue";
 
 export default {
     name: "Collage",
@@ -16,7 +27,8 @@ export default {
         title: "A Beautiful Collage",
     },
     components: {
-        SidebarMenu
+        "sidebar-menu": SidebarMenu,
+        "modal": Modal
     },
     data() {
         return {
@@ -44,6 +56,8 @@ export default {
                 }
             ]
         }
+    },
+    mounted() {
     }
 }
 </script>
