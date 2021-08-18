@@ -1,4 +1,8 @@
 export default {
+	publicRuntimeConfig: { 
+		baseURL: process.env.NUXT_BASE_URL
+	},
+
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		title: 'Educorreia932\'s Website',
@@ -9,7 +13,11 @@ export default {
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ hid: 'description', name: 'description', content: '' },
-			{ name: 'format-detection', content: 'telephone=no' }
+			{ name: 'format-detection', content: 'telephone=no' },
+			{ hid: "twitter:title", name: "twitter:title", content: "Educorreai932's Website" },
+			{ hid: "twitter:image", name: "twitter:image", content: "Avatar.png" },
+			{ hid: "og:title", name: "og:title", content: "Educorreai932's Website" },
+			{ hid: "og:image", name: "og:image", content: "Avatar.png" },
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
