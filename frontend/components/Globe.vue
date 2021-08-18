@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import * as d3 from "d3"
-import * as topojson from "topojson"
+// import * as d3 from "d3"
+// import * as topojson from "topojson"
 
 export default {
     name: "Globe",
