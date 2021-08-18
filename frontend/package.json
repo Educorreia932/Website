@@ -1,6 +1,6 @@
 {
-	"name": "frontend-nuxt",
-	"version": "1.0.0",
+	"name": "frontend",
+	"version": "2.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "nuxt",
@@ -9,20 +9,21 @@
 		"generate": "nuxt generate"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.35",
-		"@fortawesome/free-solid-svg-icons": "^5.15.3",
-		"@fortawesome/vue-fontawesome": "^3.0.0-3",
+		"@fortawesome/free-brands-svg-icons": "^5.15.4",
+		"@fortawesome/free-regular-svg-icons": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@nuxtjs/composition-api": "^0.26.0",
+		"@nuxtjs/fontawesome": "^1.1.2",
+		"@nuxtjs/tailwindcss": "^4.2.1",
 		"axios": "^0.21.1",
 		"core-js": "^3.15.1",
 		"d3": "^7.0.1",
 		"nuxt": "^2.15.7",
 		"topojson": "^3.0.2",
 		"vue-country-flag": "^2.2.0",
-		"vue-country-flag-next": "^2.2.0"
+		"vue-masonry": "^0.13.0"
 	},
 	"devDependencies": {
-		"@nuxtjs/tailwindcss": "^4.2.0",
 		"postcss": "^8.3.5",
 		"node-sass": "^5.0.0",
 		"sass": "^1.32.8",
