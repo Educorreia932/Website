@@ -3,11 +3,28 @@
         <sidebar-menu :menu="menu"/>
 
         <modal ref="informationModal">
-            Information
+            <template v-slot:header>
+                <h1>Information</h1>
+            </template>
+
+            <template v-slot:body>
+                <em>A Beautiful Collage</em> consists in a social experiment in which users are welcome to post
+                images (stamps) on a collaborative collage.
+
+                <p>
+                    <strong>Warning:</strong> Since there isn't any type of filter on the submitted images, beware of
+                    <strong class="text-red-600">NSFW/NSFL</strong> content. By closing this modal you consent to be by
+                    your own risk.
+                </p>
+
+                <div class="text-center">
+                    <img src="https://count.getloli.com/get/@Educorreia" alt=":name"/>
+                    <p class="text-center">Stamps submitted so far</p>
+                </div>
+            </template>
         </modal>
 
         <section id="stamps" class="text-center">
-            <button @click="$refs.informationModal.openModal()">Click Me</button>
         </section>
     </main>
 </template>
@@ -58,6 +75,7 @@ export default {
         }
     },
     mounted() {
+        this.$refs.informationModal.openModal()
     }
 }
 </script>
