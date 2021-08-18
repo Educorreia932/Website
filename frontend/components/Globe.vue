@@ -3,12 +3,18 @@
 </template>
 
 <script>
-import * as d3 from "d3"
 import * as topojson from "topojson"
 
 export default {
     name: "Globe",
     props: ["width", "height", "speed"],
+    head() {
+        return {
+            script: [
+                {hid: 'd3', src: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js', defer: true}
+            ]
+        }
+    },
     mounted() {
         this.drawGlobe();
     },

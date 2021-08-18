@@ -10,6 +10,7 @@ db.sqlite3
 # Frontend folders and files
 frontend/dist/
 node_modules/
+.nuxt/
 package-lock.json
 
 # Environment files

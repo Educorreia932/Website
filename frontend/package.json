@@ -1,72 +1,32 @@
 {
-    "name": "frontend",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint",
-        "production": "vue-cli-service serve --mode production"
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^1.2.35",
-        "@fortawesome/free-solid-svg-icons": "^5.15.3",
-        "@fortawesome/vue-fontawesome": "^3.0.0-3",
-        "axios": "^0.21.1",
-        "chart.js": "2.9.4",
-        "core-js": "^3.6.5",
-        "d3": "^6.7.0",
-        "d3-cloud": "^1.2.5",
-        "d3-queue": "^3.0.7",
-        "serve": "^11.3.2",
-        "topojson": "^3.0.2",
-        "vue": "^3.0.11",
-        "vue-country-flag-next": "^2.1.1",
-        "vue-masonry": "^0.13.0",
-        "vue-router": "^4.0.8",
-        "vue3-burger-menu": "^1.1.1",
-        "vue3-carousel": "^0.1.23"
-    },
-    "devDependencies": {
-        "@fortawesome/free-brands-svg-icons": "^5.15.3",
-        "@vue/cli-plugin-babel": "~4.5.0",
-        "@vue/cli-plugin-eslint": "~4.5.0",
-        "@vue/cli-plugin-router": "^4.5.13",
-        "@vue/cli-service": "~4.5.0",
-        "@vue/compiler-sfc": "^3.0.0",
-        "autoprefixer": "^9.8.6",
-        "babel-eslint": "^10.1.0",
-        "cors": "^2.8.5",
-        "cytoscape": "^3.19.0",
-        "eslint": "^6.7.2",
-        "eslint-plugin-vue": "^7.0.0",
-        "mitt": "^3.0.0",
-        "node-sass": "^5.0.0",
-        "postcss": "^7.0.35",
-        "sass": "^1.32.8",
-        "sass-loader": "^10.1.1",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/vue3-essential",
-            "eslint:recommended"
-        ],
-        "parserOptions": {
-            "parser": "babel-eslint"
-        },
-        "rules": {
-            "no-unused-vars": "off",
-            "vue/no-unused-components": "off"
-        }
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not dead"
-    ]
+	"name": "frontend",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate"
+	},
+	"dependencies": {
+		"@fortawesome/free-brands-svg-icons": "^5.15.4",
+		"@fortawesome/free-regular-svg-icons": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@nuxtjs/composition-api": "^0.26.0",
+		"@nuxtjs/fontawesome": "^1.1.2",
+		"@nuxtjs/tailwindcss": "^4.2.1",
+		"axios": "^0.21.1",
+		"core-js": "^3.15.1",
+		"d3": "^7.0.1",
+		"nuxt": "^2.15.7",
+		"topojson": "^3.0.2",
+		"vue-country-flag": "^2.2.0",
+		"vue-masonry": "^0.13.0"
+	},
+	"devDependencies": {
+		"postcss": "^8.3.5",
+		"node-sass": "^5.0.0",
+		"sass": "^1.32.8",
+		"sass-loader": "^10.1.1"
+	}
 }

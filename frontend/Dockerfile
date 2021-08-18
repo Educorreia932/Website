@@ -1,4 +1,4 @@
-# Not using Docker to deploy my website for the moment
+# WARNing: Not using Docker to deploy my website for the moment
 
 FROM node:lts-alpine
 

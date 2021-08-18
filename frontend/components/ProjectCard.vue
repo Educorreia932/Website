@@ -61,8 +61,7 @@ export default {
 }
 
 .project-tags {
-    @apply flex;
-    text-transform: uppercase;
+    @apply flex uppercase;
 }
 
 .project-tag {
@@ -74,6 +73,6 @@ export default {
 }
 
 .project-anchor {
-    color: gray !important;
+    color: gray;
 }
 </style>
