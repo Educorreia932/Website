@@ -21,11 +21,13 @@
 		"nuxt": "^2.15.7",
 		"topojson": "^3.0.2",
 		"vue-country-flag": "^2.2.0",
-		"vue-masonry": "^0.13.0"
+		"vue-masonry": "^0.13.0",
+		"vue-sidebar-menu": "^4.8.1"
 	},
 	"devDependencies": {
-		"postcss": "^8.3.5",
+		"@fortawesome/fontawesome-free": "^5.15.4",
 		"node-sass": "^5.0.0",
+		"postcss": "^8.3.5",
 		"sass": "^1.32.8",
 		"sass-loader": "^10.1.1"
 	}

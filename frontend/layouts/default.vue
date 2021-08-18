@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="content">
         <header class="pt-3">
             <nav>
                 <nuxt-link class="tab" :to="{ name: 'home' }">Introduction</nuxt-link>
@@ -16,28 +16,28 @@
     </div>
 </template>
 
-<style lang="scss">
-body {
+<style lang="scss" scoped>
+#content {
     @apply font-body bg-dark px-6 sm:px-10 md:px-12 text-base sm:text-lg;
     color: whitesmoke;
     line-height: 1.3;
     min-height: 100vh;
-}
 
-h1 {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-3xl;
-}
+    h1 {
+        @apply text-xl sm:text-2xl md:text-3xl lg:text-3xl;
+    }
 
-a:link {
-    @apply text-red-orange no-underline;
-}
+    a:link {
+        @apply text-red-orange no-underline;
+    }
 
-a:visited {
-    @apply text-red-orange-dark;
-}
+    a:visited {
+        @apply text-red-orange-dark;
+    }
 
-a:hover {
-    @apply text-red-orange-light;
+    a:hover {
+        @apply text-red-orange-light;
+    }
 }
 </style>
 
