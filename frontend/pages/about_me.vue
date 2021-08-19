@@ -117,15 +117,6 @@ h3 {
     @apply text-center;
 }
 
-img {
-    @apply block mx-auto;
-}
-
-ul {
-    text-align: center;
-    list-style: inside none;
-}
-
 #social-media a {
     @apply hover:text-2xl transition-all;
 }

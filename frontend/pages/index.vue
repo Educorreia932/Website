@@ -12,13 +12,15 @@
             ⚗️
         </div>
 
-        <!-- Avatar-->
-        <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400"
-             class="block mx-auto py-4 max-w-full"/>
-
-        <nuxt-link to="about_me">
-            Get to know me better <kaomoji category="sympathy"></kaomoji>
-        </nuxt-link>
+        <div class="text-center">
+            <nuxt-link to="about_me" class="text-2xl no-underline hover:underline">
+                <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400"
+                     class="py-4 max-w-full transform hover:scale-90 transition-all"/>
+                <br>
+                <span >Get to know me better</span>
+                <font-awesome-icon :icon="['fas', 'external-link-alt']" />
+            </nuxt-link>
+        </div>
     </div>
 </template>
 
