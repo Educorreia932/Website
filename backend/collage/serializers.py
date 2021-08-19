@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from core.models import Tag, Project
+from .models import Stamp
 
 
 class StampSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Tag
+        model = Stamp
         fields = "__all__"

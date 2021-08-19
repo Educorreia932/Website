@@ -1,15 +1,15 @@
 <template>
     <div>
-        <img :src="image" alt="A stamp">
+        <img :src="stamp.source" :alt="stamp.name">
     </div>
 </template>
 
 <script>
 export default {
     name: "Stamp",
-    props: {
-        image: String
-    }
+    props: [
+        "stamp"
+    ]
 }
 </script>
 

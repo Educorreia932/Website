@@ -25,6 +25,7 @@
         </modal>
 
         <section id="stamps" class="text-center">
+            <stamp v-for="stamp in stamps" :key="stamp" :stamp="stamp"/>
         </section>
     </main>
 </template>
@@ -37,6 +38,9 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 import Modal from "@/components/Modal.vue";
 
+import Stamps from "static/api/Collage";
+import Stamp from '../components/Stamp.vue';
+
 export default {
     name: "Collage",
     layout: "empty",
@@ -45,10 +49,12 @@ export default {
     },
     components: {
         "sidebar-menu": SidebarMenu,
-        "modal": Modal
+        "modal": Modal,
+        "stamp": Stamp
     },
     data() {
         return {
+            stamps: [],
             menu: [
                 {
                     header: true,
@@ -75,7 +81,19 @@ export default {
         }
     },
     mounted() {
-        this.$refs.informationModal.openModal()
+        this.getData();
+
+        this.$refs.informationModal.openModal();
+    },
+    methods: {
+        getData() {
+            Stamps.list().then((response) => {
+                for (let project of response.data)
+                    project.image_url = "http://localhost:8000" + project.image_url;
+
+                this.stamps = response.data;
+            });
+        }
     }
 }
 </script>
