@@ -1,5 +1,17 @@
 <template>
     <div id="content">
+        <header>
+            <button @click="$refs.navigationModal.openModal();">Menu</button>
+
+            <modal ref="navigationModal">
+                <template v-slot:body>
+                    <nav>
+                        Hello
+                    </nav>
+                </template>
+            </modal>
+        </header>
+
         <main>
             <nuxt/>
         </main>
@@ -11,7 +23,17 @@
     </div>
 </template>
 
-<style lang="scss" >
+<script>
+import Modal from "@/components/Modal.vue";
+
+export default {
+    components: {
+        "modal": Modal
+    }
+}
+</script>
+
+<style lang="scss">
 #content {
     @apply font-body bg-dark text-base sm:text-lg min-h-screen flex flex-col;
     color: whitesmoke;
