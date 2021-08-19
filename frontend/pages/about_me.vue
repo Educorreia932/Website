@@ -1,42 +1,53 @@
 <template>
-    <div>
+    <section>
         <h1>
-            Get to know me better <kaomoji category="sympathy"></kaomoji>
+            <nuxt-link to="/" class="no-underline">Eduardo Correia</nuxt-link>
         </h1>
 
-        <section>
-            <p>My name is Eduardo and this is my webpage.</p>
+        <p>
+            Currently attending a <em>Master in Informatics and Computing Engineering</em> 5-year course in
+            <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank">FEUP</a>.
+        </p>
 
-            <p>
-                I don't know how you ended up here and, since you might not know me,
-                here's a brief heads up.
-            </p>
+        <p>
+            Interested in
+            <nuxt-link to="projects">building things</nuxt-link> 📝,
+            <nuxt-link to="travel">travelling</nuxt-link> 🌍,
+            <nuxt-link to="music">music</nuxt-link> 🎹,
+            <nuxt-link to="gaming">gaming</nuxt-link> 🎮 and
+            <nuxt-link to="anime">anime & manga</nuxt-link> 📺.
+        </p>
 
-            <p>
-                I'm currently attending the third year of a "Master in Informatics and
-                Computing Engineering" 5-year course in
-                <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank"
-                >FEUP</a
-                >
-                (Faculty of Engineering of University of Porto).
-            </p>
+        <p>Online, I usually go by the username <b>Educorreia932</b> or <b>Skelozard</b>.</p>
 
-            <p>
-                My main hobbies are to watch <i>Youtube</i>/anime, browse <i>reddit</i>,
-                play video-games, tabletop games or role-playing games (mainly
-                <i>Dungeons & Dragons</i>), code (most of the time in <b>C/C++</b>,
-                <b>C#</b>(Unity) <b>Python</b>, <b>Java</b> or
-                <del>the Holy Trinity</del>
-                <b>HTML</b>/<b>CSS</b>/<b>Javascript</b>), listen to music and
-                occasionally draw, do some image editing or read a book.
-            </p>
-
-            <p>
-                Online, I usually go by the nickname <b>Educorreia932</b> or
-                <b>Skelozard</b>.
-            </p>
+        <!-- Social Media-->
+        <section id="social-media" class="flex space-x-3 place-content-center">
+            <a href="https://github.com/Educorreia932" target="_blank">
+                <font-awesome-icon :icon="['fab', 'github']" size="2x"/>
+            </a>
+            <a href="https://steamcommunity.com/id/Skelozard" target="_blank">
+                <font-awesome-icon :icon="['fab', 'steam']" size="2x"/>
+            </a>
+            <a href="https://open.spotify.com/user/skelozard" target="_blank">
+                <font-awesome-icon :icon="['fab', 'spotify']" size="2x"/>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/eduardo-correia-7a608216a"
+                target="_blank"
+            >
+                <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"/>
+            </a>
+            <a href="https://www.instagram.com/educorreia932" target="_blank">
+                <font-awesome-icon :icon="['fab', 'instagram']" size="2x"/>
+            </a>
+            <a href="https://discord.bio/p/skelozard" target="_blank">
+                <font-awesome-icon :icon="['fab', 'discord']" size="2x"/>
+            </a>
+            <a href="mailto:educorreia932@gmail.com" target="_blank">
+                <font-awesome-icon :icon="['fas', 'envelope']" size="2x"/>
+            </a>
         </section>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -66,5 +77,9 @@ img {
 ul {
     text-align: center;
     list-style: inside none;
+}
+
+#social-media a {
+    @apply hover:text-2xl transition-all;
 }
 </style>

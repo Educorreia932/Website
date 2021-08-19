@@ -7,59 +7,25 @@
         </h1>
 
         <div class="text-center">
-            <q class="italic inline mx-auto pl-2"
-            >Programming is like alchemy and I turn 0s and 1s into things in the
-                internet</q
-            >
+            <q class="italic inline mx-auto pl-2">Programming is like alchemy and I turn 0s and 1s into things in the
+                internet</q>
             ⚗️
         </div>
 
         <!-- Avatar-->
-        <img
-            id="avatar"
-            alt="Avatar"
-            src="@/assets/images/Avatar.png"
-            width="400"
-            class="block mx-auto py-4 max-w-full"
-        />
+        <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400"
+             class="block mx-auto py-4 max-w-full"/>
 
         <section class="text-center my-10">
             <p>Time to end university course ⏲</p>
 
-            <progress-bar
-                :width="width"
-                class="xs:w-full sm:w-full md:w-9/12"
-            ></progress-bar>
+            <progress-bar :width="width" class="xs:w-full sm:w-full md:w-9/12"></progress-bar>
             <countdown :end_date="end_date"></countdown>
         </section>
 
-        <!-- Social Media-->
-        <section id="social-media" class="flex space-x-3 place-content-center">
-            <a href="https://github.com/Educorreia932" target="_blank">
-                <font-awesome-icon :icon="['fab', 'github']" size="2x"/>
-            </a>
-            <a href="https://steamcommunity.com/id/Skelozard" target="_blank">
-                <font-awesome-icon :icon="['fab', 'steam']" size="2x"/>
-            </a>
-            <a href="https://open.spotify.com/user/skelozard" target="_blank">
-                <font-awesome-icon :icon="['fab', 'spotify']" size="2x"/>
-            </a>
-            <a
-                href="https://www.linkedin.com/in/eduardo-correia-7a608216a"
-                target="_blank"
-            >
-                <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"/>
-            </a>
-            <a href="https://www.instagram.com/educorreia932" target="_blank">
-                <font-awesome-icon :icon="['fab', 'instagram']" size="2x"/>
-            </a>
-            <a href="https://discord.bio/p/skelozard" target="_blank">
-                <font-awesome-icon :icon="['fab', 'discord']" size="2x"/>
-            </a>
-            <a href="mailto:educorreia932@gmail.com" target="_blank">
-                <font-awesome-icon :icon="['fas', 'envelope']" size="2x"/>
-            </a>
-        </section>
+        <nuxt-link to="about_me">
+            Get to know me better <kaomoji category="sympathy"></kaomoji>
+        </nuxt-link>
     </div>
 </template>
 
@@ -75,9 +41,9 @@ const today = new Date();
 export default {
     name: "Home",
     components: {
-        kaomoji: Kaomoji,
+        "kaomoji": Kaomoji,
         "progress-bar": ProgressBar,
-        countdown: Countdown,
+        "countdown": Countdown,
     },
     data() {
         return {
@@ -113,10 +79,6 @@ export default {
 </script>
 
 <style scoped>
-#social-media a {
-    @apply text-white hover:text-2xl transition-all;
-}
-
 q {
     color: #aaa;
     border-left: 3px solid whitesmoke;
