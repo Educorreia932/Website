@@ -1,0 +1,15 @@
+[
+    {
+        "model": "collage.Stamp",
+        "pk": 1,
+        "fields": {
+            "source": "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg",
+            "name": "A cute dog",
+            "x": 500,
+            "y": 500,
+            "submitted_on": "2011-09-01T13:20:30+03:00",
+            "ip": "127.0.0.1"
+        }
+    }
+]
+

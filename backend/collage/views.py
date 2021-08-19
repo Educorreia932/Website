@@ -1,3 +1,12 @@
 from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Stamp
+from .serializers import StampSerializer
+
+
+class StampViewSet(viewsets.ModelViewSet):
+    serializer_class = StampSerializer
+
+    queryset = Stamp.objects.all()[::-1]
+

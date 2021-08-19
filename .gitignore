@@ -2,7 +2,7 @@ __pycache__/
 .idea/
 
 # Backend folders and files
-backend/core/migrations/
+backend/*/migrations/
 venv/
 pyvenv.cfg
 db.sqlite3

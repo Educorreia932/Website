@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "core.apps.CoreConfig",
     "spotify_statistics.apps.SpotifyStatisticsConfig",
+    "collage.apps.CollageConfig",
     "rest_framework",
     "corsheaders"
 ]

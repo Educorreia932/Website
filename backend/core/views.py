@@ -8,12 +8,7 @@ from core.serializers import ProjectSerializer
 
 
 class ProjectsViewSet(viewsets.ModelViewSet):
-    queryset = Project.objects.all()[::-1]
-
-    def list(self, request, **kwargs):
-        serializer = ProjectSerializer(self.queryset, many=True, context={'request': request})
-
-        return Response(serializer.data)
+    pass
 
 
 def get_csrf(request):
