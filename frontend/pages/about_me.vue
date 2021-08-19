@@ -1,8 +1,7 @@
 <template>
     <div>
         <h1>
-            Get to know me better
-            <kaomoji category="sympathy"></kaomoji>
+            Get to know me better <kaomoji category="sympathy"></kaomoji>
         </h1>
 
         <section>
@@ -37,33 +36,6 @@
                 <b>Skelozard</b>.
             </p>
         </section>
-
-        <!-- Visited countries -->
-        <h3>Visited countries 🌍</h3>
-
-        <section id="countries">
-            <div class="flags">
-                <country-flag country="pt" size="big" class="flag"/>
-                <country-flag country="es" size="big" class="flag"/>
-                <country-flag country="fr" size="big" class="flag"/>
-                <country-flag country="gb" size="big" class="flag"/>
-                <country-flag country="it" size="big" class="flag"/>
-                <country-flag country="de" size="big" class="flag"/>
-            </div>
-
-            <globe width="400" height="400" speed="0.005" id="globe"></globe>
-
-            <div class="flags">
-                <country-flag country="be" size="big" class="flag"/>
-                <country-flag country="pl" size="big" class="flag"/>
-                <country-flag country="ch" size="big" class="flag"/>
-                <country-flag country="cz" size="big" class="flag"/>
-                <country-flag country="ie" size="big" class="flag"/>
-            </div>
-        </section>
-
-        <!-- Favorite things-->
-        <favorite-things/>
     </div>
 </template>
 
@@ -94,18 +66,5 @@ img {
 ul {
     text-align: center;
     list-style: inside none;
-}
-
-.flags {
-    @apply hidden sm:flex flex-col space-y-5 place-content-center;
-}
-
-.flag {
-    border-radius: 8px 8px;
-}
-
-#countries {
-    @apply flex flex-row sm:space-x-16 place-content-center;
-    height: 400px;
 }
 </style>

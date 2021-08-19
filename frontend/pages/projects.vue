@@ -7,7 +7,7 @@
 
         <section id="container" transition-duration="0s" v-masonry item-selector=".item" percent-position="true"
                  ref="container" :gutter="spaceBetween">
-            <project-card class="item" v-masonry-tile v-for="i in projects.length" :key="i" :project="projects[i - 1]"
+            <project-card class="item" v-masonry-tile v-for="project in projects" :key="project.id" :project="project"
                           :style="`width: ${itemWidth}px; margin-bottom: ${spaceBetween}px`"/>
         </section>
     </div>
@@ -44,7 +44,7 @@ export default {
         getData() {
             Projects.list().then((response) => {
                 for (let project of response.data)
-                    project.image_url = "http://localhost:8000" + project.image_url;
+                    project.image_url = process.env.baseURL + project.image_url;
 
                 this.projects = response.data;
             });
@@ -55,7 +55,7 @@ export default {
     },
     computed: {
         numberColumns() {
-            return Math.round(this.containerWidth / 400);
+            return Math.round(this.containerWidth / 300);
         },
         itemWidth() {
             return (

@@ -11,7 +11,7 @@
 
             <div class="flex">
                 <div class="project-tags">
-                    <span v-for="tag in project.tags" :key="tag" class="project-tag">
+                    <span v-for="tag in project.tags" :key="tag.id" class="project-tag">
                         {{ tag.name }}
                     </span>
                 </div>

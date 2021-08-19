@@ -25,19 +25,23 @@ body {
 }
 
 h1 {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-3xl;
+    @apply text-white text-xl sm:text-2xl md:text-3xl lg:text-3xl;
+}
+
+strong {
+    @apply text-white;
 }
 
 a:link {
-    @apply text-red-orange no-underline;
+    @apply text-white;
 }
 
 a:visited {
-    @apply text-red-orange-dark;
+    @apply text-white;
 }
 
 a:hover {
-    @apply text-red-orange-light;
+    @apply text-gray-200;
 }
 </style>
 
