@@ -27,6 +27,9 @@
             <p>Online, I usually go by the username <b>Educorreia932</b> or <b>Skelozard</b>.</p>
         </section>
 
+        <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400"
+                     class="py-4 max-w-full"/>
+
         <section class="text-center w-full h-full flex-1 self-stretch py-auto">
             <p>Time to end university course ⏲</p>
 
@@ -74,6 +77,13 @@ const today = new Date();
 
 export default {
     name: "AboutMe",
+    head: {
+        title: 'About Me | Eduardo Correia',
+        meta: [
+            {name: "twitter:title", content: "About Me | Eduardo Correia"},
+            {property: "og:title", content: "About Me | Eduardo Correia"},
+        ],
+    },
     components: {
         "favorite-things": FavoriteThings,
         "progress-bar": ProgressBar,

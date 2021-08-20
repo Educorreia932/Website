@@ -57,8 +57,7 @@ export default {
     }
 
     footer {
-        @apply w-full;
-        flex-shrink: 0;
+        @apply w-full flex-shrink-0;
     }
 
     h1 {

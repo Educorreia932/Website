@@ -1,26 +1,22 @@
 <template>
-    <div>
+    <div class="flex-1 flex flex-col">
         <h1>
             Welcome to my website
             <wbr/>
             <kaomoji category="greeting"></kaomoji>
         </h1>
 
-        <div class="text-center">
+        <div class="text-center flex-1">
             <q class="italic inline mx-auto pl-2">Programming is like alchemy and I turn 0s and 1s into things in the
                 internet</q>
             ⚗️
         </div>
 
-        <div class="text-center">
-            <nuxt-link to="about_me" class="text-2xl no-underline hover:underline">
-                <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400"
-                     class="py-4 max-w-full transform hover:scale-90 transition-all"/>
-                <br>
-                <span >Get to know me better</span>
-                <font-awesome-icon :icon="['fas', 'external-link-alt']" />
-            </nuxt-link>
-        </div>
+
+        <figure class="text-center flex-1 self-stretch">
+            <img src="https://count.getloli.com/get/@Educorreia932"/>
+            <figcaption>Number of visits so far</figcaption>
+        </figure>
     </div>
 </template>
 
