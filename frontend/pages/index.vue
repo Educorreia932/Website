@@ -6,15 +6,33 @@
             <kaomoji category="greeting"></kaomoji>
         </h1>
 
-        <div class="text-center flex-1">
-            <q class="italic inline mx-auto pl-2">Programming is like alchemy and I turn 0s and 1s into things in the
-                internet</q>
-            ⚗️
-        </div>
+        <div class="flex-1"></div>
 
+        <ul id="navigation-icons">
+            <nuxt-link to="about_me">
+                <font-awesome-icon :icon="['fa', 'address-card']" size="4x"/>
+            </nuxt-link>
+            <nuxt-link to="projects">
+                <font-awesome-icon :icon="['fa', 'folder']" size="4x"/>
+            </nuxt-link>
+            <nuxt-link to="travel">
+                <font-awesome-icon :icon="['fa', 'globe-europe']" size="4x"/>
+            </nuxt-link>
+            <nuxt-link to="music">
+                <font-awesome-icon :icon="['fa', 'music']" size="4x"/>
+            </nuxt-link>
+            <nuxt-link to="gaming">
+                <font-awesome-icon :icon="['fa', 'gamepad']" size="4x"/>
+            </nuxt-link>
+            <nuxt-link to="anime">
+                <font-awesome-icon :icon="['fas', 'tv']" size="4x"/>
+            </nuxt-link>
+        </ul>
 
-        <figure class="text-center flex-1 self-stretch">
-            <img src="https://count.getloli.com/get/@Educorreia932"/>
+        <div class="flex-1"></div>
+
+        <figure class="text-center flex-0 self-stretch">
+            <img src="https://count.getloli.com/get/@Educorreia932" alt="Visits count"/>
             <figcaption>Number of visits so far</figcaption>
         </figure>
     </div>
@@ -25,7 +43,7 @@ import Kaomoji from "@/components/Kaomoji";
 
 export default {
     name: "Home",
-        head: {
+    head: {
         title: 'Home | Eduardo Correia',
         meta: [
             {name: "twitter:title", content: "Home | Eduardo Correia"},
@@ -39,9 +57,12 @@ export default {
 </script>
 
 <style scoped>
-q {
-    color: #aaa;
-    border-left: 3px solid whitesmoke;
+#navigation-icons {
+    @apply flex flex-row space-x-7 justify-center;
+}
+
+#navigation-icons > * {
+    @apply transition-all hover:text-2xl;
 }
 </style>
 

@@ -1,9 +1,16 @@
 <template>
     <div id="content">
         <header>
-            <button id="navigation-button" @click="$refs.navigationModal.openModal();">
-                <font-awesome-icon :icon="['fas', 'bars']"/>
-            </button>
+            <div id="navigation-div">
+                <nuxt-link to="/">
+                    <font-awesome-icon :icon="['fas', 'home']"/>
+                </nuxt-link>
+
+                <button id="navigation-button" @click="$refs.navigationModal.openModal();">
+                    <font-awesome-icon :icon="['fas', 'bars']"/>
+                </button>
+            </div>
+
 
             <modal id="navigation-modal" ref="navigationModal">
                 <template v-slot:body>
@@ -32,14 +39,14 @@
 </template>
 
 <script>
-import Modal from "@/components/Modal.vue";
+import Modal from "@/components/Modal";
 
 export default {
     components: {
         "modal": Modal
     },
     watch: {
-        $route () {
+        $route() {
             this.$refs.navigationModal.closeModal();
         }
     },
@@ -80,8 +87,12 @@ export default {
         @apply text-gray-200;
     }
 
+    #navigation-div {
+        @apply absolute right-10 text-3xl m-5;
+    }
+
     #navigation-button {
-        @apply text-white transition-all absolute right-10 cursor-pointer border-none bg-transparent text-3xl m-5 hover:text-4xl;  
+        @apply text-white transition-all cursor-pointer border-none bg-transparent text-3xl;
     }
 
     #navigation-modal .modal {

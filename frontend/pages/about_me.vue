@@ -5,6 +5,13 @@
                 <nuxt-link to="/" class="no-underline">Eduardo Correia</nuxt-link>
             </h1>
 
+            <div class="text-center flex-1">
+                <q class="italic inline mx-auto pl-2">Programming is like alchemy and I turn 0s and 1s into things in
+                    the
+                    internet</q>
+                ⚗️
+            </div>
+
             <p>
                 Currently attending a <em>Master in Informatics and Computing Engineering</em> 5-year course in
                 <a href="https://sigarra.up.pt/feup/pt/web_page.inicial" target="_blank">FEUP</a>.
@@ -28,7 +35,7 @@
         </section>
 
         <img id="avatar" alt="Avatar" src="@/assets/images/Avatar.png" width="400"
-                     class="py-4 max-w-full"/>
+             class="py-4 max-w-full"/>
 
         <section class="text-center w-full h-full flex-1 self-stretch py-auto">
             <p>Time to end university course ⏲</p>
@@ -129,5 +136,10 @@ h3 {
 
 #social-media a {
     @apply hover:text-2xl transition-all;
+}
+
+q {
+    color: #aaa;
+    border-left: 3px solid whitesmoke;
 }
 </style>
