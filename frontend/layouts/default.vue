@@ -1,12 +1,20 @@
 <template>
     <div id="content">
         <header>
-            <button @click="$refs.navigationModal.openModal();">Menu</button>
+            <button id="navigation-button" @click="$refs.navigationModal.openModal();">
+                <font-awesome-icon :icon="['fas', 'bars']"/>
+            </button>
 
-            <modal ref="navigationModal">
+            <modal id="navigation-modal" ref="navigationModal">
                 <template v-slot:body>
-                    <nav>
-                        Hello
+                    <nav class="flex flex-col">
+                        <nuxt-link to="/">Home</nuxt-link>
+                        <nuxt-link to="about_me">About Me</nuxt-link>
+                        <nuxt-link to="projects">Projects</nuxt-link>
+                        <nuxt-link to="travel">Travelling</nuxt-link>
+                        <nuxt-link to="music">Music</nuxt-link>
+                        <nuxt-link to="gaming">Gaming</nuxt-link>
+                        <nuxt-link to="anime">Anime & Manga</nuxt-link>
                     </nav>
                 </template>
             </modal>
@@ -29,7 +37,12 @@ import Modal from "@/components/Modal.vue";
 export default {
     components: {
         "modal": Modal
-    }
+    },
+    watch: {
+        $route () {
+            this.$refs.navigationModal.closeModal();
+        }
+    },
 }
 </script>
 
@@ -66,6 +79,24 @@ export default {
 
     a:hover {
         @apply text-gray-200;
+    }
+
+    #navigation-button {
+        @apply text-white transition-all absolute right-10 cursor-pointer border-none bg-transparent text-3xl m-5 hover:text-4xl;  
+    }
+
+    #navigation-modal .modal {
+        &__dialog {
+            @apply bg-dark-light;
+        }
+
+        &__close {
+            @apply hidden;
+        }
+    }
+
+    #navigation-modal nav a {
+        @apply no-underline;
     }
 }
 </style>

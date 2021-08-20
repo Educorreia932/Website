@@ -34,7 +34,14 @@
 import Globe from "@/components/Globe";
 
 export default {
-    name: "Travel",
+    name: "Travelling",
+    head: {
+        title: 'Travelling | Eduardo Correia',
+        meta: [
+            {name: "twitter:title", content: "Travelling | Eduardo Correia"},
+            {property: "og:title", content: "Travelling | Eduardo Correia"},
+        ],
+    },
     components: {
         "globe": Globe,
     },

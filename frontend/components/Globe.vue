@@ -11,7 +11,7 @@ export default {
     head() {
         return {
             script: [
-                {hid: 'd3', src: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js', defer: true}
+                {hid: 'd3', src: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js'}
             ]
         }
     },
@@ -25,7 +25,7 @@ export default {
                 .translate([this.width / 2, this.height / 2]);
 
             let path = d3.geoPath().projection(projection);
-            let svg = d3.select("svg")
+            let svg = d3.select("#globe")
                 .attr("width", this.width)
                 .attr("height", this.height);
 

@@ -20,6 +20,13 @@ import Projects from "static/api/Projects";
 
 export default {
     name: "Projects",
+    head: {
+        title: 'Projects | Eduardo Correia',
+        meta: [
+            {name: "twitter:title", content: "Projects | Eduardo Correia"},
+            {property: "og:title", content: "Projects | Eduardo Correia"},
+        ],
+    },
     components: {
         kaomoji: Kaomoji,
         "project-card": ProjectCard,

@@ -13,6 +13,13 @@ import FavoriteThings from '../components/FavoriteThings.vue';
 
 export default {
     name: "AnimeManga",
+        head: {
+        title: 'Anime & Manga | Eduardo Correia',
+        meta: [
+            {name: "twitter:title", content: "Anime & Manga | Eduardo Correia"},
+            {property: "og:title", content: "Anime & Manga | Eduardo Correia"},
+        ],
+    },
     components: {
         "favorite-things": FavoriteThings
     },

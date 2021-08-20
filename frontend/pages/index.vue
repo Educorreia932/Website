@@ -29,6 +29,13 @@ import Kaomoji from "@/components/Kaomoji";
 
 export default {
     name: "Home",
+        head: {
+        title: 'Home | Eduardo Correia',
+        meta: [
+            {name: "twitter:title", content: "Home | Eduardo Correia"},
+            {property: "og:title", content: "Home | Eduardo Correia"},
+        ],
+    },
     components: {
         "kaomoji": Kaomoji,
     },

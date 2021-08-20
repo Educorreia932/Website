@@ -16,6 +16,13 @@ import FavoriteThings from '../components/FavoriteThings.vue';
 
 export default {
     name: "Music",
+    head: {
+        title: 'Music | Eduardo Correia',
+        meta: [
+            {name: "twitter:title", content: "Music | Eduardo Correia"},
+            {property: "og:title", content: "Music | Eduardo Correia"},
+        ],
+    },
     components: {
         "favorite-things": FavoriteThings
     },

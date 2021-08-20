@@ -72,7 +72,7 @@ export default {
     }
 
     &__dialog {
-        background-color: #ffffff;
+        // background-color: #ffffff;
         position: relative;
         width: 600px;
         margin: 50px auto;
