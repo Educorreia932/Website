@@ -31,8 +31,8 @@
 
         <div class="flex-1"></div>
 
-        <figure class="text-center flex-0 self-stretch">
-            <img src="https://count.getloli.com/get/@Educorreia932" alt="Visits count"/>
+        <figure class="text-center flex-0 self-stretch m-0">
+            <img src="https://count.getloli.com/get/@Educorreia932" alt="Visits count" class="max-w-full xs:w-full"/>
             <figcaption>Number of visits so far</figcaption>
         </figure>
     </div>
@@ -58,11 +58,11 @@ export default {
 
 <style scoped>
 #navigation-icons {
-    @apply flex flex-row space-x-7 justify-center;
+    @apply p-0 text-center justify-center;
 }
 
 #navigation-icons > * {
-    @apply transition-all hover:text-2xl;
+    @apply transition-all hover:text-2xl mx-2;
 }
 </style>
 

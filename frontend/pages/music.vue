@@ -4,8 +4,10 @@
 
         <p class="text-xl">These are my favorite music albums.</p>
 
-        <p><strong>Favorite genres:</strong> <em>Alternative rock</em>, <em>alternative metal</em>, <em>acid jazz</em>,
-            <em>portuguese rock</em> and <em>psychedelic</em></p>
+        <p>
+            <strong>Favorite genres:</strong> <em>Alternative rock</em>, <em>alternative metal</em>, <em>acid jazz</em>,
+            <em>portuguese rock</em> and <em>psychedelic</em>
+        </p>
 
         <favorite-things category="music"/>
     </div>

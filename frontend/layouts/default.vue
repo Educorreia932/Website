@@ -11,7 +11,6 @@
                 </button>
             </div>
 
-
             <modal id="navigation-modal" ref="navigationModal">
                 <template v-slot:body>
                     <nav class="flex flex-col">
@@ -33,7 +32,7 @@
 
         <footer class="text-center py-5">
             <portal-target name="footer"/>
-            2021 - Eduardo Correia
+            &copy; 2021 - Eduardo Correia
         </footer>
     </div>
 </template>
@@ -88,7 +87,7 @@ export default {
     }
 
     #navigation-div {
-        @apply absolute right-10 text-3xl m-5;
+        @apply text-3xl m-5 float-right;
     }
 
     #navigation-button {
@@ -96,6 +95,8 @@ export default {
     }
 
     #navigation-modal .modal {
+        @apply transition-all;
+
         &__dialog {
             @apply bg-dark-light;
         }

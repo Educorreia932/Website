@@ -26,8 +26,9 @@
 		"vue-masonry": "^0.13.0"
 	},
 	"devDependencies": {
-		"postcss": "^8.3.5",
+		"discord.js": "^13.1.0",
 		"node-sass": "^5.0.0",
+		"postcss": "^8.3.5",
 		"sass": "^1.32.8",
 		"sass-loader": "^10.1.1"
 	}

@@ -11,11 +11,15 @@ export default {
     head() {
         return {
             script: [
-                {hid: 'd3', src: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js'}
+                {hid: 'd3', src: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.1/d3.min.js', defer: true}
             ]
         }
     },
     mounted() {
+        while (typeof d3 === undefined) {
+            console.log("Undefine")
+        }
+
         this.drawGlobe();
     },
     methods: {

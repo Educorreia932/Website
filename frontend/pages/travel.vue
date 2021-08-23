@@ -3,9 +3,13 @@
         <h1>Visited countries 🌍</h1>
 
         <p class="text-xl">These are the countries I've visited so far.</p>
-        <p class="text-base bg-dark-light p-3 rounded mx-10"><strong>Note:</strong> No, I've not visited <a
-            href="https://en.wikipedia.org/wiki/French_Guiana" target="_blank">French Guiana</a>, but it's highlighted
-            because it's part of France and I and haven't figured out how to individually remove it ¯\_(ツ)_/¯</p>
+
+        <p class="text-base bg-dark-light p-3 rounded">
+            <strong>Note:</strong> No, I haven't visited
+            <a href="https://en.wikipedia.org/wiki/French_Guiana" target="_blank">French Guiana</a>,
+            but it's highlighted because it's part of France and I and haven't figured out how to individually remove it
+            ¯\_(ツ)_/¯
+        </p>
 
         <section id="countries">
             <div class="flags">
@@ -59,7 +63,7 @@ export default {
 }
 
 #countries {
-    @apply flex flex-row sm:space-x-16 place-content-center my-12;
+    @apply flex flex-row sm:space-x-16 place-content-center sm:my-12 my-1;
     height: 400px;
 }
 </style>

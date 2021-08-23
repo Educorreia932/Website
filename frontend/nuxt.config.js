@@ -34,7 +34,7 @@ export default {
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
         '~/plugins/vue-country-flag.js',
-        {src: '~/plugins/vue-masonry', ssr: false}
+        {src: '~/plugins/vue-masonry', ssr: false},
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components

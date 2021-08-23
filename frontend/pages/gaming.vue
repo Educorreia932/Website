@@ -4,8 +4,10 @@
 
         <p class="text-xl">These are my favorite games.</p>
 
-        <p><strong>Favorite genres:</strong> <em>RPG</em>, <em>roguelike</em>, <em>strategy</em>, <em>puzzle</em>,
-            <em>sandbox</em> and <em>adventure</em></p>
+        <p>
+            <strong>Favorite genres:</strong> <em>RPG</em>, <em>roguelike</em>, <em>strategy</em>, <em>puzzle</em>,
+            <em>sandbox</em> and <em>adventure</em>
+        </p>
 
         <favorite-things category="games"/>
     </div>
