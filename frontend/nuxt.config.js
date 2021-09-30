@@ -77,5 +77,9 @@ export default {
                 component: resolve(__dirname, 'pages/index.vue')
             })
         }
-    }
+    },
+
+    serverMiddleware: [
+        {path: "/spotify_statistics", handler: "~/server-middleware/spotify_statistics.js"}
+    ]
 }

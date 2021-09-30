@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "core.apps.CoreConfig",
-    "spotify_statistics.apps.SpotifyStatisticsConfig",
     "rest_framework",
     "corsheaders"
 ]

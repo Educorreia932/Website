@@ -17,18 +17,28 @@
 		"@nuxtjs/fontawesome": "^1.1.2",
 		"@nuxtjs/tailwindcss": "^4.2.1",
 		"axios": "^0.21.1",
+		"chart.js": "^2.7.1",
 		"core-js": "^3.15.1",
 		"d3": "^7.0.1",
+		"express": "^4.17.1",
 		"nuxt": "^2.15.7",
 		"portal-vue": "^2.1.7",
+		"query-string": "^7.0.1",
 		"topojson": "^3.0.2",
+		"vue-chartjs": "3.4.0",
 		"vue-country-flag": "^2.2.0",
-		"vue-masonry": "^0.13.0"
+		"vue-d3-cloud": "^0.2.0",
+		"vue-masonry": "^0.13.0",
+		"vuewordcloud": "^18.7.12",
+		"vuex": "^3.6.2"
 	},
 	"devDependencies": {
+		"@nuxt/types": "^2.15.8",
+		"d3-cloud": "^1.2.5",
 		"discord.js": "^13.1.0",
-		"node-sass": "^5.0.0",
+		"node-sass": "6.0.1",
 		"postcss": "^8.3.5",
+		"request": "^2.88.2",
 		"sass": "^1.32.8",
 		"sass-loader": "^10.1.1"
 	}
