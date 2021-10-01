@@ -6,7 +6,8 @@
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
-		"generate": "nuxt generate"
+		"generate": "nuxt generate",
+		"migrate": "npx prisma migrate dev --name init"
 	},
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.15.4",
