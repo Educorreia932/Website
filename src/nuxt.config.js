@@ -86,6 +86,7 @@ export default {
     },
 
     serverMiddleware: [
-        "~/server-middleware/projects.js"
+        "~/server-middleware/projects.js",
+        {path: "/spotify_statistics", handler: "~/server-middleware/spotify_statistics.js"}
     ]
 }
