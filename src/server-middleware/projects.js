@@ -10,7 +10,10 @@ app.get('/list', async (req, res) => {
     const projects = await prisma.project.findMany({
         orderBy: [{
             id: "desc"
-        }]
+        }],
+        include: {
+            tags: true
+        }
     })
 
     res.json(projects)

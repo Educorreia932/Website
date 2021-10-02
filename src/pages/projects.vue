@@ -16,7 +16,6 @@
 <script>
 import Kaomoji from "@/components/Kaomoji";
 import ProjectCard from "@/components/ProjectCard";
-import {PrismaClient} from '@prisma/client'
 import axios from "axios";
 
 export default {

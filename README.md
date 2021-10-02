@@ -2,7 +2,7 @@
 
 The source files for my personal website.  
 
-Built with *Django* and *Nuxt.js*, using *Tailwind CSS* for styling.
+Built with *Nuxt.js*, using *Tailwind CSS* for styling and *Prisma* for database.
 
 ## 📷 Preview
 
