@@ -1,14 +1,8 @@
 version: '3'
 
 services:
-    backend:
-        build: backend/
-        ports:
-            - 8000:8000
-        command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-
-    frontend:
-        build: frontend/
+    website:
+        build: src/
         ports:
             - 8080:8080
         command: npm run serve

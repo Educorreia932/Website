@@ -1,18 +1,17 @@
-__pycache__/
+# IDE folder
 .idea/
 
-# Backend folders and files
-backend/core/migrations/
-venv/
-pyvenv.cfg
-db.sqlite3
-
 # Frontend folders and files
-frontend/dist/
+src/dist/
 node_modules/
 .nuxt/
 package-lock.json
 
 # Environment files
-.env
-.env.production
+.env*
+
+# Database
+migrations/
+client/
+*.db*
+
