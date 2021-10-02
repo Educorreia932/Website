@@ -6,7 +6,9 @@
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
-		"generate": "nuxt generate"
+		"generate": "nuxt generate",
+		"migrate": "npx prisma migrate dev --name init",
+		"seed": "node prisma/seed.js"
 	},
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -16,20 +18,25 @@
 		"@nuxtjs/composition-api": "^0.26.0",
 		"@nuxtjs/fontawesome": "^1.1.2",
 		"@nuxtjs/tailwindcss": "^4.2.1",
+		"@prisma/client": "^3.1.1",
 		"axios": "^0.21.1",
 		"core-js": "^3.15.1",
 		"d3": "^7.0.1",
 		"nuxt": "^2.15.7",
 		"portal-vue": "^2.1.7",
+		"prisma": "^3.1.1",
 		"topojson": "^3.0.2",
 		"vue-country-flag": "^2.2.0",
 		"vue-masonry": "^0.13.0"
 	},
 	"devDependencies": {
-		"discord.js": "^13.1.0",
+		"express": "^4.17.1",
 		"node-sass": "^5.0.0",
 		"postcss": "^8.3.5",
 		"sass": "^1.32.8",
 		"sass-loader": "^10.1.1"
+	},
+	"prisma": {
+		"seed": "node prisma/seed.js"
 	}
 }

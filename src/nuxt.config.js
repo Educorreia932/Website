@@ -69,6 +69,12 @@ export default {
         }
     },
 
+    publicRuntimeConfig: {
+        axios: {
+            baseURL: process.env.BASE_URL
+        }
+    },
+
     router: {
         extendRoutes(routes, resolve) {
             routes.push({
@@ -77,5 +83,9 @@ export default {
                 component: resolve(__dirname, 'pages/index.vue')
             })
         }
-    }
+    },
+
+    serverMiddleware: [
+        "~/server-middleware/projects.js"
+    ]
 }
