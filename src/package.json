@@ -30,6 +30,7 @@
 		"vue-masonry": "^0.13.0"
 	},
 	"devDependencies": {
+		"express": "^4.17.1",
 		"node-sass": "^5.0.0",
 		"postcss": "^8.3.5",
 		"sass": "^1.32.8",

@@ -17,6 +17,7 @@
 import Kaomoji from "@/components/Kaomoji";
 import ProjectCard from "@/components/ProjectCard";
 import {PrismaClient} from '@prisma/client'
+import axios from "axios";
 
 export default {
 	name: "Projects",
@@ -39,6 +40,11 @@ export default {
 		};
 	},
 	mounted() {
+		// Fetch data
+		axios.get("/projects/list").then(response => {
+			this.projects = response.data
+		})
+
 		new ResizeObserver(this.onResize).observe(
 			document.getElementById("container")
 		);
@@ -47,7 +53,7 @@ export default {
 	},
 	methods: {
 		onResize() {
-			this.containerWidth = document.querySelector("main").offsetWidth;
+			this.containerWidth = document.querySelector("#container").offsetWidth;
 		},
 	},
 	computed: {
@@ -58,12 +64,6 @@ export default {
 			return ((this.containerWidth - this.numberColumns * this.spaceBetween) / this.numberColumns);
 		},
 	},
-	async fetch() {
-		const prisma = new PrismaClient();
-
-		this.projects = await prisma.project.findMany();
-	},
-	fetchOnServer: true,
 };
 </script>
 
