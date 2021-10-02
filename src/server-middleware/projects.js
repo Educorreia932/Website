@@ -7,7 +7,11 @@ const app = express()
 app.use(express.json())
 
 app.get('/list', async (req, res) => {
-    const projects = await prisma.project.findMany()
+    const projects = await prisma.project.findMany({
+        orderBy: [{
+            id: "desc"
+        }]
+    })
 
     res.json(projects)
 })

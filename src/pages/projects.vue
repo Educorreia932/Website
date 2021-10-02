@@ -42,7 +42,12 @@ export default {
 	mounted() {
 		// Fetch data
 		axios.get("/projects/list").then(response => {
-			this.projects = response.data
+			const projects = response.data
+
+			for (const project of projects)
+				project.image = require(`~/assets/images/projects/${project.image}`)
+
+			this.projects = projects
 		})
 
 		new ResizeObserver(this.onResize).observe(

@@ -5,8 +5,10 @@ const prisma = new PrismaClient();
 
 async function main() {
     for (const project of projects) {
-        await prisma.project.create({
-            data: project
+        await prisma.project.upsert({
+            where: {title: project.title},
+            update: {},
+            create: project
         })
     }
 }

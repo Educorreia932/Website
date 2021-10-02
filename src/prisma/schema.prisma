@@ -15,7 +15,7 @@ model Tag {
 
 model Project {
 	id          Int      @id @default(autoincrement())
-	title       String
+	title       String   @unique
 	description String
 	project_url String
 	image       String
