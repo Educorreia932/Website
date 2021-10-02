@@ -2,7 +2,7 @@
 .idea/
 
 # Frontend folders and files
-frontend/dist/
+src/dist/
 node_modules/
 .nuxt/
 package-lock.json
@@ -12,4 +12,6 @@ package-lock.json
 
 # Database
 migrations/
+client/
 *.db*
+

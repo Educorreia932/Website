@@ -8,7 +8,8 @@ generator client {
 }
 
 model Tag {
-	id        Int      @id @default(autoincrement())
+	id        Int         @id @default(autoincrement())
+	name      String
 	projects  Project[]
 }
 

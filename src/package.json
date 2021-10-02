@@ -7,7 +7,8 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"migrate": "npx prisma migrate dev --name init"
+		"migrate": "npx prisma migrate dev --name init",
+		"seed": "node prisma/seed.js"
 	},
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -23,6 +24,7 @@
 		"d3": "^7.0.1",
 		"nuxt": "^2.15.7",
 		"portal-vue": "^2.1.7",
+		"prisma": "^3.1.1",
 		"topojson": "^3.0.2",
 		"vue-country-flag": "^2.2.0",
 		"vue-masonry": "^0.13.0"
@@ -30,8 +32,10 @@
 	"devDependencies": {
 		"node-sass": "^5.0.0",
 		"postcss": "^8.3.5",
-		"prisma": "^3.1.1",
 		"sass": "^1.32.8",
 		"sass-loader": "^10.1.1"
+	},
+	"prisma": {
+		"seed": "node prisma/seed.js"
 	}
 }
