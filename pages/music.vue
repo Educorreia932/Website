@@ -1,0 +1,64 @@
+<template>
+	<div>
+		<portal to="h1">
+			<h1 class="inline">
+				Eduardo Correia |
+				<ruby>
+					Music
+					<rt>音楽</rt>
+				</ruby>
+			</h1>
+		</portal>
+
+		<section>
+			<h2>My favorite music albums</h2>
+
+			<div id="albums">
+				<div v-for="row in albums" class="albums-row">
+					<div v-for="album in row" class="album">
+						<img :src="require(`@/assets/images/albums/${album.image}`)" :alt="album.name" />
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</template>
+
+<script>
+import { Portal } from "portal-vue";
+import music from "~/assets/json/music.json";
+
+export default {
+	name: "Music",
+	head: {
+		title: "Music | Eduardo Correia",
+		meta: [
+			{name: "twitter:title", content: "Music | Eduardo Correia"},
+			{property: "og:title", content: "Music | Eduardo Correia"},
+		],
+	},
+	components: {
+		Portal,
+	},
+	data() {
+		return {
+			albums: music.albums
+		};
+	},
+};
+</script>
+
+<style scoped>
+#albums {
+	@apply md:space-y-5 py-5;
+}
+
+.albums-row {
+	@apply flex flex-row space-x-1 md:space-x-5;
+}
+
+.album img {
+	@apply w-full rounded md:rounded-lg;
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+</style>

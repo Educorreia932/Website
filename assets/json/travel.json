@@ -1,0 +1,48 @@
+{
+	"visited": [
+		{
+			"name": "Portugal",
+			"code": "pt"
+		},
+		{
+			"name": "Spain",
+			"code": "es"
+		},
+		{
+			"name": "France",
+			"code": "fr"
+		},
+		{
+			"name": "United Kingdom",
+			"code": "gb"
+		},
+		{
+			"name": "Italy",
+			"code": "it"
+		},
+		{
+			"name": "Belgium",
+			"code": "be"
+		},
+		{
+			"name": "Germany",
+			"code": "de"
+		},
+		{
+			"name": "Poland",
+			"code": "pl"
+		},
+		{
+			"name": "Switzerland",
+			"code": "ch"
+		},
+		{
+			"name": "Czech Republic",
+			"code": "cz"
+		},
+		{
+			"name": "Ireland",
+			"code": "ie"
+		}
+	]
+}

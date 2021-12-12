@@ -1,13 +1,8 @@
 .git
-.env
 .idea
+.gitignore
 node_modules
-Dockerfile
-package-lock.json
-.env.development
-old_preview.png
 preview.png
 README.md
-.gitignore
 exclude.txt
 deploy.sh
