@@ -16,13 +16,14 @@
 			<div class="flex flex-col md:flex-row py-6">
 				<div id="flags">
 					<div id="flag-icons">
-						<span
+						<button
 							v-for="country in visitedCountries"
 							:class="`flag-icon flag-icon-${country.code}`"
 							@mouseover="setHoveredCountry(country.name)"
 							@mouseleave="resetHoveredCountry"
+							@click="globeFocus(country.name)"
 						>
-						</span>
+						</button>
 					</div>
 
 					<em v-if="!hoveredCountry">Hover over a flag</em>
@@ -38,15 +39,15 @@
 <script>
 import Globe from "../components/Globe";
 import { Portal } from "portal-vue";
-import travel from "~/assets/json/travel.json"
+import travel from "~/assets/json/travel.json";
 
 export default {
 	name: "travel",
 	head: {
 		title: "Travel | Eduardo Correia",
 		meta: [
-			{name: "twitter:title", content: "Travelling | Eduardo Correia"},
-			{property: "og:title", content: "Travelling | Eduardo Correia"},
+			{ name: "twitter:title", content: "Travelling | Eduardo Correia" },
+			{ property: "og:title", content: "Travelling | Eduardo Correia" },
 		],
 	},
 	components: {
@@ -56,7 +57,7 @@ export default {
 	data() {
 		return {
 			hoveredCountry: "",
-			visitedCountries: travel.visited
+			visitedCountries: travel.visited,
 		};
 	},
 	methods: {
@@ -66,6 +67,9 @@ export default {
 		resetHoveredCountry() {
 			this.hoveredCountry = "";
 		},
+		globeFocus(country) {
+			this.$refs.globe.focus(country);
+		}
 	},
 };
 </script>

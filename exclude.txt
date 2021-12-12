@@ -1,6 +1,8 @@
 .git
 .idea
 .gitignore
+.prettierignore
+.prettierrc.json
 node_modules
 preview.png
 README.md

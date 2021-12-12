@@ -19,56 +19,89 @@ export default {
 		};
 	},
 	async mounted() {
-		const globe = d3
+		this.svg = d3
 			.select(this.$refs.globe)
 			.attr("width", this.width)
 			.attr("height", this.height);
 
-		const projection = d3
+		this.projection = d3
 			.geoOrthographic()
 			.scale(250)
 			.translate([this.width / 2, this.height / 2]);
 
-		const path = d3.geoPath().projection(projection);
+		this.path = d3.geoPath().projection(this.projection);
 
-		globe.append("path").datum({ type: "Sphere" }).attr("class", "water").attr("d", path);
+		this.svg
+			.append("path")
+			.datum({ type: "Sphere" })
+			.attr("class", "water")
+			.attr("d", this.path);
 
-		const [worldData, countryNames] = await Promise.all([
+		[this.worldData, this.countryNames] = await Promise.all([
 			d3.json("https://unpkg.com/world-atlas@1/world/110m.json"),
 			d3.tsv(
 				"https://raw.githubusercontent.com/KoGor/Map-Icons-Generator/master/data/world-110m-country-names.tsv"
 			),
 		]);
 
-		const countries = topojson.feature(worldData, worldData["objects"]["countries"]).features;
+		this.countries = topojson.feature(
+			this.worldData,
+			this.worldData["objects"]["countries"]
+		).features;
 
 		let countryById = {};
 
-		countryNames.forEach(function (d) {
+		this.countryNames.forEach(function (d) {
 			countryById[d.id] = d.name;
 		});
 
-		globe
+		this.svg
 			.selectAll("path.land")
-			.data(countries)
+			.data(this.countries)
 			.enter()
 			.append("path")
 			.attr("class", "land")
-			.attr("d", path)
+			.attr("d", this.path)
 			.each(function (d) {
-				let country_name = "undefined";
+				let countryName = "undefined";
 
 				try {
 					d.id = d.id.replace(/^0+/, ""); // Removes leading zeros
-					country_name = countryById[d.id].split(" ").join("_");
+					countryName = countryById[d.id].split(" ").join("_");
 				} catch (err) {}
 
-				d3.select(this).attr("id", country_name);
+				d3.select(this).attr("id", countryName);
 			});
 
 		d3.map(this.visitedCountries, function (country) {
 			d3.selectAll("#" + country.name.split(" ").join("_")).attr("class", "visited");
 		});
+	},
+	methods: {
+		country(countryName) {
+			const id = this.countryNames.find((country) => country.name == countryName).id;
+
+			return this.countries.find((country) => country.id == id);
+		},
+		focus(countryName) {
+			let focusedCountry = this.country(countryName);
+
+			const centroid = d3.geoCentroid(focusedCountry);
+
+			d3.transition()
+				.duration(1000)
+				.tween("rotate", () => {
+					const interpolator = d3.interpolate(this.projection.rotate(), [
+						-centroid[0],
+						-centroid[1],
+					]);
+
+					return function (t) {
+						this.projection.rotate(interpolator(t));
+						this.svg.selectAll("path").attr("d", this.path);
+					}.bind(this);
+				});
+		},
 	},
 };
 </script>
