@@ -102,6 +102,12 @@ export default {
 					}.bind(this);
 				});
 		},
+		highlightCountry(country, highlight) {
+			const node = d3.selectAll("#" + country.split(" ").join("_")).node();
+
+			if (highlight) node.classList.add("highlight");
+			else node.classList.remove("highlight");
+		},
 	},
 };
 </script>
@@ -128,6 +134,7 @@ html.dark-mode #globe {
 	@apply fill-current text-primary;
 }
 
+.visited.highlight,
 .visited:hover {
 	@apply fill-current text-secondary;
 }

@@ -63,8 +63,10 @@ export default {
 	methods: {
 		setHoveredCountry(country) {
 			this.hoveredCountry = country;
+			this.$refs.globe.highlightCountry(country, true);
 		},
 		resetHoveredCountry() {
+			this.$refs.globe.highlightCountry(this.hoveredCountry, false);
 			this.hoveredCountry = "";
 		},
 		globeFocus(country) {
