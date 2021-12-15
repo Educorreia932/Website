@@ -76,6 +76,19 @@ export default {
 		d3.map(this.visitedCountries, function (country) {
 			d3.selectAll("#" + country.name.split(" ").join("_")).attr("class", "visited");
 		});
+
+		this.svg.call(
+			d3.drag().on("drag", (event) => {
+				const rotate = this.projection.rotate();
+				const k = 75 / this.projection.scale();
+
+				this.projection.rotate([rotate[0] + event.dx * k, rotate[1] - event.dy * k]);
+
+				this.path = d3.geoPath().projection(this.projection);
+
+				this.svg.selectAll("path").attr("d", this.path);
+			})
+		);
 	},
 	methods: {
 		country(countryName) {
