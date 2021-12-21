@@ -15,9 +15,21 @@
 
 			<div id="albums">
 				<div v-for="row in albums" class="albums-row">
-					<div v-for="album in row" class="album">
-						<img :src="require(`@/assets/images/albums/${album.image}`)" :alt="album.name" />
-					</div>
+					<a
+						v-for="album in row"
+						class="album"
+						:href="album.url"
+						:style="{
+							backgroundImage: `url(${require('~/assets/images/albums/' + album.image)}`,
+						}"
+						target="_blank"
+					>
+						<!--						<p>-->
+						<!--							<strong>{{ album.title }}</strong-->
+						<!--							><br />-->
+						<!--							<span>{{ album.artist }}</span>-->
+						<!--						</p>-->
+					</a>
 				</div>
 			</div>
 		</section>
@@ -33,8 +45,8 @@ export default {
 	head: {
 		title: "Music | Eduardo Correia",
 		meta: [
-			{name: "twitter:title", content: "Music | Eduardo Correia"},
-			{property: "og:title", content: "Music | Eduardo Correia"},
+			{ name: "twitter:title", content: "Music | Eduardo Correia" },
+			{ property: "og:title", content: "Music | Eduardo Correia" },
 		],
 	},
 	components: {
@@ -42,7 +54,7 @@ export default {
 	},
 	data() {
 		return {
-			albums: music.albums
+			albums: music.albums,
 		};
 	},
 };
@@ -57,8 +69,13 @@ export default {
 	@apply flex flex-row space-x-1 md:space-x-5;
 }
 
-.album img {
-	@apply w-full rounded md:rounded-lg;
+.album {
+	@apply text-white w-full rounded md:rounded-lg;
+	background-size: cover;
+	aspect-ratio: 1;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+.album p {
 }
 </style>

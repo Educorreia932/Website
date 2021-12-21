@@ -22,27 +22,24 @@
 				<a href="https://sigarra.up.pt/feup/">FEUP</a>
 				<br />
 				Interested in
-				<nuxt-link to="/">
+				<nuxt-link to="/projects">
 					<ruby class="under"
 						>building things
 						<rt>事業</rt>
 					</ruby>
-				</nuxt-link>
-				,
+				</nuxt-link>,
 				<nuxt-link to="/travel">
 					<ruby class="under"
 						>travelling
 						<rt>旅行</rt>
 					</ruby>
-				</nuxt-link>
-				,
+				</nuxt-link>,
 				<nuxt-link to="/music">
 					<ruby class="under"
 						>music
 						<rt>音楽</rt>
 					</ruby>
-				</nuxt-link>
-				,
+				</nuxt-link>,
 				<nuxt-link to="/">
 					<ruby class="under"
 						>gaming

@@ -22,8 +22,7 @@
 							@mouseover="setHoveredCountry(country.name)"
 							@mouseleave="resetHoveredCountry"
 							@click="globeFocus(country.name)"
-						>
-						</button>
+						></button>
 					</div>
 
 					<em v-if="!hoveredCountry">Hover over a flag</em>
@@ -71,7 +70,7 @@ export default {
 		},
 		globeFocus(country) {
 			this.$refs.globe.focus(country);
-		}
+		},
 	},
 };
 </script>

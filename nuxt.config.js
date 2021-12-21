@@ -12,11 +12,22 @@ export default {
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
 	css: ["flag-icon-css/css/flag-icons.css"],
-	plugins: [],
+	plugins: [{ src: "~/plugins/vue-masonry", ssr: false }],
 	components: true,
 	buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
 	modules: [],
 	build: {
 		standalone: true,
+	},
+	vue: {
+		config: {
+			productionTip: false,
+			devtools: true,
+		},
+	},
+	loading: {
+		color: "white",
+		height: "5px",
+		throttle: 0,
 	},
 };
