@@ -29,7 +29,9 @@
 					<span v-else>{{ this.hoveredCountry }}</span>
 				</div>
 
-				<globe id="globe" ref="globe" :visited-countries="visitedCountries" />
+				<client-only>
+					<globe id="globe" ref="globe" :visited-countries="visitedCountries" />
+				</client-only>
 			</div>
 		</section>
 	</div>

@@ -62,18 +62,19 @@ export default {
 			.append("path")
 			.attr("class", "land")
 			.attr("d", this.path)
-			.each(function (d) {
+			.each(function(d) {
 				let countryName = "undefined";
 
 				try {
 					d.id = d.id.replace(/^0+/, ""); // Removes leading zeros
 					countryName = countryById[d.id].split(" ").join("_");
-				} catch (err) {}
+				} catch (err) {
+				}
 
 				d3.select(this).attr("id", countryName);
 			});
 
-		d3.map(this.visitedCountries, function (country) {
+		d3.map(this.visitedCountries, function(country) {
 			d3.selectAll("#" + country.name.split(" ").join("_")).attr("class", "visited");
 		});
 
@@ -87,7 +88,7 @@ export default {
 				this.path = d3.geoPath().projection(this.projection);
 
 				this.svg.selectAll("path").attr("d", this.path);
-			})
+			}),
 		);
 	},
 	methods: {
@@ -109,7 +110,7 @@ export default {
 						-centroid[1],
 					]);
 
-					return function (t) {
+					return function(t) {
 						this.projection.rotate(interpolator(t));
 						this.svg.selectAll("path").attr("d", this.path);
 					}.bind(this);

@@ -12,7 +12,7 @@ export default {
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
 	css: ["flag-icon-css/css/flag-icons.css"],
-	plugins: [{ src: "~/plugins/vue-masonry", ssr: false }],
+	plugins: [{ src: "~/plugins/vue-masonry", mode: "client" }],
 	components: true,
 	buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
 	modules: [],
