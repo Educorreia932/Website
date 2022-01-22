@@ -167,5 +167,23 @@
 		"project_url": "https://github.com/Educorreia932/Persona-4-Weather-News",
 		"image": "Persona4WeatherNews.png",
 		"tags": {}
+	},
+	{
+		"title": "Tulicreme",
+		"description": "A decentrilized micro-blogging service",
+		"project_url": "https://github.com/Educorreia932/FEUP-SDLE/tree/main/Projects/proj2",
+		"image": "Tulicreme.png",
+		"tags": [
+			"University"
+		]
+	},
+	{
+		"title": "Spot & Find",
+		"description": "A search system for music content",
+		"project_url": "https://github.com/Educorreia932/FEUP-PRI/tree/master/Project",
+		"image": "SpotFind.png",
+		"tags": [
+			"University"
+		]
 	}
 ]

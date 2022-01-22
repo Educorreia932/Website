@@ -47,7 +47,7 @@ export default {
 	},
 	data() {
 		return {
-			projects: projects,
+			projects: projects.reverse(),
 		};
 	},
 };

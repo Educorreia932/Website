@@ -55,7 +55,7 @@
 					&
 					<ruby class="under"
 						>manga
-						<rt>マンガ</rt>
+						<rt>漫画</rt>
 					</ruby>
 				</nuxt-link>
 			</p>
