@@ -18,6 +18,7 @@ export default {
 	modules: [],
 	build: {
 		standalone: true,
+		extractCSS: true
 	},
 	vue: {
 		config: {

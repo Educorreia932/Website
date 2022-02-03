@@ -121,13 +121,6 @@
 		]
 	},
 	{
-		"title": "Bad Apple",
-		"description": "My redemptions of the popular Touhou animated video.",
-		"project_url": "https://github.com/Educorreia932/Bad-Apple",
-		"image": "BadApple.jpg",
-		"tags": []
-	},
-	{
 		"title": "Spotify Statistics",
 		"description": "A webpage that gives you some insight regarding your favorite music genres according to what you listen to on Spotify.",
 		"project_url": "https://educorreia932.dev/spotify_statistics",
