@@ -178,5 +178,14 @@
 		"tags": [
 			"University"
 		]
+	},
+	{
+		"title": "Warehouse of the Future",
+		"description": "A web-application that simulates a set of devices placed in a warehouse",
+		"project_url": "",
+		"image": "WarehouseFuture.png",
+		"tags": [
+			"University"
+		]
 	}
 ]

@@ -12,13 +12,20 @@ export default {
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
 	css: ["flag-icon-css/css/flag-icons.css"],
-	plugins: [{ src: "~/plugins/vue-masonry", mode: "client" }],
+	plugins: [
+		{ src: "~/plugins/vue-masonry", mode: "client" },
+	],
 	components: true,
-	buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
-	modules: [],
+	buildModules: [
+		"@nuxtjs/tailwindcss",
+		"@nuxtjs/color-mode",
+	],
+	modules: [
+		"@nuxt/content"
+	],
 	build: {
 		standalone: true,
-		extractCSS: true
+		extractCSS: true,
 	},
 	vue: {
 		config: {
@@ -30,5 +37,8 @@ export default {
 		color: "white",
 		height: "5px",
 		throttle: 0,
+	},
+	colorMode: {
+		classSuffix: "",
 	},
 };

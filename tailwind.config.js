@@ -1,4 +1,5 @@
 module.exports = {
+	mode: "jit",
 	purge: {
 		content: [
 			`components/**/*.{vue,js}`,
@@ -9,7 +10,6 @@ module.exports = {
 		],
 	},
 	darkMode: "class",
-	mode: "jit",
 	theme: {
 		darkSelector: ".dark-mode",
 		extend: {
@@ -35,7 +35,9 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [require("tailwindcss-dark-mode")()],
+	plugins: [
+		require("tailwindcss-dark-mode")(),
+	],
 	corePlugins: {
 		preflight: false,
 	},

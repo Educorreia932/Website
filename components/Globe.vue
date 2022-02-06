@@ -132,7 +132,7 @@ export default {
 	stroke: white;
 }
 
-html.dark-mode #globe {
+html.dark #globe {
 	stroke: #2f2f2f;
 }
 
