@@ -8,14 +8,14 @@
 					<button style="font-size: 1.3em" @click="changeMode">
 						<span v-if="this.$colorMode.preference === 'dark'">
 							<ruby class="under"
-								>日
+							>日
 								<rt>Light</rt>
 							</ruby>
 						</span>
 
 						<span v-else>
 							<ruby class="under"
-								>夜
+							>夜
 								<rt>Dark</rt>
 							</ruby>
 						</span>
@@ -23,7 +23,7 @@
 
 					<nuxt-link to="/" style="font-size: 1.3em" class="text-black dark:text-white">
 						<ruby class="under"
-							>家
+						>家
 							<rt>Home</rt>
 						</ruby>
 					</nuxt-link>
@@ -34,7 +34,7 @@
 				<nuxt />
 			</div>
 
-			<footer>&copy; 2021 - Eduardo Correia</footer>
+			<footer>&copy; 2022 - Eduardo Correia</footer>
 		</div>
 	</div>
 </template>
@@ -107,5 +107,17 @@ button {
 footer {
 	@apply text-center text-sm;
 	color: #c8c8c8;
+}
+
+html.dark code {
+	background-color: rgba(110, 118, 129, 0.4);
+}
+
+code {
+	padding: .2em .4em;
+	margin: 0;
+	font-size: 85%;
+	border-radius: 6px;
+	background-color: rgba(175,184,193,0.2);
 }
 </style>

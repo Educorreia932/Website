@@ -8,8 +8,11 @@ export default {
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
 			{ hid: "description", name: "description", content: "" },
 			{ name: "format-detection", content: "telephone=no" },
+			{ name: "twitter:image", content: "~/assets/images/avatar.png"}
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+		link: [
+			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+		],
 	},
 	css: ["flag-icon-css/css/flag-icons.css"],
 	plugins: [
@@ -21,7 +24,7 @@ export default {
 		"@nuxtjs/color-mode",
 	],
 	modules: [
-		"@nuxt/content"
+		"@nuxt/content",
 	],
 	build: {
 		standalone: true,

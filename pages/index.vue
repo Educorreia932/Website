@@ -4,7 +4,7 @@
 			<h1>
 				Eduardo Correia |
 				<ruby
-					>Home
+				>Home
 					<rt>家</rt>
 				</ruby>
 			</h1>
@@ -19,45 +19,61 @@
 
 			<p class="mx-auto">
 				Currently attending a Master's Degree in Informatics and Computing Engineering in
-				<a href="https://sigarra.up.pt/feup/">FEUP</a>
+				<a href="https://sigarra.up.pt/feup/">FEUP</a>.
+
 				<br />
+
 				Interested in
 				<nuxt-link to="/projects">
 					<ruby class="under"
-						>building things
+					>building things
 						<rt>事業</rt>
 					</ruby>
-				</nuxt-link>,
+				</nuxt-link><!--
+				-->,
 				<nuxt-link to="/travel">
 					<ruby class="under"
-						>travelling
+					>travelling
 						<rt>旅行</rt>
 					</ruby>
-				</nuxt-link>,
+				</nuxt-link><!--
+				-->,
 				<nuxt-link to="/music">
 					<ruby class="under"
-						>music
+					>music
 						<rt>音楽</rt>
 					</ruby>
-				</nuxt-link>,
+				</nuxt-link><!--
+				-->,
 				<nuxt-link to="/">
 					<ruby class="under"
-						>gaming
+					>gaming
 						<rt>ゲーム</rt>
 					</ruby>
 				</nuxt-link>
 				and
 				<nuxt-link to="/">
 					<ruby class="under"
-						>anime
+					>anime
 						<rt>アニメ</rt>
 					</ruby>
 					&
 					<ruby class="under"
-						>manga
+					>manga
 						<rt>漫画</rt>
 					</ruby>
-				</nuxt-link>
+				</nuxt-link><!--
+				-->.
+
+				<br />
+
+				I also have a
+				<nuxt-link to="/blog/my-first-blog-post">
+					<ruby class="under">blog
+						<rt>網誌</rt>
+					</ruby>
+				</nuxt-link><!--
+				-->.
 			</p>
 
 			<div id="university-progress">
@@ -80,9 +96,9 @@ export default {
 	head: {
 		title: "Home | Eduardo Correia",
 		meta: [
-			{name: "twitter:title", content: "Home | Eduardo Correia"},
-			{property: "og:title", content: "Home | Eduardo Correia"},
-		]
+			{ name: "twitter:title", content: "Home | Eduardo Correia" },
+			{ property: "og:title", content: "Home | Eduardo Correia" },
+		],
 	},
 	components: {
 		ProgressBar,

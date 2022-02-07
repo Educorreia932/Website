@@ -182,7 +182,7 @@
 	{
 		"title": "Warehouse of the Future",
 		"description": "A web-application that simulates a set of devices placed in a warehouse",
-		"project_url": "",
+		"project_url": "https://github.com/softeng-feup/ds-meic2",
 		"image": "WarehouseFuture.png",
 		"tags": [
 			"University"
