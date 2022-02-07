@@ -11,6 +11,8 @@
 		</portal>
 
 		<section>
+			<now-playing/>
+
 			<h2>My favorite music albums</h2>
 
 			<div id="albums">
@@ -39,6 +41,7 @@
 <script>
 import { Portal } from "portal-vue";
 import music from "~/assets/json/music.json";
+import NowPlaying from "@/components/NowPlaying.vue";
 
 export default {
 	name: "Music",
@@ -51,6 +54,7 @@ export default {
 	},
 	components: {
 		Portal,
+		NowPlaying
 	},
 	data() {
 		return {
