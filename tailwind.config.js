@@ -22,7 +22,10 @@ module.exports = {
 					DEFAULT: "#2F2F2F",
 					dark: "#242424",
 				},
-				white: "#FFFFFF",
+				white: {
+					DEFAULT: "#FFFFFF",
+					dark: "#ECECEC"
+				},
 				black: "#000000",
 				primary: "#EC0237",
 				secondary: "#BB0324",

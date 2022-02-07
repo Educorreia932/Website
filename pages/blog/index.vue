@@ -10,16 +10,15 @@
 			</h1>
 		</portal>
 
-		<section>
-			<div v-for="post in posts" :key="post.title">
-				{{ post.title }}
-			</div>
+		<section class="space-y-4">
+			<article-card v-for="post in posts" :key="post.title" :post="post" />
 		</section>
 	</div>
 </template>
 
 <script>
 import { Portal } from "portal-vue";
+import ArticleCard from "@/components/ArticleCard.vue";
 
 export default {
 	name: "blog",
@@ -32,11 +31,10 @@ export default {
 	},
 	components: {
 		Portal,
+		ArticleCard,
 	},
 	async asyncData({ $content }) {
 		const posts = await $content("articles").fetch();
-
-		console.log(posts)
 
 		return {
 			posts,

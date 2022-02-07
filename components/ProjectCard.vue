@@ -37,8 +37,7 @@ export default {
 
 <style scoped>
 .project-card {
-	background-color: #ececec;
-	@apply inline-block text-black dark:text-white dark:bg-gray rounded-xl transition transform hover:scale-105;
+	@apply inline-block text-black dark:text-white bg-white-dark dark:bg-gray rounded-xl transition transform hover:scale-105;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
 	vertical-align: top;
 }

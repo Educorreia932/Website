@@ -1,5 +1,6 @@
 ---
-title: "Counting things - What kind of insight does it provide us?"
+title: "Counting things"
+publishedAt: "2022-02-07"
 ---
 
 # Counting things - What kind of insight does it provide us?
@@ -28,7 +29,7 @@ Weight / cost
   separately)
 - **Exclusion** - Not being classified at all as a language (*e.g.* `JSON` and `Markdown`)
 - Jupyter Notebook (many lines of code are automaticall generated)
-- **One-liners** (`Haskell`)
+- **One-liners/Formatting** (`Haskell`)
 - **Misclassification** - `ROFF`/`CHIP-8`
   
 Why is Latex considered a language, but not, let's say Markdown? To achieve the same purpose.  

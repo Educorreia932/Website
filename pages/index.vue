@@ -68,7 +68,7 @@
 				<br />
 
 				I also have a
-				<nuxt-link to="/blog/my-first-blog-post">
+				<nuxt-link to="/blog">
 					<ruby class="under">blog
 						<rt>網誌</rt>
 					</ruby>
