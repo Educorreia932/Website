@@ -41,11 +41,6 @@ export default {
 			is_playing: false,
 		};
 	},
-	watch: {
-		"$route.path"() {
-			this.currentTrack();
-		},
-	},
 	beforeMount() {
 		this.currentTrack();
 	},
@@ -60,6 +55,11 @@ export default {
 			this.is_playing = is_playing;
 		},
 	},
+	mounted() {
+		setInterval(function () {
+			this.currentTrack();
+		}.bind(this), 1000);
+	}
 };
 </script>
 
