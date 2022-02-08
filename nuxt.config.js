@@ -52,4 +52,9 @@ export default {
 			regular: true,
 		},
 	},
+	env: {
+		spotifyClientID: process.env.SPOTIFY_CLIENT_ID,
+		spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+		spotifyRefreshToken: process.env.SPOTIFY_RT,
+	},
 };

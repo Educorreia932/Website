@@ -11,8 +11,12 @@
 		</portal>
 
 		<section>
-			<now-playing/>
+			<h2>Now playing</h2>
 
+			<now-playing />
+		</section>
+
+		<section>
 			<h2>My favorite music albums</h2>
 
 			<div id="albums">
@@ -22,15 +26,10 @@
 						class="album"
 						:href="album.url"
 						:style="{
-							backgroundImage: `url(${require('~/assets/images/albums/' + album.image)}`,
+							backgroundImage: `url(${require('~/assets/images/albums/' + album.image)})`,
 						}"
 						target="_blank"
 					>
-						<!--						<p>-->
-						<!--							<strong>{{ album.title }}</strong-->
-						<!--							><br />-->
-						<!--							<span>{{ album.artist }}</span>-->
-						<!--						</p>-->
 					</a>
 				</div>
 			</div>
@@ -54,7 +53,7 @@ export default {
 	},
 	components: {
 		Portal,
-		NowPlaying
+		NowPlaying,
 	},
 	data() {
 		return {
@@ -65,8 +64,12 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+	@apply mb-5;
+}
+
 #albums {
-	@apply md:space-y-5 py-5;
+	@apply md:space-y-5 pb-5;
 }
 
 .albums-row {
@@ -78,8 +81,5 @@ export default {
 	background-size: cover;
 	aspect-ratio: 1;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-}
-
-.album p {
 }
 </style>

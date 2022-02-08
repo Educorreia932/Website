@@ -1,12 +1,12 @@
 .idea/
 node_modules/
-.output/
-.nuxt/
 *.log
-nuxt.d.ts
+
+# Nuxt
+.nuxt/
 
 # Yarn
 yarn.lock
 
 # Environment files
-.env*
+.env

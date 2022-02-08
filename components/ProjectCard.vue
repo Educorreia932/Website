@@ -32,14 +32,12 @@
 
 <script>
 import { Portal } from "portal-vue";
-import NowPlaying from "@/components/NowPlaying.vue";
 
 export default {
 	name: "ProjectCard",
 	props: ["project"],
 	components: {
 		Portal,
-		NowPlaying,
 	},
 };
 </script>

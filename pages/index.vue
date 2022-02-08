@@ -19,7 +19,7 @@
 
 			<p class="mx-auto">
 				Currently attending a Master's Degree in Informatics and Computing Engineering in
-				<a href="https://sigarra.up.pt/feup/">FEUP</a>.
+				<a href="https://sigarra.up.pt/feup/">FEUP</a>
 
 				<br />
 
@@ -62,8 +62,7 @@
 					>manga
 						<rt>漫画</rt>
 					</ruby>
-				</nuxt-link><!--
-				-->.
+				</nuxt-link>
 
 				<br />
 
@@ -72,8 +71,7 @@
 					<ruby class="under">blog
 						<rt>網誌</rt>
 					</ruby>
-				</nuxt-link><!--
-				-->.
+				</nuxt-link>
 			</p>
 
 			<div id="university-progress">
