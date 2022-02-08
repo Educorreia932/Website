@@ -26,8 +26,6 @@ async function getAccessToken() {
 export async function getNowPlaying() {
 	const accessToken = (await getAccessToken()).access_token;
 
-	console.log(accessToken);
-
 	return fetch(NOW_PLAYING_ENDPOINT, {
 		headers: {
 			Authorization: `Bearer ${accessToken}`,

@@ -8,3 +8,4 @@ preview.png
 README.md
 exclude.txt
 deploy.sh
+Makefile

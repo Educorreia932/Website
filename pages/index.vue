@@ -66,12 +66,12 @@
 
 				<br />
 
-				I also have a
-				<nuxt-link to="/blog">
-					<ruby class="under">blog
-						<rt>網誌</rt>
-					</ruby>
-				</nuxt-link>
+<!--				I also have a-->
+<!--				<nuxt-link to="/blog">-->
+<!--					<ruby class="under">blog-->
+<!--						<rt>網誌</rt>-->
+<!--					</ruby>-->
+<!--				</nuxt-link>-->
 			</p>
 
 			<div id="university-progress">

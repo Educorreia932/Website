@@ -79,7 +79,7 @@ h1 {
 }
 
 h2 {
-	@apply pl-2 m-0 text-gray-light;
+	@apply pl-2 m-0 text-gray dark:text-gray-light;
 	border-left: 2px solid;
 	font-size: 1.3rem;
 	font-weight: normal;
