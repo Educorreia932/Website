@@ -8,7 +8,7 @@ export default {
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
 			{ hid: "description", name: "description", content: "" },
 			{ name: "format-detection", content: "telephone=no" },
-			{ name: "twitter:image", content: "~/assets/images/avatar.png"}
+			{ name: "twitter:image", content: "~/assets/images/avatar.png" },
 		],
 		link: [
 			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -22,6 +22,7 @@ export default {
 	buildModules: [
 		"@nuxtjs/tailwindcss",
 		"@nuxtjs/color-mode",
+		"@nuxtjs/fontawesome",
 	],
 	modules: [
 		"@nuxt/content",
@@ -43,5 +44,12 @@ export default {
 	},
 	colorMode: {
 		classSuffix: "",
+	},
+	fontawesome: {
+		component: "fa",
+		icons: {
+			solid: true,
+			regular: true,
+		},
 	},
 };

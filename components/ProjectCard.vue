@@ -1,8 +1,6 @@
 <template>
-	<a
+	<div
 		class="project-card text-white"
-		:href="project.project_url"
-		target="_blank"
 	>
 		<img
 			class="project-illustration"
@@ -17,21 +15,32 @@
 				{{ project.description }}
 			</p>
 
-			<div class="flex">
+			<div class="flex flex-row">
 				<div class="project-tags">
 					<span v-for="tag in project.tags" :key="tag.id" class="project-tag">
 						{{ tag }}
 					</span>
 				</div>
+
+				<a :href="project.project_url" target="_blank" class="project-anchor">
+					<fa icon="link" class="float-right" />
+				</a>
 			</div>
 		</section>
-	</a>
+	</div>
 </template>
 
 <script>
+import { Portal } from "portal-vue";
+import NowPlaying from "@/components/NowPlaying.vue";
+
 export default {
 	name: "ProjectCard",
 	props: ["project"],
+	components: {
+		Portal,
+		NowPlaying,
+	},
 };
 </script>
 
@@ -77,6 +86,6 @@ h3 {
 }
 
 .project-anchor {
-	color: gray;
+	@apply text-gray-light flex-1;
 }
 </style>

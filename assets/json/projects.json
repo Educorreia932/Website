@@ -67,7 +67,7 @@
 	{
 		"title": "McDelivery",
 		"description": "WebGL scene redemption of a McDonald's zeppelin delivering hamburgers.",
-		"project_url": "https://educorreia932.github.io/CGRA/Project/src/",
+		"project_url": "https://github.com/Educorreia932/FEUP-CGRA/tree/master/Project",
 		"image": "McDelivery.png",
 		"tags": [
 			"University"
@@ -182,7 +182,7 @@
 	{
 		"title": "Warehouse of the Future",
 		"description": "A web-application that simulates a set of devices placed in a warehouse",
-		"project_url": "https://github.com/softeng-feup/ds-meic2",
+		"project_url": "",
 		"image": "WarehouseFuture.png",
 		"tags": [
 			"University"
