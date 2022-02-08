@@ -16,7 +16,8 @@
 		"@nuxt/content": "^1.15.1",
 		"core-js": "^3.15.1",
 		"nuxt": "^2.15.7",
-		"sass": "^1.49.7"
+		"sass": "^1.49.7",
+		"vue-content-placeholders": "^0.2.1"
 	},
 	"devDependencies": {
 		"@nuxtjs/color-mode": "^2.1.1",

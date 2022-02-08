@@ -17,6 +17,7 @@ export default {
 	css: ["flag-icon-css/css/flag-icons.css"],
 	plugins: [
 		{ src: "~/plugins/vue-masonry", mode: "client" },
+		{ src: "~/plugins/vue-content-placeholders.js" },
 	],
 	components: true,
 	buildModules: [
@@ -50,7 +51,7 @@ export default {
 		icons: {
 			solid: true,
 			regular: true,
-			brands: true
+			brands: true,
 		},
 	},
 	env: {

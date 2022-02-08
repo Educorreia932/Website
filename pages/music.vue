@@ -11,12 +11,7 @@
 		</portal>
 
 		<section>
-			<h2>
-				Now playing
-				<a style="color: #1DB954" href="https://open.spotify.com/user/skelozard?si=bb7e9441d87941eb">
-					<fa :icon="['fab', 'spotify']" style="font-size: 25px" class="ml-2" />
-				</a>
-			</h2>
+
 
 			<now-playing />
 		</section>
