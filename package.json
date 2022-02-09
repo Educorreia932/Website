@@ -6,23 +6,21 @@
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
-		"generate": "nuxt generate",
-		"format": "prettier --write ."
+		"generate": "nuxt generate"
 	},
 	"dependencies": {
-		"@fortawesome/free-brands-svg-icons": "^6.0.0",
-		"@fortawesome/free-regular-svg-icons": "^6.0.0",
-		"@fortawesome/free-solid-svg-icons": "^6.0.0",
 		"@nuxt/content": "^1.15.1",
 		"core-js": "^3.15.1",
 		"nuxt": "^2.15.7",
-		"sass": "^1.49.7",
-		"vue-content-placeholders": "^0.2.1"
+		"sass": "^1.49.7"
 	},
 	"devDependencies": {
 		"@nuxtjs/color-mode": "^2.1.1",
 		"@nuxtjs/fontawesome": "^1.1.2",
 		"@nuxtjs/tailwindcss": "^4.2.0",
+		"@fortawesome/free-brands-svg-icons": "^6.0.0",
+		"@fortawesome/free-regular-svg-icons": "^6.0.0",
+		"@fortawesome/free-solid-svg-icons": "^6.0.0",
 		"d3": "^7.2.1",
 		"flag-icon-css": "^4.1.6",
 		"portal-vue": "^2.1.7",
@@ -31,7 +29,8 @@
 		"topojson-client": "^3.1.0",
 		"vue": "^2.6.14",
 		"vue-masonry": "^0.14.0",
-		"vue-masonry-css": "^1.0.3"
+		"vue-masonry-css": "^1.0.3",
+		"vue-content-placeholders": "^0.2.1"
 	},
 	"type": "module"
 }

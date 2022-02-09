@@ -4,6 +4,7 @@ node_modules/
 
 # Nuxt
 .nuxt/
+dist/
 
 # Yarn
 yarn.lock

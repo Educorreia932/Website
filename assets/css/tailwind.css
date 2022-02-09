@@ -8,3 +8,9 @@
         src: url("~/assets/fonts/Kozuka Mincho Pro/KozMinPro-Medium.woff2");
     }
 }
+
+/* Fix for Font Awesome icon sizing */
+.svg-inline--fa {
+    height: 1em;
+    vertical-align: -0.125em;
+}

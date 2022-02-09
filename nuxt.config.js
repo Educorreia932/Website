@@ -10,9 +10,6 @@ export default {
 			{ name: "format-detection", content: "telephone=no" },
 			{ name: "twitter:image", content: "~/assets/images/avatar.png" },
 		],
-		link: [
-			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-		],
 	},
 	css: ["flag-icon-css/css/flag-icons.css"],
 	plugins: [

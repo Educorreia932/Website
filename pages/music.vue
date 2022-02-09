@@ -11,8 +11,6 @@
 		</portal>
 
 		<section>
-
-
 			<now-playing />
 		</section>
 

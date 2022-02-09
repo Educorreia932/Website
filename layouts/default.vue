@@ -79,10 +79,11 @@ h1 {
 }
 
 h2 {
-	@apply pl-2 m-0 text-gray dark:text-gray-light;
+	@apply pl-2 py-2 m-0 text-gray dark:text-gray-light ;
 	border-left: 2px solid;
 	font-size: 1.3rem;
 	font-weight: normal;
+	line-height: 1em;
 }
 
 ruby {
@@ -118,6 +119,6 @@ code {
 	margin: 0;
 	font-size: 85%;
 	border-radius: 6px;
-	background-color: rgba(175,184,193,0.2);
+	background-color: rgba(175, 184, 193, 0.2);
 }
 </style>
