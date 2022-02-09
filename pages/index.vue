@@ -1,13 +1,10 @@
 <template>
 	<div>
 		<portal to="h1">
-			<h1>
-				Eduardo Correia |
-				<ruby
-				>Home
-					<rt>家</rt>
-				</ruby>
-			</h1>
+			<ruby>
+				Home
+				<rt>家</rt>
+			</ruby>
 		</portal>
 
 		<section class="flex flex-col pb-5">
@@ -66,12 +63,12 @@
 
 				<br />
 
-<!--				I also have a-->
-<!--				<nuxt-link to="/blog">-->
-<!--					<ruby class="under">blog-->
-<!--						<rt>網誌</rt>-->
-<!--					</ruby>-->
-<!--				</nuxt-link>-->
+				<!--				I also have a-->
+				<!--				<nuxt-link to="/blog">-->
+				<!--					<ruby class="under">blog-->
+				<!--						<rt>網誌</rt>-->
+				<!--					</ruby>-->
+				<!--				</nuxt-link>-->
 			</p>
 
 			<div id="university-progress">

@@ -1,0 +1,4 @@
+.nuxt
+.env
+package.json
+

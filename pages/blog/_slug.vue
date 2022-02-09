@@ -1,13 +1,10 @@
 <template>
 	<div>
 		<portal to="h1">
-			<h1 class="inline">
-				Eduardo Correia |
-				<ruby>
-					Blog
-					<rt>網誌</rt>
-				</ruby>
-			</h1>
+			<ruby>
+				Blog
+				<rt>網誌</rt>
+			</ruby>
 		</portal>
 
 		<article>

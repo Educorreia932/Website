@@ -4,7 +4,7 @@
 			{{ is_playing ? "Now playing" : "Music on pause" }}
 
 			<a style="color: #1DB954" href="https://open.spotify.com/user/skelozard?si=bb7e9441d87941eb">
-				<fa :icon="['fab', 'spotify']" style="font-size: 25px" />
+				<fa :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em" class="ml-1" />
 			</a>
 		</h2>
 
@@ -17,7 +17,7 @@
 						 	track.album.images[0].url
 						"
 						alt="Album cover"
-						class="rounded-xl w-24 h-24"
+						class="cover"
 					>
 				</a>
 
@@ -100,8 +100,8 @@ a:hover {
 	text-decoration: underline;
 }
 
-img {
+.cover {
+	@apply rounded-xl w-24 h-24;
 	vertical-align: middle;
 }
 </style>
-

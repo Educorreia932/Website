@@ -1,27 +1,24 @@
 <template>
 	<div>
 		<portal to="h1">
-			<h1 class="inline">
-				Eduardo Correia |
-				<ruby>
-					Projects
-					<rt>事業</rt>
-				</ruby>
-			</h1>
+			<ruby>
+				Projects
+				<rt>事業</rt>
+			</ruby>
 		</portal>
 
 		<h2>My own creations</h2>
 
 		<masonry
-			class="py-5"
 			:cols="{ default: 4, 1000: 3, 750: 2, 400: 1 }"
 			:gutter="{ default: '30px', 750: '15px' }"
+			class="py-5"
 		>
 			<project-card
-				class="item"
 				v-for="project in projects"
 				:key="project.id"
 				:project="project"
+				class="item"
 			/>
 		</masonry>
 	</div>

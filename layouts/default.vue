@@ -2,7 +2,10 @@
 	<div id="container">
 		<div id="content">
 			<header>
-				<portal-target name="h1" class="inline" />
+				<h1>
+					<span class="hidden md:inline">Eduardo Correia |</span>
+					<portal-target name="h1" class="inline" />
+				</h1>
 
 				<div class="float-right space-x-5">
 					<button style="font-size: 1.3em" @click="changeMode">

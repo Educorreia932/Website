@@ -1,13 +1,10 @@
 <template>
 	<div>
 		<portal to="h1">
-			<h1 class="inline">
-				Eduardo Correia |
-				<ruby>
-					Music
-					<rt>音楽</rt>
-				</ruby>
-			</h1>
+			<ruby>
+				Music
+				<rt>音楽</rt>
+			</ruby>
 		</portal>
 
 		<section>
@@ -18,18 +15,22 @@
 			<h2>My favorite music albums</h2>
 
 			<div id="albums">
-				<div v-for="row in albums" class="albums-row">
+				<div v-for="album in albums">
 					<a
-						v-for="album in row"
-						class="album"
 						:href="album.url"
-						:style="{
-							backgroundImage: `url(${require('~/assets/images/albums/' + album.image)})`,
-						}"
+						:title="`${album.title} - ${album.artist}`"
+						class="h-full w-full"
 						target="_blank"
 					>
+						<div class="album"
+							 :style="{
+								backgroundImage: `url(${require('~/assets/images/albums/' + album.image)})`,
+							}"
+						>
+						</div>
 					</a>
 				</div>
+
 			</div>
 		</section>
 	</div>
@@ -67,16 +68,11 @@ h2 {
 }
 
 #albums {
-	@apply md:space-y-5 pb-5;
-}
-
-.albums-row {
-	@apply flex flex-row space-x-1 md:space-x-5;
+	@apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-5;
 }
 
 .album {
-	@apply text-white w-full rounded md:rounded-lg;
-	background-size: cover;
+	@apply text-white rounded-lg bg-cover;
 	aspect-ratio: 1;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }

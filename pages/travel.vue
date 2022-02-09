@@ -1,13 +1,10 @@
 <template>
 	<div>
 		<portal to="h1">
-			<h1 class="inline">
-				Eduardo Correia |
-				<ruby>
-					Travel
-					<rt>旅行</rt>
-				</ruby>
-			</h1>
+			<ruby>
+				Travel
+				<rt>旅行</rt>
+			</ruby>
 		</portal>
 
 		<section>
@@ -19,9 +16,9 @@
 						<button
 							v-for="country in visitedCountries"
 							:class="`flag-icon flag-icon-${country.code}`"
-							@mouseover="setHoveredCountry(country.name)"
-							@mouseleave="resetHoveredCountry"
 							@click="globeFocus(country.name)"
+							@mouseleave="resetHoveredCountry"
+							@mouseover="setHoveredCountry(country.name)"
 						></button>
 					</div>
 
