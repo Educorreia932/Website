@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="app">
 		<portal to="h1">
 			<ruby>
 				Home
@@ -133,6 +133,10 @@ export default {
 </script>
 
 <style scoped>
+#app {
+	font-size: 19px;
+}
+
 #avatar {
 	@apply text-center mt-6;
 }

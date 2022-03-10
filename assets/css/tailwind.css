@@ -5,7 +5,13 @@
 @layer base {
     @font-face {
         font-family: "Kozuka Mincho Pro";
-        src: url("~/assets/fonts/Kozuka Mincho Pro/KozMinPro-Medium.woff2");
+        src: url("../fonts/KozMinPro-Medium.otf");
+    }
+
+    @font-face {
+        font-family: "Kozuka Mincho Pro";
+        src: url("../fonts/KozMinPro-Bold.otf");
+        font-weight: bold;
     }
 }
 

@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Every Web is a Home",
-		"description": "Game developed for Global Game Jam 2019 in which you are a spider trying to catch bugs with your web.",
+		"description": "Game developed for Global Game Jam 2019 in which you are a spider trying to catch bugs with your web",
 		"project_url": "https://github.com/Lantaros/pouca-teia",
 		"image": "EveryWebIsAHome.png",
 		"tags": [
@@ -11,7 +11,7 @@
 	},
 	{
 		"title": "Github Pie Chart",
-		"description": "A script that generates a pie chart with the lines of code percentage of each language of a GitHub profile.",
+		"description": "A script that generates a pie chart with the lines of code percentage of each language of a GitHub profile",
 		"project_url": "https://github.com/Educorreia932/Github-Pie-Chart",
 		"image": "GithubPieChart.png",
 		"tags": [
@@ -21,7 +21,7 @@
 	},
 	{
 		"title": "Project Watt",
-		"description": "A platforming game themed around an electric particle in a circuit trying to reach the exit (connect to earth) and developed for MINIX.",
+		"description": "A platforming game themed around an electric particle in a circuit trying to reach the exit (connect to earth) and developed for MINIX",
 		"project_url": "https://github.com/Educorreia932/LCOM/tree/master/proj",
 		"image": "ProjectWatt.png",
 		"tags": [
@@ -31,7 +31,7 @@
 	},
 	{
 		"title": "Lain",
-		"description": "A Discord bot that retrieves statistics for a text channel.",
+		"description": "A Discord bot that retrieves statistics for a text channel",
 		"project_url": "https://github.com/Educorreia932/Lain",
 		"image": "Lain.jpg",
 		"tags": [
@@ -40,14 +40,14 @@
 	},
 	{
 		"title": "CTM 2020 Summer Internship",
-		"description": "Flying communications node controller sensitive to traffic.",
+		"description": "Flying communications node controller sensitive to traffic",
 		"project_url": "https://github.com/Educorreia932/CTM-2020-Summer-Intership",
 		"image": "CTM2020SummerInternship.png",
 		"tags": {}
 	},
 	{
 		"title": "Pokémon Origins",
-		"description": "An infographics on pokémon and its counterpart inspirational origins in flora and fauna.",
+		"description": "An infographics on pokémon and its counterpart inspirational origins in flora and fauna",
 		"project_url": "https://github.com/Educorreia932/Pokemon-Origins",
 		"image": "PokémonOrigins.png",
 		"tags": [
@@ -56,7 +56,7 @@
 	},
 	{
 		"title": "Pokémon - A Sequel Coming In Inevitably",
-		"description": "Pokémon Fire Red look-alike running on a terminal.",
+		"description": "Pokémon Fire Red look-alike running on a terminal",
 		"project_url": "https://github.com/Educorreia932/LPOO/tree/master/Project",
 		"image": "PokemonASCII.png",
 		"tags": [
@@ -66,7 +66,7 @@
 	},
 	{
 		"title": "McDelivery",
-		"description": "WebGL scene redemption of a McDonald's zeppelin delivering hamburgers.",
+		"description": "WebGL scene redemption of a McDonald's zeppelin delivering hamburgers",
 		"project_url": "https://github.com/Educorreia932/FEUP-CGRA/tree/master/Project",
 		"image": "McDelivery.png",
 		"tags": [
@@ -186,6 +186,16 @@
 		"image": "WarehouseFuture.png",
 		"tags": [
 			"University"
+		]
+	},
+	{
+		"title": "Woolf",
+		"description": "Game developed for MAD Game Jam 2022",
+		"project_url": "https://maddinosaur.itch.io/woolf",
+		"image": "Woolf.png",
+		"tags": [
+			"Game",
+			"Game-Jam"
 		]
 	}
 ]

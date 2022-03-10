@@ -22,7 +22,7 @@
 					</span>
 				</div>
 
-				<a :href="project.project_url" target="_blank" class="project-anchor">
+				<a v-if="project.project_url !== ''" :href="project.project_url" target="_blank" class="project-anchor">
 					<fa icon="link" class="float-right" />
 				</a>
 			</div>

@@ -1,20 +1,20 @@
 export default {
 	head: {
 		htmlAttrs: {
-			lang: "en",
+			lang: "en"
 		},
 		meta: [
-			{ charset: "utf-8" },
-			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ hid: "description", name: "description", content: "" },
-			{ name: "format-detection", content: "telephone=no" },
-			{ name: "twitter:image", content: "~/assets/images/avatar.png" },
-		],
+			{charset: "utf-8"},
+			{name: "viewport", content: "width=device-width, initial-scale=1"},
+			{hid: "description", name: "description", content: ""},
+			{name: "format-detection", content: "telephone=no"},
+			{name: "twitter:image", content: "~/assets/images/avatar.png"}
+		]
 	},
 	css: ["flag-icon-css/css/flag-icons.css"],
 	plugins: [
-		{ src: "~/plugins/vue-masonry", mode: "client" },
-		{ src: "~/plugins/vue-content-placeholders.js" },
+		{src: "~/plugins/vue-masonry", mode: "client"},
+		{src: "~/plugins/vue-content-placeholders.js"},
 	],
 	components: true,
 	buildModules: [
