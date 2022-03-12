@@ -33,7 +33,7 @@ export default {
 
 		this.svg
 			.append("path")
-			.datum({ type: "Sphere" })
+			.datum({type: "Sphere"})
 			.attr("class", "water")
 			.attr("d", this.path);
 
@@ -55,6 +55,7 @@ export default {
 			countryById[d.id] = d.name;
 		});
 
+		// Drawing countries
 		this.svg
 			.selectAll("path.land")
 			.data(this.countries)
@@ -62,22 +63,28 @@ export default {
 			.append("path")
 			.attr("class", "land")
 			.attr("d", this.path)
-			.each(function(d) {
+			.on("click", (e) => {
+				this.focusOnCountry(e.path[0].id);
+			})
+			.each(function (d) {
 				let countryName = "undefined";
 
 				try {
 					d.id = d.id.replace(/^0+/, ""); // Removes leading zeros
 					countryName = countryById[d.id].split(" ").join("_");
 				} catch (err) {
+
 				}
 
 				d3.select(this).attr("id", countryName);
-			});
+			})
 
-		d3.map(this.visitedCountries, function(country) {
+
+		d3.map(this.visitedCountries, function (country) {
 			d3.selectAll("#" + country.name.split(" ").join("_")).attr("class", "visited");
 		});
 
+		// Drag event
 		this.svg.call(
 			d3.drag().on("drag", (event) => {
 				const rotate = this.projection.rotate();
@@ -93,34 +100,39 @@ export default {
 	},
 	methods: {
 		country(countryName) {
-			const id = this.countryNames.find((country) => country.name == countryName).id;
+			const id = this.countryNames.find((country) => country.name === countryName.split("_").join(" ")).id;
 
-			return this.countries.find((country) => country.id == id);
+			return this.countries.find((country) => country.id === id);
 		},
-		focus(countryName) {
-			let focusedCountry = this.country(countryName);
-
-			const centroid = d3.geoCentroid(focusedCountry);
-
+		rotateGlobe(p) {
 			d3.transition()
 				.duration(1000)
 				.tween("rotate", () => {
 					const interpolator = d3.interpolate(this.projection.rotate(), [
-						-centroid[0],
-						-centroid[1],
+						-p[0],
+						-p[1],
 					]);
 
-					return function(t) {
+					return function (t) {
 						this.projection.rotate(interpolator(t));
 						this.svg.selectAll("path").attr("d", this.path);
 					}.bind(this);
 				});
 		},
+		focusOnCountry(countryName) {
+			const focusedCountry = this.country(countryName);
+			const centroid = d3.geoCentroid(focusedCountry);
+
+			this.rotateGlobe(centroid);
+		},
 		highlightCountry(country, highlight) {
 			const node = d3.selectAll("#" + country.split(" ").join("_")).node();
 
-			if (highlight) node.classList.add("highlight");
-			else node.classList.remove("highlight");
+			if (highlight)
+				node.classList.add("highlight");
+
+			else
+				node.classList.remove("highlight");
 		},
 	},
 };
@@ -145,7 +157,7 @@ html.dark #globe {
 }
 
 .visited {
-	@apply fill-current text-primary;
+	@apply fill-current text-primary cursor-pointer;
 }
 
 .visited.highlight,

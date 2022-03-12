@@ -66,7 +66,7 @@ export default {
 			this.hoveredCountry = "";
 		},
 		globeFocus(country) {
-			this.$refs.globe.focus(country);
+			this.$refs.globe.focusOnCountry(country);
 		},
 	},
 };
@@ -78,10 +78,9 @@ export default {
 }
 
 .flag-icon {
-	@apply mr-4 mb-3;
+	@apply mr-4 mb-3 drop-shadow-md;
 	font-size: 42px;
 	border-radius: 5px;
-	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
 #globe {
