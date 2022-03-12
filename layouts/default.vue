@@ -4,7 +4,7 @@
 			<header>
 				<h1>
 					<span class="hidden md:inline">Eduardo Correia |</span>
-					<portal-target name="h1" class="inline" />
+					<portal-target name="h1" class="inline"/>
 				</h1>
 
 				<div class="float-right space-x-5">
@@ -24,9 +24,14 @@
 						</span>
 					</button>
 
-					<nuxt-link to="/" style="font-size: 1.3em" class="text-black dark:text-white">
-						<ruby class="under"
-						>家
+					<nuxt-link
+						v-if="this.$route.name !== 'index'"
+						to="/"
+						style="font-size: 1.3em"
+						class="text-black dark:text-white"
+					>
+						<ruby class="under">
+							家
 							<rt>Home</rt>
 						</ruby>
 					</nuxt-link>
@@ -34,7 +39,7 @@
 			</header>
 
 			<div class="flex-1 flex flex-col">
-				<nuxt />
+				<nuxt/>
 			</div>
 
 			<footer>&copy; 2022 - Eduardo Correia</footer>
@@ -43,7 +48,7 @@
 </template>
 
 <script>
-import { PortalTarget } from "portal-vue";
+import {PortalTarget} from "portal-vue";
 
 export default {
 	components: {
