@@ -66,6 +66,15 @@ export default {
 			.on("click", (e) => {
 				this.focusOnCountry(e.path[0].id);
 			})
+			.on("mouseenter", (e) => {
+				const countryName = e.path[0].id.split("_").join(" ");
+
+				if (countryName !== "undefined")
+					this.$emit("hoveringCountry", countryName);
+			})
+			.on("mouseleave", () => {
+				this.$emit("hoveringCountry", "");
+			})
 			.each(function (d) {
 				let countryName = "undefined";
 
@@ -100,7 +109,8 @@ export default {
 	},
 	methods: {
 		country(countryName) {
-			const id = this.countryNames.find((country) => country.name === countryName.split("_").join(" ")).id;
+			countryName = countryName.split("_").join(" ");
+			const id = this.countryNames.find((country) => country.name === countryName).id;
 
 			return this.countries.find((country) => country.id === id);
 		},

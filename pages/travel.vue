@@ -22,11 +22,16 @@
 						></button>
 					</div>
 
-					<em v-if="!hoveredCountry">Hover over a flag</em>
+					<em v-if="!hoveredCountry">Hover over a flag/country</em>
 					<span v-else>{{ this.hoveredCountry }}</span>
 				</div>
 
-				<globe id="globe" ref="globe" :visited-countries="visitedCountries" />
+				<globe
+					id="globe"
+					ref="globe"
+					:visited-countries="visitedCountries"
+					@hoveringCountry="(countryName) => {this.hoveredCountry = countryName}"
+				/>
 			</div>
 		</section>
 	</div>
@@ -34,7 +39,7 @@
 
 <script>
 import Globe from "../components/Globe";
-import { Portal } from "portal-vue";
+import {Portal} from "portal-vue";
 import travel from "~/assets/json/travel.json";
 
 export default {
@@ -42,8 +47,8 @@ export default {
 	head: {
 		title: "Travel | Eduardo Correia",
 		meta: [
-			{ name: "twitter:title", content: "Travelling | Eduardo Correia" },
-			{ property: "og:title", content: "Travelling | Eduardo Correia" },
+			{name: "twitter:title", content: "Travelling | Eduardo Correia"},
+			{property: "og:title", content: "Travelling | Eduardo Correia"},
 		],
 	},
 	components: {
