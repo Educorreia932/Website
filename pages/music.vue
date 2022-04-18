@@ -30,7 +30,6 @@
 						</div>
 					</a>
 				</div>
-
 			</div>
 		</section>
 	</div>

@@ -4,7 +4,7 @@
 			{{ is_playing ? "Now playing" : "Music on pause" }}
 
 			<a style="color: #1DB954" href="https://open.spotify.com/user/skelozard?si=bb7e9441d87941eb">
-				<fa :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em" class="ml-1" />
+				<fa :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em" class="ml-1"/>
 			</a>
 		</h2>
 
@@ -12,7 +12,7 @@
 			<div class="flex flex-row items-center space-x-3" v-if="is_playing">
 				<a :href="track.external_urls.spotify">
 					<img
-						:src="track.album.images[0] == undefined?
+						:src="track.album.images[0] === undefined?
 						 	require('~/assets/images/albums/placeholder.png'):
 						 	track.album.images[0].url
 						"
@@ -28,7 +28,7 @@
 						</a>
 					</strong>
 
-					<br />
+					<br/>
 
 					<span class="text-gray dark:text-gray-light">by</span>
 
@@ -37,20 +37,20 @@
 						<a :href="artist.external_urls.spotify">{{ artist.name }}</a>
 					</span>
 
-					<br />
+					<br/>
 
 					<span class="text-gray dark:text-gray-light">on</span>
 					<a :href="track.album.external_urls.spotify">
 						{{ track.album.name }}
 					</a>
 
-					<br />
+					<br/>
 				</p>
 			</div>
 
 			<template v-else>
 				<content-placeholders :rounded="true" class="w-80">
-					<content-placeholders-heading :img="true" />
+					<content-placeholders-heading :img="true"/>
 				</content-placeholders>
 			</template>
 		</div>
@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { getNowPlaying } from "@/plugins/spotify.js";
+import {getNowPlaying} from "@/plugins/spotify.js";
 
 export default {
 	name: "NowPlaying",
@@ -75,16 +75,14 @@ export default {
 		async currentTrack() {
 			const response = await getNowPlaying();
 
-			const { item, is_playing } = await response.json();
+			const {item, is_playing} = await response.json();
 
 			this.track = item;
 			this.is_playing = is_playing;
-
-			console.log(is_playing);
 		},
 	},
 	mounted() {
-		setInterval(function() {
+		setInterval(function () {
 			this.currentTrack();
 		}.bind(this), 1000);
 	},
