@@ -39,7 +39,7 @@
 					</ruby>
 				</nuxt-link><!--
 				-->,
-				<nuxt-link to="/">
+				<nuxt-link to="/gaming">
 					<ruby class="under">
 						gaming<rt>ゲーム</rt>
 					</ruby>

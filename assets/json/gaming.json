@@ -1,0 +1,44 @@
+{
+	"games": [
+		{
+			"name": "The Elder Scrolls V: Skyrim",
+			"image": "skyrim.jpg"
+		},
+		{
+			"name": "Baldur's Gate II",
+			"image": "bg2.jpg"
+		},
+		{
+			"name": "Divinity: Original Sin II",
+			"image": "dos2.jpg"
+		},
+		{
+			"name": "Dark Souls III",
+			"image": "ds3.jpg"
+		},
+		{
+			"name": "Pokémon Heartgold",
+			"image": "heartgold.jpg"
+		},
+		{
+			"name": "Terraria",
+			"image": "terraria.webp"
+		},
+		{
+			"name": "Starbound",
+			"image": "starbound.jpg"
+		},
+		{
+			"name": "The Binding of Isaac: Rebirth",
+			"image": "boi.png"
+		},
+		{
+			"name": "Little Big Planet 2",
+			"image": "lbp2.jpg"
+		},
+		{
+			"name": "Super Scribblenauts",
+			"image": "scribblenauts.png"
+		}
+	]
+}
