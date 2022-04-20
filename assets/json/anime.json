@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Howl's Moving Castle",
+		"image": "howl.jpg"
+	},
+	{
+		"name": "Code Geass",
+		"image": "code-geass.jpg"
+	},
+	{
+		"name": "Uzumaki",
+		"image": "uzumaki.jpg"
+	},
+	{
+		"name": "Fullmetal Alchemist: Brotherhood",
+		"image": "fma.jpg"
+	},
+	{
+		"name": "FLCL",
+		"image": "flcl.jpg"
+	},
+	{
+		"name": "Serial Experiments Lain",
+		"image": "lain.png"
+	},
+	{
+		"name": "Neon Genesis Evangelion: The End of Evangelion",
+		"image": "evangelion.jpg"
+	},
+
+	{
+		"name": "Monogatari Series Second Season",
+		"image": "monogatari.png"
+	},
+	{
+		"name": "Nisekoi",
+		"image": "nisekoi.jpg"
+	},
+	{
+		"name": "Death Note",
+		"image": "death-note.jpg"
+	}
+]

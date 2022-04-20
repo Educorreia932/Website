@@ -45,7 +45,7 @@
 					</ruby>
 				</nuxt-link>
 				and
-				<nuxt-link to="/">
+				<nuxt-link to="/anime">
 					<ruby class="under"
 					>anime
 						<rt>アニメ</rt>
