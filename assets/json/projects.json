@@ -207,5 +207,33 @@
 			"Game",
 			"Game-Jam"
 		]
+	},
+	{
+		"title": "@hack",
+		"description": "Game developed for Level Up! Game Jam 2022",
+		"project_url": "https://maddinosaur.itch.io/at-hack",
+		"image": "@hack.png",
+		"tags": [
+			"Game",
+			"Game-Jam"
+		]
+	},
+	{
+		"title": "Phanes",
+		"description": "A Python library that handles biological sequences",
+		"project_url": "https://github.com/Educorreia932/FCUP-BINF/tree/master/Phanes",
+		"image": "Phanes.png",
+		"tags": [
+			"University"
+		]
+	},
+	{
+		"title": "Electrica Imperium",
+		"description": "A web application to manage electric energy distribution assets",
+		"project_url": "",
+		"image": "Electrica-Imperium.jpg",
+		"tags": [
+			"University"
+		]
 	}
 ]
