@@ -1,17 +1,15 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: "jit",
-	purge: {
-		content: [
-			`components/**/*.{vue,js}`,
-			`layouts/**/*.vue`,
-			`pages/**/*.vue`,
-			`plugins/**/*.{js,ts}`,
-			`nuxt.config.{js,ts}`,
-		],
-	},
+	content: [
+		`components/**/*.{vue,js,ts}`,
+		`layouts/**/*.vue`,
+		`pages/**/*.vue`,
+		`app.vue`,
+		`plugins/**/*.{js,ts}`,
+	],
 	darkMode: "class",
 	theme: {
-		darkSelector: ".dark-mode",
 		extend: {
 			fontFamily: {
 				kozuka: ["Kozuka Mincho Pro", "serif"],
@@ -35,13 +33,8 @@ module.exports = {
 			},
 		},
 	},
-	variants: {
-		extend: {},
-	},
-	plugins: [
-		require("tailwindcss-dark-mode")(),
-	],
+	plugins: [],
 	corePlugins: {
 		preflight: false,
 	},
-};
+}

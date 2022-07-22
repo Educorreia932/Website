@@ -1,13 +1,18 @@
-.idea/
 node_modules/
-*.log
+dist/
+
+# IDE
+.idea/
 
 # Nuxt
 .nuxt/
-dist/
-
-# Yarn
-yarn.lock
+.nitro/
+.cache/
+.output/
 
 # Environment files
 .env
+
+# Log files
+*.log*
+

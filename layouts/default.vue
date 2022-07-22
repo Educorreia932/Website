@@ -2,30 +2,30 @@
 	<div id="container">
 		<div id="content">
 			<header>
-				<h1>
-					<span class="hidden md:inline">Eduardo Correia |</span>
-					<portal-target name="h1" class="inline"/>
+				<h1>Eduardo Correia |
+					<ruby>{{ title }}
+						<rt>{{ kana }}</rt>
+					</ruby>
 				</h1>
 
 				<div class="float-right space-x-5">
 					<button style="font-size: 1.3em" @click="changeMode">
-						<span v-if="this.$colorMode.preference === 'dark'">
-							<ruby class="under"
-							>日
+						<span v-if="true">
+							<ruby class="under">
+								日
 								<rt>Light</rt>
 							</ruby>
 						</span>
 
 						<span v-else>
-							<ruby class="under"
-							>夜
+							<ruby class="under">
+								夜
 								<rt>Dark</rt>
 							</ruby>
 						</span>
 					</button>
 
-					<nuxt-link
-						v-if="this.$route.name !== 'index'"
+					<NuxtLink
 						to="/"
 						style="font-size: 1.3em"
 						class="text-black dark:text-white"
@@ -34,99 +34,41 @@
 							家
 							<rt>Home</rt>
 						</ruby>
-					</nuxt-link>
+					</NuxtLink>
 				</div>
 			</header>
 
-			<div class="flex-1 flex flex-col">
-				<nuxt/>
-			</div>
+			<main>
+				<slot/>
+			</main>
 
-			<footer>&copy; 2022 - Eduardo Correia</footer>
+			<footer>
+				&copy; 2022 - Eduardo Correia
+			</footer>
 		</div>
 	</div>
 </template>
 
-<script>
-import {PortalTarget} from "portal-vue";
-
-export default {
-	components: {
-		PortalTarget,
-	},
-	methods: {
-		changeMode() {
-			this.$colorMode.preference = this.$colorMode.preference === "light" ? "dark" : "light";
-		},
-	},
-};
+<script lang="ts" setup>
+const route = useRoute();
+const {title, kana} = route.meta;
 </script>
 
-<style>
-body {
-	@apply font-kozuka text-black dark:text-white m-0 dark:bg-gray;
-	background-color: #e8e8e8;
-	font-size: 20px;
-}
-
+<style scoped>
 #container {
-	@apply px-0 sm:px-20 min-h-screen flex flex-col;
-	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+	@apply px-0 sm:px-20 min-h-screen flex flex-col drop-shadow-lg;
 }
 
 #content {
 	@apply bg-white dark:bg-gray-dark px-5 sm:px-10 py-3 my-6 rounded-lg flex-1 flex flex-col;
 }
 
-a {
-	@apply text-primary no-underline;
-}
-
-h1 {
-	@apply m-0 inline;
-}
-
-h2 {
-	@apply pl-2 py-2 m-0 text-gray dark:text-gray-light ;
-	border-left: 2px solid;
-	font-size: 1.3rem;
-	font-weight: normal;
-	line-height: 1em;
-}
-
-ruby {
-	ruby-align: center;
-}
-
-ruby.under {
-	ruby-position: under;
-}
-
-rt {
-	@apply text-center text-black dark:text-white;
-	font-weight: lighter;
-	font-size: 0.7em;
-}
-
-button {
-	all: unset;
-	@apply cursor-pointer;
+main {
+	@apply flex-1 flex flex-col;
 }
 
 footer {
 	@apply text-center text-sm;
 	color: #c8c8c8;
-}
-
-html.dark code {
-	background-color: rgba(110, 118, 129, 0.4);
-}
-
-code {
-	padding: .2em .4em;
-	margin: 0;
-	font-size: 85%;
-	border-radius: 6px;
-	background-color: rgba(175, 184, 193, 0.2);
 }
 </style>

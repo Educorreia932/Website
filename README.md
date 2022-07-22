@@ -2,7 +2,7 @@
 
 The source files for my personal website.
 
-Built with _Nuxt 3_ and using _Tailwind CSS_ for styling.
+Built with *Nuxt 3* and using *Tailwind CSS* for styling.
 
 ## 📷 Preview
 
