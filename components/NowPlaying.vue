@@ -1,23 +1,20 @@
 <template>
-	<div>
+	<section v-if="isPlaying">
 		<h2>
-			{{ is_playing ? "Now playing" : "Music on pause" }}
+			{{ isPlaying ? "Now playing" : "Music on pause" }}
 
 			<a style="color: #1DB954" href="https://open.spotify.com/user/skelozard?si=bb7e9441d87941eb">
-				<fa :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em" class="ml-1"/>
+				<!--			<fa :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em" class="ml-1"/>-->
 			</a>
 		</h2>
 
 		<div class="my-5">
-			<div class="flex flex-row items-center space-x-3" v-if="is_playing">
+			<div class="flex flex-row items-center space-x-3">
 				<a :href="track.external_urls.spotify">
 					<img
-						:src="track.album.images[0] === undefined?
-						 	require('~/assets/images/albums/placeholder.png'):
-						 	track.album.images[0].url
-						"
 						alt="Album cover"
 						class="cover"
+						:src="track.album.images[0].url"
 					>
 				</a>
 
@@ -30,16 +27,17 @@
 
 					<br/>
 
-					<span class="text-gray dark:text-gray-light">by</span>
+					<span class="text-gray dark:text-gray-light">by </span>
 
 					<span v-for="(artist, i) in track.artists" :key="i">
-						<template v-if="i > 0">,</template>
-						<a :href="artist.external_urls.spotify">{{ artist.name }}</a>
-					</span>
+					<template v-if="i > 0">,</template>
+					<a :href="artist.external_urls.spotify">{{ artist.name }}</a>
+				</span>
 
 					<br/>
 
-					<span class="text-gray dark:text-gray-light">on</span>
+					<span class="text-gray dark:text-gray-light">on </span>
+
 					<a :href="track.album.external_urls.spotify">
 						{{ track.album.name }}
 					</a>
@@ -47,46 +45,31 @@
 					<br/>
 				</p>
 			</div>
-
-			<template v-else>
-				<content-placeholders :rounded="true" class="w-80">
-					<content-placeholders-heading :img="true"/>
-				</content-placeholders>
-			</template>
 		</div>
-	</div>
+	</section>
 </template>
 
-<script>
-import {getNowPlaying} from "@/plugins/spotify.js";
+<script setup lang="ts">
+const {$getNowPlaying} = useNuxtApp();
 
-export default {
-	name: "NowPlaying",
-	data() {
-		return {
-			track: {},
-			is_playing: false,
-		};
-	},
-	beforeMount() {
-		this.currentTrack();
-	},
-	methods: {
-		async currentTrack() {
-			const response = await getNowPlaying();
+const config = useRuntimeConfig()
 
-			const {item, is_playing} = await response.json();
+let isPlaying = ref(false);
+let track = ref<SpotifyTrack>(null);
 
-			this.track = item;
-			this.is_playing = is_playing;
-		},
-	},
-	mounted() {
-		setInterval(function () {
-			this.currentTrack();
-		}.bind(this), 1000);
-	},
-};
+setInterval(() => {
+	$getNowPlaying()
+	.then((response) => response.json())
+	.then((data) => {
+		const {item, is_playing} = data;
+
+		isPlaying.value = is_playing;
+		track.value = item;
+	})
+	.catch((error) => {
+		console.log(error)
+	})
+}, 1000)
 </script>
 
 <style scoped>
