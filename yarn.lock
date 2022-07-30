@@ -696,6 +696,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/spotify-api@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@types/spotify-api/-/spotify-api-0.0.16.tgz#4f509ab1883af6d20cd79d518df11d08232009bb"
+  integrity sha512-5tzZ8cJe2Wv5zjhBLXi7gJObp/kzuG10FwMKPqNtmG9HFWlXKvqBhd0Z+T5Oa0yhkSX1u8Y+bBUhUEPmZpGpDQ==
+
 "@types/tailwindcss@^3.0.11":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-3.1.0.tgz#1185e4b3437c6e0f19d6cc8cd42738a94fd7b64f"
