@@ -1,12 +1,5 @@
 <template>
 	<div>
-		<portal to="h1">
-			<ruby>
-				Travel
-				<rt>旅行</rt>
-			</ruby>
-		</portal>
-
 		<section>
 			<h2>Where I've been to</h2>
 
@@ -26,10 +19,10 @@
 					<span v-else>{{ this.hoveredCountry }}</span>
 				</div>
 
-				<globe
+				<Globe
 					id="globe"
 					ref="globe"
-					:visited-countries="visitedCountries"
+					:visitedCountries="visitedCountries"
 					@hoveringCountry="(countryName) => {this.hoveredCountry = countryName}"
 				/>
 			</div>
@@ -37,44 +30,31 @@
 	</div>
 </template>
 
-<script>
-import Globe from "../components/Globe";
-import {Portal} from "portal-vue";
+<script setup lang="ts">
 import travel from "~/assets/json/travel.json";
 
-export default {
-	name: "travel",
-	head: {
-		title: "Travel | Eduardo Correia",
-		meta: [
-			{name: "twitter:title", content: "Travelling | Eduardo Correia"},
-			{property: "og:title", content: "Travelling | Eduardo Correia"},
-		],
-	},
-	components: {
-		Globe,
-		Portal,
-	},
-	data() {
-		return {
-			hoveredCountry: "",
-			visitedCountries: travel.visited,
-		};
-	},
-	methods: {
-		setHoveredCountry(country) {
-			this.hoveredCountry = country;
-			this.$refs.globe.highlightCountry(country, true);
-		},
-		resetHoveredCountry() {
-			this.$refs.globe.highlightCountry(this.hoveredCountry, false);
-			this.hoveredCountry = "";
-		},
-		globeFocus(country) {
-			this.$refs.globe.focusOnCountry(country);
-		},
-	},
-};
+definePageMeta({
+	title: "Travel",
+	kana: "旅行",
+});
+
+const visitedCountries = travel.visited;
+const hoveredCountry = ref("");
+const globe = ref(null);
+
+function setHoveredCountry(country) {
+	hoveredCountry.value = country;
+	globe.highlightCountry(country, true);
+}
+
+function resetHoveredCountry() {
+	this.$refs.globe.highlightCountry(this.hoveredCountry, false);
+	hoveredCountry.value = "";
+}
+
+function globeFocus(country) {
+	globe.focusOnCountry(country);
+}
 </script>
 
 <style scoped>
