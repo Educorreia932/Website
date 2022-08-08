@@ -1,7 +1,10 @@
-import {defineNuxtConfig} from 'nuxt'
+import {defineNuxtConfig} from 'nuxt';
 
 export default defineNuxtConfig({
-	css: ["~/assets/css/tailwind.css"],
+	css: [
+		"~/assets/css/tailwind.css",
+		"flag-icon-css/css/flag-icons.css",
+	],
 	build: {
 		postcss: {
 			postcssOptions: {
@@ -14,17 +17,17 @@ export default defineNuxtConfig({
 	},
 	buildModules: [
 		"@nuxtjs/tailwindcss",
-		"@nuxtjs/color-mode"
+		"@nuxtjs/color-mode",
 	],
 	modules: [
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
 	],
 	colorMode: {
-		classSuffix: ''
+		classSuffix: '',
 	},
 	publicRuntimeConfig: {
 		spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
 		spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-		spotifyRt: process.env.SPOTIFY_RT
-	}
-})
+		spotifyRt: process.env.SPOTIFY_RT,
+	},
+});

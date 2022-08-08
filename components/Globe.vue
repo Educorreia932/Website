@@ -15,12 +15,12 @@ const height = 500;
 
 const globe = ref(null);
 
-let countries = [];
-let countryNames = [];
-let worldData;
-let svg;
-let projection;
-let path;
+let countries,
+	countryNames,
+	worldData,
+	svg,
+	projection,
+	path;
 
 function country(countryName: string) {
 	countryName = countryName.split("_").join(" ");
@@ -52,8 +52,8 @@ function focusOnCountry(countryName: string) {
 	rotateGlobe(centroid);
 }
 
-function highlightCountry(country, highlight) {
-	const node = d3.selectAll<HTMLElement, HTMLElement>("#" + country.split(" ").join("_")).node();
+function highlightCountry(countryName: string, highlight: boolean) {
+	const node = d3.selectAll<HTMLElement, HTMLElement>("#" + countryName.replace(" ", "_")).node();
 
 	if (highlight)
 		node.classList.add("highlight");
@@ -61,6 +61,11 @@ function highlightCountry(country, highlight) {
 	else
 		node.classList.remove("highlight");
 }
+
+defineExpose({
+	focusOnCountry,
+	highlightCountry,
+});
 
 onMounted(async () => {
 	svg = d3.select(globe.value)

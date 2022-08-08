@@ -16,7 +16,7 @@
 					</div>
 
 					<em v-if="!hoveredCountry">Hover over a flag/country</em>
-					<span v-else>{{ this.hoveredCountry }}</span>
+					<span v-else>{{ hoveredCountry }}</span>
 				</div>
 
 				<Globe
@@ -44,16 +44,16 @@ const globe = ref(null);
 
 function setHoveredCountry(country) {
 	hoveredCountry.value = country;
-	globe.highlightCountry(country, true);
+	globe.value.highlightCountry(country, true);
 }
 
 function resetHoveredCountry() {
-	this.$refs.globe.highlightCountry(this.hoveredCountry, false);
+	globe.value.highlightCountry(hoveredCountry.value, false);
 	hoveredCountry.value = "";
 }
 
 function globeFocus(country) {
-	globe.focusOnCountry(country);
+	globe.value.focusOnCountry(country);
 }
 </script>
 
