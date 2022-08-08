@@ -21,7 +21,7 @@
 				</div>
 
 				<a v-if="project.project_url !== ''" :href="project.project_url" target="_blank" class="anchor">
-					<!--					<fa icon="link" class="float-right"/>-->
+					<FontAwesomeIcon icon="link" class="float-right"/>
 				</a>
 			</div>
 		</section>

@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 	css: [
 		"~/assets/css/tailwind.css",
 		"flag-icon-css/css/flag-icons.css",
+		"@fortawesome/fontawesome-svg-core/styles.css",
 	],
 	build: {
 		postcss: {
