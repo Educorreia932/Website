@@ -1,11 +1,12 @@
 <template>
 	<div class="project-card">
 		<img
+			:src="imageURL"
 			class="project-illustration"
 			alt="Project Illustration"
 		/>
 
-		<section class="project-information">
+		<section class="information">
 			<h3>{{ project.title }}</h3>
 
 			<p class="project-description">
@@ -20,7 +21,7 @@
 				</div>
 
 				<a v-if="project.project_url !== ''" :href="project.project_url" target="_blank" class="anchor">
-					<fa icon="link" class="float-right"/>
+					<!--					<fa icon="link" class="float-right"/>-->
 				</a>
 			</div>
 		</section>
@@ -28,12 +29,27 @@
 </template>
 
 <script setup lang="ts">
+import useAssets from "~/composables/useAssets";
+
 const {project} = defineProps<{
 	project: Project
 }>();
+
+const {images} = useAssets();
+
+const imageURL = ref("");
+const promise = images[`/assets/images/projects/${project.image}`]();
+
+onServerPrefetch(async () => {
+	imageURL.value = (await promise).default;
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+h3 {
+	@apply m-0;
+}
+
 .project-card {
 	@apply inline-block text-black dark:text-white bg-white-dark dark:bg-gray rounded-xl transition transform hover:scale-105;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
@@ -45,21 +61,13 @@ img {
 	border-radius: 10px 10px 0 0;
 }
 
-.project-information {
+.information {
 	padding: 0 1rem 1rem;
-}
 
-h3 {
-	@apply m-0;
-}
-
-.project-information {
-	padding: 0 1rem 1rem;
-}
-
-.project-information p {
-	margin: 0 0 1rem;
-	font-size: 0.9rem;
+	p {
+		margin: 0 0 1rem;
+		font-size: 0.9rem;
+	}
 }
 
 .tags {
