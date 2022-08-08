@@ -1,101 +1,54 @@
 {
 	"albums": [
 		{
-			"title": "Lateralus",
-			"artist": "TOOL",
-			"image": "lateralus.jpg",
-			"url": "https://open.spotify.com/album/5l5m1hnH4punS1GQXgEi3T?si=d7aacaf35a6f4701"
-		},
-		{
-			"title": "Bossanova",
-			"artist": "Pixies",
-			"image": "bossanova.jpg",
-			"url": "https://open.spotify.com/album/0BK1LxNNcaNUtAqTBQAOR8?si=4ba0f8ac50ca4bf1"
-		},
-		{
-			"title": "Nonagon Infinity",
-			"artist": "King Gizzard & the Lizard Wizard",
-			"image": "nonagon-infinity.jpg",
-			"url": "https://open.spotify.com/album/2tEvJY6mmREPqmxZG5PJMT?si=5b762957b3844a95"
-		},
-		{
-			"title": "Cão",
-			"artist": "Ornatos Violeta",
-			"image": "cao.jpg",
-			"url": "https://open.spotify.com/album/5VCLXX7XkCd0weHl5czK27?si=66d1bbecc12f45a9"
-		},
-		{
-			"title": "Bom Dia",
-			"artist": "Pluto",
-			"image": "bom-dia.jpg",
-			"url": "https://open.spotify.com/album/4hUEJkl2B87nVy9pby0OZv?si=c7dfcb7f574a458b"
-		},
-		{
 			"title": "FLCL (Original Soundtrack)",
 			"artist": "the pillows",
 			"image": "flcl-ost.jpg",
-			"url": "https://open.spotify.com/album/02TbNzERYy1dt8LsQ9XZYu?si=4PBTceBqQ-WNosyo4IDuXw"
+			"url": "https://open.spotify.com/album/02TbNzERYy1dt8LsQ9XZYu"
 		},
 		{
 			"title": "Salu2",
 			"artist": "Axolotes Mexicanos",
 			"image": "salu2.jpg",
-			"url": "https://open.spotify.com/album/76TfhYNf67u3tX8EnGJm70?si=aa75d1cdc60346b5"
+			"url": "https://open.spotify.com/album/76TfhYNf67u3tX8EnGJm70"
 		},
 		{
 			"title": "Trompe le Monde",
 			"artist": "Pixies",
 			"image": "trompe-le-monde.jpg",
-			"url": "https://open.spotify.com/album/1xtaONLuwdb5STNnLGNVGi?si=2d01b97b03c94f65"
+			"url": "https://open.spotify.com/album/1xtaONLuwdb5STNnLGNVGi"
 		},
 		{
-			"title": "In Her Garden",
-			"artist": "Colour Haze",
-			"image": "in-her-garden.jpg",
-			"url": "https://open.spotify.com/album/4Rna96AH3yctoFy4GWla4G?si=6e3ce76dd62c483f"
+			"title": "Masana Temples",
+			"artist": "Kikagaku Moyo",
+			"image": "masana-temples.jpg",
+			"url": "https://open.spotify.com/album/5g5l9entA4bTztfpLJd1kS"
 		},
 		{
 			"title": "Mutilator Defeated at Last",
 			"artist": "Thee Oh Sees",
 			"image": "mutilator-defeated-at-last.jpg",
-			"url": "https://open.spotify.com/album/31e4Yq05lmd00H8Iardp17?si=2557d5ca17384bfb"
+			"url": "https://open.spotify.com/album/31e4Yq05lmd00H8Iardp17"
 		},
 		{
-			"title": "Tempel",
-			"artist": "Colour Haze",
-			"image": "tempel.jpg",
-			"url": "https://open.spotify.com/album/5KuXPHPuYVisNCwUgunWG5?si=2a81bf2894124571"
-		},
-		{
-			"title": "O Monstro Precisa de Amigos",
+			"title": "Cão",
 			"artist": "Ornatos Violeta",
-			"image": "o-monstro-precisa-de-amigos.jpg",
-			"url": "https://open.spotify.com/album/1ctUX6jooPNVVKA8T6uNkz?si=cea8becc4caf4ab9"
+			"image": "cao.jpg",
+			"url": "https://open.spotify.com/album/5VCLXX7XkCd0weHl5czK27"
 		},
 		{
-			"title": "Halloween 81",
-			"artist": "Frank Zappa",
-			"image": "halloween-81.jpg",
-			"url": "https://open.spotify.com/album/04zuj09fa5q1lpJYsf7z7M?si=JrBU48SVQ0a0aJdIQOZZcw"
+			"title": "Nonagon Infinity",
+			"artist": "King Gizzard & the Lizard Wizard",
+			"image": "nonagon-infinity.jpg",
+			"url": "https://open.spotify.com/album/2tEvJY6mmREPqmxZG5PJMT"
 		},
 		{
-			"title": "Nada é Possível",
-			"artist": "Supernada",
-			"image": "nada-e-possivel.jpg",
-			"url": "https://open.spotify.com/album/0IIXpYnfg0I5y18vH7jRNy?si=e30ec8e010654396"
-		},
-		{
-			"title": "10000 Days",
+			"title": "Lateralus",
 			"artist": "TOOL",
-			"image": "10000-days.jpg",
-			"url": "https://open.spotify.com/album/1fvWYcbjuycyHpzNPH1Vfk?si=1e1407407974499b"
+			"image": "lateralus.jpg",
+			"url": "https://open.spotify.com/album/5l5m1hnH4punS1GQXgEi3T"
 		},
-		{
-			"title": "Wlfgrl",
-			"artist": "Machine Girl",
-			"image": "wlfgrl.jpg",
-			"url": "https://open.spotify.com/album/1xbcqJ0EAMxyGyffMzO8rL?si=cafa27ddb7514f83"
-		},
+
 		{
 			"title": "Serial Experiments Lain OST",
 			"artist": "Nakaido \"Chabo\" Reichi",
@@ -106,19 +59,67 @@
 			"title": "Capitão Fausto Têm Os Dias Contados",
 			"artist": "Capitão Fausto",
 			"image": "capitao-fausto-tem-os-dias-contados.jpg",
-			"url": "https://open.spotify.com/album/7iXoMNx0O5wa0gQ1iRE6Xp?si=b42b7037e038492a"
+			"url": "https://open.spotify.com/album/7iXoMNx0O5wa0gQ1iRE6Xp"
 		},
 		{
-			"title": "Paper Machê Dream Balloon",
-			"artist": "King Gizzard & the Lizard Wizard",
-			"image": "paper-mache-dream-balloon.jpg",
-			"url": "https://open.spotify.com/album/6upVMLoNWxRF5Ahrd8YGF2?si=5792bd47ef434af4"
+			"title": "The Moon & Antarctica",
+			"artist": "Modest Mouse",
+			"image": "moon-and-antarctica.jpg",
+			"url": "https://open.spotify.com/album/5SbcupirEParczvqqyUPXL"
+		},
+		{
+			"title": "Tempel",
+			"artist": "Colour Haze",
+			"image": "tempel.jpg",
+			"url": "https://open.spotify.com/album/5KuXPHPuYVisNCwUgunWG5"
+		},
+		{
+			"title": "Travelling Without Moving",
+			"artist": "Jamiroquai",
+			"image": "travelling-without-moving.jpg",
+			"url": "https://open.spotify.com/album/4yrrPNjd9RcqnuDnoEhlER"
+		},
+		{
+			"title": "Halloween 81",
+			"artist": "Frank Zappa",
+			"image": "halloween-81.jpg",
+			"url": "https://open.spotify.com/album/04zuj09fa5q1lpJYsf7z7M"
 		},
 		{
 			"title": "Howl's Moving Castle Soundtrack",
 			"artist": "Joe Hisaishi",
 			"image": "howl-moving-castle-ost.jpg",
-			"url": "https://open.spotify.com/album/5fqlZFKYqvkIe2jdDGt2nl?si=c91bb814ed25446c"
+			"url": "https://open.spotify.com/album/5fqlZFKYqvkIe2jdDGt2nl"
+		},
+		{
+			"title": "Bom Dia",
+			"artist": "Pluto",
+			"image": "bom-dia.jpg",
+			"url": "https://open.spotify.com/album/4hUEJkl2B87nVy9pby0OZv"
+		},
+		{
+			"title": "Mëkanïk Dëstruktïẁ Kömmandöh",
+			"artist": "Magma",
+			"image": "mdk.jpg",
+			"url": "https://open.spotify.com/album/1hWwZZvGF4CGT9AnSAPXlR"
+		},
+		{
+			"title": "Nada é Possível",
+			"artist": "Supernada",
+			"image": "nada-e-possivel.jpg",
+			"url": "https://open.spotify.com/album/0IIXpYnfg0I5y18vH7jRNy"
+		},
+		{
+			"title": "Cell-Scape",
+			"artist": "Melt Banana",
+			"image": "cellscape.jpg",
+			"url": "https://open.spotify.com/album/6Dzhy8VSlHZqHN1oZxMn9s"
+		},
+		{
+			"title": "Wlfgrl",
+			"artist": "Machine Girl",
+			"image": "wlfgrl.jpg",
+			"url": "https://open.spotify.com/album/1xbcqJ0EAMxyGyffMzO8rL"
 		}
 	]
 }

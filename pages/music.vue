@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<section>
-			<NowPlaying />
+			<NowPlaying/>
 		</section>
 
 		<section>
@@ -17,6 +17,9 @@
 					>
 						<div
 							class="album"
+							:style="{
+								backgroundImage: `url(${albumImages[album.title]})`,
+							}"
 						>
 						</div>
 					</a>
@@ -28,13 +31,28 @@
 
 <script setup lang="ts">
 import music from "~/assets/json/music.json";
+import useAssets from "~/composables/useAssets";
 
 definePageMeta({
 	title: "Music",
-	kana: "音楽"
-})
+	kana: "音楽",
+});
 
 const albums = music.albums;
+
+const {images} = useAssets();
+
+const albumImages = {};
+
+onServerPrefetch(async () => {
+	albums.forEach((album) => {
+		const promise = images[`/assets/images/albums/${album.image}`]();
+
+		promise.then((module) => {
+			albumImages[album.title] = module.default;
+		});
+	});
+});
 </script>
 
 <style scoped>
