@@ -1,11 +1,8 @@
 <template>
-	<div
-		class="project-card text-white"
-	>
+	<div class="project-card">
 		<img
 			class="project-illustration"
 			alt="Project Illustration"
-			:src="require(`~/assets/images/projects/${project.image}`)"
 		/>
 
 		<section class="project-information">
@@ -16,30 +13,24 @@
 			</p>
 
 			<div class="flex flex-row">
-				<div class="project-tags">
-					<span v-for="tag in project.tags" :key="tag.id" class="project-tag">
+				<div class="tags">
+					<span v-for="(tag, i) in project.tags" :key="i" class="tag">
 						{{ tag }}
 					</span>
 				</div>
 
-				<a v-if="project.project_url !== ''" :href="project.project_url" target="_blank" class="project-anchor">
-					<fa icon="link" class="float-right" />
+				<a v-if="project.project_url !== ''" :href="project.project_url" target="_blank" class="anchor">
+					<fa icon="link" class="float-right"/>
 				</a>
 			</div>
 		</section>
 	</div>
 </template>
 
-<script>
-import { Portal } from "portal-vue";
-
-export default {
-	name: "ProjectCard",
-	props: ["project"],
-	components: {
-		Portal,
-	},
-};
+<script setup lang="ts">
+const {project} = defineProps<{
+	project: Project
+}>();
 </script>
 
 <style scoped>
@@ -71,11 +62,11 @@ h3 {
 	font-size: 0.9rem;
 }
 
-.project-tags {
+.tags {
 	@apply flex uppercase;
 }
 
-.project-tag {
+.tag {
 	@apply bg-primary text-white;
 	padding: 0.2rem 0.5rem 0.1rem;
 	margin-right: 0.8rem;
@@ -83,7 +74,7 @@ h3 {
 	font-size: 0.8rem;
 }
 
-.project-anchor {
+.anchor {
 	@apply text-gray-light flex-1;
 }
 </style>
