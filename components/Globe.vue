@@ -151,9 +151,17 @@ onMounted(async () => {
 });
 </script>
 
-<style>
+<style lang="scss">
 #globe {
 	@apply stroke-[0.5] stroke-white;
+}
+
+path {
+	@apply cursor-grab;
+
+	&:active {
+		@apply cursor-grabbing;
+	}
 }
 
 html.dark #globe {

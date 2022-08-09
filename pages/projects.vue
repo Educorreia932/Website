@@ -2,24 +2,26 @@
 	<section>
 		<h2>My own creations</h2>
 
-		<ProjectCard
-			v-for="(project, i) in projects"
-			:key="i"
-			:project="project"
-		/>
+		<div class="mt-5">
+			<masonry-wall
+				:items="projects.reverse()"
+				:ssr-columns="1"
+				:column-width="300"
+				:gap="20"
+			>
+				<template #default="{ item, index }">
+					<ProjectCard :project="item"/>
+				</template>
+			</masonry-wall>
+		</div>
 	</section>
 </template>
 
 <script setup lang="ts">
 import projects from "~/assets/json/projects.json";
-import ProjectCard from "~/components/ProjectCard.vue";
 
 definePageMeta({
 	title: "Projects",
-	kana: "事業"
-})
+	kana: "事業",
+});
 </script>
-
-<style scoped>
-
-</style>

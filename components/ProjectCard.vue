@@ -1,7 +1,7 @@
 <template>
 	<div class="project-card">
 		<img
-			:src="imageURL"
+			:src="images[`/assets/images/projects/${project.image}`].default"
 			class="project-illustration"
 			alt="Project Illustration"
 		/>
@@ -36,13 +36,6 @@ const {project} = defineProps<{
 }>();
 
 const {images} = useAssets();
-
-const imageURL = ref("");
-const promise = images[`/assets/images/projects/${project.image}`]();
-
-onServerPrefetch(async () => {
-	imageURL.value = (await promise).default;
-});
 </script>
 
 <style scoped lang="scss">

@@ -1,52 +1,32 @@
 <template>
-	<div>
-		<portal to="h1">
-			<ruby>
-				Gaming
-				<rt>ゲーム</rt>
-			</ruby>
-		</portal>
+	<section>
+		<h2>My favorite games</h2>
 
-		<section>
-			<h2>My favorite games</h2>
-
-			<div id="games">
-				<div v-for="game in games">
-					<div class="game"
-						 :title="game.name"
-						 :style="{
-							backgroundImage: `url(${require('~/assets/images/games/' + game.image)})`,
+		<div id="games">
+			<div v-for="game in games">
+				<div class="game"
+					 :title="game.name"
+					 :style="{
+							backgroundImage: `url(${images[`/assets/images/games/${game.image}`].default})`,
 						}"
-					>
-					</div>
+				>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 </template>
 
-<script>
-import {Portal} from "portal-vue";
+<script setup lang="ts">
 import gaming from "~/assets/json/gaming.json";
 
-export default {
-	name: "Gaming",
-	head: {
-		title: "Gaming | Eduardo Correia",
-		meta: [
-			{name: "twitter:title", content: "Gaming | Eduardo Correia"},
-			{property: "og:title", content: "Gaming | Eduardo Correia"},
-		],
-	},
-	components: {
-		Portal,
-	},
-	data() {
-		return {
-			games: gaming.games,
-		};
-	},
-}
+definePageMeta({
+	title: "Gaming",
+	kana: "ゲーム",
+});
+
+const games = gaming.games;
+
+const {images} = useAssets();
 </script>
 
 <style scoped>

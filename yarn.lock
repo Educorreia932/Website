@@ -1132,6 +1132,11 @@
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.6.tgz#39eb2aa593db6f02d10ba469b33d8cfbce038183"
   integrity sha512-cOWqCkT3WiF5oEpw+VVEWUJd9RLD5rc7DmnFp3cePsejp+t7686uKD9Z9ZU7Twb7R/BI8iexKTmXo9D/F3v6UA==
 
+"@yeger/vue-masonry-wall@^3.0.44":
+  version "3.0.44"
+  resolved "https://registry.yarnpkg.com/@yeger/vue-masonry-wall/-/vue-masonry-wall-3.0.44.tgz#75da8167e99653eedd53c49cf6d1e9330513299d"
+  integrity sha512-j2+dsF0OseMvE7anfA4P6OyOJBlILvNtxTIv0me0OIrYG9zjetvRxhUKkc7creIMAPD2LW2fmZeqluDmhSITYQ==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

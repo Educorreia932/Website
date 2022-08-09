@@ -1,8 +1,6 @@
 <template>
 	<div>
-		<section>
-			<NowPlaying/>
-		</section>
+		<NowPlaying/>
 
 		<section>
 			<h2>My favorite music albums</h2>
@@ -18,7 +16,7 @@
 						<div
 							class="album"
 							:style="{
-								backgroundImage: `url(${albumImages[album.title]})`,
+								backgroundImage: `url(${images[`/assets/images/albums/${album.image}`].default})`,
 							}"
 						>
 						</div>
@@ -31,7 +29,6 @@
 
 <script setup lang="ts">
 import music from "~/assets/json/music.json";
-import useAssets from "~/composables/useAssets";
 
 definePageMeta({
 	title: "Music",
@@ -41,18 +38,6 @@ definePageMeta({
 const albums = music.albums;
 
 const {images} = useAssets();
-
-const albumImages = {};
-
-onServerPrefetch(async () => {
-	albums.forEach((album) => {
-		const promise = images[`/assets/images/albums/${album.image}`]();
-
-		promise.then((module) => {
-			albumImages[album.title] = module.default;
-		});
-	});
-});
 </script>
 
 <style scoped>

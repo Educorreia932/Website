@@ -1,58 +1,30 @@
 <template>
-	<div>
-		<portal to="h1">
-			<ruby class="under"
-			>Anime
-				<rt>アニメ</rt>
-			</ruby>
-			&
-			<ruby class="under"
-			>Manga
-				<rt>漫画</rt>
-			</ruby>
-		</portal>
+	<section>
+		<h2>My favorite anime & manga</h2>
 
-		<section>
-			<h2>My favorite anime & manga</h2>
-
-			<div id="games">
-				<div v-for="entry in anime">
-					<div class="game"
-						 :title="entry.name"
-						 :style="{
-							backgroundImage: `url(${require('~/assets/images/anime/' + entry.image)})`,
+		<div id="cards">
+			<div v-for="entry in anime">
+				<div class="card"
+					 :title="entry.name"
+					 :style="{
+							backgroundImage: `url(${images[`/assets/images/anime/${entry.image}`].default})`,
 						}"
-					>
-					</div>
+				>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 </template>
 
-<script>
-import {Portal} from "portal-vue";
-
+<script setup lang="ts">
 import anime from "~/assets/json/anime.json";
 
-export default {
-	name: "AnimeManga",
-	head: {
-		title: "Anime & Manga | Eduardo Correia",
-		meta: [
-			{name: "twitter:title", content: "Anime & Manga | Eduardo Correia"},
-			{property: "og:title", content: "Anime & Manga | Eduardo Correia"},
-		],
-	},
-	components: {
-		Portal,
-	},
-	data() {
-		return {
-			anime: anime,
-		};
-	},
-}
+definePageMeta({
+	title: "Anime & Manga",
+	kana: "アニメ 漫画",
+});
+
+const {images} = useAssets();
 </script>
 
 <style scoped>
@@ -60,11 +32,11 @@ h2 {
 	@apply mb-5;
 }
 
-#games {
+#cards {
 	@apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-5;
 }
 
-.game {
+.card {
 	@apply text-white rounded-lg bg-cover;
 	background-position: center;
 	aspect-ratio: 1;
