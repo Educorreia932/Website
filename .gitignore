@@ -1,17 +1,18 @@
-# IDE folder
+node_modules/
+
+# IDE
 .idea/
 
-# Frontend folders and files
-src/dist/
-node_modules/
+# Nuxt
 .nuxt/
-package-lock.json
+.nitro/
+.cache/
+.output/
+dist
 
 # Environment files
-.env*
+.env
 
-# Database
-migrations/
-client/
-*.db*
+# Log files
+*.log*
 

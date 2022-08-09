@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Kozuka Mincho Pro";
+        src: url("../fonts/KozMinPro-Medium.otf");
+    }
+
+    @font-face {
+        font-family: "Kozuka Mincho Pro";
+        src: url("../fonts/KozMinPro-Bold.otf");
+        font-weight: bold;
+    }
+
+    body {
+        @apply font-kozuka text-black dark:text-white m-0 dark:bg-gray;
+        background-color: #e8e8e8;
+        font-size: 20px;
+    }
+
+    a {
+        @apply text-primary no-underline;
+    }
+
+    h1 {
+        @apply m-0 inline;
+    }
+
+    h2 {
+        @apply pl-2 py-2 m-0 text-gray dark:text-gray-light ;
+        border-left: 2px solid;
+        font-size: 1.3rem;
+        font-weight: normal;
+        line-height: 1em;
+    }
+
+    ruby {
+        ruby-align: center;
+    }
+
+    ruby.under {
+        ruby-position: under;
+    }
+
+    rt {
+        @apply text-center text-black dark:text-white;
+        font-weight: lighter;
+        font-size: 0.7em;
+    }
+
+    button {
+        all: unset;
+        @apply cursor-pointer;
+    }
+}
+
+/* Fix for Font Awesome icon sizing */
+.svg-inline--fa {
+    height: 1em;
+    vertical-align: -0.125em;
+}
