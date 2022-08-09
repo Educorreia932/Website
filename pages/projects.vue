@@ -2,9 +2,9 @@
 	<section>
 		<h2>My own creations</h2>
 
-		<div class="mt-5">
+		<div class="my-5">
 			<masonry-wall
-				:items="projects.reverse()"
+				:items="projects.slice().reverse()"
 				:ssr-columns="1"
 				:column-width="300"
 				:gap="20"

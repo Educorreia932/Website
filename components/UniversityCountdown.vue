@@ -39,7 +39,7 @@ setInterval(() => {
 
 #progress-bar {
 	@apply rounded-lg dark:bg-gray;
-	background-color: #e8e8e8;
+	background-color: #E8E8E8;
 	height: 20px;
 }
 

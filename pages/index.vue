@@ -7,8 +7,8 @@
 		</div>
 
 		<p class="mx-auto">
-			Currently attending a Master's Degree in Informatics and Computing Engineering in <a
-			href="https://sigarra.up.pt/feup/">FEUP</a>
+			Currently attending a Master's Degree in Informatics and Computing Engineering in
+			<a href="https://sigarra.up.pt/feup/">FEUP</a>
 
 			<br/>
 
@@ -35,34 +35,34 @@
 <script lang="ts" setup>
 definePageMeta({
 	title: "Home",
-	kana: "家"
-})
+	kana: "家",
+});
 
 const topics = [
 	{
 		endpoint: "projects",
 		text: "building things",
-		kana: "事業"
+		kana: "事業",
 	},
 	{
 		endpoint: "travel",
 		text: "travelling",
-		kana: "旅行"
+		kana: "旅行",
 	},
 	{
 		endpoint: "music",
 		text: "music",
-		kana: "音楽"
+		kana: "音楽",
 	},
 	{
 		endpoint: "gaming",
 		text: "gaming",
-		kana: "ゲーム"
+		kana: "ゲーム",
 	},
 	{
 		endpoint: "anime",
 		text: "anime & manga",
-		kana: "アニメ 漫画"
-	}
-]
+		kana: "アニメ 漫画",
+	},
+];
 </script>

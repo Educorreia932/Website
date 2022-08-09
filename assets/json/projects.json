@@ -10,16 +10,6 @@
 		]
 	},
 	{
-		"title": "Github Pie Chart",
-		"description": "A script that generates a pie chart with the lines of code percentage of each language of a GitHub profile",
-		"project_url": "https://github.com/Educorreia932/Github-Pie-Chart",
-		"image": "GithubPieChart.png",
-		"tags": [
-			"Chart",
-			"Statistics"
-		]
-	},
-	{
 		"title": "Project Watt",
 		"description": "A platforming game themed around an electric particle in a circuit trying to reach the exit (connect to earth) and developed for MINIX",
 		"project_url": "https://github.com/Educorreia932/LCOM/tree/master/proj",

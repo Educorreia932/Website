@@ -4,7 +4,12 @@
 			My favorite anime & manga
 
 			<a href="https://anilist.co/user/Skelozard/">
-				<img src="~assets/images/anilist.svg" class="align-middle rounded" style="height: 28px"/>
+				<img
+					alt="AniList icon"
+					src="~assets/images/anilist.svg"
+					class="align-middle rounded"
+					style="height: 28px"
+				/>
 			</a>
 		</h2>
 

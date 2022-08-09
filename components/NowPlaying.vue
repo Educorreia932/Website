@@ -1,14 +1,15 @@
 <template>
 	<section v-if="isPlaying">
 		<h2>
-			{{ isPlaying ? "Now playing" : "Music on pause" }}
+			Now playing
 
-			<a style="color: #1DB954" href="https://open.spotify.com/user/skelozard?si=bb7e9441d87941eb">
-				<FontAwesomeIcon :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em" class="ml-1"/>
+			<a style="color: #1DB954" href="https://open.spotify.com/user/skelozard">
+				<FontAwesomeIcon :icon="['fab', 'spotify']" style="font-size: 25px; vertical-align: -0.25em"
+								 class="ml-1"/>
 			</a>
 		</h2>
 
-		<div class="my-5">
+		<div class="my-5" >
 			<div class="flex flex-row items-center space-x-3">
 				<a :href="track.external_urls.spotify">
 					<img
@@ -30,9 +31,9 @@
 					<span class="text-gray dark:text-gray-light">by </span>
 
 					<span v-for="(artist, i) in track.artists" :key="i">
-					<template v-if="i > 0">,</template>
-					<a :href="artist.external_urls.spotify">{{ artist.name }}</a>
-				</span>
+						<template v-if="i > 0">,</template>
+						<a :href="artist.external_urls.spotify">{{ artist.name }}</a>
+					</span>
 
 					<br/>
 
@@ -52,24 +53,22 @@
 <script setup lang="ts">
 const {$getNowPlaying} = useNuxtApp();
 
-const config = useRuntimeConfig()
-
 let isPlaying = ref(false);
-let track = ref<SpotifyTrack>(null);
+let track = ref(null);
 
 setInterval(() => {
 	$getNowPlaying()
-	.then((response) => response.json())
-	.then((data) => {
-		const {item, is_playing} = data;
+		.then((response) => response.json())
+		.then((data) => {
+			const {item, is_playing} = data;
 
-		isPlaying.value = is_playing;
-		track.value = item;
-	})
-	.catch((error) => {
-		console.log(error)
-	})
-}, 1000)
+			isPlaying.value = is_playing;
+			track.value = item;
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+}, 1000);
 </script>
 
 <style scoped>

@@ -3,13 +3,16 @@
 		<div id="content">
 			<header>
 				<h1>Eduardo Correia |
-					<ruby>{{ title }}
-						<rt>{{ kana }}</rt>
+					<ruby>{{ route.meta.title }}
+						<rt>{{ route.meta.kana }}</rt>
 					</ruby>
 				</h1>
 
 				<div class="float-right space-x-5">
-					<button style="font-size: 1.3em" @click="changeMode">
+					<button
+						style="font-size: 1.3em"
+						@click="setColorTheme($colorMode.preference === 'dark'? 'light' : 'dark')"
+					>
 						<span v-if="true">
 							<ruby class="under">
 								日
@@ -51,7 +54,20 @@
 
 <script lang="ts" setup>
 const route = useRoute();
-const {title, kana} = route.meta;
+
+useHead({
+	title: `Eduardo Correia`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia`},
+		{name: 'og:title', content: `Eduardo Correia`},
+	],
+});
+
+type Theme = "light" | "dark";
+
+const setColorTheme = (newTheme: Theme) => {
+	useColorMode().preference = newTheme;
+};
 </script>
 
 <style scoped>
