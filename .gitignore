@@ -1,5 +1,4 @@
 node_modules/
-dist/
 
 # IDE
 .idea/
@@ -9,6 +8,7 @@ dist/
 .nitro/
 .cache/
 .output/
+dist
 
 # Environment files
 .env

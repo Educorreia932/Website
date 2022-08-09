@@ -1,4 +1,5 @@
-.nuxt
-.env
-package.json
-
++ .output/***
++ .env
++ package.json
++ yarn.lock
+- *

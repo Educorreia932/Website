@@ -1,11 +1,12 @@
-all: build sync deploy
+# Resize images so they are 300 pixel wide
+resize:
+	@mogrify -geometry 300x -define colorspace:auto-grayscale=false -path . *.png
 
 deploy:
-	@ssh root@educorreia932.dev 'cd $$HOME/website && yarn start &'
+	@ssh root@educorreia932.dev 'screen -R website && yarn preview'
 
+# Syncs files with server
 sync:
 	@cd $(dirname ${BASH_SOURCE[0]})
-	@rsync -arv --exclude=".git" --exclude="node_modules" "${PWD}/" root@educorreia932.dev:/var/www/website
+	@rsync -rav --include-from='include.txt' "${PWD}/" root@educorreia932.dev:/var/www/website
 
-build: 
-	@yarn build
