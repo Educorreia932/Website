@@ -1,12 +1,19 @@
 <template>
 	<section>
-		<h2>My favorite anime & manga</h2>
+		<h2>
+			My favorite anime & manga
+
+			<a href="https://anilist.co/user/Skelozard/">
+				<img src="~assets/images/anilist.svg" class="align-middle rounded" style="height: 28px"/>
+			</a>
+		</h2>
 
 		<div id="cards">
 			<div v-for="entry in anime">
-				<div class="card"
-					 :title="entry.name"
-					 :style="{
+				<div
+					class="card"
+					:title="entry.name"
+					:style="{
 							backgroundImage: `url(${images[`/assets/images/anime/${entry.image}`].default})`,
 						}"
 				>

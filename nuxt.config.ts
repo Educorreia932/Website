@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 	buildModules: [
 		"@nuxtjs/tailwindcss",
 		"@nuxtjs/color-mode",
+		"@nuxtjs/svg"
 	],
 	modules: [
 		'@nuxtjs/color-mode',
