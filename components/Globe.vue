@@ -154,13 +154,13 @@ onMounted(async () => {
 <style lang="scss">
 #globe {
 	@apply stroke-[0.5] stroke-white;
-}
 
-path {
-	@apply cursor-grab;
+	path {
+		@apply cursor-grab;
 
-	&:active {
-		@apply cursor-grabbing;
+		&:active {
+			@apply cursor-grabbing;
+		}
 	}
 }
 

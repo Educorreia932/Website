@@ -13,7 +13,7 @@
 						style="font-size: 1.3em"
 						@click="setColorTheme($colorMode.preference === 'dark'? 'light' : 'dark')"
 					>
-						<span v-if="true">
+						<span v-if="$colorMode.preference === 'dark'">
 							<ruby class="under">
 								日
 								<rt>Light</rt>

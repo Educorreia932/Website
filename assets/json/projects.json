@@ -113,7 +113,7 @@
 	{
 		"title": "Spotify Statistics",
 		"description": "A webpage that gives you some insight regarding your favorite music genres according to what you listen to on Spotify.",
-		"project_url": "https://educorreia932.dev/spotify_statistics",
+		"project_url": "",
 		"image": "SpotifyStatistics.png",
 		"tags": [
 			"Chart"
@@ -225,5 +225,12 @@
 		"tags": [
 			"University"
 		]
+	},
+	{
+		"title": "/Toy/Box",
+		"description": "Collection of toy programs or otherwise interesting computational apparatus I've developed",
+		"project_url": "https://github.com/Educorreia932/Toybox",
+		"image": "toybox.png",
+		"tags": []
 	}
 ]
