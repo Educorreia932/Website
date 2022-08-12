@@ -10,7 +10,7 @@
 				:gap="20"
 			>
 				<template #default="{ item, index }">
-					<ProjectCard :project="item"/>
+					<ProjectCard :project="item" class="w-full"/>
 				</template>
 			</masonry-wall>
 		</div>

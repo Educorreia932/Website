@@ -69,8 +69,6 @@ defineExpose({
 
 onMounted(async () => {
 	svg = d3.select(globe.value)
-		.attr("width", width)
-		.attr("height", height);
 
 	projection = d3
 		.geoOrthographic()
@@ -162,26 +160,26 @@ onMounted(async () => {
 			@apply cursor-grabbing;
 		}
 	}
+
+	.water {
+		@apply fill-white dark:fill-gray-dark;
+	}
+
+	.land {
+		@apply fill-black dark:fill-white;
+	}
+
+	.visited {
+		@apply fill-primary cursor-pointer;
+	}
+
+	.visited.highlight,
+	.visited:hover {
+		@apply fill-secondary;
+	}
 }
 
 html.dark #globe {
 	stroke: #2f2f2f;
-}
-
-.water {
-	@apply fill-white dark:fill-gray-dark;
-}
-
-.land {
-	@apply fill-black dark:fill-white;
-}
-
-.visited {
-	@apply fill-primary cursor-pointer;
-}
-
-.visited.highlight,
-.visited:hover {
-	@apply fill-secondary;
 }
 </style>

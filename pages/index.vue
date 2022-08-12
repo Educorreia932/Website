@@ -6,27 +6,27 @@
 			<img src="~/assets/images/avatar.png" alt="Avatar" style="height: 300px"/>
 		</div>
 
-		<p class="mx-auto">
+		<p class="mb-2 text-center">
 			Currently attending a Master's Degree in Informatics and Computing Engineering in
 			<a href="https://sigarra.up.pt/feup/">FEUP</a>
+		</p>
 
-			<br/>
-
+		<p class="mt-0 text-center">
 			Interested in
 
 			<span v-for="(topic, i) in topics" :key="i" style="display: inline-block">
-			<span v-if="i === topics.length - 1">&nbsp;and </span><span v-else-if="i > 0">, </span>
+				<span v-if="i === topics.length - 1">&nbsp;and </span><span v-else-if="i > 0">, </span>
 
-			<NuxtLink :to="topic['endpoint']">
-				<ruby class="under">
-					{{ topic.text }}
-					<rt>{{ topic.kana }}</rt>
-				</ruby>
-			</NuxtLink>
-		</span>
+				<NuxtLink :to="topic['endpoint']">
+					<ruby class="under">
+						{{ topic.text }}
+						<rt>{{ topic.kana }}</rt>
+					</ruby>
+				</NuxtLink>
+			</span>
 		</p>
 
-		<div class="mt-4 w-7/12 mx-auto">
+		<div class="mt-4 md:w-7/12 w-full mx-auto">
 			<UniversityCountdown/>
 		</div>
 	</div>

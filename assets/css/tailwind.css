@@ -15,9 +15,8 @@
     }
 
     body {
-        @apply font-kozuka text-black dark:text-white m-0 dark:bg-gray;
+        @apply font-kozuka text-black dark:text-white m-0 dark:bg-gray text-lg;
         background-color: #e8e8e8;
-        font-size: 20px;
     }
 
     a {

@@ -1,33 +1,31 @@
 <template>
-	<div>
-		<section>
-			<h2>Where I've been to</h2>
+	<section class="flex flex-col flex-1">
+		<h2>Where I've been to</h2>
 
-			<div class="flex flex-col md:flex-row py-6">
-				<div id="flags">
-					<div id="flag-icons">
-						<button
-							v-for="country in visitedCountries"
-							:class="`flag-icon flag-icon-${country.code}`"
-							@click="globeFocus(country.name)"
-							@mouseleave="resetHoveredCountry"
-							@mouseover="setHoveredCountry(country.name)"
-						></button>
-					</div>
-
-					<em v-if="!hoveredCountry">Hover over a flag/country</em>
-					<span v-else>{{ hoveredCountry }}</span>
+		<div class="container">
+			<div id="flags">
+				<div>
+					<button
+						v-for="country in visitedCountries"
+						:class="`flag-icon flag-icon-${country.code}`"
+						@click="globeFocus(country.name)"
+						@mouseleave="resetHoveredCountry"
+						@mouseover="setHoveredCountry(country.name)"
+					></button>
 				</div>
 
-				<Globe
-					id="globe"
-					ref="globe"
-					:visitedCountries="visitedCountries"
-					@hoveringCountry="(countryName) => {this.hoveredCountry = countryName}"
-				/>
+				<em v-if="!hoveredCountry">Hover over a flag/country</em>
+				<span v-else>{{ hoveredCountry }}</span>
 			</div>
-		</section>
-	</div>
+
+			<Globe
+				id="globe"
+				ref="globe"
+				:visitedCountries="visitedCountries"
+				@hoveringCountry="(countryName) => {this.hoveredCountry = countryName}"
+			/>
+		</div>
+	</section>
 </template>
 
 <script setup lang="ts">
@@ -58,8 +56,12 @@ function globeFocus(country) {
 </script>
 
 <style scoped>
+.container {
+	@apply flex flex-col flex-1 space-y-10 lg:flex-row items-center mt-3 h-full my-auto;
+}
+
 #flags {
-	@apply flex flex-col md:ml-20 md:mt-16;
+	@apply flex flex-col max-w-[30rem] text-center;
 }
 
 .flag-icon {
@@ -69,6 +71,6 @@ function globeFocus(country) {
 }
 
 #globe {
-	@apply w-full mt-5 md:mt-0 md:ml-16;
+	@apply mx-3 sm:mx-14 lg:mx-0 max-h-[30rem] flex-1;
 }
 </style>

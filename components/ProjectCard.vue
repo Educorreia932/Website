@@ -9,7 +9,7 @@
 		<section class="information">
 			<h3>{{ project.title }}</h3>
 
-			<p class="project-description">
+			<p class="pt-1">
 				{{ project.description }}
 			</p>
 
@@ -44,9 +44,9 @@ h3 {
 }
 
 .project-card {
-	@apply inline-block text-black dark:text-white bg-white-dark dark:bg-gray rounded-xl transition transform hover:scale-105;
+	@apply inline-block text-black dark:text-white bg-white-dark dark:bg-gray rounded-xl transition transform
+		hover:scale-105 align-top;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
-	vertical-align: top;
 }
 
 img {
@@ -55,7 +55,7 @@ img {
 }
 
 .information {
-	padding: 0 1rem 1rem;
+	padding: 0.5rem 1rem 1rem;
 
 	p {
 		margin: 0 0 1rem;

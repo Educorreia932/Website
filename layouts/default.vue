@@ -1,16 +1,19 @@
 <template>
 	<div id="container">
 		<div id="content">
-			<header>
-				<h1>Eduardo Correia |
+			<header class="flex justify-between">
+				<h1>
+					<span class="hidden md:inline">
+						Eduardo Correia ￨
+					</span>
+
 					<ruby>{{ route.meta.title }}
 						<rt>{{ route.meta.kana }}</rt>
 					</ruby>
 				</h1>
 
-				<div class="float-right space-x-5">
+				<div class="space-x-5 flex content-center" style="font-size: 1.4em">
 					<button
-						style="font-size: 1.3em"
 						@click="setColorTheme($colorMode.preference === 'dark'? 'light' : 'dark')"
 					>
 						<span v-if="$colorMode.preference === 'dark'">
@@ -30,8 +33,7 @@
 
 					<NuxtLink
 						to="/"
-						style="font-size: 1.3em"
-						class="text-black dark:text-white"
+						class="text-black dark:text-white self-center"
 					>
 						<ruby class="under">
 							家
@@ -41,7 +43,7 @@
 				</div>
 			</header>
 
-			<main>
+			<main class="my-3">
 				<slot/>
 			</main>
 
