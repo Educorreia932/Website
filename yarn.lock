@@ -3041,11 +3041,6 @@ filter-obj@^1.1.0:
   resolved "https://registry.yarnpkg.com/filter-obj/-/filter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
   integrity sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==
 
-flag-icon-css@^4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-4.1.7.tgz#5471197f9ab965a3603b3e0face31dd513fec289"
-  integrity sha512-AFjSU+fv98XbU0vnTQ32vcLj89UEr1MhwDFcooQv14qWJCjg9fGZzfh9BVyDhAhIOZW/pGmJmq38RqpgPaeybQ==
-
 flat@^5.0.0:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
@@ -6782,6 +6777,11 @@ vue-bundle-renderer@^0.3.9:
   integrity sha512-jhkyS2Zaey9OAp2xVyGnN0//lLfNtT2elFq1NevaY4JwQEw27DFS970rQbNYPds2WXeq2H/O2HM+qCPcsimJGg==
   dependencies:
     bundle-runner "^0.0.1"
+
+vue-country-flag-next@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/vue-country-flag-next/-/vue-country-flag-next-2.3.2.tgz#c35d283f83b7631be414c720391a8363991557c2"
+  integrity sha512-Lv12L1VTwlBgizpZ3xPEPO3zuIETaJmeSiPuLOWLLgu2EakwU/o72iKYiKcdZ6BXiSkfss+Ski5fDzjuxZ1DcA==
 
 vue-router@^4.1.2:
   version "4.1.2"

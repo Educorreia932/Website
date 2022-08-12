@@ -7,11 +7,13 @@
 				<div>
 					<button
 						v-for="country in visitedCountries"
-						:class="`flag-icon flag-icon-${country.code}`"
+						class="flag-icon"
 						@click="globeFocus(country.name)"
 						@mouseleave="resetHoveredCountry"
 						@mouseover="setHoveredCountry(country.name)"
-					></button>
+					>
+						<country-flag :country="country.code" size="big" class="rounded-md"/>
+					</button>
 				</div>
 
 				<em v-if="!hoveredCountry">Hover over a flag/country</em>
@@ -66,8 +68,6 @@ function globeFocus(country) {
 
 .flag-icon {
 	@apply mr-4 mb-3 drop-shadow-md;
-	font-size: 42px;
-	border-radius: 5px;
 }
 
 #globe {

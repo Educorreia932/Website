@@ -151,7 +151,7 @@ onMounted(async () => {
 
 <style lang="scss">
 #globe {
-	@apply stroke-[0.5] stroke-white;
+	@apply stroke-[0.5] stroke-white dark:stroke-gray-dark;
 
 	path {
 		@apply cursor-grab;
@@ -177,9 +177,5 @@ onMounted(async () => {
 	.visited:hover {
 		@apply fill-secondary;
 	}
-}
-
-html.dark #globe {
-	stroke: #2f2f2f;
 }
 </style>
