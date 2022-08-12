@@ -91,8 +91,17 @@
 		]
 	},
 	{
+		"title": "Helper Shelter",
+		"description": "An adoption shelter website",
+		"project_url": "https://github.com/Educorreia932/FEUP-LTW/tree/master/Project",
+		"image": "HelperShelter.png",
+		"tags": [
+			"University"
+		]
+	},
+	{
 		"title": "Umbrella",
-		"description": "Game developed for Global Game Jam 2021.",
+		"description": "Game developed for Global Game Jam 2021",
 		"project_url": "https://globalgamejam.org/2021/games/umbrella-4",
 		"image": "Umbrella.png",
 		"tags": [
@@ -102,7 +111,7 @@
 	},
 	{
 		"title": "Break_In",
-		"description": "Game developed for Retro Jam 2021.",
+		"description": "Game developed for Retro Jam 2021",
 		"project_url": "https://github.com/xavier-santos/BreakIn",
 		"image": "Break_In.png",
 		"tags": [
@@ -145,7 +154,7 @@
 		"tags": {}
 	},
 	{
-		"title": "Persona 4 - Weather News ",
+		"title": "Persona 4 - Weather News",
 		"description": "A Google Chrome extension that makes your New Tab page display the weather news in the style of Persona 4.",
 		"project_url": "https://github.com/Educorreia932/Persona-4-Weather-News",
 		"image": "Persona4WeatherNews.png",
