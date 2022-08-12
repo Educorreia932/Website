@@ -20,9 +20,6 @@ export default defineNuxtConfig({
 		"@nuxtjs/color-mode",
 		"@nuxtjs/svg"
 	],
-	modules: [
-		'@nuxtjs/color-mode',
-	],
 	colorMode: {
 		classSuffix: '',
 	},
