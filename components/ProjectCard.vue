@@ -1,9 +1,12 @@
 <template>
 	<div class="project-card">
-		<img
-			:src="images[`/assets/images/projects/${project.image}`].default"
-			class="project-illustration"
+		<nuxt-img
+			:src="`/images/projects/${project.image}`"
 			alt="Project Illustration"
+			class="project-illustration"
+			width="300"
+			format="webp"
+			placeholder
 		/>
 
 		<section class="information">

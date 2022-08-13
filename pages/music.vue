@@ -13,13 +13,12 @@
 						class="h-full w-full"
 						target="_blank"
 					>
-						<div
+						<nuxt-img
 							class="album"
-							:style="{
-								backgroundImage: `url(${images[`/assets/images/albums/${album.image}`].default})`,
-							}"
-						>
-						</div>
+							:src="`/images/albums/${album.image}`"
+							format="webp"
+							placeholder
+						/>
 					</a>
 				</div>
 			</div>
@@ -50,7 +49,7 @@ h2 {
 }
 
 .album {
-	@apply text-white rounded-lg bg-cover;
+	@apply text-white rounded-lg w-full h-full;
 	aspect-ratio: 1;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }

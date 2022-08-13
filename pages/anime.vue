@@ -6,7 +6,7 @@
 			<a href="https://anilist.co/user/Skelozard/">
 				<img
 					alt="AniList icon"
-					src="~assets/images/anilist.svg"
+					src="~/assets/images/anilist.svg"
 					class="align-middle rounded"
 					style="height: 28px"
 				/>
@@ -15,14 +15,12 @@
 
 		<div id="cards">
 			<div v-for="entry in anime">
-				<div
-					class="card"
-					:title="entry.name"
-					:style="{
-							backgroundImage: `url(${images[`/assets/images/anime/${entry.image}`].default})`,
-						}"
-				>
-				</div>
+				<nuxt-img
+					:src="`/images/anime/${entry.image}`"
+					class="w-full h-full object-cover rounded-lg aspect-square"
+					format="webp"
+					placeholder
+				/>
 			</div>
 		</div>
 	</section>
@@ -49,9 +47,8 @@ h2 {
 }
 
 .card {
-	@apply text-white rounded-lg bg-cover;
+	@apply text-white rounded-lg;
 	background-position: center;
-	aspect-ratio: 1;
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 </style>

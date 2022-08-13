@@ -3,7 +3,12 @@
 		<h2>Programming is like alchemy and I turn 0s and 1s into things in the internet</h2>
 
 		<div class="text-center mt-6">
-			<img src="~/assets/images/avatar.png" alt="Avatar" style="height: 300px"/>
+			<nuxt-img
+				src="/images/avatar.png"
+				alt="Avatar"
+				height="300"
+				format="webp"
+			/>
 		</div>
 
 		<p class="mb-2 text-center">
@@ -33,10 +38,14 @@
 </template>
 
 <script lang="ts" setup>
+import useAssets from "~/composables/useAssets";
+
 definePageMeta({
 	title: "Home",
 	kana: "家",
 });
+
+const {images} = useAssets();
 
 const topics = [
 	{
