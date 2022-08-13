@@ -1,21 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: "Kozuka Mincho Pro";
-        src: url("../fonts/KozMinPro-Medium.otf");
-    }
-
-    @font-face {
-        font-family: "Kozuka Mincho Pro";
-        src: url("../fonts/KozMinPro-Bold.otf");
-        font-weight: bold;
-    }
-
     body {
         @apply font-kozuka text-black dark:text-white m-0 dark:bg-gray text-lg;
+        font-family: 'Sawarabi Mincho', serif;
         background-color: #e8e8e8;
     }
 

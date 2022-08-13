@@ -12,7 +12,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				kozuka: ["Kozuka Mincho Pro", "serif"],
+				kozuka: ["Sawarabi Mincho", "serif"],
 			},
 			colors: {
 				gray: {
