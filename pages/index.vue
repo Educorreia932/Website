@@ -6,6 +6,7 @@
 			<nuxt-img
 				src="/images/avatar.png"
 				alt="Avatar"
+				width="300"
 				height="300"
 				format="webp"
 			/>

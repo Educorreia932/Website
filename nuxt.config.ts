@@ -31,4 +31,7 @@ export default defineNuxtConfig({
 		spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
 		spotifyRt: process.env.SPOTIFY_RT,
 	},
+	image: {
+		provider: "netlify"
+	}
 });
