@@ -19,6 +19,8 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxtjs/color-mode",
 		"@nuxtjs/svg",
+	],
+	modules:  [
 		"@nuxt/image-edge",
 	],
 	colorMode: {
