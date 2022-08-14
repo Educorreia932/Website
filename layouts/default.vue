@@ -1,6 +1,6 @@
 <template>
 	<div id="container">
-		<div id="content">
+		<div id="content" class="relative">
 			<header class="flex justify-between">
 				<h1>
 					<span class="hidden md:inline">
@@ -16,19 +16,15 @@
 					<button
 						@click="setColorTheme($colorMode.preference === 'dark'? 'light' : 'dark')"
 					>
-						<span v-if="$colorMode.preference === 'dark'">
-							<ruby class="under">
-								日
-								<rt>Light</rt>
-							</ruby>
-						</span>
+						<ruby class="under hidden dark:inline">
+							日
+							<rt>Light</rt>
+						</ruby>
 
-						<span v-else>
-							<ruby class="under">
-								夜
-								<rt>Dark</rt>
-							</ruby>
-						</span>
+						<ruby class="under inline dark:hidden">
+							夜
+							<rt>Dark</rt>
+						</ruby>
 					</button>
 
 					<NuxtLink
@@ -48,7 +44,23 @@
 			</main>
 
 			<footer>
-				&copy; 2022 - Eduardo Correia
+				<div>
+					&copy; 2022 - Eduardo Correia
+				</div>
+
+				<div class="text-2xl space-x-3">
+					<a href="https://github.com/Educorreia932" class="text-gray-dark dark:text-white">
+						<FontAwesomeIcon :icon="['fab', 'github']"/>
+					</a>
+
+					<a href="linkedin.com/in/educorreia932/" class="text-gray-dark dark:text-white">
+						<FontAwesomeIcon :icon="['fab', 'linkedin']"/>
+					</a>
+
+					<a href="https://www.instagram.com/educorreia932/" class="text-gray-dark dark:text-white">
+						<FontAwesomeIcon :icon="['fab', 'instagram']"/>
+					</a>
+				</div>
 			</footer>
 		</div>
 	</div>
@@ -86,7 +98,6 @@ main {
 }
 
 footer {
-	@apply text-center text-sm;
-	color: #c8c8c8;
+	@apply text-center text-sm text-gray-dark dark:text-white opacity-50;
 }
 </style>
