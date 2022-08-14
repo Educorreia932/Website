@@ -44,21 +44,19 @@
 			</main>
 
 			<footer>
-				<div>
+				<div class="opacity-50">
 					&copy; 2022 - Eduardo Correia
 				</div>
 
 				<div class="text-2xl space-x-3">
-					<a href="https://github.com/Educorreia932" class="text-gray-dark dark:text-white">
-						<FontAwesomeIcon :icon="['fab', 'github']"/>
-					</a>
-
-					<a href="linkedin.com/in/educorreia932/" class="text-gray-dark dark:text-white">
-						<FontAwesomeIcon :icon="['fab', 'linkedin']"/>
-					</a>
-
-					<a href="https://www.instagram.com/educorreia932/" class="text-gray-dark dark:text-white">
-						<FontAwesomeIcon :icon="['fab', 'instagram']"/>
+					<a
+						v-for="(socialLink, i) in socialLinks"
+						:key="i"
+						class="social-link"
+						:href="socialLink.url"
+						:title="socialLink.name"
+					>
+						<FontAwesomeIcon :icon="['fab', socialLink.icon]"/>
 					</a>
 				</div>
 			</footer>
@@ -76,6 +74,24 @@ useHead({
 		{name: 'og:title', content: `Eduardo Correia`},
 	],
 });
+
+const socialLinks = [
+	{
+		name: "Github",
+		icon: "github",
+		url: "https://github.com/Educorreia932",
+	},
+	{
+		name: "LinkedIn",
+		icon: "linkedin",
+		url: "https://linkedin.com/in/educorreia932",
+	},
+	{
+		name: "Instagram",
+		icon: "instagram",
+		url: "https://www.instagram.com/educorreia932",
+	},
+];
 
 type Theme = "light" | "dark";
 
@@ -98,6 +114,10 @@ main {
 }
 
 footer {
-	@apply text-center text-sm text-gray-dark dark:text-white opacity-50;
+	@apply text-center text-sm text-gray-dark dark:text-white;
+}
+
+.social-link {
+	@apply text-gray-dark dark:text-white transition-opacity opacity-50 hover:opacity-100;
 }
 </style>
