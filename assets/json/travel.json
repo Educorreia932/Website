@@ -43,6 +43,10 @@
 		{
 			"name": "Ireland",
 			"code": "ie"
+		},
+		{
+			"name": "Japan",
+			"code": "jp"
 		}
 	]
 }
