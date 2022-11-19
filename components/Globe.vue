@@ -1,9 +1,11 @@
 <template>
-	<svg id="globe" ref="globe" viewBox="0 0 500 500"></svg>
+	<svg id="globe" ref="globe" :viewBox="`0 0 ${width} ${height}`"></svg>
 </template>
 
 <script setup lang="ts">
 import * as d3 from "d3";
+import {DSVRowString, GeoPath, GeoProjection, Selection} from "d3";
+import {Feature, Geometry} from "geojson";
 import * as topojson from "topojson-client";
 import {GeometryCollection, Topology} from "topojson-specification";
 
@@ -15,21 +17,21 @@ const height = 500;
 
 const globe = ref(null);
 
-let countries,
-	countryNames,
-	worldData,
-	svg,
-	projection,
-	path;
+let countries: Feature<Geometry, {}>[],
+	countryNames: d3.DSVRowString[],
+	worldData: Topology | undefined,
+	svg: Selection<null, unknown, null, undefined>,
+	projection: GeoProjection,
+	path: GeoPath;
 
-function country(countryName: string) {
+const country = (countryName: string): Feature<Geometry, {}> => {
 	countryName = countryName.split("_").join(" ");
-	const id = countryNames.find((country) => country.name === countryName).id;
+	const id = countryNames.find((country) => country.name === countryName)?.id;
 
-	return countries.find((country) => country.id === id);
-}
+	return countries.find((country) => country.id === id)!!;
+};
 
-function rotateGlobe(p) {
+const rotateGlobe = (p: [number, number]) => {
 	d3.transition()
 		.duration(1000)
 		.tween("rotate", () => {
@@ -38,29 +40,29 @@ function rotateGlobe(p) {
 				-p[1],
 			]);
 
-			return function (t) {
-				projection.rotate(interpolator(t));
+			return (t: number) => {
+				projection.rotate(interpolator(t) as [number, number]);
 				svg.selectAll("path").attr("d", path);
-			}.bind(this);
+			};
 		});
-}
+};
 
-function focusOnCountry(countryName: string) {
+const focusOnCountry = (countryName: string) => {
 	const focusedCountry = country(countryName);
 	const centroid = d3.geoCentroid(focusedCountry);
 
 	rotateGlobe(centroid);
-}
+};
 
-function highlightCountry(countryName: string, highlight: boolean) {
+const highlightCountry = (countryName: string, highlight: boolean) => {
 	const node = d3.selectAll<HTMLElement, HTMLElement>("#" + countryName.replace(" ", "_")).node();
 
 	if (highlight)
-		node.classList.add("highlight");
+		node?.classList.add("highlight");
 
 	else
-		node.classList.remove("highlight");
-}
+		node?.classList.remove("highlight");
+};
 
 defineExpose({
 	focusOnCountry,
@@ -68,7 +70,7 @@ defineExpose({
 });
 
 onMounted(async () => {
-	svg = d3.select(globe.value)
+	svg = d3.select(globe.value);
 
 	projection = d3
 		.geoOrthographic()
@@ -83,19 +85,19 @@ onMounted(async () => {
 		.attr("d", path);
 
 	[worldData, countryNames] = await Promise.all([
-		d3.json("https://unpkg.com/world-atlas@1/world/110m.json"),
+		d3.json<Topology>("https://unpkg.com/world-atlas@1/world/110m.json"),
 		d3.tsv("https://raw.githubusercontent.com/KoGor/Map-Icons-Generator/master/data/world-110m-country-names.tsv"),
 	]);
 
 	countries = topojson.feature(
-		worldData as Topology,
-		worldData["objects"]["countries"] as GeometryCollection,
+		worldData!!,
+		worldData!!["objects"]["countries"] as GeometryCollection,
 	).features;
 
-	let countryById = {};
+	let countryById: { [key: string]: string } = {};
 
-	countryNames.forEach((d) => {
-		countryById[d.id] = d.name;
+	countryNames.forEach((d: DSVRowString) => {
+		countryById[d.id as string] = d.name as string;
 	});
 
 	// Drawing countries
@@ -105,18 +107,6 @@ onMounted(async () => {
 		.append("path")
 		.attr("class", "land")
 		.attr("d", path)
-		.on("click", (e) => {
-			focusOnCountry(e.path[0].id);
-		})
-		.on("mouseenter", (e) => {
-			const countryName = e.path[0].id.split("_").join(" ");
-
-			if (countryName !== "undefined")
-				emit("hoveringCountry", countryName);
-		})
-		.on("mouseleave", () => {
-			emit("hoveringCountry", "");
-		})
 		.each((d, i, elements) => {
 			let countryName = "undefined";
 
@@ -128,9 +118,23 @@ onMounted(async () => {
 			d3.select(elements[i]).attr("id", countryName);
 		});
 
-	d3.map(visitedCountries, (country: { name }) => {
+	d3.map(visitedCountries, (country: { name: string }) => {
 		d3.selectAll("#" + country.name.split(" ").join("_"))
-			.attr("class", "visited");
+			.attr("class", "visited")
+			.on("mouseenter", (e) => {
+				const countryName = e.path[0].id.split("_").join(" ");
+
+				console.log(countryName);
+
+				if (countryName !== "undefined")
+					emit("hoveringCountry", countryName);
+			})
+			.on("mouseleave", () => {
+				emit("hoveringCountry", "");
+			})
+			.on("click", (e) => {
+				focusOnCountry(e.path[0].id);
+			});
 	});
 
 	// Drag event

@@ -24,13 +24,14 @@
 				id="globe"
 				ref="globe"
 				:visitedCountries="visitedCountries"
-				@hoveringCountry="(countryName) => {this.hoveredCountry = countryName}"
+				@hovering-country="(countryName) => {hoveredCountry = countryName}"
 			/>
 		</div>
 	</section>
 </template>
 
 <script setup lang="ts">
+import {Globe} from "#components";
 import travel from "~/assets/json/travel.json";
 
 definePageMeta({
@@ -40,17 +41,17 @@ definePageMeta({
 
 const visitedCountries = travel.visited;
 const hoveredCountry = ref("");
-const globe = ref(null);
+const globe = ref<InstanceType<typeof Globe> | null>(null);
 
-function setHoveredCountry(country: string) {
+const setHoveredCountry = (country: string) => {
 	hoveredCountry.value = country;
 	globe.value.highlightCountry(country, true);
-}
+};
 
-function resetHoveredCountry() {
+const resetHoveredCountry = () => {
 	globe.value.highlightCountry(hoveredCountry.value, false);
 	hoveredCountry.value = "";
-}
+};
 
 function globeFocus(country: string) {
 	globe.value.focusOnCountry(country);
