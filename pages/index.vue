@@ -1,6 +1,8 @@
 <template>
 	<div class="flex flex-col">
-		<h2>Programming is like alchemy and I turn 0s and 1s into things in the internet</h2>
+		<h2>
+			Programming is like alchemy and I turn 0s and 1s into things in the internet
+		</h2>
 
 		<div class="text-center mt-6">
 			<nuxt-img
@@ -9,6 +11,7 @@
 				width="300"
 				height="300"
 				format="webp"
+				placeholder
 			/>
 		</div>
 

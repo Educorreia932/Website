@@ -3,7 +3,6 @@
 		<nuxt-img
 			:src="`/images/projects/${project.image}`"
 			alt="Project Illustration"
-			class="project-illustration"
 			width="300"
 			format="webp"
 			placeholder

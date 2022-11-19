@@ -2,7 +2,7 @@
 	<div id="container">
 		<div id="content" class="relative">
 			<header class="flex justify-between">
-				<h1>
+				<h1 class="truncate leading-normal">
 					<span class="hidden md:inline">
 						Eduardo Correia ￨
 					</span>
@@ -22,7 +22,7 @@
 						</ruby>
 
 						<ruby class="under inline dark:hidden">
-							夜
+							月
 							<rt>Dark</rt>
 						</ruby>
 					</button>
@@ -48,17 +48,19 @@
 					&copy; 2022 - Eduardo Correia
 				</div>
 
-				<div class="text-2xl space-x-3">
-					<a
-						v-for="(socialLink, i) in socialLinks"
-						:key="i"
-						class="social-link"
-						:href="socialLink.url"
-						:title="socialLink.name"
-					>
-						<FontAwesomeIcon :icon="['fab', socialLink.icon]"/>
-					</a>
-				</div>
+				<client-only>
+					<div class="text-2xl space-x-3">
+						<a
+							v-for="(socialLink, i) in socialLinks"
+							:key="i"
+							class="social-link"
+							:href="socialLink.url"
+							:title="socialLink.name"
+						>
+							<FontAwesomeIcon :icon="['fab', socialLink.icon]"/>
+						</a>
+					</div>
+				</client-only>
 			</footer>
 		</div>
 	</div>
@@ -75,7 +77,7 @@ useHead({
 	],
 });
 
-const socialLinks = [
+const socialLinks = ref([
 	{
 		name: "Github",
 		icon: "github",
@@ -91,7 +93,7 @@ const socialLinks = [
 		icon: "instagram",
 		url: "https://www.instagram.com/educorreia932",
 	},
-];
+]);
 
 type Theme = "light" | "dark";
 

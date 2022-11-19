@@ -42,7 +42,7 @@ const visitedCountries = travel.visited;
 const hoveredCountry = ref("");
 const globe = ref(null);
 
-function setHoveredCountry(country) {
+function setHoveredCountry(country: string) {
 	hoveredCountry.value = country;
 	globe.value.highlightCountry(country, true);
 }
@@ -52,7 +52,7 @@ function resetHoveredCountry() {
 	hoveredCountry.value = "";
 }
 
-function globeFocus(country) {
+function globeFocus(country: string) {
 	globe.value.focusOnCountry(country);
 }
 </script>

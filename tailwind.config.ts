@@ -25,8 +25,8 @@ module.exports = {
 					dark: "#ECECEC"
 				},
 				black: "#000000",
-				primary: "#EC0237",
-				secondary: "#BB0324",
+				primary: "#ED0A3F",   // Crayola red
+				secondary: "#BA160C", // International Orange (Engineering)
 			},
 			borderRadius: {
 				lg: "1rem",
