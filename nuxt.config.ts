@@ -16,9 +16,11 @@ export default defineNuxtConfig({
 		"@nuxtjs/color-mode",
 	],
 	runtimeConfig: {
-		spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
-		spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-		spotifyRt: process.env.SPOTIFY_RT,
+		public: {
+			spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
+			spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+			spotifyRt: process.env.SPOTIFY_RT,
+		}
 	},
 	image: {
 		provider: "netlify",
