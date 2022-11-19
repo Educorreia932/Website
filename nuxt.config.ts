@@ -1,37 +1,29 @@
-import {defineNuxtConfig} from 'nuxt';
-
 export default defineNuxtConfig({
 	css: [
 		"~/assets/css/tailwind.css",
 		"@fortawesome/fontawesome-svg-core/styles.css",
 	],
-	build: {
-		postcss: {
-			postcssOptions: {
-				plugins: {
-					tailwindcss: {},
-					autoprefixer: {},
-				},
-			},
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
 		},
 	},
-	buildModules: [
+	build: {},
+	modules: [
 		"@nuxtjs/tailwindcss",
-		"@nuxtjs/color-mode",
-		"@nuxtjs/svg",
-	],
-	modules:  [
 		"@nuxt/image-edge",
+		"@nuxtjs/color-mode",
 	],
-	colorMode: {
-		classSuffix: '',
-	},
-	publicRuntimeConfig: {
+	runtimeConfig: {
 		spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
 		spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
 		spotifyRt: process.env.SPOTIFY_RT,
 	},
 	image: {
-		provider: "netlify"
-	}
+		provider: "netlify",
+	},
+	colorMode: {
+		classSuffix: '',
+	},
 });
