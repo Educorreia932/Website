@@ -63,6 +63,8 @@
 				</client-only>
 			</footer>
 		</div>
+
+		<ScrollToTopButton/>
 	</div>
 </template>
 
