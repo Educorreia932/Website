@@ -124,7 +124,7 @@ onMounted(async () => {
 			.on("mouseenter", (e) => {
 				const countryName = e.path[0].id.split("_").join(" ");
 
-				console.log(countryName);
+
 
 				if (countryName !== "undefined")
 					emit("hoveringCountry", countryName);
