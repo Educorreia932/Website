@@ -1,32 +1,83 @@
 <template>
-	<div id="scroller">
-		<span v-for="(album, i) in albums" :key="i" :class="`item ${getPosition(i)}`" @click="scroll(i)">
-			<img width="300" :src="`/images/albums/${album.image}`" alt="Album cover">
+	<div id="scroller" @keyup.space="advanceTrack">
+		<span
+			v-for="(item, i) in albums"
+			:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
+			@click="i === currentPosition? advanceTrack() : scroll(i)"
+		>
+			<nuxt-img width="300" :src="item.album.images[1].url" alt="Album cover"/>
 		</span>
 	</div>
 
-	<audio :src="previewTrack" autoplay></audio>
+	<p class="text-center">
+		<strong>{{ currentAlbum.album.artists[0].name }}</strong> |
+
+		<a :href="currentAlbum.album.external_urls.spotify" class="text-black dark:text-white">
+			{{ currentAlbum.album.name }}
+		</a>
+
+		<br>
+
+		<span class="flex flex-row space-x-2 text-center items-center justify-center">
+			<AudioBars/>
+
+			<a :href="currentAlbum.album.tracks.items[currentTrack].external_urls.spotify"
+			   class="text-black dark:text-white">
+				{{ currentAlbum.album.tracks.items[currentTrack].name }}
+			</a>
+		</span>
+	</p>
+
+	<audio :src="previewTrack" autoplay loop ref="audioPlayer"></audio>
 </template>
 
 <script setup lang="ts">
-import music from "~/assets/json/music.json";
-
-const {$fetchMostPlayedTrack} = useNuxtApp();
+import music from "assets/json/music.json";
 
 const albums = music.albums;
 
 let currentPosition = ref(0);
-let previewTrack = ref(null);
+let shake = ref(false);
+let previewTrack = ref<string>("");
+const audioPlayer = ref<HTMLAudioElement | null>(null);
+const currentAlbum = computed(() => albums[currentPosition.value]);
+const currentTrack = ref(0);
 
 const scroll = (i: number) => {
+	shake.value = false;
+	currentTrack.value = 0;
 	currentPosition.value = i;
-
-	$fetchMostPlayedTrack(`https://api.spotify.com/v1/albums/${albums[i].albumID}`)
-		.then(track => {
-				previewTrack.value = track.preview_url;
-			},
-		);
 };
+
+const advanceTrack = () => {
+	shake.value = true;
+
+	setTimeout(() => shake.value = false, 1000);
+
+	currentTrack.value = (currentTrack.value + 1) % currentAlbum.value.album.tracks.items.length;
+};
+
+watchEffect(() => {
+	const track = currentAlbum.value.album.tracks.items[currentTrack.value];
+
+	previewTrack.value = track.preview_url;
+});
+
+onMounted(() => {
+	if (audioPlayer.value != null)
+		audioPlayer.value.volume = 0.2;
+
+	window.addEventListener('keyup', (event) => {
+		if (event.code == "Space")
+			advanceTrack();
+
+		else if (event.code == "ArrowLeft")
+			scroll(mod(currentPosition.value - 1, albums.length));
+
+		else if (event.code == "ArrowRight")
+			scroll(mod(currentPosition.value + 1, albums.length));
+	});
+});
 
 const getPosition = (i: number) => {
 	let classes = [];
@@ -49,16 +100,38 @@ const getPosition = (i: number) => {
 
 	return classes.join(" ");
 };
-
 </script>
 
 <style scoped lang="scss">
+@keyframes tilt-shaking {
+	0% {
+		transform: translateX(0)
+	}
+	25% {
+		transform: translateY(-9px)
+	}
+	35% {
+		transform: translateY(-9px) rotate(17deg)
+	}
+	55% {
+		transform: translateY(-9px) rotate(-17deg)
+	}
+	65% {
+		transform: translateY(-9px) rotate(17deg)
+	}
+	75% {
+		transform: translateY(-9px) rotate(-17deg)
+	}
+	100% {
+		transform: translateY(0) rotate(0)
+	}
+}
+
 #scroller {
 	@apply mx-auto;
 
 	width: 300px;
 	height: 300px;
-	padding: 50px 0;
 	perspective: 500px;
 }
 
@@ -70,12 +143,12 @@ const getPosition = (i: number) => {
 	transition: all 0.4s ease-in-out;
 
 	img {
-		@apply block mx-auto rounded-lg;
+		@apply block mx-auto rounded-lg pointer-events-none select-none;
 	}
 }
 
 .hide {
-	@apply opacity-0;
+	@apply opacity-0 pointer-events-none;
 }
 
 .left {
@@ -88,6 +161,10 @@ const getPosition = (i: number) => {
 
 .middle {
 	transform: rotateY(0deg) translateX(0) scale(1);
+
+	&.shake {
+		animation: tilt-shaking 1s;
+	}
 }
 
 .right {
