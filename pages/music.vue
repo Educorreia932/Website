@@ -1,18 +1,14 @@
 <template>
-	<div>
-		<section>
-			<h2>My favorite music albums</h2>
+	<section class="flex flex-col flex-1">
+		<h2 class="flex-0">My favorite music albums</h2>
 
-			<div>
-				<CoverFlow/>
-			</div>
-		</section>
-	</div>
+		<div class="flex flex-col flex-1 justify-center">
+			<CoverFlow/>
+		</div>
+	</section>
 </template>
 
 <script setup lang="ts">
-import music from "~/assets/json/music.json";
-
 definePageMeta({
 	title: "Music",
 	kana: "音楽",

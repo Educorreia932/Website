@@ -1,32 +1,36 @@
 <template>
-	<div id="scroller" @keyup.space="advanceTrack">
-		<span
-			v-for="(item, i) in albums"
-			:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
-			@click="i === currentPosition? advanceTrack() : scroll(i)"
-		>
-			<nuxt-img width="300" :src="item.album.images[1].url" alt="Album cover"/>
-		</span>
+	<div>
+		<div id="scroller">
+			<span
+				v-for="(item, i) in albums"
+				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
+				@click="i === currentPosition? changeTrack(1) : scroll(i)"
+			>
+				<nuxt-img :src="item.image_url" alt="Album cover"/>
+			</span>
+		</div>
+
+		<p class="text-center">
+			<span class="text-xl">
+				<strong>{{ currentAlbum.artist }}</strong> |
+
+				<a :href="currentAlbum.album_url" class="text-black dark:text-white">
+					{{ currentAlbum.name }}
+				</a>
+			</span>
+
+			<br>
+
+			<span class="flex flex-row space-x-2 text-center items-center justify-center">
+				<AudioBars/>
+	
+				<a :href="currentAlbum.tracks[currentTrack].track_url"
+				   class="text-black dark:text-white">
+					{{ currentAlbum.tracks[currentTrack].name }}
+				</a>
+			</span>
+		</p>
 	</div>
-
-	<p class="text-center">
-		<strong>{{ currentAlbum.album.artists[0].name }}</strong> |
-
-		<a :href="currentAlbum.album.external_urls.spotify" class="text-black dark:text-white">
-			{{ currentAlbum.album.name }}
-		</a>
-
-		<br>
-
-		<span class="flex flex-row space-x-2 text-center items-center justify-center">
-			<AudioBars/>
-
-			<a :href="currentAlbum.album.tracks.items[currentTrack].external_urls.spotify"
-			   class="text-black dark:text-white">
-				{{ currentAlbum.album.tracks.items[currentTrack].name }}
-			</a>
-		</span>
-	</p>
 
 	<audio :src="previewTrack" autoplay loop ref="audioPlayer"></audio>
 </template>
@@ -38,7 +42,7 @@ const albums = music.albums;
 
 let currentPosition = ref(0);
 let shake = ref(false);
-let previewTrack = ref<string>("");
+let previewTrack = ref<string | null>(null);
 const audioPlayer = ref<HTMLAudioElement | null>(null);
 const currentAlbum = computed(() => albums[currentPosition.value]);
 const currentTrack = ref(0);
@@ -49,16 +53,16 @@ const scroll = (i: number) => {
 	currentPosition.value = i;
 };
 
-const advanceTrack = () => {
+const changeTrack = (offset: number) => {
 	shake.value = true;
 
 	setTimeout(() => shake.value = false, 1000);
 
-	currentTrack.value = (currentTrack.value + 1) % currentAlbum.value.album.tracks.items.length;
+	currentTrack.value = mod((currentTrack.value + offset), currentAlbum.value.tracks.length);
 };
 
 watchEffect(() => {
-	const track = currentAlbum.value.album.tracks.items[currentTrack.value];
+	const track = currentAlbum.value.tracks[currentTrack.value];
 
 	previewTrack.value = track.preview_url;
 });
@@ -67,9 +71,12 @@ onMounted(() => {
 	if (audioPlayer.value != null)
 		audioPlayer.value.volume = 0.2;
 
-	window.addEventListener('keyup', (event) => {
-		if (event.code == "Space")
-			advanceTrack();
+	window.addEventListener("keyup", (event) => {
+		if (event.code == "ArrowDown")
+			changeTrack(1);
+
+		else if (event.code == "ArrowUp")
+			changeTrack(-1);
 
 		else if (event.code == "ArrowLeft")
 			scroll(mod(currentPosition.value - 1, albums.length));
@@ -104,6 +111,8 @@ const getPosition = (i: number) => {
 
 <style scoped lang="scss">
 @keyframes tilt-shaking {
+	$angle: 10deg;
+
 	0% {
 		transform: translateX(0)
 	}
@@ -111,52 +120,45 @@ const getPosition = (i: number) => {
 		transform: translateY(-9px)
 	}
 	35% {
-		transform: translateY(-9px) rotate(17deg)
+		transform: translateY(-9px) rotate($angle)
 	}
 	55% {
-		transform: translateY(-9px) rotate(-17deg)
+		transform: translateY(-9px) rotate(-$angle)
 	}
 	65% {
-		transform: translateY(-9px) rotate(17deg)
+		transform: translateY(-9px) rotate($angle)
 	}
 	75% {
-		transform: translateY(-9px) rotate(-17deg)
+		transform: translateY(-9px) rotate(-$angle)
 	}
 	100% {
 		transform: translateY(0) rotate(0)
 	}
 }
 
-#scroller {
-	@apply mx-auto;
-
-	width: 300px;
-	height: 300px;
-	perspective: 500px;
+@mixin scroller($size) {
+	width: $size;
+	height: $size;
 }
 
-.item {
-	@apply cursor-pointer;
+@mixin left($offset) {
+	transform: rotateY(25deg) translateX(-#{$offset}) skewY(-5deg) scale(0.4, 0.6);
 
-	width: 300px;
-	position: absolute;
-	transition: all 0.4s ease-in-out;
+	&.hide {
+		transform: rotateY(25deg) translateX(-#{$offset}) skewY(-5deg) scale(0.3, 0.5);
+	}
+}
 
-	img {
-		@apply block mx-auto rounded-lg pointer-events-none select-none;
+@mixin right($offset) {
+	transform: rotateY(-25deg) translateX($offset) skewY(5deg) scale(0.4, 0.6);
+
+	&.hide {
+		transform: rotateY(-25deg) translateX($offset) skewY(5deg) scale(0.3, 0.5);
 	}
 }
 
 .hide {
 	@apply opacity-0 pointer-events-none;
-}
-
-.left {
-	transform: rotateY(25deg) translateX(-320px) skewY(-5deg) scale(0.4, 0.6);
-
-	&.hide {
-		transform: rotateY(25deg) translateX(-430px) skewY(-5deg) scale(0.3, 0.5);
-	}
 }
 
 .middle {
@@ -167,11 +169,71 @@ const getPosition = (i: number) => {
 	}
 }
 
-.right {
-	transform: rotateY(-25deg) translateX(320px) skewY(5deg) scale(0.4, 0.6);
+#scroller {
+	@apply mx-auto;
 
-	&.hide {
-		transform: rotateY(-25deg) translateX(430px) skewY(5deg) scale(0.3, 0.5);
+	perspective: 500px;
+
+	@media screen and (min-width: 0px) {
+		@include scroller(45vw);
+	}
+	
+	@media screen and (min-width: 640px) {
+		@include scroller(30vw);
+	}
+
+	@media screen and (min-width: 1300px) {
+		@include scroller(25vw);
+	}
+}
+
+.item {
+	@apply cursor-pointer absolute;
+
+	transition: all 0.4s ease-in-out;
+
+	img {
+		@apply block mx-auto rounded-lg pointer-events-none select-none;
+
+		@media screen and (min-width: 0px) {
+			@include scroller(45vw);
+		}
+		
+		@media screen and (min-width: 640px) {
+			@include scroller(30vw);
+		}
+
+		@media screen and (min-width: 1300px) {
+			@include scroller(25vw);
+		}
+	}
+}
+
+.left {
+	@media screen and (min-width: 0px) {
+		@include left(35vw);
+	}
+	
+	@media screen and (min-width: 640px) {
+		@include left(23vw);
+	}
+
+	@media screen and (min-width: 1300px) {
+		@include left(20vw);
+	}
+}
+
+.right {
+	@media screen and (min-width: 0px) {
+		@include right(35vw);
+	}
+	
+	@media screen and (min-width: 640px) {
+		@include right(23vw);
+	}
+
+	@media screen and (min-width: 1300px) {
+		@include right(20vw);
 	}
 }
 </style>
