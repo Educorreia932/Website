@@ -1,21 +1,31 @@
 <template>
-	<button @click="scroll">Right</button>
 	<div id="scroller">
 		<span v-for="(album, i) in albums" :key="i" :class="`item ${getPosition(i)}`" @click="scroll(i)">
 			<img width="300" :src="`/images/albums/${album.image}`" alt="Album cover">
 		</span>
 	</div>
+
+	<audio :src="previewTrack" autoplay></audio>
 </template>
 
 <script setup lang="ts">
 import music from "~/assets/json/music.json";
 
+const {$fetchMostPlayedTrack} = useNuxtApp();
+
 const albums = music.albums;
 
 let currentPosition = ref(0);
+let previewTrack = ref(null);
 
 const scroll = (i: number) => {
 	currentPosition.value = i;
+
+	$fetchMostPlayedTrack(`https://api.spotify.com/v1/albums/${albums[i].albumID}`)
+		.then(track => {
+				previewTrack.value = track.preview_url;
+			},
+		);
 };
 
 const getPosition = (i: number) => {
@@ -39,6 +49,7 @@ const getPosition = (i: number) => {
 
 	return classes.join(" ");
 };
+
 </script>
 
 <style scoped lang="scss">
@@ -53,7 +64,7 @@ const getPosition = (i: number) => {
 
 .item {
 	@apply cursor-pointer;
-	
+
 	width: 300px;
 	position: absolute;
 	transition: all 0.4s ease-in-out;
