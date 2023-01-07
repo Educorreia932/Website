@@ -5,10 +5,20 @@
 		<div class="flex flex-col flex-1 justify-center">
 			<CoverFlow/>
 		</div>
+		
+		<div id="controls" class="space-x-2 text-gray-light">
+			<FontAwesomeIcon :icon="['fa-solid', 'arrow-left']"/>
+			<FontAwesomeIcon :icon="['fa-solid', 'arrow-up']"/>
+			<FontAwesomeIcon :icon="['fa-solid', 'arrow-down']"/>
+			<FontAwesomeIcon :icon="['fa-solid', 'arrow-right']"/>
+			<FontAwesomeIcon :icon="['fa-solid', 'arrows-down-to-line']"/>
+		</div>
 	</section>
 </template>
 
 <script setup lang="ts">
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
 definePageMeta({
 	title: "Music",
 	kana: "音楽",
