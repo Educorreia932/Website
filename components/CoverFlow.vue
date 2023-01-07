@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div id="scroller">
+		<div id="scroller" ref="scroller">
 			<span
 				v-for="(item, i) in albums"
 				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
@@ -10,7 +10,7 @@
 			</span>
 		</div>
 
-		<p class="text-center">
+		<p class="text-center select-none">
 			<span class="text-xl">
 				<strong>{{ currentAlbum.artist }}</strong> |
 
@@ -36,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+import {SwipeDirection, useSwipe} from "@vueuse/core";
 import music from "assets/json/music.json";
 
 const albums = music.albums;
@@ -43,9 +44,23 @@ const albums = music.albums;
 let currentPosition = ref(0);
 let shake = ref(false);
 let previewTrack = ref<string | null>(null);
+
+const scroller = ref(null);
 const audioPlayer = ref<HTMLAudioElement | null>(null);
+
 const currentAlbum = computed(() => albums[currentPosition.value]);
 const currentTrack = ref(0);
+
+useSwipe(scroller, {
+	threshold: 10,
+	onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
+		if (direction == SwipeDirection.LEFT)
+			scroll(currentPosition.value + 1);
+
+		else if (direction == SwipeDirection.RIGHT)
+			changeTrack(currentPosition.value + 1);
+	}
+});
 
 const scroll = (i: number) => {
 	shake.value = false;
@@ -69,7 +84,7 @@ watchEffect(() => {
 
 onMounted(() => {
 	if (audioPlayer.value != null)
-		audioPlayer.value.volume = 0.2;
+		audioPlayer.value.volume = 0.3;
 
 	window.addEventListener("keyup", (event) => {
 		if (event.code == "ArrowDown")
@@ -177,7 +192,7 @@ const getPosition = (i: number) => {
 	@media screen and (min-width: 0px) {
 		@include scroller(45vw);
 	}
-	
+
 	@media screen and (min-width: 640px) {
 		@include scroller(30vw);
 	}
@@ -198,7 +213,7 @@ const getPosition = (i: number) => {
 		@media screen and (min-width: 0px) {
 			@include scroller(45vw);
 		}
-		
+
 		@media screen and (min-width: 640px) {
 			@include scroller(30vw);
 		}
@@ -213,7 +228,7 @@ const getPosition = (i: number) => {
 	@media screen and (min-width: 0px) {
 		@include left(35vw);
 	}
-	
+
 	@media screen and (min-width: 640px) {
 		@include left(23vw);
 	}
@@ -227,7 +242,7 @@ const getPosition = (i: number) => {
 	@media screen and (min-width: 0px) {
 		@include right(35vw);
 	}
-	
+
 	@media screen and (min-width: 640px) {
 		@include right(23vw);
 	}

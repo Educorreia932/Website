@@ -20,6 +20,7 @@
 		"@types/spotify-api": "^0.0.16",
 		"@types/topojson-client": "^3.1.1",
 		"@vitejs/plugin-vue": "^3.0.1",
+		"@vueuse/core": "^9.10.0",
 		"@yeger/vue-masonry-wall": "^3.0.44",
 		"autoprefixer": "^10.4.13",
 		"d3": "^7.6.1",
@@ -32,6 +33,7 @@
 		"vue-country-flag-next": "^2.3.2"
 	},
 	"dependencies": {
-		"buffer": "^6.0.3"
+		"buffer": "^6.0.3",
+		"vue3-touch-events": "^4.1.0"
 	}
 }
