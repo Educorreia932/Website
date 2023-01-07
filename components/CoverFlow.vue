@@ -1,7 +1,7 @@
 <template>
 	<button @click="scroll">Right</button>
 	<div id="scroller">
-		<span v-for="(album, i) in albums" :key="i" :class="`item ${getPosition(i)}`">
+		<span v-for="(album, i) in albums" :key="i" :class="`item ${getPosition(i)}`" @click="scroll(i)">
 			<img width="300" :src="`/images/albums/${album.image}`" alt="Album cover">
 		</span>
 	</div>
@@ -14,8 +14,8 @@ const albums = music.albums;
 
 let currentPosition = ref(0);
 
-const scroll = () => {
-	currentPosition.value = mod(currentPosition.value + 1, albums.length);
+const scroll = (i: number) => {
+	currentPosition.value = i;
 };
 
 const getPosition = (i: number) => {
@@ -52,6 +52,8 @@ const getPosition = (i: number) => {
 }
 
 .item {
+	@apply cursor-pointer;
+	
 	width: 300px;
 	position: absolute;
 	transition: all 0.4s ease-in-out;
@@ -62,7 +64,7 @@ const getPosition = (i: number) => {
 }
 
 .hide {
-	opacity: 0;
+	@apply opacity-0;
 }
 
 .left {
