@@ -1,37 +1,43 @@
 <template>
 	<button @click="scroll">Right</button>
 	<div id="scroller">
-		<span v-for="(item, i) in items" :key="i" :class="`item ${getPosition(i)}`">
-			<img width="300" :src="item" alt="Album cover">
+		<span v-for="(album, i) in albums" :key="i" :class="`item ${getPosition(i)}`">
+			<img width="300" :src="`/images/albums/${album.image}`" alt="Album cover">
 		</span>
 	</div>
 </template>
 
 <script setup lang="ts">
+import music from "~/assets/json/music.json";
+
+const albums = music.albums;
+
 let currentPosition = ref(0);
 
-const items = [
-	"https://upload.wikimedia.org/wikipedia/en/6/63/Tool_-_Lateralus.jpg",
-	"https://upload.wikimedia.org/wikipedia/en/1/1d/Primal_Scream_-_Screamadelica.png",
-	"https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg?20210720151219",
-];
-
 const scroll = () => {
-	currentPosition.value++;
+	currentPosition.value = mod(currentPosition.value + 1, albums.length);
 };
 
 const getPosition = (i: number) => {
+	let classes = [];
+
+	if (
+		i != mod(currentPosition.value - 1, albums.length) &&
+		i != mod(currentPosition.value + 1, albums.length) &&
+		i != currentPosition.value
+	)
+		classes.push("hide");
+
 	if (i == currentPosition.value)
-		return "middle";
+		classes.push("middle");
 
-	else if (i == mod(currentPosition.value - 1, 3))
-		return "left";
-
-	else if (i == mod(currentPosition.value + 1, 3))
-		return "right";
+	else if (mod(i - currentPosition.value, albums.length) <= albums.length / 2)
+		classes.push("right");
 
 	else
-		return "hidden";
+		classes.push("left");
+
+	return classes.join(" ");
 };
 </script>
 
@@ -47,20 +53,35 @@ const getPosition = (i: number) => {
 
 .item {
 	width: 300px;
-	display: block;
 	position: absolute;
 	transition: all 0.4s ease-in-out;
 
 	img {
-		@apply block mx-auto;
+		@apply block mx-auto rounded-lg;
 	}
+}
+
+.hide {
+	opacity: 0;
 }
 
 .left {
 	transform: rotateY(25deg) translateX(-320px) skewY(-5deg) scale(0.4, 0.6);
+
+	&.hide {
+		transform: rotateY(25deg) translateX(-430px) skewY(-5deg) scale(0.3, 0.5);
+	}
+}
+
+.middle {
+	transform: rotateY(0deg) translateX(0) scale(1);
 }
 
 .right {
 	transform: rotateY(-25deg) translateX(320px) skewY(5deg) scale(0.4, 0.6);
+
+	&.hide {
+		transform: rotateY(-25deg) translateX(430px) skewY(5deg) scale(0.3, 0.5);
+	}
 }
 </style>
