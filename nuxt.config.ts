@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 	],
 	postcss: {
 		plugins: {
+			"tailwindcss/nesting": {},
 			tailwindcss: {},
 			autoprefixer: {},
 		},
@@ -20,7 +21,7 @@ export default defineNuxtConfig({
 			spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
 			spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
 			spotifyRt: process.env.SPOTIFY_RT,
-		}
+		},
 	},
 	image: {
 		provider: "netlify",
