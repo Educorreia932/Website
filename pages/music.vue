@@ -5,23 +5,25 @@
 		<section>
 			<h2>My favorite music albums</h2>
 
-			<div id="albums">
-				<div v-for="album in albums">
-					<a
-						:href="album.url"
-						:title="`${album.title} - ${album.artist}`"
-						class="h-full w-full"
-						target="_blank"
-					>
-						<nuxt-img
-							class="album"
-							:src="`/images/albums/${album.image}`"
-							format="webp"
-							placeholder
-						/>
-					</a>
-				</div>
-			</div>
+<!--			<div id="albums">-->
+<!--				<div v-for="album in albums">-->
+<!--					<a-->
+<!--						:href="album.url"-->
+<!--						:title="`${album.title} - ${album.artist}`"-->
+<!--						class="h-full w-full"-->
+<!--						target="_blank"-->
+<!--					>-->
+<!--						<nuxt-img-->
+<!--							class="album"-->
+<!--							:src="`/images/albums/${album.image}`"-->
+<!--							format="webp"-->
+<!--							placeholder-->
+<!--						/>-->
+<!--					</a>-->
+<!--				</div>-->
+<!--			</div>-->
+
+				<CoverFlow/>
 		</section>
 	</div>
 </template>
