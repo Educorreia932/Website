@@ -34,7 +34,6 @@
 </template>
 
 <script setup lang="ts">
-import {Globe} from "#components";
 import travel from "~/assets/json/travel.json";
 
 definePageMeta({

@@ -33,7 +33,6 @@
 		"vue-country-flag-next": "^2.3.2"
 	},
 	"dependencies": {
-		"buffer": "^6.0.3",
-		"vue3-touch-events": "^4.1.0"
+		"buffer": "^6.0.3"
 	}
 }

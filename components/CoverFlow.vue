@@ -6,7 +6,7 @@
 				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
 				@click="i === currentPosition? changeTrack(1) : scroll(i)"
 			>
-				<nuxt-img :src="item.image_url" alt="Album cover"/>
+				<img :src="item.image_url" alt="Album cover"/>
 			</span>
 		</div>
 
