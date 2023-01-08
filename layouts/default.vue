@@ -1,5 +1,7 @@
 <template>
 	<div id="container">
+		<NavigationTabs class="pt-6"/>
+
 		<div id="content" class="relative">
 			<header class="flex justify-between">
 				<h1 class="truncate leading-normal">
@@ -26,16 +28,6 @@
 							<rt>Dark</rt>
 						</ruby>
 					</button>
-
-					<NuxtLink
-						to="/"
-						class="text-black dark:text-white self-center"
-					>
-						<ruby class="under">
-							家
-							<rt>Home</rt>
-						</ruby>
-					</NuxtLink>
 				</div>
 			</header>
 
@@ -44,23 +36,21 @@
 			</main>
 
 			<footer>
+				<div class="text-2xl space-x-3">
+					<a
+						v-for="(socialLink, i) in socialLinks"
+						:key="i"
+						class="social-link"
+						:href="socialLink.url"
+						:title="socialLink.name"
+					>
+						<FontAwesomeIcon :icon="['fab', socialLink.icon]"/>
+					</a>
+				</div>
+
 				<div class="opacity-50">
 					&copy; 2022 - Eduardo Correia
 				</div>
-
-				<client-only>
-					<div class="text-2xl space-x-3">
-						<a
-							v-for="(socialLink, i) in socialLinks"
-							:key="i"
-							class="social-link"
-							:href="socialLink.url"
-							:title="socialLink.name"
-						>
-							<FontAwesomeIcon :icon="['fab', socialLink.icon]"/>
-						</a>
-					</div>
-				</client-only>
 			</footer>
 		</div>
 
@@ -75,7 +65,7 @@ useHead({
 	title: `Eduardo Correia`,
 	meta: [
 		{name: "twitter:title", content: `Eduardo Correia`},
-		{name: 'og:title', content: `Eduardo Correia`},
+		{name: "og:title", content: `Eduardo Correia`},
 	],
 });
 
@@ -110,7 +100,7 @@ const setColorTheme = (newTheme: Theme) => {
 }
 
 #content {
-	@apply bg-white dark:bg-gray-dark px-5 sm:px-10 py-3 my-6 rounded-lg flex-1 flex flex-col;
+	@apply bg-white dark:bg-gray-dark px-5 sm:px-10 py-3 mb-6 rounded-b-lg rounded-tr-lg flex-1 flex flex-col;
 }
 
 main {
