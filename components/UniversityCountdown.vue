@@ -12,10 +12,6 @@
 
 			left until I end my university course
 		</s>
-
-		<br>
-
-		On pause <FontAwesomeIcon :icon="['fas', 'pause']"/>
 	</p>
 </template>
 

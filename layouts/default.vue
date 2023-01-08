@@ -9,9 +9,7 @@
 						Eduardo Correia ￨
 					</span>
 
-					<ruby>{{ route.meta.title }}
-						<rt>{{ route.meta.kana }}</rt>
-					</ruby>
+					{{ route.meta.title }}
 				</h1>
 
 				<div class="space-x-5 flex content-center" style="font-size: 1.4em">
