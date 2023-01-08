@@ -9,6 +9,7 @@
         @apply font-kozuka text-black dark:text-white m-0 dark:bg-gray text-lg;
         font-family: 'Sawarabi Mincho', serif;
         background-color: #e8e8e8;
+        -webkit-tap-highlight-color: transparent;
     }
 
     a {
