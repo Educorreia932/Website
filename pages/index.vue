@@ -8,8 +8,8 @@
 			<nuxt-img
 				src="/images/avatar.png"
 				alt="Avatar"
-				width="300"
-				height="300"
+				width="250"
+				height="250"
 				format="webp"
 				placeholder
 			/>
@@ -42,14 +42,10 @@
 </template>
 
 <script lang="ts" setup>
-import useAssets from "~/composables/useAssets";
-
 definePageMeta({
 	title: "Home",
 	kana: "家",
 });
-
-const {images} = useAssets();
 
 const topics = [
 	{
