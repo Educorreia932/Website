@@ -42,8 +42,6 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {SwipeDirection, useSwipe} from "@vueuse/core";
 import music from "assets/json/music.json";
 
-const {$getNowPlaying} = useNuxtApp();
-
 const albums = music.albums;
 
 let currentPosition = ref(0);
@@ -61,10 +59,10 @@ useSwipe(scroller, {
 	threshold: 10,
 	onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
 		if (direction == SwipeDirection.LEFT)
-			scroll(currentPosition.value + 1);
+			scroll(mod(currentPosition.value + 1, albums.length));
 
 		else if (direction == SwipeDirection.RIGHT)
-			changeTrack(currentPosition.value + 1);
+			scroll(mod(currentPosition.value - 1, albums.length));
 	}
 });
 
@@ -100,14 +98,22 @@ onMounted(() => {
 		if (event.code == "ArrowDown") {
 			event.preventDefault();
 			changeTrack(1);
-		} else if (event.code == "ArrowUp") {
+		} 
+		
+		else if (event.code == "ArrowUp") {
 			event.preventDefault();
 			changeTrack(-1);
-		} else if (event.code == "ArrowLeft")
+		} 
+		
+		else if (event.code == "ArrowLeft") {
+			event.preventDefault();
 			scroll(mod(currentPosition.value - 1, albums.length));
+		}
 
-		else if (event.code == "ArrowRight")
+		else if (event.code == "ArrowRight") {
+			event.preventDefault();
 			scroll(mod(currentPosition.value + 1, albums.length));
+		}
 
 		else if (event.code == "Space") {
 			event.preventDefault();
