@@ -17,11 +17,11 @@ const route = useRoute();
 
 const pages = [
 	{title: "Home", path: "/", icon: "house"},
-	{title: "Projects", path: "projects", icon: "pencil-ruler"},
-	{title: "Travel", path: "travel", icon: "plane"},
-	{title: "Music", path: "music", icon: "music"},
-	{title: "Gaming", path: "gaming", icon: "gamepad"},
-	{title: "Anime & Manga", path: "anime", icon: "tv"},
+	{title: "Projects", path: "/projects", icon: "pencil-ruler"},
+	{title: "Travel", path: "/travel", icon: "plane"},
+	{title: "Music", path: "/music", icon: "music"},
+	{title: "Gaming", path: "/gaming", icon: "gamepad"},
+	{title: "Anime & Manga", path: "/anime", icon: "tv"},
 ];
 
 let currentIndex = ref(pages.findIndex(({title}) => title == route.meta.title));
