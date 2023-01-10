@@ -4,7 +4,7 @@
 			<span
 				v-for="(item, i) in albums"
 				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
-				@click="i === currentPosition? changeTrack(1) : scroll(i)"
+				@click="i === currentPosition? togglePlaying() : scroll(i)"
 			>
 				<img :src="item.image_url" alt="Album cover"/>
 			</span>
@@ -22,7 +22,9 @@
 			<br>
 
 			<span class="flex flex-row space-x-2 text-center items-center justify-center">
-				<AudioBars/>
+				<AudioBars v-if="playing"/>
+				
+				<FontAwesomeIcon :icon="['fa-solid', 'volume-xmark']" v-else/>
 	
 				<a :href="currentAlbum.tracks[currentTrack].track_url"
 				   class="text-black dark:text-white">
@@ -32,10 +34,11 @@
 		</p>
 	</div>
 
-	<audio :src="previewTrack" autoplay loop ref="audioPlayer"></audio>
+	<audio :src="previewTrack" autoplay loop ref="audioPlayer" :muted="!playing"></audio>
 </template>
 
 <script setup lang="ts">
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {SwipeDirection, useSwipe} from "@vueuse/core";
 import music from "assets/json/music.json";
 
@@ -44,6 +47,7 @@ const albums = music.albums;
 let currentPosition = ref(0);
 let shake = ref(false);
 let previewTrack = ref<string | null>(null);
+let playing = ref(true);
 
 const scroller = ref(null);
 const audioPlayer = ref<HTMLAudioElement | null>(null);
@@ -55,10 +59,10 @@ useSwipe(scroller, {
 	threshold: 10,
 	onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
 		if (direction == SwipeDirection.LEFT)
-			scroll(currentPosition.value + 1);
+			scroll(mod(currentPosition.value + 1, albums.length));
 
 		else if (direction == SwipeDirection.RIGHT)
-			changeTrack(currentPosition.value + 1);
+			scroll(mod(currentPosition.value - 1, albums.length));
 	}
 });
 
@@ -76,6 +80,10 @@ const changeTrack = (offset: number) => {
 	currentTrack.value = mod((currentTrack.value + offset), currentAlbum.value.tracks.length);
 };
 
+const togglePlaying = () => {
+	playing.value = !playing.value;
+};
+
 watchEffect(() => {
 	const track = currentAlbum.value.tracks[currentTrack.value];
 
@@ -86,18 +94,31 @@ onMounted(() => {
 	if (audioPlayer.value != null)
 		audioPlayer.value.volume = 0.3;
 
-	window.addEventListener("keyup", (event) => {
-		if (event.code == "ArrowDown")
+	window.addEventListener("keydown", (event) => {
+		if (event.code == "ArrowDown") {
+			event.preventDefault();
 			changeTrack(1);
-
-		else if (event.code == "ArrowUp")
+		} 
+		
+		else if (event.code == "ArrowUp") {
+			event.preventDefault();
 			changeTrack(-1);
-
-		else if (event.code == "ArrowLeft")
+		} 
+		
+		else if (event.code == "ArrowLeft") {
+			event.preventDefault();
 			scroll(mod(currentPosition.value - 1, albums.length));
+		}
 
-		else if (event.code == "ArrowRight")
+		else if (event.code == "ArrowRight") {
+			event.preventDefault();
 			scroll(mod(currentPosition.value + 1, albums.length));
+		}
+
+		else if (event.code == "Space") {
+			event.preventDefault();
+			togglePlaying();
+		}
 	});
 });
 
@@ -151,25 +172,28 @@ const getPosition = (i: number) => {
 	}
 }
 
-@mixin scroller($size) {
+@mixin sizer($size) {
 	width: $size;
 	height: $size;
 }
 
-@mixin left($offset) {
-	transform: rotateY(25deg) translateX(-#{$offset}) skewY(-5deg) scale(0.4, 0.6);
+@mixin side-item($offset, $direction) {
+	$y-rotation: rotateY(calc($direction * -25deg));
+	$y-skew: skewY(calc($direction * 5deg));
+
+	transform: $y-rotation translateX(calc($direction * $offset)) $y-skew scale(0.4, 0.6);
 
 	&.hide {
-		transform: rotateY(25deg) translateX(-#{$offset}) skewY(-5deg) scale(0.3, 0.5);
+		transform: $y-rotation translateX(calc($direction * (#{$offset} + 5vw))) $y-skew scale(0.3, 0.5);
 	}
 }
 
-@mixin right($offset) {
-	transform: rotateY(-25deg) translateX($offset) skewY(5deg) scale(0.4, 0.6);
+@mixin left($offset) {
+	@include side-item($offset, -1);
+}
 
-	&.hide {
-		transform: rotateY(-25deg) translateX($offset) skewY(5deg) scale(0.3, 0.5);
-	}
+@mixin right($offset) {
+	@include side-item($offset, 1);
 }
 
 .hide {
@@ -184,43 +208,34 @@ const getPosition = (i: number) => {
 	}
 }
 
+#scroller, .item img {
+	@media screen and (min-width: 0px) {
+		@include sizer(45vw);
+	}
+
+	@media screen and (min-width: 640px) {
+		@include sizer(30vw);
+	}
+
+	@media screen and (min-width: 1300px) {
+		@include sizer(25vw);
+	}
+}
+
 #scroller {
 	@apply mx-auto;
 
 	perspective: 500px;
-
-	@media screen and (min-width: 0px) {
-		@include scroller(45vw);
-	}
-
-	@media screen and (min-width: 640px) {
-		@include scroller(30vw);
-	}
-
-	@media screen and (min-width: 1300px) {
-		@include scroller(25vw);
-	}
 }
 
 .item {
 	@apply cursor-pointer absolute;
+	-webkit-tap-highlight-color: transparent;
 
 	transition: all 0.4s ease-in-out;
 
 	img {
 		@apply block mx-auto rounded-lg pointer-events-none select-none;
-
-		@media screen and (min-width: 0px) {
-			@include scroller(45vw);
-		}
-
-		@media screen and (min-width: 640px) {
-			@include scroller(30vw);
-		}
-
-		@media screen and (min-width: 1300px) {
-			@include scroller(25vw);
-		}
 	}
 }
 

@@ -9,14 +9,15 @@ import {
 	faPause,
 	faPencilRuler,
 	faPlane,
-	faTv
+	faTv,
+    faVolumeMute
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 config.autoAddCss = false;
 
 library.add(faLink, faSpotify, faGithub, faInstagram, faLinkedin, faPause, faArrowUp, faHouse, faPencilRuler, faPlane,
-	faMusic, faGamepad, faTv);
+	faMusic, faGamepad, faTv, faVolumeMute);
 
 export default defineNuxtPlugin((nuxtApp) => {
 	nuxtApp.vueApp.component("FontAwesomeIcon", FontAwesomeIcon);
