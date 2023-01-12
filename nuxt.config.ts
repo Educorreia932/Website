@@ -10,7 +10,15 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
-	build: {},
+	build: {
+		transpile: [
+			"@fortawesome/vue-fontawesome",
+			"@fortawesome/fontawesome-svg-core",
+			"@fortawesome/pro-solid-svg-icons",
+			"@fortawesome/pro-regular-svg-icons",
+			"@fortawesome/free-brands-svg-icons"
+		]
+	},
 	modules: [
 		"@nuxtjs/tailwindcss",
 		"@nuxt/image-edge",
@@ -27,6 +35,6 @@ export default defineNuxtConfig({
 		provider: "netlify",
 	},
 	colorMode: {
-		classSuffix: '',
+		classSuffix: "",
 	},
 });
