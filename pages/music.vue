@@ -11,13 +11,16 @@
 			<FontAwesomeIcon :icon="['fa-solid', 'arrow-up']"/>
 			<FontAwesomeIcon :icon="['fa-solid', 'arrow-down']"/>
 			<FontAwesomeIcon :icon="['fa-solid', 'arrow-right']"/>
-			<FontAwesomeIcon :icon="['fa-solid', 'arrows-down-to-line']"/>
+		<CoverFlow :albums="albums" v-if="currentViewMode === ViewMode.Carousel"/>
 		</div>
 	</section>
 </template>
 
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import music from "assets/json/music.json";
+import {Ref} from "vue";
+import {Album} from "~/types/Album";
+let albums: Ref<Album[]> = ref(music.albums);
 
 definePageMeta({
 	title: "Music",

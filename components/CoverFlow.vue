@@ -4,72 +4,70 @@
 			<span
 				v-for="(item, i) in albums"
 				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
-				@click="i === currentPosition? togglePlaying() : scroll(i)"
+				@click="i === currentAlbumIndex? togglePlaying() : scroll(i)"
 			>
 				<img :src="item.image_url" alt="Album cover"/>
 			</span>
 		</div>
 
-		<p class="text-center select-none">
-			<span class="text-xl">
-				<strong>{{ currentAlbum.artist }}</strong> |
+		<div>
+			<AlbumInformation
+				:album="currentAlbum"
+				:current-track="currentTrack"
+				:playing="playing"
+				class="mb-4"
+			/>
 
-				<a :href="currentAlbum.album_url" class="text-black dark:text-white">
-					{{ currentAlbum.name }}
-				</a>
-			</span>
+			<div class="flex flex-row justify-center">
+				<AudioControls 
+					:playing="playing"
+					:on-backward="() => changeTrack(-1)" 
+					:on-play-pause="togglePlaying"
+					:on-forward="() => changeTrack(1)"
+				/>
+			</div>
+		</div>
 
-			<br>
-
-			<span class="flex flex-row space-x-2 text-center items-center justify-center">
-				<AudioBars v-if="playing"/>
-				
-				<FontAwesomeIcon :icon="['fa-solid', 'volume-xmark']" v-else/>
-	
-				<a :href="currentAlbum.tracks[currentTrack].track_url"
-				   class="text-black dark:text-white">
-					{{ currentAlbum.tracks[currentTrack].name }}
-				</a>
-			</span>
-		</p>
+		<AudioPlayer :track="currentTrack" :playing="playing"/>
 	</div>
-
-	<audio :src="previewTrack" autoplay loop ref="audioPlayer" :muted="!playing"></audio>
 </template>
 
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {SwipeDirection, useSwipe} from "@vueuse/core";
-import music from "assets/json/music.json";
+import {ComputedRef} from "vue";
+import {Album} from "~/types/Album";
+import {Track} from "~/types/Track";
 
-const albums = music.albums;
+let {albums} = defineProps<{
+	albums: Album[],
+}>();
 
-let currentPosition = ref(0);
 let shake = ref(false);
 let previewTrack = ref<string | null>(null);
-let playing = ref(true);
 
 const scroller = ref(null);
-const audioPlayer = ref<HTMLAudioElement | null>(null);
 
-const currentAlbum = computed(() => albums[currentPosition.value]);
-const currentTrack = ref(0);
+const playing = ref(true);
+const currentAlbumIndex = ref(0);
+const currentTrackIndex = ref(0);
+const currentAlbum: ComputedRef<Album> = computed(() => albums[currentAlbumIndex.value]);
+const currentTrack: ComputedRef<Track> = computed(() => currentAlbum.value.tracks[currentTrackIndex.value]);
 
 useSwipe(scroller, {
 	threshold: 10,
 	onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
 		if (direction == SwipeDirection.LEFT)
-			scroll(mod(currentPosition.value + 1, albums.length));
+			scroll(mod(currentAlbumIndex.value + 1, albums.length));
 
 		else if (direction == SwipeDirection.RIGHT)
-			scroll(mod(currentPosition.value - 1, albums.length));
+			scroll(mod(currentAlbumIndex.value - 1, albums.length));
 	}
 });
 
 const scroll = (i: number) => {
 	shake.value = false;
-	currentTrack.value = 0;
-	currentPosition.value = i;
+	currentTrackIndex.value = 0;
+	currentAlbumIndex.value = i;
 };
 
 const changeTrack = (offset: number) => {
@@ -77,7 +75,7 @@ const changeTrack = (offset: number) => {
 
 	setTimeout(() => shake.value = false, 1000);
 
-	currentTrack.value = mod((currentTrack.value + offset), currentAlbum.value.tracks.length);
+	currentTrackIndex.value = mod((currentTrackIndex.value + offset), currentAlbum.value.tracks.length);
 };
 
 const togglePlaying = () => {
@@ -85,34 +83,32 @@ const togglePlaying = () => {
 };
 
 watchEffect(() => {
-	const track = currentAlbum.value.tracks[currentTrack.value];
+	const track = currentAlbum.value.tracks[currentTrackIndex.value];
 
-	previewTrack.value = track.preview_url;
+	if (track.preview_url)
+		previewTrack.value = track.preview_url;
 });
 
 onMounted(() => {
-	if (audioPlayer.value != null)
-		audioPlayer.value.volume = 0.3;
-
 	window.addEventListener("keydown", (event) => {
 		if (event.code == "ArrowDown") {
 			event.preventDefault();
 			changeTrack(1);
-		} 
-		
+		}
+
 		else if (event.code == "ArrowUp") {
 			event.preventDefault();
 			changeTrack(-1);
-		} 
-		
+		}
+
 		else if (event.code == "ArrowLeft") {
 			event.preventDefault();
-			scroll(mod(currentPosition.value - 1, albums.length));
+			scroll(mod(currentAlbumIndex.value - 1, albums.length));
 		}
 
 		else if (event.code == "ArrowRight") {
 			event.preventDefault();
-			scroll(mod(currentPosition.value + 1, albums.length));
+			scroll(mod(currentAlbumIndex.value + 1, albums.length));
 		}
 
 		else if (event.code == "Space") {
@@ -126,16 +122,16 @@ const getPosition = (i: number) => {
 	let classes = [];
 
 	if (
-		i != mod(currentPosition.value - 1, albums.length) &&
-		i != mod(currentPosition.value + 1, albums.length) &&
-		i != currentPosition.value
+		i != mod(currentAlbumIndex.value - 1, albums.length) &&
+		i != mod(currentAlbumIndex.value + 1, albums.length) &&
+		i != currentAlbumIndex.value
 	)
 		classes.push("hide");
 
-	if (i == currentPosition.value)
+	if (i == currentAlbumIndex.value)
 		classes.push("middle");
 
-	else if (mod(i - currentPosition.value, albums.length) <= albums.length / 2)
+	else if (mod(i - currentAlbumIndex.value, albums.length) <= albums.length / 2)
 		classes.push("right");
 
 	else
@@ -229,7 +225,7 @@ const getPosition = (i: number) => {
 }
 
 .item {
-	@apply cursor-pointer absolute;
+	@apply cursor-pointer absolute rounded-lg shadow-xl;
 	-webkit-tap-highlight-color: transparent;
 
 	transition: all 0.4s ease-in-out;
