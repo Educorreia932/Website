@@ -3,15 +3,7 @@
 		<h2 class="flex-0">My favorite music albums</h2>
 
 		<div class="flex flex-col flex-1 justify-center">
-			<CoverFlow/>
-		</div>
-		
-		<div id="controls" class="space-x-2 text-gray-light">
-			<FontAwesomeIcon :icon="['fa-solid', 'arrow-left']"/>
-			<FontAwesomeIcon :icon="['fa-solid', 'arrow-up']"/>
-			<FontAwesomeIcon :icon="['fa-solid', 'arrow-down']"/>
-			<FontAwesomeIcon :icon="['fa-solid', 'arrow-right']"/>
-		<CoverFlow :albums="albums" v-if="currentViewMode === ViewMode.Carousel"/>
+			<CoverFlow :albums="albums"/>
 		</div>
 	</section>
 </template>
