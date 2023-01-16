@@ -15,7 +15,7 @@
 				:album="currentAlbum"
 				:current-track="currentTrack"
 				:playing="playing"
-				class="mb-4"
+				class="my-4"
 			/>
 
 			<div class="flex flex-row justify-center">

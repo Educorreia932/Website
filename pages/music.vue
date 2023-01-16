@@ -1,10 +1,21 @@
 <template>
 	<section class="flex flex-col flex-1">
-		<h2 class="flex-0">My favorite music albums</h2>
+		<div class="flex justify-between mb-4">
+			<h2 class="flex-0">My favorite music albums</h2>
 
-		<div class="flex flex-col flex-1 justify-center">
-			<CoverFlow :albums="albums"/>
+			<button @click="changeViewMode">
+				View mode
+			</button>
 		</div>
+
+		<!--		<button @click="sortAlbums">-->
+		<!--			<FontAwesomeIcon :icon="['fa-solid', 'sort']"/>-->
+		<!--			Sort-->
+		<!--		</button>-->
+
+		<CoverFlow :albums="albums" v-if="currentViewMode === ViewMode.Carousel"/>
+
+		<AlbumGallery :albums="albums" v-else/>
 	</section>
 </template>
 
@@ -12,6 +23,12 @@
 import music from "assets/json/music.json";
 import {Ref} from "vue";
 import {Album} from "~/types/Album";
+
+enum ViewMode {
+	Carousel,
+	Gallery,
+}
+
 let albums: Ref<Album[]> = ref(music.albums);
 
 definePageMeta({
@@ -21,7 +38,4 @@ definePageMeta({
 </script>
 
 <style scoped>
-h2 {
-	@apply mb-5;
-}
 </style>
