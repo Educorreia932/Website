@@ -5,8 +5,10 @@ import {
 	faBackwardStep,
 	faForwardStep,
 	faGamepad,
+	faHeadphones,
 	faHouse,
 	faLink,
+	faListUl,
 	faMusic,
 	faPause,
 	faPencilRuler,
@@ -36,7 +38,9 @@ library.add(
 	faVolumeMute,
 	faForwardStep,
 	faBackwardStep,
-	faPlay
+	faPlay,
+	faListUl,
+	faHeadphones
 );
 
 export default defineNuxtPlugin((nuxtApp) => {

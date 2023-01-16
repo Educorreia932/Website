@@ -3,9 +3,21 @@
 		<div class="flex justify-between mb-4">
 			<h2 class="flex-0">My favorite music albums</h2>
 
-			<button @click="changeViewMode">
-				View mode
-			</button>
+			<div class="view-mode">
+				<button
+					@click="currentViewMode = ViewMode.Gallery"
+					:class="currentViewMode === ViewMode.Gallery? 'opacity-100': 'opacity-50'"
+				>
+					<FontAwesomeIcon :icon="['fa-solid', 'fa-list-ul']"/>
+				</button>
+
+				<button
+					@click="currentViewMode = ViewMode.Carousel"
+					:class="currentViewMode === ViewMode.Carousel? 'opacity-100': 'opacity-50'"
+				>
+					<FontAwesomeIcon :icon="['fa-solid', 'fa-headphones']"/>
+				</button>
+			</div>
 		</div>
 
 		<!--		<button @click="sortAlbums">-->
@@ -30,6 +42,7 @@ enum ViewMode {
 }
 
 let albums: Ref<Album[]> = ref(music.albums);
+let currentViewMode = ref(ViewMode.Carousel);
 
 definePageMeta({
 	title: "Music",
@@ -38,4 +51,11 @@ definePageMeta({
 </script>
 
 <style scoped>
+.view-mode {
+	@apply space-x-3;
+
+	& > * {
+		@apply w-5 h-5 p-2 text-center text-sm bg-white-dark dark:bg-gray rounded-full hover:opacity-100;
+	}
+}
 </style>
