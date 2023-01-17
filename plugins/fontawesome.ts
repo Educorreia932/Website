@@ -14,6 +14,7 @@ import {
 	faPencilRuler,
 	faPlane,
 	faPlay,
+	faSort,
 	faTv,
 	faVolumeMute
 } from "@fortawesome/free-solid-svg-icons";
@@ -36,6 +37,7 @@ library.add(
 	faGamepad,
 	faTv,
 	faVolumeMute,
+	faSort,
 	faForwardStep,
 	faBackwardStep,
 	faPlay,

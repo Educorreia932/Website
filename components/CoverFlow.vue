@@ -4,7 +4,7 @@
 			<span
 				v-for="(item, i) in albums"
 				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
-				@click="i === currentAlbumIndex? togglePlaying() : scroll(i)"
+				@click="i === store.currentAlbumIndex? store.togglePlaying() : scroll(i)"
 			>
 				<img :src="item.image_url" alt="Album cover"/>
 			</span>
@@ -14,21 +14,21 @@
 			<AlbumInformation
 				:album="currentAlbum"
 				:current-track="currentTrack"
-				:playing="playing"
+				:playing="store.playing"
 				class="my-4"
 			/>
 
 			<div class="flex flex-row justify-center">
-				<AudioControls 
-					:playing="playing"
-					:on-backward="() => changeTrack(-1)" 
-					:on-play-pause="togglePlaying"
+				<AudioControls
+					:playing="store.playing"
+					:on-backward="() => changeTrack(-1)"
+					:on-play-pause="store.togglePlaying"
 					:on-forward="() => changeTrack(1)"
 				/>
 			</div>
 		</div>
 
-		<AudioPlayer :track="currentTrack" :playing="playing"/>
+		<AudioPlayer :track="currentTrack" :playing="store.playing"/>
 	</div>
 </template>
 
@@ -37,6 +37,9 @@ import {SwipeDirection, useSwipe} from "@vueuse/core";
 import {ComputedRef} from "vue";
 import {Album} from "~/types/Album";
 import {Track} from "~/types/Track";
+import {useMusicStore} from "~/stores/music-store";
+
+const store = useMusicStore();
 
 let {albums} = defineProps<{
 	albums: Album[],
@@ -47,27 +50,25 @@ let previewTrack = ref<string | null>(null);
 
 const scroller = ref(null);
 
-const playing = ref(true);
-const currentAlbumIndex = ref(0);
 const currentTrackIndex = ref(0);
-const currentAlbum: ComputedRef<Album> = computed(() => albums[currentAlbumIndex.value]);
+const currentAlbum: ComputedRef<Album> = computed(() => albums[store.currentAlbumIndex]);
 const currentTrack: ComputedRef<Track> = computed(() => currentAlbum.value.tracks[currentTrackIndex.value]);
 
 useSwipe(scroller, {
 	threshold: 10,
 	onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
 		if (direction == SwipeDirection.LEFT)
-			scroll(mod(currentAlbumIndex.value + 1, albums.length));
+			scroll(mod(store.currentAlbumIndex + 1, albums.length));
 
 		else if (direction == SwipeDirection.RIGHT)
-			scroll(mod(currentAlbumIndex.value - 1, albums.length));
+			scroll(mod(store.currentAlbumIndex - 1, albums.length));
 	}
 });
 
 const scroll = (i: number) => {
 	shake.value = false;
 	currentTrackIndex.value = 0;
-	currentAlbumIndex.value = i;
+	store.setCurrentAlbumIndex(i);
 };
 
 const changeTrack = (offset: number) => {
@@ -78,10 +79,6 @@ const changeTrack = (offset: number) => {
 	currentTrackIndex.value = mod((currentTrackIndex.value + offset), currentAlbum.value.tracks.length);
 };
 
-const togglePlaying = () => {
-	playing.value = !playing.value;
-};
-
 watchEffect(() => {
 	const track = currentAlbum.value.tracks[currentTrackIndex.value];
 
@@ -89,49 +86,55 @@ watchEffect(() => {
 		previewTrack.value = track.preview_url;
 });
 
+const onMouseDown = (event: KeyboardEvent) => {
+	if (event.code == "ArrowDown") {
+		event.preventDefault();
+		changeTrack(1);
+	}
+
+	else if (event.code == "ArrowUp") {
+		event.preventDefault();
+		changeTrack(-1);
+	}
+
+	else if (event.code == "ArrowLeft") {
+		event.preventDefault();
+		scroll(mod(store.currentAlbumIndex - 1, albums.length));
+	}
+
+	else if (event.code == "ArrowRight") {
+		event.preventDefault();
+		scroll(mod(store.currentAlbumIndex + 1, albums.length));
+	}
+
+	else if (event.code == "Space") {
+		event.preventDefault();
+		store.togglePlaying();
+	}
+};
+
 onMounted(() => {
-	window.addEventListener("keydown", (event) => {
-		if (event.code == "ArrowDown") {
-			event.preventDefault();
-			changeTrack(1);
-		}
+	window.addEventListener("keydown", onMouseDown);
+});
 
-		else if (event.code == "ArrowUp") {
-			event.preventDefault();
-			changeTrack(-1);
-		}
-
-		else if (event.code == "ArrowLeft") {
-			event.preventDefault();
-			scroll(mod(currentAlbumIndex.value - 1, albums.length));
-		}
-
-		else if (event.code == "ArrowRight") {
-			event.preventDefault();
-			scroll(mod(currentAlbumIndex.value + 1, albums.length));
-		}
-
-		else if (event.code == "Space") {
-			event.preventDefault();
-			togglePlaying();
-		}
-	});
+onUnmounted(() => {
+	window.removeEventListener("mousedown", onMouseDown, true);
 });
 
 const getPosition = (i: number) => {
 	let classes = [];
 
 	if (
-		i != mod(currentAlbumIndex.value - 1, albums.length) &&
-		i != mod(currentAlbumIndex.value + 1, albums.length) &&
-		i != currentAlbumIndex.value
+		i != mod(store.currentAlbumIndex - 1, albums.length) &&
+		i != mod(store.currentAlbumIndex + 1, albums.length) &&
+		i != store.currentAlbumIndex
 	)
 		classes.push("hide");
 
-	if (i == currentAlbumIndex.value)
+	if (i == store.currentAlbumIndex)
 		classes.push("middle");
 
-	else if (mod(i - currentAlbumIndex.value, albums.length) <= albums.length / 2)
+	else if (mod(i - store.currentAlbumIndex, albums.length) <= albums.length / 2)
 		classes.push("right");
 
 	else
