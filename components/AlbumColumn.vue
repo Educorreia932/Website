@@ -1,5 +1,5 @@
 <template>
-	<div class="row">
+	<div class="column relative">
 		<div v-for="(album, j) in albums" :key="j" class="album">
 			<img
 				:src="album.image_url"
@@ -18,20 +18,19 @@ const {albums} = defineProps<{
 </script>
 
 <style scoped>
-.row {
-	@apply flex flex-row;
+.column {
+	@apply grid grid-rows-2 grid-flow-col gap-4;
 }
 
 .album {
-	@apply hover:mr-52 transition-all;
+	@apply transition-all;
 
-	&:not(:first-child) {
-		@apply -ml-36;
-	}
+	width: 14rem;
+	height: 14rem;
 
 	img {
-		height: 14rem;
-		width: 14rem;
+		height: 100%;
+		width: 100%;
 		
 		@apply mx-auto rounded-lg cursor-pointer shadow-[-8px_0px_15px_rgba(0,0,0,0.3)];
 	}
