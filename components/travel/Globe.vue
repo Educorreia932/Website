@@ -122,9 +122,7 @@ onMounted(async () => {
 		d3.selectAll("#" + country.name.split(" ").join("_"))
 			.attr("class", "visited")
 			.on("mouseenter", (e) => {
-				const countryName = e.path[0].id.split("_").join(" ");
-
-
+				const countryName = e.target?.id.split("_").join(" ");
 
 				if (countryName !== "undefined")
 					emit("hoveringCountry", countryName);
@@ -133,7 +131,7 @@ onMounted(async () => {
 				emit("hoveringCountry", "");
 			})
 			.on("click", (e) => {
-				focusOnCountry(e.path[0].id);
+				focusOnCountry(e.target?.id);
 			});
 	});
 

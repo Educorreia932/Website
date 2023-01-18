@@ -18,12 +18,9 @@ import gaming from "~/assets/json/gaming.json";
 
 definePageMeta({
 	title: "Gaming",
-	kana: "ゲーム",
 });
 
 const games = gaming.games;
-
-const {images} = useAssets();
 </script>
 
 <style scoped>

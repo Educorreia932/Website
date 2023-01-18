@@ -22,6 +22,5 @@ import projects from "~/assets/json/projects.json";
 
 definePageMeta({
 	title: "Projects",
-	kana: "事業",
 });
 </script>

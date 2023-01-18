@@ -10,7 +10,8 @@
 			</span>
 		</p>
 
-		<div class="flex flex-row space-x-2 text-center items-center justify-center text-sm" v-if="currentTrack != null">
+		<div class="flex flex-row space-x-2 text-center items-center justify-center text-sm"
+			 v-if="currentTrack != null">
 			<div>
 				<AudioBars v-if="playing"/>
 				<FontAwesomeIcon :icon="['fa-solid', 'volume-xmark']" v-else/>
@@ -29,6 +30,7 @@
 <script setup lang="ts">
 import {Album} from "~/types/Album";
 import {Track} from "~/types/Track";
+import AudioBars from "~/components/music/AudioBars.vue";
 
 const {album, currentTrack} = defineProps<{
 	album: Album,

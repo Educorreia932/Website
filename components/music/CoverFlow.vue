@@ -35,9 +35,12 @@
 <script setup lang="ts">
 import {SwipeDirection, useSwipe} from "@vueuse/core";
 import {ComputedRef} from "vue";
+import AlbumInformation from "~/components/music/AlbumInformation.vue";
+import AudioControls from "~/components/music/AudioControls.vue";
+import AudioPlayer from "~/components/music/AudioPlayer.vue";
+import {useMusicStore} from "~/stores/music-store";
 import {Album} from "~/types/Album";
 import {Track} from "~/types/Track";
-import {useMusicStore} from "~/stores/music-store";
 
 const store = useMusicStore();
 

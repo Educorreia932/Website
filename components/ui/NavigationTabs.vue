@@ -3,9 +3,8 @@
 		<NuxtLink
 			v-for="(page, i) in pages"
 			:key="i"
-			:class="`tab ${i === currentIndex? 'active' : ''}`"
+			:class="`tab ${route.meta.title === page.title? 'active' : ''}`"
 			:to="page.path"
-			@click="currentIndex = i"
 		>
 			<FontAwesomeIcon :icon="['fa', page.icon]"/>
 		</NuxtLink>
@@ -23,8 +22,6 @@ const pages = [
 	{title: "Gaming", path: "/gaming", icon: "gamepad"},
 	{title: "Anime & Manga", path: "/anime", icon: "tv"},
 ];
-
-let currentIndex = ref(pages.findIndex(({title}) => title == route.meta.title));
 </script>
 
 <style scoped>

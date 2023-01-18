@@ -35,10 +35,10 @@
 
 <script setup lang="ts">
 import travel from "~/assets/json/travel.json";
+import Globe from "~/components/travel/Globe.vue";
 
 definePageMeta({
 	title: "Travel",
-	kana: "旅行",
 });
 
 const visitedCountries = travel.visited;

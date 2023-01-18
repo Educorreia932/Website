@@ -31,10 +31,7 @@ import anime from "~/assets/json/anime.json";
 
 definePageMeta({
 	title: "Anime & Manga",
-	kana: "アニメ 漫画",
 });
-
-const {images} = useAssets();
 </script>
 
 <style scoped>

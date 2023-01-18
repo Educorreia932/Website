@@ -44,34 +44,28 @@
 <script lang="ts" setup>
 definePageMeta({
 	title: "Home",
-	kana: "家",
 });
 
 const topics = [
 	{
 		endpoint: "projects",
 		text: "building things",
-		kana: "事業",
 	},
 	{
 		endpoint: "travel",
 		text: "travelling",
-		kana: "旅行",
 	},
 	{
 		endpoint: "music",
 		text: "music",
-		kana: "音楽",
 	},
 	{
 		endpoint: "gaming",
 		text: "gaming",
-		kana: "ゲーム",
 	},
 	{
 		endpoint: "anime",
 		text: "anime & manga",
-		kana: "アニメ 漫画",
 	},
 ];
 </script>

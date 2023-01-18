@@ -4,17 +4,17 @@
 			<h2 class="flex-0">My favorite music albums</h2>
 
 			<div class="flex flex-row space-x-3">
-<!--				<div>-->
-<!--					<label for="sort">-->
-<!--						<FontAwesomeIcon :icon="['fa-solid', 'sort']"/>-->
-<!--					</label>-->
+				<!--				<div>-->
+				<!--					<label for="sort">-->
+				<!--						<FontAwesomeIcon :icon="['fa-solid', 'sort']"/>-->
+				<!--					</label>-->
 
-<!--					<select id="sort" @change="(event) => store.setSortingCriteria(event.target.value)">-->
-<!--						<option :value="SortingCriteria.Artist">Artist</option>-->
-<!--						<option :value="SortingCriteria.Title">Title</option>-->
-<!--						<option :value="SortingCriteria.Date">Date of release</option>-->
-<!--					</select>-->
-<!--				</div>-->
+				<!--					<select id="sort" @change="(event) => store.setSortingCriteria(event.target.value)">-->
+				<!--						<option :value="SortingCriteria.Artist">Artist</option>-->
+				<!--						<option :value="SortingCriteria.Title">Title</option>-->
+				<!--						<option :value="SortingCriteria.Date">Date of release</option>-->
+				<!--					</select>-->
+				<!--				</div>-->
 
 				<div class="view-mode">
 					<button
@@ -43,10 +43,11 @@
 <script setup lang="ts">
 import music from "assets/json/music.json";
 import {Ref} from "vue";
-import {SortingCriteria} from "~/enums/SortingCriteria";
 import {ViewMode} from "~/enums/ViewMode";
 import {useMusicStore} from "~/stores/music-store";
 import {Album} from "~/types/Album";
+import AlbumGallery from "~/components/music/AlbumGallery.vue";
+import CoverFlow from "~/components/music/CoverFlow.vue";
 
 let albums: Ref<Album[]> = ref(music.albums);
 
@@ -70,7 +71,6 @@ const store = useMusicStore();
 
 definePageMeta({
 	title: "Music",
-	kana: "音楽",
 });
 </script>
 

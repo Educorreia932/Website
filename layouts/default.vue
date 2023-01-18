@@ -57,6 +57,9 @@
 </template>
 
 <script lang="ts" setup>
+import NavigationTabs from "~/components/ui/NavigationTabs.vue";
+import ScrollToTopButton from "~/components/ui/ScrollToTopButton.vue";
+
 const route = useRoute();
 
 useHead({

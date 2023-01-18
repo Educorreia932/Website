@@ -21,6 +21,7 @@ import {storeToRefs} from "pinia";
 import {SortingCriteria} from "~/enums/SortingCriteria";
 import {useMusicStore} from "~/stores/music-store";
 import {Album} from "~/types/Album";
+import AlbumColumn from "~/components/music/AlbumColumn.vue";
 
 const {albums} = defineProps<{
 	albums: Album[]
@@ -28,7 +29,7 @@ const {albums} = defineProps<{
 
 const store = useMusicStore();
 
-const { sortingCriteria } = storeToRefs(store);
+const {sortingCriteria} = storeToRefs(store);
 
 const groupedAlbums = computed(() => {
 	switch (sortingCriteria.value) {
