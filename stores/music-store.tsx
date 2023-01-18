@@ -6,7 +6,7 @@ export const useMusicStore = defineStore("music", {
 	state: () => {
 		return {
 			currentViewMode: ViewMode.Carousel,
-			sortingCriteria: SortingCriteria.Artist,
+			sortingCriteria: SortingCriteria.Title,
 			currentAlbumIndex: 0,
 			currentTrackIndex: 0,
 			playing: true,

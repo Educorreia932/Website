@@ -1,6 +1,6 @@
 <template>
 	<div class="column relative">
-		<div v-for="(album, j) in albums" :key="j" class="album">
+		<div v-for="(album, j) in albums" :key="j" class="album snap-start">
 			<img
 				:src="album.image_url"
 				:alt="`${album.name} cover`"
@@ -25,8 +25,8 @@ const {albums} = defineProps<{
 .album {
 	@apply transition-all;
 
-	width: 14rem;
-	height: 14rem;
+	width: 12em;
+	height: 12em;
 
 	img {
 		height: 100%;

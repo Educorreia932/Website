@@ -4,17 +4,17 @@
 			<h2 class="flex-0">My favorite music albums</h2>
 
 			<div class="flex flex-row space-x-3">
-				<div>
-					<label for="sort">
-						<FontAwesomeIcon :icon="['fa-solid', 'sort']"/>
-					</label>
+<!--				<div>-->
+<!--					<label for="sort">-->
+<!--						<FontAwesomeIcon :icon="['fa-solid', 'sort']"/>-->
+<!--					</label>-->
 
-					<select id="sort" @change="(event) => store.setSortingCriteria(event.target.value)">
-						<option :value="SortingCriteria.Artist">Artist</option>
-						<option :value="SortingCriteria.Title">Title</option>
-						<option :value="SortingCriteria.Date">Date of release</option>
-					</select>
-				</div>
+<!--					<select id="sort" @change="(event) => store.setSortingCriteria(event.target.value)">-->
+<!--						<option :value="SortingCriteria.Artist">Artist</option>-->
+<!--						<option :value="SortingCriteria.Title">Title</option>-->
+<!--						<option :value="SortingCriteria.Date">Date of release</option>-->
+<!--					</select>-->
+<!--				</div>-->
 
 				<div class="view-mode">
 					<button
@@ -52,21 +52,21 @@ let albums: Ref<Album[]> = ref(music.albums);
 
 const store = useMusicStore();
 
-watchEffect(() => {
-	switch (store.sortingCriteria) {
-		case SortingCriteria.Artist:
-			albums.value.sort((a, b) => (a.artist > b.artist) ? 1 : ((b.artist > a.artist) ? -1 : 0));
-			break;
-
-		case SortingCriteria.Title:
-			albums.value.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-			break;
-
-		case SortingCriteria.Date:
-			albums.value.sort((a, b) => new Date(a.release_date).getTime() - new Date(b.release_date).getTime());
-			break;
-	}
-});
+// watchEffect(() => {
+// 	switch (store.sortingCriteria) {
+// 		case SortingCriteria.Artist:
+// 			albums.value.sort((a, b) => (a.artist > b.artist) ? 1 : ((b.artist > a.artist) ? -1 : 0));
+// 			break;
+//
+// 		case SortingCriteria.Title:
+// 			albums.value.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+// 			break;
+//
+// 		case SortingCriteria.Date:
+// 			albums.value.sort((a, b) => new Date(a.release_date).getTime() - new Date(b.release_date).getTime());
+// 			break;
+// 	}
+// });
 
 definePageMeta({
 	title: "Music",

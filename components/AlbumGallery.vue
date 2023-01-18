@@ -1,13 +1,15 @@
 <template>
 	<div class="flex flex-row w-full">
-		<div class="gallery">
+		<div class="gallery snap-proximity snap-x">
 			<section
-				v-for="(albums, key, i) in groupedAlbums()"
+				v-for="(key, i) in Object.keys(groupedAlbums).sort()"
 				:key="i"
 			>
-				<h3 class="mt-2">{{ key }}</h3>
+				<div>
+					<h3 class="mt-2 truncate">{{ key }}</h3>
+				</div>
 
-				<AlbumColumn :albums="albums"/>
+				<AlbumColumn :albums="groupedAlbums[key]"/>
 			</section>
 		</div>
 	</div>
@@ -15,6 +17,7 @@
 
 <script setup lang="ts">
 import {groupBy} from "lodash";
+import {storeToRefs} from "pinia";
 import {SortingCriteria} from "~/enums/SortingCriteria";
 import {useMusicStore} from "~/stores/music-store";
 import {Album} from "~/types/Album";
@@ -25,24 +28,25 @@ const {albums} = defineProps<{
 
 const store = useMusicStore();
 
-const groupedAlbums = () => {
-	switch (store.sortingCriteria) {
+const { sortingCriteria } = storeToRefs(store);
+
+const groupedAlbums = computed(() => {
+	switch (sortingCriteria.value) {
 		case SortingCriteria.Artist:
 			return groupBy(albums, ({artist}) => artist);
 
 		case SortingCriteria.Title:
-			return groupBy(albums, ({name}) => name[0]);
+			return groupBy(albums, ({name}) => name[0].toUpperCase());
 
 		case SortingCriteria.Date:
 			return groupBy(albums, ({release_date}) => (new Date(release_date).getUTCFullYear()));
 	}
-};
-
+});
 </script>
 
 <style scoped>
 .gallery {
-	@apply flex flex-row overflow-hidden;
+	@apply flex flex-row overflow-y-hidden overflow-x-auto py-2;
 
 	& > * {
 		border-width: 1px;
