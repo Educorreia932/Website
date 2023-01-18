@@ -5,21 +5,20 @@
 
 
 	<p id="countdown">
-		<s class="opacity-40">
+		<span class="opacity-40">
+			Living in Japan for more
+			
 			<template v-for="(value, key, i) in remaining" :key="i">
 				{{ Math.floor(value) }}{{ key[0] }}{{ " " }}
 			</template>
-
-			left until I end my university course
-		</s>
+		</span>
 	</p>
 </template>
 
 <script setup lang="ts">
-const startDate = new Date(2018, 9, 8);
-const endDate = new Date(2023, 6, 21);
-// const today = new Date();
-const today = new Date(2022, 8, 24); // Temporarily paused
+const startDate = new Date(2022, 9, 1);
+const endDate = new Date(2023, 9, 1);
+const today = new Date();
 
 const remainingMiliseconds = ref(endDate.getTime() - today.getTime());
 
@@ -31,11 +30,11 @@ const remaining = computed(() => ({
 
 const barWidth = computed(() => 1 - (remainingMiliseconds.value / (endDate.getTime() - startDate.getTime())));
 
-// onBeforeMount(() => {
-// 	setInterval(() => {
-// 		remainingMiliseconds.value -= 1000;
-// 	}, 1000);
-// })
+onBeforeMount(() => {
+	setInterval(() => {
+		remainingMiliseconds.value -= 1000;
+	}, 1000);
+})
 </script>
 
 <style scoped>

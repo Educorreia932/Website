@@ -16,8 +16,7 @@
 		</div>
 
 		<p class="mb-2 text-center">
-			Currently attending a Master's Degree in Informatics and Computing Engineering in
-			<a href="https://sigarra.up.pt/feup/">FEUP</a>
+			Currently coding on the other side of the world
 		</p>
 
 		<p class="mt-0 text-center">
@@ -36,7 +35,7 @@
 		</p>
 
 		<div class="mt-4 md:w-7/12 w-full mx-auto">
-			<UniversityCountdown/>
+			<Countdown/>
 		</div>
 	</div>
 </template>
