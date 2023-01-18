@@ -5,13 +5,16 @@ import {
 	faBackwardStep,
 	faForwardStep,
 	faGamepad,
+	faHeadphones,
 	faHouse,
 	faLink,
+	faListUl,
 	faMusic,
 	faPause,
 	faPencilRuler,
 	faPlane,
 	faPlay,
+	faSort,
 	faTv,
 	faVolumeMute
 } from "@fortawesome/free-solid-svg-icons";
@@ -34,9 +37,12 @@ library.add(
 	faGamepad,
 	faTv,
 	faVolumeMute,
+	faSort,
 	faForwardStep,
 	faBackwardStep,
-	faPlay
+	faPlay,
+	faListUl,
+	faHeadphones
 );
 
 export default defineNuxtPlugin((nuxtApp) => {

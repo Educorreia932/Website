@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p class="text-center select-none mb-1">
+		<p class="text-center select-none m-0">
 			<span class="text-xl">
 				<strong>{{ album.artist }}</strong> |
 
@@ -10,7 +10,7 @@
 			</span>
 		</p>
 
-		<div class="flex flex-row space-x-2 text-center items-center justify-center text-sm">
+		<div class="flex flex-row space-x-2 text-center items-center justify-center text-sm" v-if="currentTrack != null">
 			<div>
 				<AudioBars v-if="playing"/>
 				<FontAwesomeIcon :icon="['fa-solid', 'volume-xmark']" v-else/>
@@ -20,6 +20,9 @@
 				{{ currentTrack.name }}
 			</a>
 		</div>
+
+		<template v-else>
+		</template>
 	</div>
 </template>
 
@@ -29,7 +32,7 @@ import {Track} from "~/types/Track";
 
 const {album, currentTrack} = defineProps<{
 	album: Album,
-	currentTrack: Track,
+	currentTrack: Track | null,
 	playing: boolean
 }>();
 </script>

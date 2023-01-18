@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxt/image-edge",
 		"@nuxtjs/color-mode",
+		"@pinia/nuxt"
 	],
 	runtimeConfig: {
 		public: {
