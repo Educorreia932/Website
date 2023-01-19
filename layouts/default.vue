@@ -62,14 +62,6 @@ import ScrollToTopButton from "~/components/ui/ScrollToTopButton.vue";
 
 const route = useRoute();
 
-useHead({
-	title: `Eduardo Correia`,
-	meta: [
-		{name: "twitter:title", content: `Eduardo Correia`},
-		{name: "og:title", content: `Eduardo Correia`},
-	],
-});
-
 const socialLinks = ref([
 	{
 		name: "Github",

@@ -69,6 +69,14 @@ const store = useMusicStore();
 // 	}
 // });
 
+useHead({
+	title: `Eduardo Correia | Music`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia | Music`},
+		{name: "og:title", content: `Eduardo Correia | Music`},
+	],
+});
+
 definePageMeta({
 	title: "Music",
 });
