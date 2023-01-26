@@ -34,9 +34,11 @@
 			</div>
 		</div>
 
-		<CoverFlow :albums="albums" v-if="store.currentViewMode === ViewMode.Carousel"/>
+		<div>
+			<CoverFlow v-if="store.currentViewMode === ViewMode.Carousel"/>
 
-		<AlbumGallery :albums="albums" v-else/>
+			<AlbumGallery v-else/>
+		</div>
 	</section>
 </template>
 
@@ -49,7 +51,6 @@ import {Album} from "~/types/Album";
 import AlbumGallery from "~/components/music/AlbumGallery.vue";
 import CoverFlow from "~/components/music/CoverFlow.vue";
 
-let albums: Ref<Album[]> = ref(music.albums);
 
 const store = useMusicStore();
 

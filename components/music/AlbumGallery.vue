@@ -16,12 +16,7 @@ import {groupBy} from "lodash";
 import {storeToRefs} from "pinia";
 import {SortingCriteria} from "~/enums/SortingCriteria";
 import {useMusicStore} from "~/stores/music-store";
-import {Album} from "~/types/Album";
 import AlbumGrid from "~/components/music/AlbumGrid.vue";
-
-const {albums} = defineProps<{
-	albums: Album[]
-}>();
 
 const store = useMusicStore();
 
@@ -30,13 +25,13 @@ const {sortingCriteria} = storeToRefs(store);
 const groupedAlbums = computed(() => {
 	switch (sortingCriteria.value) {
 		case SortingCriteria.Artist:
-			return groupBy(albums, ({artist}) => artist);
+			return groupBy(store.albums, ({artist}) => artist);
 
 		case SortingCriteria.Title:
-			return groupBy(albums, ({name}) => name[0].toUpperCase());
+			return groupBy(store.albums, ({name}) => name[0].toUpperCase());
 
 		case SortingCriteria.Date:
-			return groupBy(albums, ({release_date}) => (new Date(release_date).getUTCFullYear()));
+			return groupBy(store.albums, ({release_date}) => (new Date(release_date).getUTCFullYear()));
 	}
 });
 </script>

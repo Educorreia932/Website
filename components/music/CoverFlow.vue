@@ -2,7 +2,7 @@
 	<div>
 		<div id="scroller" ref="scroller">
 			<span
-				v-for="(item, i) in albums"
+				v-for="(item, i) in store.albums"
 				:key="i" :class="`item ${getPosition(i)} ${shake? 'shake' : ''}`"
 				@click="i === store.currentAlbumIndex? store.togglePlaying() : scroll(i)"
 			>
@@ -44,27 +44,23 @@ import {Track} from "~/types/Track";
 
 const store = useMusicStore();
 
-let {albums} = defineProps<{
-	albums: Album[],
-}>();
-
 let shake = ref(false);
 let previewTrack = ref<string | null>(null);
 
 const scroller = ref(null);
 
 const currentTrackIndex = ref(0);
-const currentAlbum: ComputedRef<Album> = computed(() => albums[store.currentAlbumIndex]);
+const currentAlbum: ComputedRef<Album> = computed(() => store.albums[store.currentAlbumIndex]);
 const currentTrack: ComputedRef<Track> = computed(() => currentAlbum.value.tracks[currentTrackIndex.value]);
 
 useSwipe(scroller, {
 	threshold: 10,
 	onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
 		if (direction == SwipeDirection.LEFT)
-			scroll(mod(store.currentAlbumIndex + 1, albums.length));
+			scroll(mod(store.currentAlbumIndex + 1, store.albums.length));
 
 		else if (direction == SwipeDirection.RIGHT)
-			scroll(mod(store.currentAlbumIndex - 1, albums.length));
+			scroll(mod(store.currentAlbumIndex - 1, store.albums.length));
 	}
 });
 
@@ -102,12 +98,12 @@ const onMouseDown = (event: KeyboardEvent) => {
 
 	else if (event.code == "ArrowLeft") {
 		event.preventDefault();
-		scroll(mod(store.currentAlbumIndex - 1, albums.length));
+		scroll(mod(store.currentAlbumIndex - 1, store.albums.length));
 	}
 
 	else if (event.code == "ArrowRight") {
 		event.preventDefault();
-		scroll(mod(store.currentAlbumIndex + 1, albums.length));
+		scroll(mod(store.currentAlbumIndex + 1, store.albums.length));
 	}
 
 	else if (event.code == "Space") {
@@ -128,8 +124,8 @@ const getPosition = (i: number) => {
 	let classes = [];
 
 	if (
-		i != mod(store.currentAlbumIndex - 1, albums.length) &&
-		i != mod(store.currentAlbumIndex + 1, albums.length) &&
+		i != mod(store.currentAlbumIndex - 1, store.albums.length) &&
+		i != mod(store.currentAlbumIndex + 1, store.albums.length) &&
 		i != store.currentAlbumIndex
 	)
 		classes.push("hide");
@@ -137,7 +133,7 @@ const getPosition = (i: number) => {
 	if (i == store.currentAlbumIndex)
 		classes.push("middle");
 
-	else if (mod(i - store.currentAlbumIndex, albums.length) <= albums.length / 2)
+	else if (mod(i - store.currentAlbumIndex, store.albums.length) <= store.albums.length / 2)
 		classes.push("right");
 
 	else
