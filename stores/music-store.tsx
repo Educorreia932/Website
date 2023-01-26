@@ -1,12 +1,15 @@
 import {defineStore} from "pinia";
 import {SortingCriteria} from "~/enums/SortingCriteria";
 import {ViewMode} from "~/enums/ViewMode";
+import music from "assets/json/music.json";
+import {Album} from "~/types/Album";
 
 export const useMusicStore = defineStore("music", {
 	state: () => {
 		return {
+			albums: music.albums,
 			currentViewMode: ViewMode.Carousel,
-			sortingCriteria: SortingCriteria.Title,
+			sortingCriteria: SortingCriteria.Artist,
 			currentAlbumIndex: 0,
 			currentTrackIndex: 0,
 			playing: true,
@@ -18,6 +21,9 @@ export const useMusicStore = defineStore("music", {
 		},
 		setSortingCriteria(sortingCriteria: SortingCriteria) {
 			this.sortingCriteria = sortingCriteria;
+		},
+		setCurrentAlbum(album: Album) {
+			this.currentAlbumIndex = this.albums.findIndex((element) => element.album_url == album.album_url);
 		},
 		setCurrentAlbumIndex(index: number) {
 			this.currentAlbumIndex = index;

@@ -34,9 +34,11 @@
 			</div>
 		</div>
 
-		<CoverFlow :albums="albums" v-if="store.currentViewMode === ViewMode.Carousel"/>
+		<div>
+			<CoverFlow v-if="store.currentViewMode === ViewMode.Carousel"/>
 
-		<AlbumGallery :albums="albums" v-else/>
+			<AlbumGallery v-else/>
+		</div>
 	</section>
 </template>
 
@@ -49,7 +51,6 @@ import {Album} from "~/types/Album";
 import AlbumGallery from "~/components/music/AlbumGallery.vue";
 import CoverFlow from "~/components/music/CoverFlow.vue";
 
-let albums: Ref<Album[]> = ref(music.albums);
 
 const store = useMusicStore();
 
@@ -84,7 +85,7 @@ definePageMeta({
 
 <style scoped>
 .view-mode {
-	@apply space-x-2;
+	@apply space-x-2 flex flex-row;
 
 	& > * {
 		@apply w-5 h-5 p-2 text-center text-sm bg-white-dark dark:bg-gray rounded-full hover:opacity-100;
