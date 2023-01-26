@@ -4,7 +4,13 @@
 			v-for="(key, i) in Object.keys(groupedAlbums).sort()"
 			:key="i"
 		>
-			<h3 class="mt-0 mb-3 truncate">{{ key }}</h3>
+			<div class="flex flex-row space-x-2 items-center mt-0 mb-3">
+				<h3 class="truncate my-0">{{ key }}</h3>
+				
+				<span class="h-5 w-5 text-sm text-center p-1 rounded-full bg-gray text-gray-light">
+					{{ groupedAlbums[key].length }}
+				</span>
+			</div>
 
 			<AlbumGrid :albums="groupedAlbums[key]"/>
 		</section>
