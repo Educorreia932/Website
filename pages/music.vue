@@ -84,7 +84,7 @@ definePageMeta({
 
 <style scoped>
 .view-mode {
-	@apply space-x-2;
+	@apply space-x-2 flex flex-row;
 
 	& > * {
 		@apply w-5 h-5 p-2 text-center text-sm bg-white-dark dark:bg-gray rounded-full hover:opacity-100;
