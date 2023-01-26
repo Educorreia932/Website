@@ -30,17 +30,18 @@ const playAlbum = () => {
 
 <style scoped>
 .album {
-	@apply transition-all relative;
+	@apply transition-all relative overflow-hidden shadow-lg;
 
 	img {
-		height: 100%;
-		width: 100%;
-
-		@apply mx-auto rounded-[12px] shadow-[-8px_0px_15px_rgba(0,0,0,0.3)];
+		@apply w-full h-full mx-auto rounded-[12px] shadow-[-8px_0px_15px_rgba(0,0,0,0.3)];
 	}
-}
 
-.play-button {
-	@apply w-10 h-10 rounded-full bg-gray text-center absolute right-3 bottom-3;
+	.play-button {
+		@apply w-10 h-10 text-white dark:text-black shadow-lg rounded-full bg-green-600 text-center absolute transition-all right-3 -bottom-12;
+	}
+
+	&:hover .play-button {
+		@apply bottom-3;
+	}
 }
 </style>
