@@ -1,5 +1,5 @@
 <template>
-	<div class="gallery space-y-8 w-8/12 mx-auto">
+	<div class="gallery">
 		<section
 			v-for="(key, i) in Object.keys(groupedAlbums).sort()"
 			:key="i"
@@ -43,7 +43,7 @@ const groupedAlbums = computed(() => {
 
 <style scoped>
 .gallery {
-	@apply flex flex-col py-2;
+	@apply flex flex-col py-2 space-y-8 w-full xl:w-8/12 mx-auto;
 }
 
 h3 {

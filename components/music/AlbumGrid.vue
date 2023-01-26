@@ -18,23 +18,18 @@ const {albums} = defineProps<{
 </script>
 
 <style scoped lang="scss">
-$size: 12em;
-
 .album-grid {
-	@apply grid grid-flow-row gap-6 grid-cols-[repeat(auto-fill,_#{$size})];
+	@apply grid grid-flow-row gap-3 xl:gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
 }
 
 .album {
 	@apply transition-all;
 
-	width: $size;
-	height: $size;
-
 	img {
 		height: 100%;
 		width: 100%;
 
-		@apply mx-auto rounded-lg cursor-pointer shadow-[-8px_0px_15px_rgba(0,0,0,0.3)];
+		@apply mx-auto rounded-[12px] cursor-pointer shadow-[-8px_0px_15px_rgba(0,0,0,0.3)];
 	}
 }
 </style>
