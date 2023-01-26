@@ -12,21 +12,15 @@
 					{{ route.meta.title }}
 				</h1>
 
-				<div class="space-x-5 flex content-center" style="font-size: 1.4em">
-					<button
-						@click="setColorTheme($colorMode.preference === 'dark'? 'light' : 'dark')"
-					>
-						<ruby class="under hidden dark:inline">
-							日
-							<rt>Light</rt>
-						</ruby>
-
-						<ruby class="under inline dark:hidden">
-							月
-							<rt>Dark</rt>
-						</ruby>
-					</button>
-				</div>
+				<button
+					@click="setColorTheme($colorMode.preference === 'dark'? 'light' : 'dark')"
+					style="font-size: 1.4em"
+				>
+					<div class="flex flex-col items-center">
+						<span>{{ isDark() ? "日" : "月" }}</span>
+						<span style="font-size: 0.7em">{{ isDark() ? "Light" : "Dark" }}</span>
+					</div>
+				</button>
 			</header>
 
 			<main class="my-3">
@@ -62,14 +56,6 @@ import ScrollToTopButton from "~/components/ui/ScrollToTopButton.vue";
 
 const route = useRoute();
 
-useHead({
-	title: `Eduardo Correia`,
-	meta: [
-		{name: "twitter:title", content: `Eduardo Correia`},
-		{name: "og:title", content: `Eduardo Correia`},
-	],
-});
-
 const socialLinks = ref([
 	{
 		name: "Github",
@@ -93,6 +79,8 @@ type Theme = "light" | "dark";
 const setColorTheme = (newTheme: Theme) => {
 	useColorMode().preference = newTheme;
 };
+
+const isDark = () => useColorMode().value === "dark";
 </script>
 
 <style scoped>

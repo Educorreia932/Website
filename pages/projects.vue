@@ -20,6 +20,14 @@
 <script setup lang="ts">
 import projects from "~/assets/json/projects.json";
 
+useHead({
+	title: `Eduardo Correia | Projects`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia | Projects`},
+		{name: "og:title", content: `Eduardo Correia | Projects`},
+	],
+});
+
 definePageMeta({
 	title: "Projects",
 });

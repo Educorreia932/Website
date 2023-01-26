@@ -41,6 +41,14 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+	title: `Eduardo Correia | Home`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia | Home`},
+		{name: "og:title", content: `Eduardo Correia | Home`},
+	],
+});
+
 definePageMeta({
 	title: "Home",
 });

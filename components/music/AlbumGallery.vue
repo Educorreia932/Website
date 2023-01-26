@@ -1,17 +1,13 @@
 <template>
-	<div class="flex flex-row w-full">
-		<div class="gallery snap-proximity snap-x">
-			<section
-				v-for="(key, i) in Object.keys(groupedAlbums).sort()"
-				:key="i"
-			>
-				<div>
-					<h3 class="mt-2 truncate">{{ key }}</h3>
-				</div>
+	<div class="gallery">
+		<section
+			v-for="(key, i) in Object.keys(groupedAlbums).sort()"
+			:key="i"
+		>
+			<h3 class="mt-0 mb-3 truncate">{{ key }}</h3>
 
-				<AlbumColumn :albums="groupedAlbums[key]"/>
-			</section>
-		</div>
+			<AlbumGrid :albums="groupedAlbums[key]"/>
+		</section>
 	</div>
 </template>
 
@@ -20,12 +16,7 @@ import {groupBy} from "lodash";
 import {storeToRefs} from "pinia";
 import {SortingCriteria} from "~/enums/SortingCriteria";
 import {useMusicStore} from "~/stores/music-store";
-import {Album} from "~/types/Album";
-import AlbumColumn from "~/components/music/AlbumColumn.vue";
-
-const {albums} = defineProps<{
-	albums: Album[]
-}>();
+import AlbumGrid from "~/components/music/AlbumGrid.vue";
 
 const store = useMusicStore();
 
@@ -34,27 +25,23 @@ const {sortingCriteria} = storeToRefs(store);
 const groupedAlbums = computed(() => {
 	switch (sortingCriteria.value) {
 		case SortingCriteria.Artist:
-			return groupBy(albums, ({artist}) => artist);
+			return groupBy(store.albums, ({artist}) => artist);
 
 		case SortingCriteria.Title:
-			return groupBy(albums, ({name}) => name[0].toUpperCase());
+			return groupBy(store.albums, ({name}) => name[0].toUpperCase());
 
 		case SortingCriteria.Date:
-			return groupBy(albums, ({release_date}) => (new Date(release_date).getUTCFullYear()));
+			return groupBy(store.albums, ({release_date}) => (new Date(release_date).getUTCFullYear()));
 	}
 });
 </script>
 
 <style scoped>
 .gallery {
-	@apply flex flex-row overflow-y-hidden overflow-x-auto py-2;
+	@apply flex flex-col py-2 space-y-8 w-full xl:w-8/12 mx-auto;
+}
 
-	& > * {
-		border-width: 1px;
-		border-style: solid;
-		border-left: 0;
-		border-image: linear-gradient(rgba(0, 0, 0, 0), rgb(79, 79, 79, 0.5), rgba(0, 0, 0, 0)) 0 100%;
-		@apply px-8;
-	}
+h3 {
+	@apply text-2xl;
 }
 </style>

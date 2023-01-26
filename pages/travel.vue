@@ -37,6 +37,14 @@
 import travel from "~/assets/json/travel.json";
 import Globe from "~/components/travel/Globe.vue";
 
+useHead({
+	title: `Eduardo Correia | Travelling`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia | Travelling`},
+		{name: "og:title", content: `Eduardo Correia | Travelling`},
+	],
+});
+
 definePageMeta({
 	title: "Travel",
 });

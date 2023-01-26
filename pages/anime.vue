@@ -29,6 +29,14 @@
 <script setup lang="ts">
 import anime from "~/assets/json/anime.json";
 
+useHead({
+	title: `Eduardo Correia | Anime & Manga`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia | Anime & Manga`},
+		{name: "og:title", content: `Eduardo Correia | Anime & Manga`},
+	],
+});
+
 definePageMeta({
 	title: "Anime & Manga",
 });

@@ -16,6 +16,14 @@
 <script setup lang="ts">
 import gaming from "~/assets/json/gaming.json";
 
+useHead({
+	title: `Eduardo Correia | Gaming`,
+	meta: [
+		{name: "twitter:title", content: `Eduardo Correia | Gaming`},
+		{name: "og:title", content: `Eduardo Correia | Gaming`},
+	],
+});
+
 definePageMeta({
 	title: "Gaming",
 });
