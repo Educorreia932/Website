@@ -1,17 +1,13 @@
 <template>
-	<div class="flex flex-row w-full">
-		<div class="gallery snap-proximity snap-x">
-			<section
-				v-for="(key, i) in Object.keys(groupedAlbums).sort()"
-				:key="i"
-			>
-				<div>
-					<h3 class="mt-2 truncate">{{ key }}</h3>
-				</div>
+	<div class="gallery space-y-8 w-8/12 mx-auto">
+		<section
+			v-for="(key, i) in Object.keys(groupedAlbums).sort()"
+			:key="i"
+		>
+			<h3 class="mt-0 mb-3 truncate">{{ key }}</h3>
 
-				<AlbumColumn :albums="groupedAlbums[key]"/>
-			</section>
-		</div>
+			<AlbumGrid :albums="groupedAlbums[key]"/>
+		</section>
 	</div>
 </template>
 
@@ -21,7 +17,7 @@ import {storeToRefs} from "pinia";
 import {SortingCriteria} from "~/enums/SortingCriteria";
 import {useMusicStore} from "~/stores/music-store";
 import {Album} from "~/types/Album";
-import AlbumColumn from "~/components/music/AlbumColumn.vue";
+import AlbumGrid from "~/components/music/AlbumGrid.vue";
 
 const {albums} = defineProps<{
 	albums: Album[]
@@ -47,14 +43,10 @@ const groupedAlbums = computed(() => {
 
 <style scoped>
 .gallery {
-	@apply flex flex-row overflow-y-hidden overflow-x-auto py-2;
+	@apply flex flex-col py-2;
+}
 
-	& > * {
-		border-width: 1px;
-		border-style: solid;
-		border-left: 0;
-		border-image: linear-gradient(rgba(0, 0, 0, 0), rgb(79, 79, 79, 0.5), rgba(0, 0, 0, 0)) 0 100%;
-		@apply px-8;
-	}
+h3 {
+	@apply text-2xl;
 }
 </style>
