@@ -47,6 +47,10 @@
 		{
 			"name": "Japan",
 			"code": "jp"
+		},
+		{
+			"name": "South Korea",
+			"code": "kr"
 		}
 	]
 }
