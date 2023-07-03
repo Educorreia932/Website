@@ -113,28 +113,28 @@ onMounted(async () => {
 			d.id = (d.id as string).replace(/^0+/, ""); // Removes leading zeros
 
 			if (d.id in countryById)
-				countryName = countryById[d.id].split(" ").join("_");
+				countryName = countryById[d.id];
 
-			d3.select(elements[i]).attr("id", countryName);
+			d3.select(elements[i]).attr("id", countryName.split(" ").join("_"));
+			
+			// Visited countries
+			if ((visitedCountries.map((e: { name: any; }) => e.name)).includes(countryName))
+				d3.select(elements[i])
+					.attr("class", "visited")
+					.on("mouseenter", (e) => {
+						const countryName = e.target?.id.split("_").join(" ");
+
+						if (countryName !== "undefined")
+							emit("hoveringCountry", countryName);
+					})
+					.on("mouseleave", () => {
+						emit("hoveringCountry", "");
+					})
+					.on("click", (e) => {
+						focusOnCountry(e.target?.id);
+					});
 		});
-
-	d3.map(visitedCountries, (country: { name: string }) => {
-		d3.selectAll("#" + country.name.split(" ").join("_"))
-			.attr("class", "visited")
-			.on("mouseenter", (e) => {
-				const countryName = e.target?.id.split("_").join(" ");
-
-				if (countryName !== "undefined")
-					emit("hoveringCountry", countryName);
-			})
-			.on("mouseleave", () => {
-				emit("hoveringCountry", "");
-			})
-			.on("click", (e) => {
-				focusOnCountry(e.target?.id);
-			});
-	});
-
+	
 	// Drag event
 	svg.call(
 		d3.drag().on("drag", (event) => {
