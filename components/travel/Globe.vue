@@ -3,11 +3,21 @@
 </template>
 
 <script setup lang="ts">
-import * as d3 from "d3";
-import {DSVRowString, GeoPath, GeoProjection, Selection} from "d3";
-import {Feature, Geometry} from "geojson";
-import * as topojson from "topojson-client";
-import {GeometryCollection, Topology} from "topojson-specification";
+import {
+	drag,
+	geoCentroid,
+	geoOrthographic,
+	geoPath,
+	GeoPath,
+	GeoProjection,
+	interpolate,
+	select,
+	selectAll,
+	Selection,
+	transition
+} from "d3";
+
+import * as countries from "~/assets/json/countries.geo.json";
 
 const {visitedCountries} = defineProps(["visitedCountries"]);
 const emit = defineEmits(["hoveringCountry"]);
@@ -17,25 +27,15 @@ const height = 500;
 
 const globe = ref(null);
 
-let countries: Feature<Geometry, {}>[],
-	countryNames: d3.DSVRowString[],
-	worldData: Topology | undefined,
-	svg: Selection<null, unknown, null, undefined>,
+let svg: Selection<SVGElement, any, any, any>,
 	projection: GeoProjection,
-	path: GeoPath;
-
-const country = (countryName: string): Feature<Geometry, {}> => {
-	countryName = countryName.split("_").join(" ");
-	const id = countryNames.find((country) => country.name === countryName)?.id;
-
-	return countries.find((country) => country.id === id)!!;
-};
+	path: GeoPath<any, any>;
 
 const rotateGlobe = (p: [number, number]) => {
-	d3.transition()
+	transition()
 		.duration(1000)
 		.tween("rotate", () => {
-			const interpolator = d3.interpolate(projection.rotate(), [
+			const interpolator = interpolate(projection.rotate(), [
 				-p[0],
 				-p[1],
 			]);
@@ -49,13 +49,13 @@ const rotateGlobe = (p: [number, number]) => {
 
 const focusOnCountry = (countryName: string) => {
 	const focusedCountry = country(countryName);
-	const centroid = d3.geoCentroid(focusedCountry);
+	const centroid = geoCentroid(focusedCountry);
 
 	rotateGlobe(centroid);
 };
 
 const highlightCountry = (countryName: string, highlight: boolean) => {
-	const node = d3.selectAll<HTMLElement, HTMLElement>("#" + countryName.replace(" ", "_")).node();
+	const node = selectAll<HTMLElement, HTMLElement>("#" + countryName.replace(" ", "_")).node();
 
 	if (highlight)
 		node?.classList.add("highlight");
@@ -70,56 +70,30 @@ defineExpose({
 });
 
 onMounted(async () => {
-	svg = d3.select(globe.value);
+	svg = select(globe.value);
 
-	projection = d3
-		.geoOrthographic()
+	projection = geoOrthographic()
 		.scale(250)
 		.translate([width / 2, height / 2]);
 
-	path = d3.geoPath().projection(projection);
+	path = geoPath().projection(projection);
 
 	svg.append("path")
 		.datum({type: "Sphere"})
 		.attr("class", "water")
 		.attr("d", path);
 
-	[worldData, countryNames] = await Promise.all([
-		d3.json<Topology>("https://unpkg.com/world-atlas@1/world/110m.json"),
-		d3.tsv("https://raw.githubusercontent.com/KoGor/Map-Icons-Generator/master/data/world-110m-country-names.tsv"),
-	]);
-
-	countries = topojson.feature(
-		worldData!!,
-		worldData!!["objects"]["countries"] as GeometryCollection,
-	).features;
-
-	let countryById: { [key: string]: string } = {};
-
-	countryNames.forEach((d: DSVRowString) => {
-		countryById[d.id as string] = d.name as string;
-	});
-
 	// Drawing countries
 	svg.selectAll("path.land")
-		.data(countries)
+		.data(countries.features)
 		.enter()
 		.append("path")
 		.attr("class", "land")
 		.attr("d", path)
 		.each((d, i, elements) => {
-			let countryName = "undefined";
-
-			d.id = (d.id as string).replace(/^0+/, ""); // Removes leading zeros
-
-			if (d.id in countryById)
-				countryName = countryById[d.id];
-
-			d3.select(elements[i]).attr("id", countryName.split(" ").join("_"));
-			
 			// Visited countries
-			if ((visitedCountries.map((e: { name: any; }) => e.name)).includes(countryName))
-				d3.select(elements[i])
+			if ((visitedCountries.map((e: { id: string; }) => e.id)).includes(d.id))
+				select(elements[i])
 					.attr("class", "visited")
 					.on("mouseenter", (e) => {
 						const countryName = e.target?.id.split("_").join(" ");
@@ -137,13 +111,13 @@ onMounted(async () => {
 	
 	// Drag event
 	svg.call(
-		d3.drag().on("drag", (event) => {
+		drag().on("drag", (event) => {
 			const rotate = projection.rotate();
 			const k = 75 / projection.scale();
 
 			projection.rotate([rotate[0] + event.dx * k, rotate[1] - event.dy * k]);
 
-			path = d3.geoPath().projection(projection);
+			path = geoPath().projection(projection);
 
 			svg.selectAll("path").attr("d", path);
 		}),

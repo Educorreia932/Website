@@ -2,55 +2,68 @@
 	"visited": [
 		{
 			"name": "Portugal",
-			"code": "pt"
+			"code": "pt",
+			"id": "PRT"
 		},
 		{
 			"name": "Spain",
-			"code": "es"
+			"code": "es",
+			"id": "ESP"
 		},
 		{
 			"name": "France",
-			"code": "fr"
+			"code": "fr",
+			"id": "FRA"
 		},
 		{
 			"name": "United Kingdom",
-			"code": "gb"
+			"code": "gb",
+			"id": "GBR"
 		},
 		{
 			"name": "Italy",
-			"code": "it"
+			"code": "it",
+			"id": "ITA"
 		},
 		{
 			"name": "Belgium",
-			"code": "be"
+			"code": "be",
+			"id": "BEL"
 		},
 		{
 			"name": "Germany",
-			"code": "de"
+			"code": "de",
+			"id": "DEU"
 		},
 		{
 			"name": "Poland",
-			"code": "pl"
+			"code": "pl",
+			"id": "POL"
 		},
 		{
 			"name": "Switzerland",
-			"code": "ch"
+			"code": "ch",
+			"id": "CHE"
 		},
 		{
 			"name": "Czech Republic",
-			"code": "cz"
+			"code": "cz",
+			"id": "CZE"
 		},
 		{
 			"name": "Ireland",
-			"code": "ie"
+			"code": "ie",
+			"id": "IRL"
 		},
 		{
 			"name": "Japan",
-			"code": "jp"
+			"code": "jp",
+			"id": "JPN"
 		},
 		{
-			"name": "Korea, Republic of",
-			"code": "kr"
+			"name": "South Korea",
+			"code": "kr",
+			"id": "KOR"
 		}
 	]
 }
