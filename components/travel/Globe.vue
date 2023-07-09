@@ -46,9 +46,9 @@ const rotateGlobe = (p: [number, number]) => {
 			};
 		});
 };
-
+	
 const focusOnCountry = (countryName: string) => {
-	const focusedCountry = country(countryName);
+	const focusedCountry = countries.features.find((e) => e.properties.name == countryName)!!
 	const centroid = geoCentroid(focusedCountry);
 
 	rotateGlobe(centroid);
