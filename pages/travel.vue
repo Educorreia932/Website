@@ -8,26 +8,27 @@
 					<button
 						v-for="country in visitedCountries"
 						class="flag-icon drop-shadow-xl"
-						@click="globeFocus(country.name)"
+						@click="globeFocus(country)"
 						@mouseleave="resetHoveredCountry"
-						@mouseover="setHoveredCountry(country.name)"
+						@mouseover="setHoveredCountry(country)"
 					>
 						<country-flag
 							:country="country.code" size="big"
-							:class="`rounded-md ${hoveredCountry === country.name ? 'opacity-100': 'opacity-80'}`"
+							:class="`rounded-md ${hoveredCountry?.id === country?.id ? 'opacity-100': 'opacity-80'}`"
 						/>
 					</button>
 				</div>
 
 				<em v-if="!hoveredCountry">Hover over a flag/country</em>
-				<span v-else>{{ hoveredCountry }}</span>
+				
+				<span v-else>{{ hoveredCountry.name }}</span>
 			</div>
 
 			<Globe
 				id="globe"
 				ref="globe"
 				:visitedCountries="visitedCountries"
-				@hovering-country="(countryName) => {hoveredCountry = countryName}"
+				@hovering-country="(country) => {hoveredCountry = country}"
 			/>
 		</div>
 	</section>
@@ -49,22 +50,30 @@ definePageMeta({
 	title: "Travel",
 });
 
+type VisitedCountry = {
+	code: string,
+	name: string,
+	id: string,
+}
+
 const visitedCountries = travel.visited;
-const hoveredCountry = ref("");
+const hoveredCountry = ref<VisitedCountry>();
 const globe = ref<InstanceType<typeof Globe> | null>(null);
 
-const setHoveredCountry = (country: string) => {
+const setHoveredCountry = (country: VisitedCountry) => {
 	hoveredCountry.value = country;
-	globe.value.highlightCountry(country, true);
+	
+	globe.value.highlightCountry(country.id, true);
 };
 
 const resetHoveredCountry = () => {
-	globe.value.highlightCountry(hoveredCountry.value, false);
-	hoveredCountry.value = "";
+	globe.value.highlightCountry(hoveredCountry.value?.id, false);
+	
+	hoveredCountry.value = undefined;
 };
 
-function globeFocus(country: string) {
-	globe.value.focusOnCountry(country);
+function globeFocus(country: {name: string, id: string}) {
+	globe.value.focusOnCountry(country.id);
 }
 </script>
 

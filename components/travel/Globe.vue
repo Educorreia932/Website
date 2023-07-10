@@ -12,10 +12,10 @@ import {
 	GeoProjection,
 	interpolate,
 	select,
-	selectAll,
 	Selection,
 	transition
 } from "d3";
+import {Feature} from "geojson";
 
 import * as countries from "~/assets/json/countries.geo.json";
 
@@ -46,31 +46,29 @@ const rotateGlobe = (p: [number, number]) => {
 			};
 		});
 };
-	
-const focusOnCountry = (countryName: string) => {
-	const focusedCountry = countries.features.find((e) => e.properties.name == countryName)!!
+
+const focusOnCountry = (id: string) => {
+	const focusedCountry = countries.features.find((e) => e.id == id)!!;
 	const centroid = geoCentroid(focusedCountry);
 
 	rotateGlobe(centroid);
 };
 
-const highlightCountry = (countryName: string, highlight: boolean) => {
-	const node = selectAll<HTMLElement, HTMLElement>("#" + countryName.replace(" ", "_")).node();
+const highlightCountry = (id: string, highlight: boolean) => {
+	const node = svg
+		.selectAll("path")
+		.filter((feature: Feature) => feature.id == id)
+		.node();
 
 	if (highlight)
 		node?.classList.add("highlight");
-
+	
 	else
 		node?.classList.remove("highlight");
 };
 
-defineExpose({
-	focusOnCountry,
-	highlightCountry,
-});
-
-onMounted(async () => {
-	svg = select(globe.value);
+const drawGlobe = () => {
+	svg = select<SVGElement, any>(globe.value!);
 
 	projection = geoOrthographic()
 		.scale(250)
@@ -96,22 +94,22 @@ onMounted(async () => {
 				select(elements[i])
 					.attr("class", "visited")
 					.on("mouseenter", (e) => {
-						const countryName = e.target?.id.split("_").join(" ");
+						const country = e.target;
 
-						if (countryName !== "undefined")
-							emit("hoveringCountry", countryName);
+						if (country !== "undefined")
+							emit("hoveringCountry", e.target);
 					})
 					.on("mouseleave", () => {
-						emit("hoveringCountry", "");
+						emit("hoveringCountry", null);
 					})
 					.on("click", (e) => {
 						focusOnCountry(e.target?.id);
 					});
 		});
-	
+
 	// Drag event
 	svg.call(
-		drag().on("drag", (event) => {
+		drag<SVGElement, any>().on("drag", (event) => {
 			const rotate = projection.rotate();
 			const k = 75 / projection.scale();
 
@@ -122,6 +120,15 @@ onMounted(async () => {
 			svg.selectAll("path").attr("d", path);
 		}),
 	);
+}
+
+defineExpose({
+	focusOnCountry,
+	highlightCountry,
+});
+
+onMounted( () => {
+	drawGlobe()
 });
 </script>
 
