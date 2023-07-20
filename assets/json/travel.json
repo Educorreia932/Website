@@ -64,6 +64,11 @@
 			"name": "South Korea",
 			"code": "kr",
 			"id": "KOR"
+		},
+		{
+			"name": "Taiwan",
+			"code": "tw",
+			"id": "TWN"
 		}
 	]
 }
