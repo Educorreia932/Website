@@ -69,6 +69,11 @@
 			"name": "Taiwan",
 			"code": "tw",
 			"id": "TWN"
+		},
+		{
+			"name": "United States of America",
+			"code": "us",
+			"id": "USA"
 		}
 	]
 }
