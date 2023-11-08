@@ -6,7 +6,7 @@
 
 	<p id="countdown">
 		<span class="opacity-40">
-			Living in Japan for more
+			Finished degree in
 			
 			<template v-for="(value, key, i) in remaining" :key="i">
 				{{ Math.floor(value) }}{{ key[0] }}{{ " " }}
@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-const startDate = new Date(2022, 9, 1);
-const endDate = new Date(2023, 9, 1);
+const startDate = new Date(2018, 9, 1);
+const endDate = new Date(2024, 8, 1);
 const today = new Date();
 
 const remainingMiliseconds = ref(endDate.getTime() - today.getTime());

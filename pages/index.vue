@@ -16,7 +16,7 @@
 		</div>
 
 		<p class="mb-2 text-center">
-			Currently coding on the other side of the world
+			Currently studying Computer Engineering at FEUP
 		</p>
 
 		<p class="mt-0 text-center">
