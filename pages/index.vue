@@ -6,16 +6,16 @@
 
 		<div class="text-center mt-6">
 			<nuxt-img
-				src="/images/avatar.png"
+				src="/images/space-foxes.png"
 				alt="Avatar"
-				width="250"
-				height="250"
-				format="webp"
+				width="300"
+				height="300"
+				format="png"
 				placeholder
 			/>
 		</div>
 
-		<p class="mb-2 text-center">
+		<p class="mt-12 text-center">
 			Currently studying Computer Engineering at FEUP
 		</p>
 
