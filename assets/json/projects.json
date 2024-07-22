@@ -3,243 +3,138 @@
 		"title": "Every Web is a Home",
 		"description": "Game developed for Global Game Jam 2019 in which you are a spider trying to catch bugs with your web",
 		"project_url": "https://github.com/Lantaros/pouca-teia",
-		"image": "EveryWebIsAHome.png",
-		"tags": [
-			"Game",
-			"Game-Jam"
-		]
+		"image": "EveryWebIsAHome.png"
 	},
 	{
 		"title": "Project Watt",
 		"description": "A platforming game themed around an electric particle in a circuit trying to reach the exit (connect to earth) and developed for MINIX",
 		"project_url": "https://github.com/Educorreia932/LCOM/tree/master/proj",
-		"image": "ProjectWatt.png",
-		"tags": [
-			"Game",
-			"University"
-		]
-	},
-	{
-		"title": "Lain",
-		"description": "A Discord bot that retrieves statistics for a text channel",
-		"project_url": "https://github.com/Educorreia932/Lain",
-		"image": "Lain.jpg",
-		"tags": [
-			"Bot"
-		]
+		"image": "ProjectWatt.png"
 	},
 	{
 		"title": "CTM 2020 Summer Internship",
 		"description": "Flying communications node controller sensitive to traffic",
 		"project_url": "https://github.com/Educorreia932/CTM-2020-Summer-Intership",
-		"image": "CTM2020SummerInternship.png",
-		"tags": {}
-	},
-	{
-		"title": "Pokémon Origins",
-		"description": "An infographics on pokémon and its counterpart inspirational origins in flora and fauna",
-		"project_url": "https://github.com/Educorreia932/Pokemon-Origins",
-		"image": "PokémonOrigins.png",
-		"tags": [
-			"Chart"
-		]
+		"image": "CTM2020SummerInternship.png"
 	},
 	{
 		"title": "Pokémon - A Sequel Coming In Inevitably",
 		"description": "Pokémon Fire Red look-alike running on a terminal",
 		"project_url": "https://github.com/Educorreia932/LPOO/tree/master/Project",
-		"image": "PokemonASCII.png",
-		"tags": [
-			"Game",
-			"University"
-		]
+		"image": "PokemonASCII.png"
 	},
 	{
 		"title": "McDelivery",
 		"description": "WebGL scene redemption of a McDonald's zeppelin delivering hamburgers",
 		"project_url": "https://github.com/Educorreia932/FEUP-CGRA/tree/master/Project",
-		"image": "McDelivery.png",
-		"tags": [
-			"University"
-		]
+		"image": "McDelivery.png"
 	},
 	{
 		"title": "Tour Mate App",
 		"description": "An application that let's you plan a tour around Porto by choosing several touristic attractions and calculating an optimal route to let you visit them.",
 		"project_url": "https://github.com/Educorreia932/CAL/tree/master/Project",
-		"image": "TourMateApp.png",
-		"tags": [
-			"University"
-		]
-	},
-	{
-		"title": "Oblivion Visual Studio Code Theme",
-		"description": "A syntax coloring theme for Visual Studio Code based on the already existing Oblivion.",
-		"project_url": "https://github.com/Educorreia932/Oblivion-Theme",
-		"image": "Oblivion.png",
-		"tags": [
-			"Theme"
-		]
+		"image": "TourMateApp.png"
 	},
 	{
 		"title": "Ask Away",
 		"description": "A mobile application designed to ask questions in conference talks.",
 		"project_url": "https://github.com/Educorreia932/ESOF",
-		"image": "AskAway.png",
-		"tags": [
-			"University"
-		]
+		"image": "AskAway.png"
 	},
 	{
 		"title": "Helper Shelter",
 		"description": "An adoption shelter website",
 		"project_url": "https://github.com/Educorreia932/FEUP-LTW/tree/master/Project",
-		"image": "HelperShelter.png",
-		"tags": [
-			"University"
-		]
-	},
-	{
-		"title": "Umbrella",
-		"description": "Game developed for Global Game Jam 2021",
-		"project_url": "https://globalgamejam.org/2021/games/umbrella-4",
-		"image": "Umbrella.png",
-		"tags": [
-			"Game",
-			"Game-Jam"
-		]
+		"image": "HelperShelter.png"
 	},
 	{
 		"title": "Break_In",
 		"description": "Game developed for Retro Jam 2021",
 		"project_url": "https://github.com/xavier-santos/BreakIn",
-		"image": "Break_In.png",
-		"tags": [
-			"Game",
-			"Game-Jam"
-		]
-	},
-	{
-		"title": "Spotify Statistics",
-		"description": "A webpage that gives you some insight regarding your favorite music genres according to what you listen to on Spotify.",
-		"project_url": "",
-		"image": "SpotifyStatistics.png",
-		"tags": [
-			"Chart"
-		]
+		"image": "Break_In.png"
 	},
 	{
 		"title": "Trade-a-Bid",
 		"description": "Online auction platform for users to buy and sell all kinds of digital products, through a bidding system.",
 		"project_url": "https://github.com/Educorreia932/LBAW",
-		"image": "Trade-a-Bid.png",
-		"tags": [
-			"Website"
-		]
+		"image": "Trade-a-Bid.png"
 	},
 	{
 		"title": "Undermountain",
 		"description": "A roguelike game based on the Undermountain setting of Dungeons & Dragons.",
 		"project_url": "https://github.com/Educorreia932/Undermountain",
-		"image": "Undermountain.png",
-		"tags": [
-			"Game"
-		]
+		"image": "Undermountain.png"
 	},
 	{
 		"title": "PokéBattle",
 		"description": "An esoteric language designed so that the program looks like the transcript of a Pokémon battle.",
 		"project_url": "https://github.com/Educorreia932/PokeBattle",
-		"image": "PokeBattle.png",
-		"tags": {}
+		"image": "PokeBattle.png"
 	},
 	{
 		"title": "Persona 4 - Weather News",
 		"description": "A Google Chrome extension that makes your New Tab page display the weather news in the style of Persona 4.",
 		"project_url": "https://github.com/Educorreia932/Persona-4-Weather-News",
-		"image": "Persona4WeatherNews.png",
-		"tags": {}
+		"image": "Persona4WeatherNews.png"
 	},
 	{
 		"title": "Tulicreme",
 		"description": "A decentrilized micro-blogging service",
 		"project_url": "https://github.com/Educorreia932/FEUP-SDLE/tree/main/Projects/proj2",
-		"image": "Tulicreme.png",
-		"tags": [
-			"University"
-		]
+		"image": "Tulicreme.png"
 	},
 	{
 		"title": "Spot & Find",
 		"description": "A search system for music content",
 		"project_url": "https://github.com/Educorreia932/FEUP-PRI/tree/master/Project",
-		"image": "SpotFind.png",
-		"tags": [
-			"University"
-		]
+		"image": "SpotFind.png"
 	},
 	{
 		"title": "Warehouse of the Future",
 		"description": "A web-application that simulates a set of devices placed in a warehouse",
 		"project_url": "",
-		"image": "WarehouseFuture.png",
-		"tags": [
-			"University"
-		]
+		"image": "WarehouseFuture.png"
 	},
 	{
 		"title": "Woolf",
 		"description": "Game developed for MAD Game Jam 2022",
 		"project_url": "https://maddinosaur.itch.io/woolf",
-		"image": "Woolf.png",
-		"tags": [
-			"Game",
-			"Game-Jam"
-		]
+		"image": "Woolf.png"
 	},
 	{
 		"title": "Don't Cross the Streams",
 		"description": "Game developed for Retro Jam 2022",
 		"project_url": "https://educorreia932.itch.io/dont-cross-the-streams",
-		"image": "DontCrossTheStreams.png",
-		"tags": [
-			"Game",
-			"Game-Jam"
-		]
+		"image": "DontCrossTheStreams.png"
 	},
 	{
 		"title": "@hack",
 		"description": "Game developed for Level Up! Game Jam 2022",
 		"project_url": "https://maddinosaur.itch.io/at-hack",
-		"image": "@hack.png",
-		"tags": [
-			"Game",
-			"Game-Jam"
-		]
+		"image": "@hack.png"
 	},
 	{
 		"title": "Phanes",
 		"description": "A Python library that handles biological sequences",
 		"project_url": "https://github.com/Educorreia932/FCUP-BINF/tree/master/Phanes",
-		"image": "Phanes.png",
-		"tags": [
-			"University"
-		]
+		"image": "Phanes.png"
 	},
 	{
 		"title": "Electrica Imperium",
 		"description": "A web application to manage electric energy distribution assets",
 		"project_url": "",
-		"image": "Electrica-Imperium.jpg",
-		"tags": [
-			"University"
-		]
+		"image": "Electrica-Imperium.jpg"
 	},
 	{
-		"title": "/Toy/Box",
-		"description": "Collection of toy programs or otherwise interesting computational apparatus I've developed",
-		"project_url": "https://github.com/Educorreia932/Toybox",
-		"image": "toybox.png",
-		"tags": []
+		"title": "TableFork",
+		"description": " DSL for tabular data extraction and manipulation from arbitrary sources.",
+		"project_url": "https://github.com/Educorreia932/TableFork",
+		"image": "TableFork.png"
+	},
+	{
+		"title": "Recording",
+		"description": "REPL for a polymorphic record-calculus",
+		"project_url": "https://github.com/Educorreia932/Recording",
+		"image": "Recording.png"
 	}
 ]

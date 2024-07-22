@@ -33,10 +33,6 @@
 				</NuxtLink>
 			</span>
 		</p>
-
-		<div class="mt-4 md:w-7/12 w-full mx-auto">
-			<Countdown/>
-		</div>
 	</div>
 </template>
 
