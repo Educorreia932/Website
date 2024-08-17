@@ -1,120 +1,119 @@
 {
-	"visited": [
-		{
-			"name": "Portugal",
-			"code": "pt",
-			"id": "PRT"
-		},
-		{
-			"name": "Spain",
-			"code": "es",
-			"id": "ESP"
-		},
-		{
-			"name": "France",
-			"code": "fr",
-			"id": "FRA"
-		},
-		{
-			"name": "United Kingdom",
-			"code": "gb",
-			"id": "GBR"
-		},
-		{
-			"name": "Italy",
-			"code": "it",
-			"id": "ITA"
-		},
-		{
-			"name": "Belgium",
-			"code": "be",
-			"id": "BEL"
-		},
-		{
-			"name": "Germany",
-			"code": "de",
-			"id": "DEU"
-		},
-		{
-			"name": "Poland",
-			"code": "pl",
-			"id": "POL"
-		},
-		{
-			"name": "Switzerland",
-			"code": "ch",
-			"id": "CHE"
-		},
-		{
-			"name": "Czech Republic",
-			"code": "cz",
-			"id": "CZE"
-		},
-		{
-			"name": "Ireland",
-			"code": "ie",
-			"id": "IRL"
-		},
-		{
-			"name": "Japan",
-			"code": "jp",
-			"id": "JPN"
-		},
-		{
-			"name": "South Korea",
-			"code": "kr",
-			"id": "KOR"
-		},
-		{
-			"name": "Taiwan",
-			"code": "tw",
-			"id": "TWN"
-		},
-		{
-			"name": "United States of America",
-			"code": "us",
-			"id": "USA"
-		},
-		{
-			"name": "Luxembourg",
-			"code": "lu",
-			"id": "LUX"
-		},
-		{
-			"name": "Austria",
-			"code": "at",
-			"id": "AUT",
-		},
-		{
-			"name": "Slovakia",
-			"code": "sk",
-			"id": "SVK"
-		},
-		{
-			"name": "Hungary",
-			"code": "hu",
-			"id": "HUN"
-		},
-                { 
-			"name": "Serbia",
-			"code": "rs",
-			"id": "SRB"
-		},
-                {
-			"name": "Bosnia and Herzegovina",
-			"code": "bh",
-			"id": "BIH"
-		},
-                {
-			"name": "Croatia",
-			"code": "hr",
-			"id": "HRV"
-		},
-		{
-			"name": "Slovenia",
-			"code": "si",
-			"id": "SVL"
-		}
-
-	]
+   "visited":[
+      {
+         "name":"Portugal",
+         "code":"pt",
+         "id":"PRT"
+      },
+      {
+         "name":"Spain",
+         "code":"es",
+         "id":"ESP"
+      },
+      {
+         "name":"France",
+         "code":"fr",
+         "id":"FRA"
+      },
+      {
+         "name":"United Kingdom",
+         "code":"gb",
+         "id":"GBR"
+      },
+      {
+         "name":"Italy",
+         "code":"it",
+         "id":"ITA"
+      },
+      {
+         "name":"Belgium",
+         "code":"be",
+         "id":"BEL"
+      },
+      {
+         "name":"Germany",
+         "code":"de",
+         "id":"DEU"
+      },
+      {
+         "name":"Poland",
+         "code":"pl",
+         "id":"POL"
+      },
+      {
+         "name":"Switzerland",
+         "code":"ch",
+         "id":"CHE"
+      },
+      {
+         "name":"Czech Republic",
+         "code":"cz",
+         "id":"CZE"
+      },
+      {
+         "name":"Ireland",
+         "code":"ie",
+         "id":"IRL"
+      },
+      {
+         "name":"Japan",
+         "code":"jp",
+         "id":"JPN"
+      },
+      {
+         "name":"South Korea",
+         "code":"kr",
+         "id":"KOR"
+      },
+      {
+         "name":"Taiwan",
+         "code":"tw",
+         "id":"TWN"
+      },
+      {
+         "name":"United States of America",
+         "code":"us",
+         "id":"USA"
+      },
+      {
+         "name":"Luxembourg",
+         "code":"lu",
+         "id":"LUX"
+      },
+      {
+         "name":"Austria",
+         "code":"at",
+         "id":"AUT"
+      },
+      {
+         "name":"Slovakia",
+         "code":"sk",
+         "id":"SVK"
+      },
+      {
+         "name":"Hungary",
+         "code":"hu",
+         "id":"HUN"
+      },
+      {
+         "name":"Serbia",
+         "code":"rs",
+         "id":"SRB"
+      },
+      {
+         "name":"Bosnia and Herzegovina",
+         "code":"bh",
+         "id":"BIH"
+      },
+      {
+         "name":"Croatia",
+         "code":"hr",
+         "id":"HRV"
+      },
+      {
+         "name":"Slovenia",
+         "code":"si",
+         "id":"SVL"
+      }
+   ]
 }
