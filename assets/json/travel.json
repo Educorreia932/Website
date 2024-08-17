@@ -79,6 +79,42 @@
 			"name": "Luxembourg",
 			"code": "lu",
 			"id": "LUX"
+		},
+		{
+			"name": "Austria",
+			"code": "at",
+			"id": "AUT",
+		},
+		{
+			"name": "Slovakia",
+			"code": "sk",
+			"id": "SVK"
+		},
+		{
+			"name": "Hungary",
+			"code": "hu",
+			"id": "HUN"
+		},
+                { 
+			"name": "Serbia",
+			"code": "rs",
+			"id": "SRB"
+		},
+                {
+			"name": "Bosnia and Herzegovina",
+			"code": "bh",
+			"id": "BIH"
+		},
+                {
+			"name": "Croatia",
+			"code": "hr",
+			"id": "HRV"
+		},
+		{
+			"name": "Slovenia",
+			"code": "si",
+			"id": "SVL"
 		}
+
 	]
 }
