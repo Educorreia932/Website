@@ -1,4 +1,5 @@
 {
+	"name": "educorreia932.dev",
 	"private": true,
 	"scripts": {
 		"build": "nuxt build",
